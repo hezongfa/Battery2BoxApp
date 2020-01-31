@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/act_shop_detail_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/x30"
+        android:layout_marginEnd="@dimen/x30"
+        android:layout_marginBottom="@dimen/x30">
+
+        <RelativeLayout
+            android:id="@+id/act_shop_detail_count_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/x79"
+                android:layout_height="@dimen/x79"
+                android:layout_marginTop="@dimen/x29"
+                android:background="@drawable/bg_borrow_count"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/act_shop_detail_return_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#010101"
+                    android:textSize="@dimen/x30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x8"
+                    android:text="@string/shop_8"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/x18" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/x99"
+                android:layout_height="@dimen/x99"
+                android:layout_marginStart="@dimen/x74"
+                android:background="@drawable/bg_borrow_count"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/act_shop_detail_borrow_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#010101"
+                    android:textSize="@dimen/x40" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x8"
+                    android:text="@string/shop_7"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/x18" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/act_shop_detail_scan_ll"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/x42"
+            android:layout_toEndOf="@id/act_shop_detail_count_ll"
+            android:background="@mipmap/pic_orange_btn"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/x45"
+                android:layout_height="@dimen/x45"
+                android:src="@mipmap/ic_shop_scan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x20"
+                android:gravity="center_vertical"
+                android:text="QR"
+                android:textColor="#754700"
+                android:textSize="@dimen/x36" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/act_shop_detail_rl"
+        android:layout_marginBottom="@dimen/x20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/act_shop_detail_img_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x670"
+                android:paddingStart="@dimen/x18"
+                android:paddingTop="@dimen/x20"
+                android:paddingEnd="@dimen/x18"
+                android:paddingBottom="@dimen/x10">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/act_shop_detail_img_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:delay_time="3200"
+                    app:image_scale_type="fit_xy"
+                    app:is_auto_play="false"
+                    app:scroll_time="800" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/x30"
+                    android:background="@drawable/bg_f2f2f2_r20px"
+                    android:paddingStart="@dimen/x40"
+                    android:paddingTop="@dimen/x8"
+                    android:paddingEnd="@dimen/x40"
+                    android:paddingBottom="@dimen/x8"
+                    android:text="Descripcion"
+                    android:textColor="#b5b5b5"
+                    android:textSize="@dimen/x28"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/act_shop_detail_img_index_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/x30"
+                    android:alpha="0.8"
+                    android:background="@drawable/bg_f2f2f2_r20px"
+                    android:paddingStart="@dimen/x26"
+                    android:paddingTop="@dimen/x14"
+                    android:paddingEnd="@dimen/x26"
+                    android:paddingBottom="@dimen/x14"
+                    android:text="0/0"
+                    android:textColor="#b5b5b5"
+                    android:textSize="@dimen/x24" />
+
+                <ImageView
+                    android:id="@+id/act_shop_detail_coupon_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/bg_shop_coupon"
+                    android:paddingStart="@dimen/x40"
+                    android:layout_margin="@dimen/x15"
+                    android:paddingTop="@dimen/x15"
+                    android:paddingEnd="@dimen/x40"
+                    android:paddingBottom="@dimen/x15"
+                    android:src="@mipmap/ic_shop_coupon" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/x27"
+                android:paddingEnd="@dimen/x27"
+                android:paddingBottom="@dimen/x84">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x85"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/x20"
+                        android:text="服务"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/x32" />
+
+                    <ImageView
+                        android:id="@+id/act_shop_detail_wifi_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x30"
+                        android:src="@mipmap/ic_shop_detail_wifi"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/act_shop_detail_smoke_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x30"
+                        android:src="@mipmap/ic_shop_detail_smoke"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:background="#DFDFDF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x85"
+                    android:layout_marginEnd="@dimen/x20"
+                    android:gravity="center_vertical"
+                    android:text="信息"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x32" />
+
+                <TextView
+                    android:id="@+id/act_shop_detail_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x5"
+                    android:drawableStart="@mipmap/ic_shop_detail_time"
+                    android:drawablePadding="@dimen/x18"
+                    android:gravity="center_vertical"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/act_shop_detail_address_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x5"
+                    android:layout_marginTop="@dimen/x24"
+                    android:drawableStart="@mipmap/ic_shop_detail_address"
+                    android:drawablePadding="@dimen/x18"
+                    android:gravity="center_vertical"
+                    android:textColor="#4284FD"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/act_shop_detail_web_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x3"
+                    android:layout_marginTop="@dimen/x24"
+                    android:drawableStart="@mipmap/ic_shop_detail_net"
+                    android:drawablePadding="@dimen/x18"
+                    android:gravity="center_vertical"
+                    android:textColor="#4284FD"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/act_shop_detail_shape_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x6"
+                    android:layout_marginTop="@dimen/x24"
+                    android:drawableStart="@mipmap/ic_shop_detail_shape"
+                    android:drawablePadding="@dimen/x18"
+                    android:gravity="center_vertical"
+                    android:textColor="#4284FD"
+                    android:textSize="@dimen/x28" />
+
+                <TextView
+                    android:id="@+id/act_shop_detail_tel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x2"
+                    android:layout_marginTop="@dimen/x24"
+                    android:drawableStart="@mipmap/ic_shop_detail_tel"
+                    android:drawablePadding="@dimen/x18"
+                    android:gravity="center_vertical"
+                    android:textColor="#4284FD"
+                    android:textSize="@dimen/x28" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x1"
+                    android:layout_marginTop="@dimen/x24"
+                    android:background="#DFDFDF" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/act_shop_detail_nav_iv"
+        android:layout_width="@dimen/x73"
+        android:layout_height="@dimen/x73"
+        android:layout_above="@id/act_shop_detail_rl"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/x20"
+        android:layout_marginBottom="@dimen/x40"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_shop_nav_btn" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:background="#78000000">
+
+        <TextView
+            android:id="@+id/act_shop_detail_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/x25"
+            android:text="星巴克咖啡店"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x47" />
+
+        <ImageView
+            android:id="@+id/act_shop_detail_close_iv"
+            android:layout_width="@dimen/x51"
+            android:layout_height="@dimen/x51"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x25"
+            android:src="@mipmap/ic_shop_close" />
+    </RelativeLayout>
+</RelativeLayout>

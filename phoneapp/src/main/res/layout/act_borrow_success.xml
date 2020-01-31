@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/pic_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/act_borrow_result_iv"
+            android:layout_width="@dimen/x250"
+            android:layout_height="@dimen/x250"
+            android:layout_marginTop="@dimen/x30"
+            android:scaleType="fitXY"
+            android:src="@mipmap/pic_borrow_success" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x50"
+            android:text="@string/borrow_16"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x40" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:gravity="center"
+            android:text="@string/borrow_17"
+            android:textColor="@color/gray_666666"
+            android:textSize="@dimen/x28" />
+
+        <TextView
+            android:id="@+id/act_borrow_result_help_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:layout_marginStart="@dimen/x40"
+            android:layout_marginTop="@dimen/x40"
+            android:layout_marginEnd="@dimen/x40"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="@string/borrow_18"
+            android:textColor="@color/gray_666666"
+            android:textSize="@dimen/x30" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x32"
+            android:layout_marginTop="@dimen/x70"
+            android:text="@string/borrow_19"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x34" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x48"
+            android:layout_marginTop="@dimen/x20"
+            android:layout_marginEnd="@dimen/x48"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/borrow_20"
+                android:textColor="@color/black"
+                android:textSize="@dimen/x28" />
+
+            <TextView
+                android:id="@+id/act_borrow_success_hour_cost_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/borrow_24"
+                android:textColor="@color/black"
+                android:textSize="@dimen/x24" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/act_borrow_success_des_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x48"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginEnd="@dimen/x48"
+            android:text="@string/borrow_22"
+            android:textSize="@dimen/x24" />
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="@dimen/x33"-->
+            <!--android:layout_marginTop="@dimen/x30"-->
+            <!--android:text="@string/borrow_21"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:textSize="@dimen/x28" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/act_borrow_success_des_tv2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="@dimen/x48"-->
+            <!--android:layout_marginTop="@dimen/x10"-->
+            <!--android:layout_marginEnd="@dimen/x48"-->
+            <!--android:text="@string/borrow_23"-->
+            <!--android:textSize="@dimen/x24" />-->
+    </LinearLayout>
+</ScrollView>

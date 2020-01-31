@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/pic_bg"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/x15"
+    android:paddingEnd="@dimen/x15">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x10"
+        android:text="@string/wallet_2"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/x40" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@drawable/bg_round_fcf3d1"
+        android:paddingStart="@dimen/x30"
+        android:paddingTop="@dimen/x30"
+        android:paddingEnd="@dimen/x30"
+        android:paddingBottom="@dimen/x30">
+
+        <TextView
+            android:id="@+id/act_my_wallet_card_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x5"
+            android:text="@string/wallet_3"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/x34" />
+
+        <TextView
+            android:id="@+id/act_my_wallet_card_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_below="@id/act_my_wallet_card_tv1"
+            android:layout_marginTop="@dimen/x10"
+            android:text="@string/wallet_4"
+            android:textColor="@color/gray_6f6f6f"
+            android:textSize="@dimen/x28" />
+
+        <ImageView
+            android:layout_width="@dimen/x125"
+            android:layout_height="@dimen/x115"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x115"
+            android:src="@mipmap/ic_wallet_card" />
+
+        <TextView
+            android:id="@+id/act_my_wallet_cart_submit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/pic_enter_btn_bg"
+            android:gravity="center"
+            android:paddingStart="@dimen/x25"
+            android:paddingTop="@dimen/x20"
+            android:paddingEnd="@dimen/x25"
+            android:paddingBottom="@dimen/x20"
+            android:text="@string/wallet_5"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x28" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@drawable/bg_round_fcf3d1"
+        android:paddingStart="@dimen/x30"
+        android:paddingTop="@dimen/x30"
+        android:paddingEnd="@dimen/x30"
+        android:paddingBottom="@dimen/x30">
+
+        <TextView
+            android:id="@+id/act_my_wallet_balance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x5"
+            android:text="0.00€"
+            android:textColor="@color/red_d11818"
+            android:textSize="@dimen/x38" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_my_wallet_balance_tv"
+            android:layout_marginTop="@dimen/x10"
+            android:text="@string/wallet_6"
+            android:textColor="@color/gray_6f6f6f"
+            android:textSize="@dimen/x28" />
+
+        <ImageView
+            android:layout_width="@dimen/x125"
+            android:layout_height="@dimen/x115"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x115"
+            android:src="@mipmap/ic_wallet_balance" />
+
+        <TextView
+            android:id="@+id/act_my_wallet_balance_submit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/pic_enter_btn_bg"
+            android:gravity="center"
+            android:paddingStart="@dimen/x25"
+            android:paddingTop="@dimen/x20"
+            android:paddingEnd="@dimen/x25"
+            android:paddingBottom="@dimen/x20"
+            android:text="@string/wallet_7"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x28" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x20"
+        android:background="@drawable/bg_round_fcf3d1"
+        android:paddingStart="@dimen/x30"
+        android:paddingTop="@dimen/x30"
+        android:paddingEnd="@dimen/x30"
+        android:paddingBottom="@dimen/x30">
+
+        <TextView
+            android:id="@+id/act_my_wallet_time_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x5"
+            android:text="0"
+            android:textColor="@color/red_d11818"
+            android:textSize="@dimen/x34" />
+
+        <TextView
+            android:id="@+id/act_my_wallet_time_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_my_wallet_time_tv1"
+            android:layout_marginTop="@dimen/x10"
+            android:text="@string/wallet_20"
+            android:textColor="@color/gray_6f6f6f"
+            android:textSize="@dimen/x28" />
+
+        <ImageView
+            android:layout_width="@dimen/x125"
+            android:layout_height="@dimen/x115"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x115"
+            android:src="@mipmap/ic_wallet_time" />
+
+        <TextView
+            android:id="@+id/act_my_wallet_time_submit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/pic_enter_btn_bg"
+            android:gravity="center"
+            android:paddingStart="@dimen/x25"
+            android:paddingTop="@dimen/x20"
+            android:paddingEnd="@dimen/x25"
+            android:paddingBottom="@dimen/x20"
+            android:text="@string/wallet_5"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x28" />
+    </RelativeLayout>
+</LinearLayout>

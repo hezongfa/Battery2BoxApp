@@ -1,0 +1,18 @@
+cn.bingoogolapple.progressbar
+attr bga_pb_isCapRounded
+attr bga_pb_isHiddenText
+attr bga_pb_mode
+attr bga_pb_radius
+attr bga_pb_reachedColor
+attr bga_pb_reachedHeight
+attr bga_pb_textColor
+attr bga_pb_textMargin
+attr bga_pb_textSize
+attr bga_pb_unReachedColor
+attr bga_pb_unReachedHeight
+id circle
+id comet
+id horizontal
+id system
+id wave
+styleable BGAProgressBar bga_pb_isCapRounded bga_pb_isHiddenText bga_pb_mode bga_pb_radius bga_pb_reachedColor bga_pb_reachedHeight bga_pb_textColor bga_pb_textMargin bga_pb_textSize bga_pb_unReachedColor bga_pb_unReachedHeight

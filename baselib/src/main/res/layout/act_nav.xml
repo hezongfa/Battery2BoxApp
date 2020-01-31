@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/act_nav_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:background="@color/yellow_f0c517">
+
+        <TextView
+            android:id="@+id/act_nav_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableStart="@mipmap/ic_nav_back_r"
+            android:gravity="center"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30" />
+
+        <TextView
+            android:id="@+id/act_nav_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/x150"
+            android:layout_marginEnd="@dimen/x150"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x36" />
+
+        <TextView
+            android:id="@+id/act_nav_right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingStart="@dimen/x20"
+            android:paddingEnd="@dimen/x20"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x28" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x2"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_f7f7f7"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/act_nav_content_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_f7f7f7" />
+
+        <TextView
+            android:id="@+id/act_nav_empty_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/x60"
+            android:gravity="center"
+            android:text="@string/app_53"
+            android:textColor="@color/gray_6f6f6f"
+            android:textSize="@dimen/x28"
+            android:visibility="invisible" />
+    </FrameLayout>
+</LinearLayout>

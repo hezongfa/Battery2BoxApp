@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/pic_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/act_share_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x50"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginEnd="@dimen/x50"
+        android:drawableTop="@mipmap/pic_share"
+        android:drawablePadding="@dimen/x30"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/x30"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x180"
+        android:layout_marginStart="@dimen/x32"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginEnd="@dimen/x32"
+        android:background="@drawable/bg_round_x180"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/share_2"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x25" />
+
+            <TextView
+                android:id="@+id/act_share_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x43" />
+        </LinearLayout>
+
+        <View
+
+            android:layout_width="@dimen/x2"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x30"
+            android:layout_marginBottom="@dimen/x30"
+            android:background="@color/bg" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/share_3"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x25" />
+
+            <TextView
+                android:id="@+id/act_share_tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x43" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/act_share_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x90"
+        android:layout_marginStart="@dimen/x55"
+        android:layout_marginTop="@dimen/x50"
+        android:layout_marginEnd="@dimen/x55"
+        android:background="@drawable/bg_btn_yellow_r90px"
+        android:text="@string/share_4"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/x36" />
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/x13">
+
+    <TextView
+        android:id="@+id/item_area_code_hot_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:background="@drawable/bg_area_code_hot"
+        android:gravity="center"
+        android:textColor="@color/orange_ff6600"
+        android:textSize="@dimen/x28" />
+</LinearLayout>

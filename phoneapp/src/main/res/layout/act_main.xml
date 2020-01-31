@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ke.tang.slidemenu.SlideMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slideMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:edgeSlide="true"
+    app:primaryShadowWidth="@dimen/x20"
+    app:slideDirection="right">
+    <!--slidemenudemo:primaryShadowDrawable="reference"-->
+    <!--slidemenudemo:primaryShadowWidth="dimension"-->
+    <!--slidemenudemo:secondaryShadowWidth="dimension"-->
+    <!--slidemenudemo:secondaryShadowDrawable="reference"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_slide_menu_role="content">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/act_main_shop_search_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x120"
+            android:layout_marginStart="@dimen/x30"
+            android:layout_marginTop="@dimen/x30"
+            android:layout_marginEnd="@dimen/x30"
+            android:background="@drawable/bg_main_search">
+
+            <com.chenyi.baselib.widget.CircleImageView
+                android:id="@+id/act_main_menu_btn"
+                android:layout_width="@dimen/x84"
+                android:layout_height="@dimen/x84"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/x6"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/act_main_shop_search_tv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/x90"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/x14"
+                android:layout_marginEnd="@dimen/x4"
+                android:layout_weight="1"
+                android:background="@drawable/bg_text_input"
+                android:gravity="center"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30"
+                android:text="@string/main_1"
+                android:textColor="@color/orange_ff6600"
+                android:textSize="@dimen/x30" />
+
+        </LinearLayout>
+
+        <com.youth.banner.Banner
+            android:id="@+id/act_main_shop_ad_banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:layout_below="@id/act_main_shop_search_ll"
+            android:layout_marginStart="@dimen/x30"
+            android:layout_marginEnd="@dimen/x30"
+            android:background="@android:color/transparent"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/act_main_borrow_cur_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/act_main_shop_ad_banner"
+            android:layout_marginStart="@dimen/x30"
+            android:layout_marginEnd="@dimen/x30"
+            android:background="@drawable/bg_main_search"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/act_main_borrow_cur_logo_iv"
+                android:layout_width="@dimen/x120"
+                android:layout_height="@dimen/x120"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/x6"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/x24"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_borrow_cur_logo" />
+
+            <TextView
+                android:id="@+id/act_main_borrow_cur_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x20"
+                android:layout_toEndOf="@id/act_main_borrow_cur_logo_iv"
+                android:text="@string/main_10"
+                android:textColor="@color/gray_555555"
+                android:textSize="@dimen/x28" />
+
+            <TextView
+                android:id="@+id/act_main_borrow_cur_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/act_main_borrow_cur_state_tv"
+                android:layout_marginTop="@dimen/x8"
+                android:layout_toEndOf="@id/act_main_borrow_cur_logo_iv"
+                android:text="@string/main_11"
+                android:textColor="@color/gray_666666"
+                android:textSize="@dimen/x24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/x30"
+                android:background="@drawable/bg_btn_yellow_r90px"
+                android:paddingStart="@dimen/x26"
+                android:paddingTop="@dimen/x12"
+                android:paddingEnd="@dimen/x26"
+                android:paddingBottom="@dimen/x12"
+                android:text="@string/main_12"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x28" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/act_main_select_location_iv"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/x120"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_select_location" />
+
+        <LinearLayout
+            android:id="@+id/act_login_submit_ll"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/x80"
+            android:layout_marginEnd="@dimen/x80"
+            android:layout_marginBottom="@dimen/x60"
+            android:background="@drawable/bg_btn_yellow_r90px"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/x45"
+                android:layout_height="@dimen/x45"
+                android:src="@mipmap/ic_main_scan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x20"
+                android:gravity="center_vertical"
+                android:text="@string/main_2"
+                android:textColor="@color/gray_666666"
+                android:textSize="@dimen/x30" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/act_main_help_iv"
+            android:layout_width="@dimen/x90"
+            android:layout_height="@dimen/x90"
+            android:layout_above="@id/act_login_submit_ll"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginBottom="@dimen/x20"
+            android:src="@mipmap/ic_main_help" />
+
+        <ImageView
+            android:id="@+id/act_main_nav_iv"
+            android:layout_width="@dimen/x90"
+            android:layout_height="@dimen/x90"
+            android:layout_above="@id/act_login_submit_ll"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginBottom="@dimen/x20"
+            android:src="@mipmap/ic_main_nav" />
+
+        <ImageView
+            android:id="@+id/act_main_refresh_iv"
+            android:layout_width="@dimen/x90"
+            android:layout_height="@dimen/x90"
+            android:layout_above="@id/act_main_nav_iv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginBottom="@dimen/x20"
+            android:src="@mipmap/ic_main_refresh" />
+
+    </RelativeLayout>
+
+
+    <include
+        layout="@layout/lay_main_menu"
+        android:layout_width="@dimen/x600"
+        android:layout_height="match_parent"
+        app:layout_slide_menu_role="primaryMenu" />
+
+    <!--<View-->
+    <!--android:layout_width="300dip"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/gray_bbbbbb"-->
+    <!--app:layout_slide_menu_role="secondaryMenu" />-->
+
+</ke.tang.slidemenu.SlideMenu>

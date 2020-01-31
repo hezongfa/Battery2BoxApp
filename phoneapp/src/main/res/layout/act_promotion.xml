@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/pic_bg">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x86"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_marginEnd="@dimen/x30"
+        android:layout_marginBottom="@dimen/x15"
+        android:background="@drawable/bg_text_input"
+        android:drawableStart="@mipmap/ic_search_y"
+        android:drawablePadding="@dimen/x15"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/x28" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/pic_coupon_none" />
+
+</RelativeLayout>

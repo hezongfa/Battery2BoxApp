@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/act_user_info_photo_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableEnd="@mipmap/ic_goto"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:text="@string/user_1"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/act_user_info_iv"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x80"
+            android:background="@mipmap/ic_launcher"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/line" />
+
+    <RelativeLayout
+        android:id="@+id/act_user_info_name_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableEnd="@mipmap/ic_goto"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:text="@string/user_2"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x28" />
+
+        <TextView
+            android:id="@+id/act_user_info_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x80"
+            android:textColor="@color/gray_6f6f6f"
+            android:textSize="@dimen/x28" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:text="@string/user_3"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x28" />
+
+        <TextView
+            android:id="@+id/act_user_info_phone_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x80"
+            android:textColor="@color/gray_6f6f6f"
+            android:textSize="@dimen/x28" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/line" />
+
+    <RelativeLayout
+        android:id="@+id/act_user_info_email_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableEnd="@mipmap/ic_goto"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:text="@string/user_4"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x28" />
+
+        <TextView
+            android:id="@+id/act_user_info_email_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x80"
+            android:hint="@string/user_5"
+            android:textColor="@color/gray_6f6f6f"
+            android:textColorHint="@color/gray_6f6f6f"
+            android:textSize="@dimen/x28" />
+    </RelativeLayout>
+</LinearLayout>

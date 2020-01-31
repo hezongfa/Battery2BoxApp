@@ -1,0 +1,145 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        jcenter()
+
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven {
+            url "http://maven.aliyun.com/nexus/content/repositories/releases/"
+        }
+        maven {
+            url "http://maven.aliyun.com/nexus/content/repositories/snapshots"
+        }
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath "io.objectbox:objectbox-gradle-plugin:2.3.4"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven {
+            url "http://maven.aliyun.com/nexus/content/repositories/releases/"
+        }
+        maven {
+            url "http://maven.aliyun.com/nexus/content/repositories/snapshots"
+        }
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    applicationId = "com.huangrui.tao.shop"
+    compileSdkVersion = 28
+//    buildToolsVersion = "27.0.1"
+//    supportLibVersion = "25.3.1"
+    minSdkVersion = 18
+    targetSdkVersion = 22
+    javaVersion = JavaVersion.VERSION_1_8
+//    abiFilters = "x86"
+//    abiFilters = "armeabi, armeabi-v7a, arm64-v8a, x86 ,x86_64, mips, mips64"
+    // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+
+//    resConfigs = ["en", "zh"]
+    isNotificationDebug = false
+
+//    if (System.properties['APP_VERSION']) {
+//        def appVersion = System.properties['APP_VERSION'] as String
+//        def lastIndexOfDot = appVersion.lastIndexOf(".");
+//        versionName = appVersion.substring(0, lastIndexOfDot)
+//        versionCode = appVersion.substring(lastIndexOfDot + 1) as int
+//    }
+//    if (System.properties['NEW_VERSION']) {
+//        def appVersion = System.properties['NEW_VERSION'] as String
+//        def lastIndexOfDot = appVersion.lastIndexOf(".");
+//        versionName = appVersion.substring(0, lastIndexOfDot)
+//        versionCode = appVersion.substring(lastIndexOfDot + 1) as int
+//    }
+//    if (System.properties['USE_TINGYUN']) {
+//        useTingYun = System.properties['USE_TINGYUN'] as boolean
+//    }
+//    if (System.properties['Apk_Type']) {
+//        def apkType = System.properties['Apk_Type'] as String
+//        if ("resguardRelease" == apkType) useTingYun = true
+//    }
+//    AppConfigHomePageVersion="\"1526463802\""
+//    AppConfigCategoryVersion = "\"1.1.9\""
+//    AppConfigAddressVersion = "\"1.0.1\""
+    wechatAppId = "\"wxaf94c02b4586722d\""
+    MQId = "\"2d815b8ca081d6b09dc59fc0ef9a213f\""
+//    QQAppId = "\"1106797157\""
+//    WBAppKey = "\"4034017795\""
+//    WBREDIRECT_URL = "\"https://www.ewgvip.com\""
+//    WBSCOPE = "\"\""
+//    DOMAIN_URL = "\"http://cloud-api-dev.wk3.meifengweishang.com/\""
+    //测试
+    DOMAIN_URL = "\"https://chuxin-cloud-app-api-dev.chenyi-tech.com/\""
+//    DOMAIN_URL = "\"http://cloud-api-dev.wk3.meifengweishang.com/\""
+    DOMAIN_H5 = "\"http://cloud-webapp-dev.wk3.meifengweishang.com/\""
+    //决定app域名
+    isApkDev = false
+    // 测试
+    isApkTest = false
+    //预发布
+    isApkPre = false
+
+    //JHY电脑
+//    DOMAIN_H5_TEST ="\"http://activity-h5-test.ewgvip.com/\""
+//    DOMAIN_SHOP_TEST="\"http://192.168.1.122:90/\""
+//    DOMAIN_USER_TEST ="\"http://member-api-test.ewgvip.com/\""
+//    DOMAIN_PAY_TEST ="\"http://pay-api-test.ewgvip.com/\""
+//    DOMAIN_UPLOAD_TEST ="\"http://file-service-api-test.ewgvip.com/\""
+
+//    //测试
+//    DOMAIN_H5_TEST = "\"http://activity-h5-test.ewgvip.com/\""
+//    DOMAIN_MALL_H5_TEST = "\"http://mall-app-h5-test.ewgvip.com/\""
+//    DOMAIN_SHOP_TEST = "\"http://mall-api-test.ewgvip.com/\""
+//    DOMAIN_USER_TEST = "\"http://member-api-test.ewgvip.com/\""
+//    DOMAIN_PAY_TEST = "\"http://pay-api-test.ewgvip.com/\""
+//    DOMAIN_UPLOAD_TEST = "\"http://file-service-api-test.ewgvip.com/\""
+//
+//    //开发
+//    DOMAIN_H5_DEV = "\"http://activity-h5-dev.ewgvip.com/\""
+//    DOMAIN_MALL_H5_DEV = "\"http://mall-app-h5-dev.ewgvip.com/\""
+//    DOMAIN_SHOP_DEV = "\"http://mall-api-dev.ewgvip.com/\""
+//    DOMAIN_USER_DEV = "\"http://member-api-dev.ewgvip.com/\""
+//    DOMAIN_PAY_DEV = "\"http://pay-api-dev.ewgvip.com/\""
+//    DOMAIN_UPLOAD_DEV = "\"http://file-service-api-dev.ewgvip.com/\""
+//
+//    //预发布
+//    DOMAIN_H5_PRE = "\"http://activity-h5-pre.ewgvip.com/\""
+//    DOMAIN_MALL_H5_PRE = "\"http://mall-app-h5-pre.ewgvip.com/\""
+//    DOMAIN_SHOP_PRE = "\"http://mall-api-pre.ewgvip.com/\""
+//    DOMAIN_USER_PRE = "\"http://member-api-pre.ewgvip.com/\""
+//    DOMAIN_PAY_PRE = "\"http://pay-api-pre.ewgvip.com/\""
+//    DOMAIN_UPLOAD_PRE = "\"http://file-service-api-pre.ewgvip.com/\""
+//
+//    //生产
+//    DOMAIN_H5 = "\"https://activity-h5.ewgvip.com/\""
+//    DOMAIN_MALL_H5 = "\"https://mall-app-h5.ewgvip.com/\""
+//    DOMAIN_SHOP = "\"https://mall-api.ewgvip.com/\""
+//    DOMAIN_USER = "\"https://member-api.ewgvip.com/\""
+//    DOMAIN_PAY = "\"https://paycenter-api.ewgvip.com/\""
+//    DOMAIN_UPLOAD = "\"https://file-service-api.ewgvip.com/\""
+}

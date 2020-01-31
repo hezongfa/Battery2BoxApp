@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/pic_bg_p"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginBottom="@dimen/x40"
+        android:src="@mipmap/pic_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x55"
+        android:text="@string/login_8"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x40"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x90"
+        android:layout_marginStart="@dimen/x55"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginEnd="@dimen/x55"
+        android:background="@drawable/bg_text_input">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:minWidth="@dimen/x124"
+            android:paddingStart="@dimen/x10"
+            android:paddingEnd="@dimen/x10"
+            android:text="@string/login_25"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x26" />
+
+        <EditText
+            android:id="@+id/act_change_pwd_pwd_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/login_27"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x26" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x90"
+        android:layout_marginStart="@dimen/x55"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginEnd="@dimen/x55"
+        android:background="@drawable/bg_text_input">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:minWidth="@dimen/x124"
+            android:paddingStart="@dimen/x10"
+            android:paddingEnd="@dimen/x10"
+            android:text="@string/login_26"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x26" />
+
+        <EditText
+            android:id="@+id/act_change_pwd_new_pwd_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/login_28"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x26" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x90"
+        android:layout_marginStart="@dimen/x55"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginEnd="@dimen/x55"
+        android:background="@drawable/bg_text_input">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:minWidth="@dimen/x124"
+            android:text="@string/login_9"
+            android:paddingStart="@dimen/x10"
+            android:paddingEnd="@dimen/x10"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x26" />
+
+        <EditText
+            android:id="@+id/act_change_pwd_pwd_et2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/login_29"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x26" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/act_change_pwd_submit_btn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x90"
+        android:layout_marginStart="@dimen/x55"
+        android:layout_marginTop="@dimen/x50"
+        android:layout_marginEnd="@dimen/x55"
+        android:background="@drawable/bg_btn_yellow_r90px"
+        android:text="@string/app_13"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/x36" />
+
+</LinearLayout>

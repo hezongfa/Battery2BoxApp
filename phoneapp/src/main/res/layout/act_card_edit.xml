@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/pic_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/act_card_edit_content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/act_card_edit_visa_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:background="@android:color/white"
+            android:drawableStart="@mipmap/ic_card_visa"
+            android:drawableEnd="@mipmap/ic_choced"
+            android:drawablePadding="@dimen/x20"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x20"
+            android:paddingEnd="@dimen/x20"
+            android:text="Visa"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x32" />
+
+        <View
+            android:id="@+id/act_card_edit_type_line_v"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x2"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/act_card_edit_master_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:background="@android:color/white"
+            android:drawableStart="@mipmap/ic_card_master"
+            android:drawableEnd="@mipmap/ic_no_chose"
+            android:drawablePadding="@dimen/x20"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x20"
+            android:paddingEnd="@dimen/x20"
+            android:text="Master"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x32" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x2"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@color/line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:paddingStart="@dimen/x30">
+
+            <TextView
+                android:id="@+id/act_card_edit_card_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:minWidth="@dimen/x180"
+                android:text="@string/wallet_8"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x30" />
+
+            <EditText
+                android:id="@+id/act_card_edit_card_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/x24"
+                android:layout_toEndOf="@id/act_card_edit_card_tv1"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/wallet_9"
+                android:inputType="textCapCharacters"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x30" />
+
+            <ImageView
+                android:id="@+id/act_card_edit_scan_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/x30"
+                android:src="@mipmap/ic_card_scan" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x2"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@color/line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:paddingStart="@dimen/x30">
+
+            <TextView
+                android:id="@+id/act_card_edit_user_name_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:minWidth="@dimen/x180"
+                android:text="@string/wallet_10"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x30" />
+
+            <EditText
+                android:id="@+id/act_card_edit_user_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/x24"
+                android:layout_toEndOf="@id/act_card_edit_user_name_tv1"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/wallet_11"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x30" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x2"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@color/line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30">
+
+            <TextView
+                android:id="@+id/act_card_edit_date_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:minWidth="@dimen/x180"
+                android:text="@string/wallet_12"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x30" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/act_card_edit_date_tv1"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/act_card_edit_date_month_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:hint="@string/wallet_14"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/wallet_14"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/x30"
+                    android:text="/"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x40" />
+
+                <EditText
+                    android:id="@+id/act_card_edit_date_year_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/x24"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:hint="@string/wallet_13"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/wallet_13"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/x24" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x2"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginEnd="@dimen/x20"
+            android:background="@color/line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:paddingStart="@dimen/x30">
+
+            <TextView
+                android:id="@+id/act_card_edit_cvv_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:minWidth="@dimen/x180"
+                android:text="cvv"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x30" />
+
+            <EditText
+                android:id="@+id/act_card_edit_cvv_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/x24"
+                android:layout_toEndOf="@id/act_card_edit_cvv_tv1"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/wallet_15"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x30" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/act_card_edit_submit_btn"
+        android:layout_width="@dimen/x436"
+        android:layout_height="@dimen/x80"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x60"
+        android:background="@mipmap/pic_btn_yellow_r"
+        android:text="@string/app_13"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/x32" />
+</LinearLayout>

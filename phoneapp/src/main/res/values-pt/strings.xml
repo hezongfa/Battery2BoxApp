@@ -1,0 +1,243 @@
+<resources>
+    <string name="app_name">Battery2Box</string>
+
+    <string name="app_1">Pressione a Tecla de Retorno novamente para sair</string>
+    <string name="app_11">Certo.</string>
+    <string name="app_13">Enviar</string>
+    <string name="app_16">Cancelar</string>
+    <string name="app_20">Sucesso</string>
+    <string name="app_28">Tirando fotos</string>
+    <string name="app_29">Selecionar a partir do álbum de telefone</string>
+    <string name="app_32">Excluir</string>
+    <string name="app_53">Sem dados</string>
+
+    <string name="m_1">€</string>
+
+    <string name="scan_1"> Digite o código GR/ código de barras na caixa e será digitalizado automaticamente</string>
+    <string name="scan_2">Digitalizar</string>
+    <string name="scan_3">Álbum</string>
+    <string name="scan_4">Código bidimensional inválido</string>
+
+    <string name="refresh_1">Destacável pode atualizar</string>
+    <string name="refresh_2">Eles estão atualizando os dados...</string>
+    <string name="refresh_3">Libere e atualize imediatamente</string>
+    <string name="refresh_4"> </string>
+    <string name="refresh_5">Eles estão atualizando os dados...</string>
+    <string name="refresh_6"> </string>
+
+    <string name="login_0">Recordar senha</string>
+    <string name="login_1">Iniciar sessão</string>
+    <string name="login_2">ENTRE NO TELEFONE:</string>
+    <string name="login_3">Número de telemóvel</string>
+    <string name="login_4">Senha</string>
+    <string name="login_5">Senha</string>
+    <string name="login_6">Inscreva-se</string>
+    <string name="login_7">¿Esqueci minha senha?</string>
+    <string name="login_8">Inscreva-se</string>
+    <string name="login_9">Confirme</string>
+    <string name="login_10">Código de verificação</string>
+    <string name="login_11">Confirme</string>
+    <string name="login_12">Verificação</string>
+    <string name="login_13">RECIBIR</string>
+    <string name="login_14">Inscreva-se</string>
+    <string name="login_15">ACEITO O</string>
+    <string name="login_16">DISPOSIÇÕES LEGAIS,CONDIÇÕES DE USO E PRIVACIDADE</string>
+    <string name="login_17">A senha está incorreta. Por favor escreva novamente</string>
+    <string name="login_18">ACEITO O CONDIÇÕES DE USO E PRIVACIDADE</string>
+    <string name="login_19">Sucesso</string>
+    <string name="login_20">Sucesso</string>
+    <string name="login_21">telefone</string>
+    <string name="login_22">Pesquisar</string>
+    <string name="login_23">Mais usado</string>
+    <string name="login_24">Escolha o seu país</string>
+    <string name="login_25">Senha antiga</string>
+    <string name="login_26">Nova senha</string>
+    <string name="login_27">Senha</string>
+    <string name="login_28">Senha</string>
+    <string name="login_29">Confirme</string>
+    <string name="login_30">Alterar senha</string>
+    <string name="login_31">Sucesso</string>
+    <string name="login_32"> Política de privacidade</string>
+    <string name="login_33">Y</string>
+
+    <string name="main_1">Pesquisar Battery2Box</string>
+    <string name="main_2">DIGITALIZAÇÃO E CARGA</string>
+    <string name="main_3">Carteira</string>
+    <string name="main_4">Cupons</string>
+    <string name="main_5">Registro de locação</string>
+    <string name="main_6">Convide um Amigo</string>
+    <string name="main_7">Consulta de Negócios</string>
+    <string name="main_8">Ajuda</string>
+    <string name="main_9">Definições</string>
+    <string name="main_10">Alugar</string>
+    <string name="main_11">Tempo de carregamento %s minutos</string>
+    <string name="main_12">Detalhes</string>
+    <string name="main_13">Promoções</string>
+
+    <string name="borrow_1">INFORMAÇÕES DE ALUGUEL</string>
+    <string name="borrow_2">USE TAXA</string>
+    <string name="borrow_3">Novos usuários:%s</string>
+    <string name="borrow_4">GRÁTIS</string>
+    <string name="borrow_5">%s/hora</string>
+    <string name="borrow_6">%s/Dia</string>
+    <string name="borrow_7">%s + IVA mais de 5 dias de uso</string>
+    <string name="borrow_8">( Após mais de 5 dias de uso contínuo, será cobrado %s € + IVA na sua conta e você pode guardar a bateria para uso pessoal sem precisar devolvê-la)</string>
+    <string name="borrow_9">%s/hora</string>
+    <string name="borrow_10">(Montante máximo %s / Dia)</string>
+    <string name="borrow_11">( Valor cobrado a cada 24 horas de uso continuado)</string>
+    <string name="borrow_12">PRÓXIMO</string>
+    <string name="borrow_13">Por favor, remova a bateria do carregador da posição indicada na figura</string>
+    <string name="borrow_14">aguarde um momento para remover a bateria</string>
+    <string name="borrow_15">Falha de Renda</string>
+    <string name="borrow_16">Tudo ok</string>
+    <string name="borrow_17">Pode ser devolvido em qualquer um dos nossos pontos de carregamento</string>
+    <string name="borrow_18">Veja as instruções de carregamento</string>
+    <string name="borrow_19">Taxas de cobrança</string>
+    <string name="borrow_20">Tempo livre</string>
+    <string name="borrow_21">Regra de Depósito</string>
+    <string name="borrow_22">Tarifas após o aluguel, Grátis durante o primeiro %1$s Minutos grátis; menos de uma hora são calculados como uma hora %2$s Euros por hora e em menos de uma hora são calculados em uma hora; Cinco euros a cada 24 horas %3$s euros a cada 24 horas</string>
+    <!--（该计费规则为订单计费规则，即租借时商家设备定计费规则，订单开始后计费规则则不会变更）-->
+    <string name="borrow_23">Quando o aluguel for muito longo, mais de 120 horas, e o valor total for superior a %1$s euros, o valor total será cobrado automaticamente no cartão de %2$s euros + IVA</string>
+
+    <string name="borrow_24">%s/Hora</string>
+
+
+    <string name="wallet_1">DETALHE DE FATURAMENTO</string>
+    <string name="wallet_2">PURSE</string>
+    <string name="wallet_3">Métodos de pagamento</string>
+    <string name="wallet_4">Cartão de Crédito ou Débito</string>
+    <string name="wallet_5">Entrar</string>
+    <string name="wallet_6">Saldo total</string>
+    <string name="wallet_7">Recarregar</string>
+    <string name="wallet_8">Número de cartão</string>
+    <string name="wallet_9">Número de cartão</string>
+    <string name="wallet_10">NOME DO TITULAR</string>
+    <string name="wallet_11">NOME DO TITULAR</string>
+    <string name="wallet_12">Termo de validade</string>
+    <string name="wallet_13">Ano</string>
+    <string name="wallet_14">Mês</string>
+    <string name="wallet_15">Cvv</string>
+    <string name="wallet_16">Termo de validade</string>
+    <string name="wallet_17">Independência</string>
+    <string name="wallet_18">Independência？</string>
+    <string name="wallet_19">Independência</string>
+    <string name="wallet_20">Tempo restante</string>
+    <string name="wallet_21">Detalhe Tempo</string>
+    <string name="wallet_22">Número ordem：%s</string>
+    <string name="wallet_23">Permanecer %s Minutos</string>
+    <string name="wallet_24">Informações do cartão bancário</string>
+    <string name="wallet_25">ADICIONAR MÉTODO DE PAGAMENTO</string>
+    <string name="wallet_26">Escolha o número de encargos a cobrar</string>
+    <string name="wallet_27">O montante Da reconstituição não é reembolsável</string>
+    <string name="wallet_28">Minutos</string>
+    <string name="wallet_29">LIVRE</string>
+
+    <string name="shop_1">Alugar：%s</string>
+    <string name="shop_2">Retorno：%s</string>
+    <string name="shop_3">Há  Wi-Fi</string>
+    <string name="shop_4">No ofrecer Wi-Fi</string>
+    <string name="shop_5">Proibido fumar</string>
+    <string name="shop_6">Fumante</string>
+    <string name="shop_7">Alugar</string>
+    <string name="shop_8">Retorno</string>
+
+    <string name="order__0">Inacabado</string>
+    <string name="order_0">Concluído</string>
+    <string name="order_1">Data e hora</string>
+    <string name="order_2">Ponto de partida</string>
+    <string name="order_3">Montante total do pagamento</string>
+    <string name="order_4">Problemas de uso？</string>
+    <string name="order_5">Número:%s</string>
+    <string name="order_6">Execução</string>
+    <string name="order_7">Alugado</string>
+    <string name="order_8">Devuelto</string>
+    <string name="order_9">Cancelado</string>
+    <string name="order_10">Horas extras</string>
+    <string name="order_11">Compra</string>
+    <string name="order_12">Não pago</string>
+    <string name="order_13">Pago</string>
+    <string name="order_14">Detalhes do aluguel</string>
+    <string name="order_15">Detalhes de uso</string>
+    <string name="order_16">Data e hora</string>
+    <string name="order_17">Ponto de partida</string>
+    <string name="order_18">Tempo de retorno</string>
+    <string name="order_19">Local de retorno</string>
+    <string name="order_20">Lista de preços</string>
+    <string name="order_21">Ormulário de cobrança</string>
+    <string name="order_22">Duração de uso</string>
+    <string name="order_23">Primeiro Minuto Grátis</string>
+    <string name="order_24">Limite do dia 24 horas</string>
+    <string name="order_25">Montante total do pagamento</string>
+    <string name="order_26">Status de pagamento</string>
+    <string name="order_27">Método de pagamento</string>
+    <string name="order_28">Horas gratuitas com desconto</string>
+    <!--<string name="order_29">冻结状态</string>-->
+    <!--<string name="order_30">冻结类型</string>-->
+    <string name="order_31">Taxas de cobrança</string>
+    <string name="order_32">Anomalia do pedido</string>
+    <string name="order_33">%s/hora</string>
+    <string name="order_34">Cartão de crédito</string>
+    <string name="order_35">Saldo</string>
+    <string name="order_36">Sem aluguel</string>
+    <!--<string name="order_37">冻结</string>-->
+    <!--<string name="order_38">已解冻</string>-->
+    <!--<string name="order_39">信用卡</string>-->
+    <!--<string name="order_40">余额</string>-->
+    <!--<string name="order_41">免押金</string>-->
+    <string name="order_42">minutos</string>
+    <string name="order_43">Tarifas após o aluguel, Grátis durante o primeiro %1$s Minutos grátis; menos de uma hora são calculados como uma hora %2$s Euros por hora e em menos de uma hora são calculados em uma hora; Cinco euros a cada 24 horas %3$s euros a cada 24 horas</string>
+    <!--（该计费规则为订单计费规则，即租借时商家设备定计费规则，订单开始后计费规则则不会变更）-->
+
+    <string name="helper_1">SUGESTÕES</string>
+    <string name="helper_2">FREQÜENTEMENTE</string>
+    <string name="helper_3">¿ QUAL É O SEU PROBLEMA?</string>
+    <string name="helper_4">BATERIA\nATOLADA</string>
+    <string name="helper_5">FORA DE\nSERVIÇO</string>
+    <string name="helper_6">BATERIA\nDANIFICADA</string>
+    <string name="helper_7">OUTRO\nPROBLEMA</string>
+    <string name="helper_8">Digitalize a máquina ou digite seu ID</string>
+    <string name="helper_9">Sugestões</string>
+    <string name="helper_10">Correio eletrônico</string>
+
+    <string name="setting_1">CONFIGURAÇÕES</string>
+    <string name="setting_2">Línguas</string>
+    <string name="setting_3">Guia do Usuário</string>
+    <string name="setting_4">Política de privacidade</string>
+    <string name="setting_5">Sobre nós</string>
+    <string name="setting_6">Saia da APP</string>
+
+    <string name="user_1">Imagem de perfil</string>
+    <string name="user_2">Primeiro nome</string>
+    <string name="user_3">Telefones</string>
+    <string name="user_4">Email</string>
+    <string name="user_5">Desvinculado</string>
+    <string name="user_6">Informações do Usuário</string>
+    <string name="user_7">Primeiro nome</string>
+    <string name="user_8">Email</string>
+    <!--<string name="helper_4">BATERÍA\nATASCADA</string>-->
+    <!--<string name="helper_5">ESTACIÓN FUERA\nDE SERVICIO</string>-->
+    <!--<string name="helper_6">BATERÍA\nDAÑADA</string>-->
+    <!--<string name="helper_7">OTRO\nPROBLEMA</string>-->
+
+    <string name="cooperation_1">Bem-vindo</string>
+    <string name="cooperation_2">Deixe suas informações básicas e entraremos em contato o mais breve possível</string>
+    <string name="cooperation_3">Instalação</string>
+    <string name="cooperation_4">Publicidad</string>
+    <string name="cooperation_5">Otros</string>
+    <string name="cooperation_6">Nome da empresa</string>
+    <string name="cooperation_7">Pessoa de contato</string>
+    <string name="cooperation_8">Telefone de contato</string>
+    <string name="cooperation_9">Enviar</string>
+    <string name="cooperation_10">Email</string>
+    <string name="cooperation_11">Outros</string>
+
+
+    <string name="versino_1">Descoberta de novas versões！</string>
+    <string name="versino_2">Actualizar imediatamente</string>
+    <string name="versino_3">Cancelar</string>
+
+    <string name="share_1">%s Minutos grátis para cadA convite</string>
+    <string name="share_2">Convite</string>
+    <string name="share_3">Minutos Gratuita</string>
+    <string name="share_4">Partilha</string>
+</resources>

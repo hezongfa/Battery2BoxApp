@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_shop_click_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/x10"
+    android:background="@android:color/white"
+    android:paddingStart="@dimen/x20"
+    android:paddingTop="@dimen/x30"
+    android:paddingEnd="@dimen/x20"
+    android:paddingBottom="@dimen/x30">
+
+    <ImageView
+        android:id="@+id/item_shop_iv"
+        android:layout_width="@dimen/x140"
+        android:layout_height="@dimen/x140"
+        android:layout_marginStart="@dimen/x8"
+        android:layout_marginEnd="@dimen/x10"
+        android:background="@drawable/bg_round_fcf3d1"
+        android:padding="@dimen/x12"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/item_shop_dis_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginEnd="@dimen/x10"
+        android:text="0km"
+        android:textColor="@color/gray_666666"
+        android:textSize="@dimen/x22" />
+
+    <TextView
+        android:id="@+id/item_shop_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/item_shop_dis_tv"
+        android:layout_toEndOf="@id/item_shop_iv"
+        android:textColor="#ff8a00"
+        android:textSize="@dimen/x28" />
+
+    <TextView
+        android:id="@+id/item_shop_time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_shop_name_tv"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_toStartOf="@id/item_shop_dis_tv"
+        android:layout_toEndOf="@id/item_shop_iv"
+        android:drawableStart="@mipmap/ic_shop_time"
+        android:drawablePadding="@dimen/x8"
+        android:textColor="@color/gray_666666"
+        android:textSize="@dimen/x22" />
+
+    <TextView
+        android:id="@+id/item_shop_address_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_shop_time_tv"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_toStartOf="@id/item_shop_dis_tv"
+        android:layout_toEndOf="@id/item_shop_iv"
+        android:drawableStart="@mipmap/ic_shop_location"
+        android:drawablePadding="@dimen/x8"
+        android:textColor="@color/gray_666666"
+        android:textSize="@dimen/x22" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_shop_address_tv"
+        android:layout_marginTop="@dimen/x40"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/x100"
+        android:paddingEnd="@dimen/x100">
+
+        <TextView
+            android:id="@+id/item_shop_borrow_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x70"
+            android:background="@drawable/bg_yellow_edb049_r90px"
+            android:gravity="center"
+            android:paddingStart="@dimen/x40"
+            android:paddingEnd="@dimen/x40"
+            android:text="@string/shop_1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x26" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/item_shop_return_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x70"
+            android:background="@drawable/bg_yellow_edb049_r90px"
+            android:gravity="center"
+            android:paddingStart="@dimen/x40"
+            android:paddingEnd="@dimen/x40"
+            android:text="@string/shop_2"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/x26" />
+    </LinearLayout>
+</RelativeLayout>

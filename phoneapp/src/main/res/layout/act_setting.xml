@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/pic_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/x30"
+        android:paddingEnd="@dimen/x30">
+
+        <TextView
+            android:id="@+id/act_setting_language_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:layout_marginTop="@dimen/x30"
+            android:background="@drawable/bg_text_input"
+            android:drawableEnd="@mipmap/ic_goto"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:text="@string/setting_2"
+            android:textColor="@color/black_191919"
+            android:textSize="@dimen/x30" />
+
+        <TextView
+            android:id="@+id/act_setting_change_pwd_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:layout_marginTop="@dimen/x30"
+            android:background="@drawable/bg_text_input"
+            android:drawableEnd="@mipmap/ic_goto"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:text="@string/login_30"
+            android:textColor="@color/black_191919"
+            android:textSize="@dimen/x30" />
+
+        <TextView
+            android:id="@+id/act_setting_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:layout_marginTop="@dimen/x30"
+            android:background="@drawable/bg_text_input"
+            android:drawableEnd="@mipmap/ic_goto"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:text="@string/setting_3"
+            android:textColor="@color/black_191919"
+            android:textSize="@dimen/x30" />
+
+        <TextView
+            android:id="@+id/act_setting_tv2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:layout_marginTop="@dimen/x30"
+            android:background="@drawable/bg_text_input"
+            android:drawableEnd="@mipmap/ic_goto"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:text="@string/setting_4"
+            android:textColor="@color/black_191919"
+            android:textSize="@dimen/x30" />
+
+
+        <TextView
+            android:id="@+id/act_setting_tv3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:layout_marginTop="@dimen/x30"
+            android:background="@drawable/bg_text_input"
+            android:drawableEnd="@mipmap/ic_goto"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:text="@string/setting_5"
+            android:textColor="@color/black_191919"
+            android:textSize="@dimen/x30" />
+        <TextView
+            android:id="@+id/act_setting_tv4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:layout_marginTop="@dimen/x30"
+            android:background="@drawable/bg_text_input"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
+            android:text="@string/app_name"
+            android:textColor="@color/black_191919"
+            android:textSize="@dimen/x30" />
+        <Button
+            android:id="@+id/act_setting_logout_btn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:layout_marginStart="@dimen/x80"
+            android:layout_marginTop="@dimen/x50"
+            android:layout_marginEnd="@dimen/x80"
+            android:background="@drawable/bg_btn_yellow_r90px"
+            android:text="@string/setting_6"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x36" />
+
+    </LinearLayout>
+
+</RelativeLayout>

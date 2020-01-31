@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PortablePowerBankCtrlDemo.iml" filepath="$PROJECT_DIR$/PortablePowerBankCtrlDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PowerApp.iml" filepath="$PROJECT_DIR$/PowerApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/banner/PowerApp-banner.iml" filepath="$PROJECT_DIR$/banner/PowerApp-banner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/phoneapp/PowerApp-phoneapp.iml" filepath="$PROJECT_DIR$/phoneapp/PowerApp-phoneapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slidemenulib/PowerApp-slidemenulib.iml" filepath="$PROJECT_DIR$/slidemenulib/PowerApp-slidemenulib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PowerApp_Device_5.iml" filepath="$PROJECT_DIR$/PowerApp_Device_5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/banner/banner.iml" filepath="$PROJECT_DIR$/banner/banner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baselib/baselib.iml" filepath="$PROJECT_DIR$/baselib/baselib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loadlibrary/loadlibrary.iml" filepath="$PROJECT_DIR$/loadlibrary/loadlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/phoneapp/phoneapp.iml" filepath="$PROJECT_DIR$/phoneapp/phoneapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slidemenulib/slidemenulib.iml" filepath="$PROJECT_DIR$/slidemenulib/slidemenulib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zbarlibary/zbarlibary.iml" filepath="$PROJECT_DIR$/zbarlibary/zbarlibary.iml" />
+    </modules>
+  </component>
+</project>

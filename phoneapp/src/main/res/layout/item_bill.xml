@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingTop="@dimen/x28">
+
+        <TextView
+            android:id="@+id/item_bill_title_order_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x28"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x28" />
+
+        <TextView
+            android:id="@+id/item_bill_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_bill_title_order_tv"
+            android:layout_marginStart="@dimen/x28"
+            android:layout_marginTop="@dimen/x8"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x28" />
+
+        <TextView
+            android:id="@+id/item_bill_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_bill_title_tv"
+            android:layout_marginStart="@dimen/x28"
+            android:layout_marginTop="@dimen/x8"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x24" />
+
+        <TextView
+            android:id="@+id/item_bill_money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x28"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x28" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x1"
+            android:layout_below="@id/item_bill_time_tv"
+            android:layout_marginTop="@dimen/x28"
+            android:background="@color/line" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_bill_delete_tv"
+        android:layout_width="@dimen/x120"
+        android:layout_height="fill_parent"
+        android:background="@color/red_d11818"
+        android:gravity="center"
+        android:text="@string/app_32"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/x28" />
+</LinearLayout>

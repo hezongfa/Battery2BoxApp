@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_tab_pager_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/fragment_tab_pager_tl_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88"
+        android:background="@android:color/white"
+        app:tabIndicatorColor="?attr/colorPrimary"
+        app:tabIndicatorHeight="@dimen/x6"
+        app:tabPadding="0dp"
+        app:tabSelectedTextColor="?attr/colorPrimary"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="@color/gray_bbbbbb" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/gray_f5f5f5" />
+
+    <android.support.v4.view.ViewPager
+        android:overScrollMode="never"
+        android:id="@+id/fragment_tab_pager_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

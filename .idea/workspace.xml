@@ -1,0 +1,1627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config>
+        <device id="Nexus 6P" />
+        <device id="Nexus 9" />
+        <device id="Nexus 7" />
+        <device id="pixel" />
+        <device id="pixel_2" />
+        <device id="pixel_xl" />
+      </config>
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="okhtt" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AvailableLibraryUpdateStorage">
+    <library-updates>
+      <library-update>
+        <group-id>com.github.bumptech.glide</group-id>
+        <name>compiler</name>
+        <version>4.10.0</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>support-v4</name>
+        <version>26.0.0-alpha1</version>
+        <repository>Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.squareup.okhttp3</group-id>
+        <name>okhttp</name>
+        <version>4.3.0</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.squareup.retrofit2</group-id>
+        <name>converter-gson</name>
+        <version>2.7.1</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.squareup.okhttp3</group-id>
+        <name>logging-interceptor</name>
+        <version>4.3.0</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.squareup.retrofit2</group-id>
+        <name>adapter-rxjava2</name>
+        <version>2.7.1</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.squareup.retrofit2</group-id>
+        <name>retrofit</name>
+        <version>2.7.1</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.squareup.okio</group-id>
+        <name>okio</name>
+        <version>2.4.3</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>appcompat-v7</name>
+        <version>26.0.0-alpha1</version>
+        <repository>Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.github.bumptech.glide</group-id>
+        <name>glide</name>
+        <version>4.10.0</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.android.support</group-id>
+        <name>multidex</name>
+        <version>1.0.1</version>
+        <repository>Android Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.android.gms</group-id>
+        <name>play-services-location</name>
+        <version>11.0.4</version>
+        <repository>Google Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.davemorrissey.labs</group-id>
+        <name>subsampling-scale-image-view</name>
+        <version>3.10.0</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.android.gms</group-id>
+        <name>play-services-maps</name>
+        <version>11.0.4</version>
+        <repository>Google Repository</repository>
+      </library-update>
+      <library-update>
+        <group-id>io.card</group-id>
+        <name>android-sdk</name>
+        <version>5.5.1</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.maps.android</group-id>
+        <name>android-maps-utils</name>
+        <version>0.6.2</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.soundcloud.android</group-id>
+        <name>android-crop</name>
+        <version>1.0.1</version>
+        <repository>JCenter</repository>
+      </library-update>
+      <library-update>
+        <group-id>com.google.zxing</group-id>
+        <name>core</name>
+        <version>3.4.0</version>
+        <repository>JCenter</repository>
+      </library-update>
+    </library-updates>
+    <last-search-timestamp>1579175868900</last-search-timestamp>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5b1f817d-3167-4b1a-bb69-d881d72eed1e" name="Default Changelist" comment="ass">
+      <change afterPath="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/widget/RoundImageView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/MainBannerImageLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopDetailActivity_o.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/dialog/ShopCouponDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/ADDataEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/ADEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/res/drawable/bg_borrow_count.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/res/drawable/bg_shop_coupon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/res/layout/act_shop_detail_o.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/res/layout/dialog_shop_coupon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_scan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/pic_orange_btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/pic_recharge_top.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/utils/ImageLoaderUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/utils/ImageLoaderUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/GlideImageLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/GlideImageLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopDetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopDetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/wallet/RechargeListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/wallet/RechargeListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/ShopDetailEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/ShopDetailEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/Api.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/DomainHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/DomainHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/HttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/HttpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/drawable/bg_ffffff_r10px_selected.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/drawable/bg_ffffff_r10px_selected.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/layout/act_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/layout/act_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/layout/act_recharge_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/layout/act_recharge_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/layout/act_shop_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/layout/act_shop_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_coupon.png" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_coupon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_address.png" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_address.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_net.png" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_net.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_shape.png" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_shape.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_smoke.png" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_smoke.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_tel.png" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_tel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_time.png" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_time.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_wifi.png" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_detail_wifi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_nav_btn.png" beforeDir="false" afterPath="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_nav_btn.png" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/build/classes/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="TEV0217729002696" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/phoneapp">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="PowerApp" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="PowerApp" type="f1a62948:ProjectNode" />
+                <item name=":phoneapp" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="PowerApp" type="f1a62948:ProjectNode" />
+                <item name=":phoneapp" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="PowerApp" type="f1a62948:ProjectNode" />
+                <item name=":phoneapp" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="android" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/dialog/ShopCouponDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1320">
+              <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopDetailActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="110" column="69" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/layout/act_shop_detail.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2520">
+              <caret line="168" column="32" selection-start-line="168" selection-start-column="32" selection-end-line="168" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>emitter</find>
+      <find>api</find>
+      <find>downloadApkFile1</find>
+      <find>addInterceptor</find>
+      <find>loadingDialog</find>
+      <find>mRetrofit</find>
+      <find>getdat</find>
+      <find>startHeartBeat</find>
+      <find>DOMAIN_URL</find>
+      <find>isInitDone</find>
+      <find>oncreate</find>
+      <find>onresu</find>
+      <find>saveDomainType</find>
+      <find>onresum</find>
+      <find>act_shop_detail_return_tv</find>
+      <find>act_shop_detail_nav_iv</find>
+      <find>onDelayLoad</find>
+      <find>lbShopEntity</find>
+      <find>setNavigationTitle</find>
+      <find>roundedCorners</find>
+      <find>12</find>
+      <find>oncrea</find>
+      <find>act_shop_detail_scan_ll</find>
+      <find>353535</find>
+      <find>banner</find>
+      <find>余额</find>
+      <find>RECHARGE_LIST</find>
+      <find>recharge_list</find>
+      <find>充值</find>
+      <find>couponCon</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>@dimen/x180</replace>
+      <replace>FQL.d</replace>
+      <replace>20</replace>
+      <replace>corner</replace>
+      <replace>4284FD</replace>
+    </replaceStrings>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="EXPORT_PRIVATE_KEY" value="false" />
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/app/dianqu.keystore" />
+    <option name="KEY_ALIAS" value="dianqu" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="ChargeFUZE" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/entity/AdEntity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/iot/manager/IotHepler.java" />
+        <option value="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/utils/FileUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/entity/VideoEntity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/utils/VideoHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/entity/LogEntity.java" />
+        <option value="$PROJECT_DIR$/app/objectbox-models/default.json" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/settings.gradle" />
+        <option value="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/ui/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/ui/BaseFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/PowerApp.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/AppStartReceiver.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/utils/DownLoadHelper.java" />
+        <option value="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/widget/dialog/LoadingDialog.java" />
+        <option value="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/utils/http/down/DownLoadClient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/http/Api.java" />
+        <option value="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/utils/http/BaseHttpClient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/http/HttpClient.java" />
+        <option value="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/utils/http/down/DownHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/utils/WifiHelper.java" />
+        <option value="$PROJECT_DIR$/phoneapp/proguard-rules.pro" />
+        <option value="$PROJECT_DIR$/phoneapp/build.gradle" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/act_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/ui/MainActivity.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/ADEntity.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/Api.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/HttpClient.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/ADDataEntity.java" />
+        <option value="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/utils/ImageLoaderUtil.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/MyImageLoader.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/MainBannerImageLoader.java" />
+        <option value="$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/widget/RoundImageView.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/res/layout/act_main.xml" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/MainActivity.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/GlideImageLoader.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/DomainHelper.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/res/layout/act_shop_detail_o.xml" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/res/drawable/bg_borrow_count.xml" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopDetailActivity_o.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/res/drawable/bg_ffffff_r10px_selected.xml" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/res/layout/act_recharge_list.xml" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/res/drawable/bg_shop_coupon.xml" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/wallet/RechargeListActivity.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/res/layout/dialog_shop_coupon.xml" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/ShopDetailEntity.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/res/layout/act_shop_detail.xml" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopDetailActivity.java" />
+        <option value="$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/dialog/ShopCouponDialog.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="38" />
+    <option name="y" value="23" />
+    <option name="width" value="1402" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PowerApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PowerApp" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="huawei-lon_al00-TEV0217729002696" />
+    <property name="DEBUGGABLE_PROCESS" value="com.batterbox.power.phone.app" />
+    <property name="DEBUGGER_ID" value="Auto" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="fca0140006" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-01-26T03:23:35.611Z" />
+    <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
+    <property name="ExportApk.BuildVariants" value="release" />
+    <property name="ExportApk.SignV1" value="true" />
+    <property name="ExportApk.SignV2" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="device.picker.selection" value="WTKDU16622004952" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="not.eligible.for.single.variant.sync" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1579176036456" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
+    <option name="LAST_EDITED_SIGNING_CONFIG" value="config" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="debug" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/phoneapp/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi" />
+      <recent name="$PROJECT_DIR$/phoneapp/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" />
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.batterbox.power.phone.app.dialog" />
+      <recent name="com.batterbox.power.phone.app.act" />
+      <recent name="com.chenyi.baselib.widget" />
+      <recent name="com.sharing.app.main.widget" />
+      <recent name="com.sharing.app.main.utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Android App.PowerApp-phoneapp">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PowerApp-app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="PowerApp-app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PowerApp-phoneapp" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="PowerApp-phoneapp" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="phoneapp" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="phoneapp" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sharing.app.main.ui.T" />
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sharing.app.main.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PowerApp:phoneapp [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/phoneapp" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signingReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.PowerApp:phoneapp [signingReport]" />
+        <item itemvalue="Application.T" />
+        <item itemvalue="Gradle.PowerApp:phoneapp [signingReport]" />
+        <item itemvalue="Application.T" />
+        <item itemvalue="Gradle.PowerApp:phoneapp [signingReport]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b1f817d-3167-4b1a-bb69-d881d72eed1e" name="Default Changelist" comment="" />
+      <created>1570774388019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570774388019</updated>
+    </task>
+    <task id="LOCAL-00070" summary="ass">
+      <created>1574768090902</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1574768090902</updated>
+    </task>
+    <task id="LOCAL-00071" summary="ass">
+      <created>1574823199972</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1574823199973</updated>
+    </task>
+    <task id="LOCAL-00072" summary="ass">
+      <created>1574864422326</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1574864422326</updated>
+    </task>
+    <task id="LOCAL-00073" summary="ass">
+      <created>1574908474726</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1574908474727</updated>
+    </task>
+    <task id="LOCAL-00074" summary="ass">
+      <created>1574941046162</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1574941046162</updated>
+    </task>
+    <task id="LOCAL-00075" summary="ass">
+      <created>1575009357708</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1575009357711</updated>
+    </task>
+    <task id="LOCAL-00076" summary="ass">
+      <created>1575034076440</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1575034076441</updated>
+    </task>
+    <task id="LOCAL-00077" summary="ass">
+      <created>1575125859253</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1575125859254</updated>
+    </task>
+    <task id="LOCAL-00078" summary="ass">
+      <created>1575199250325</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1575199250325</updated>
+    </task>
+    <task id="LOCAL-00079" summary="ass">
+      <created>1575203106279</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1575203106279</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Merge branch 'master' of https://github.com/hezongfa/PowerApp into DCPowerBank&#10;&#10;# Conflicts:&#10;#&#9;phoneapp/build.gradle&#10;#&#9;phoneapp/release/phoneapp.aab&#10;#&#9;phoneapp/src/main/AndroidManifest.xml&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/BatterBoxApp.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/BillListActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/MainActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShareActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopDetailActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/wallet/RechargeListActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/aroute/ARouteHelper.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyJPushMessageReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/PushService.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/utils/UserUtil.java&#10;#&#9;phoneapp/src/main/res/layout/act_card_edit.xml&#10;#&#9;phoneapp/src/main/res/layout/act_share.xml&#10;#&#9;phoneapp/src/main/res/layout/item_bill.xml&#10;#&#9;phoneapp/src/main/res/layout/item_recharge_list.xml&#10;#&#9;phoneapp/src/main/res/values/styles.xml">
+      <created>1575203705596</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1575203705596</updated>
+    </task>
+    <task id="LOCAL-00081" summary="ass">
+      <created>1575203721999</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1575203721999</updated>
+    </task>
+    <task id="LOCAL-00082" summary="ass">
+      <created>1575204078727</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1575204078727</updated>
+    </task>
+    <task id="LOCAL-00083" summary="ass">
+      <created>1575608483682</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1575608483684</updated>
+    </task>
+    <task id="LOCAL-00084" summary="ass">
+      <created>1575608867248</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1575608867248</updated>
+    </task>
+    <task id="LOCAL-00085" summary="ass">
+      <created>1575609156356</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1575609156357</updated>
+    </task>
+    <task id="LOCAL-00086" summary="ass">
+      <created>1575691012979</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1575691012979</updated>
+    </task>
+    <task id="LOCAL-00087" summary="ass">
+      <created>1575691309188</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1575691309195</updated>
+    </task>
+    <task id="LOCAL-00088" summary="ass">
+      <created>1575727777215</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1575727777215</updated>
+    </task>
+    <task id="LOCAL-00089" summary="ass">
+      <created>1575822996494</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1575822996494</updated>
+    </task>
+    <task id="LOCAL-00090" summary="ass">
+      <created>1575830521889</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1575830521889</updated>
+    </task>
+    <task id="LOCAL-00091" summary="ass">
+      <created>1575831380301</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1575831380301</updated>
+    </task>
+    <task id="LOCAL-00092" summary="ass">
+      <created>1575899518932</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1575899518933</updated>
+    </task>
+    <task id="LOCAL-00093" summary="ass">
+      <created>1575976509106</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1575976509106</updated>
+    </task>
+    <task id="LOCAL-00094" summary="ass">
+      <created>1575982738937</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1575982738937</updated>
+    </task>
+    <task id="LOCAL-00095" summary="ass">
+      <created>1575997528955</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1575997528955</updated>
+    </task>
+    <task id="LOCAL-00096" summary="ass">
+      <created>1576247770583</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1576247770583</updated>
+    </task>
+    <task id="LOCAL-00097" summary="ass">
+      <created>1576248281636</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1576248281636</updated>
+    </task>
+    <task id="LOCAL-00098" summary="ass">
+      <created>1576249251602</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1576249251602</updated>
+    </task>
+    <task id="LOCAL-00099" summary="ass">
+      <created>1576250620978</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1576250620978</updated>
+    </task>
+    <task id="LOCAL-00100" summary="ass">
+      <created>1576250666809</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1576250666809</updated>
+    </task>
+    <task id="LOCAL-00101" summary="ass">
+      <created>1576251530373</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1576251530373</updated>
+    </task>
+    <task id="LOCAL-00102" summary="ass">
+      <created>1576326891521</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1576326891521</updated>
+    </task>
+    <task id="LOCAL-00103" summary="ass">
+      <created>1576672077925</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1576672077926</updated>
+    </task>
+    <task id="LOCAL-00104" summary="ass">
+      <created>1576843696747</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1576843696748</updated>
+    </task>
+    <task id="LOCAL-00105" summary="ass">
+      <created>1577104306523</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1577104306524</updated>
+    </task>
+    <task id="LOCAL-00106" summary="ass">
+      <created>1577447863087</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1577447863087</updated>
+    </task>
+    <task id="LOCAL-00107" summary="ass">
+      <created>1577632238664</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1577632238665</updated>
+    </task>
+    <task id="LOCAL-00108" summary="ass">
+      <created>1577634539248</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1577634539250</updated>
+    </task>
+    <task id="LOCAL-00109" summary="ass">
+      <created>1578099264671</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1578099264671</updated>
+    </task>
+    <task id="LOCAL-00110" summary="Merge branch 'master' of https://github.com/hezongfa/PowerApp into ChargeFUZE&#10;&#10;# Conflicts:&#10;#&#9;app/build.gradle&#10;#&#9;app/src/main/java/com/sharing/app/main/ui/MainActivity.java&#10;#&#9;baselib/src/main/java/com/chenyi/baselib/ui/BaseActivity.java&#10;#&#9;phoneapp/build.gradle&#10;#&#9;phoneapp/src/main/AndroidManifest.xml&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/BatterBoxApp.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/DeviceDetailActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/MainActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyJPushMessageReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/PushService.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/utils/UserUtil.java">
+      <created>1578834911528</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1578834911529</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Merge branch 'master' of https://github.com/hezongfa/PowerApp into ChargeFUZE&#10;&#10;# Conflicts:&#10;#&#9;app/build.gradle&#10;#&#9;app/src/main/java/com/sharing/app/main/ui/MainActivity.java&#10;#&#9;baselib/src/main/java/com/chenyi/baselib/ui/BaseActivity.java&#10;#&#9;phoneapp/build.gradle&#10;#&#9;phoneapp/src/main/AndroidManifest.xml&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/BatterBoxApp.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/DeviceDetailActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/MainActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyJPushMessageReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/PushService.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/utils/UserUtil.java">
+      <created>1578849862027</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1578849862028</updated>
+    </task>
+    <task id="LOCAL-00112" summary="日志">
+      <created>1579018508024</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1579018508024</updated>
+    </task>
+    <task id="LOCAL-00113" summary="日志">
+      <created>1579024309009</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1579024309009</updated>
+    </task>
+    <task id="LOCAL-00114" summary="日志">
+      <created>1579177699438</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1579177699440</updated>
+    </task>
+    <task id="LOCAL-00115" summary="日志">
+      <created>1580214936530</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1580214936532</updated>
+    </task>
+    <task id="LOCAL-00116" summary="ass">
+      <created>1580265976330</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1580265976332</updated>
+    </task>
+    <task id="LOCAL-00117" summary="ass">
+      <created>1580278396030</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1580278396031</updated>
+    </task>
+    <task id="LOCAL-00118" summary="ass">
+      <created>1580278517998</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1580278517998</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="38" y="23" width="1402" height="877" extended-state="0" />
+    <layout>
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="1" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.1985294" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Resources Explorer" order="7" weight="0.32941177" />
+      <window_info id="DB Browser" order="8" weight="0.17058824" />
+      <window_info id="Favorites" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.4996321" weight="0.69250983" />
+      <window_info anchor="bottom" id="DB Execution Console" order="1" />
+      <window_info anchor="bottom" id="TODO" order="2" />
+      <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" weight="0.28407642" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.6522293" />
+      <window_info anchor="bottom" id="Flutter Performance" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.20382166" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49668875" visible="true" weight="0.5235669" />
+      <window_info anchor="bottom" x="59" y="120" width="1360" height="780" id="Logcat" order="8" sideWeight="0.4996321" weight="0.25732484" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.24076433" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.124840766" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50036794" side_tool="true" weight="0.588535" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.32965416" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Flutter Inspector" order="4" />
+      <window_info anchor="right" id="Flutter Outline" order="5" weight="0.32941177" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Preview" order="7" weight="0.3154412" />
+      <window_info anchor="right" id="Assistant" order="8" weight="0.32941177" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="1" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.19313304" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Resources Explorer" order="7" weight="0.32941177" />
+      <window_info id="DB Browser" order="8" weight="0.17058824" />
+      <window_info id="Favorites" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.4996321" weight="0.18433735" />
+      <window_info anchor="bottom" id="DB Execution Console" order="1" />
+      <window_info anchor="bottom" id="TODO" order="2" />
+      <window_info anchor="bottom" id="Android Profiler" order="3" weight="0.28407642" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.63821656" />
+      <window_info anchor="bottom" id="Flutter Performance" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.12356688" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49668875" weight="0.24096386" />
+      <window_info active="true" anchor="bottom" x="59" y="120" width="1360" height="780" id="Logcat" order="8" sideWeight="0.4996321" visible="true" weight="0.213253" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.24076433" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.35421687" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50036794" side_tool="true" weight="0.588535" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.32965416" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Flutter Inspector" order="4" />
+      <window_info anchor="right" id="Flutter Outline" order="5" weight="0.32941177" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Preview" order="7" weight="0.3154412" />
+      <window_info anchor="right" id="Assistant" order="8" weight="0.32941177" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Merge branch 'master' of https://gitee.com/hezongfa/PowerApp&#10;&#10;# Conflicts:&#10;#&#9;.idea/caches/build_file_checksums.ser" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/hezongfa/PowerApp into DCPowerBank&#10;&#10;# Conflicts:&#10;#&#9;loadlibrary/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" />
+    <MESSAGE value="Merge branch 'iot_30' of https://github.com/hezongfa/PowerApp into DCPowerBank_30&#10;&#10;# Conflicts:&#10;#&#9;app/build.gradle&#10;#&#9;app/release/output.json&#10;#&#9;app/src/main/AndroidManifest.xml&#10;#&#9;app/src/main/java/com/sharing/app/main/device/UartPortConnect.java&#10;#&#9;app/src/main/java/com/sharing/app/main/ui/MainActivity.java&#10;#&#9;app/src/main/res/values/strings.xml" />
+    <MESSAGE value="Merge branch 'iot_30' of https://github.com/hezongfa/PowerApp into ChargeFUZE&#10;&#10;# Conflicts:&#10;#&#9;.idea/caches/build_file_checksums.ser&#10;#&#9;.idea/gradle.xml&#10;#&#9;.idea/modules.xml&#10;#&#9;app/build.gradle&#10;#&#9;app/objectbox-models/default.json&#10;#&#9;app/objectbox-models/default.json.bak&#10;#&#9;app/release/output.json&#10;#&#9;app/src/main/AndroidManifest.xml&#10;#&#9;app/src/main/java/com/sharing/app/main/device/DeviceHelper.java&#10;#&#9;app/src/main/java/com/sharing/app/main/entity/VersionEntity.java&#10;#&#9;app/src/main/java/com/sharing/app/main/entity/VideoEntity.java&#10;#&#9;app/src/main/java/com/sharing/app/main/http/HttpClient.java&#10;#&#9;app/src/main/java/com/sharing/app/main/iot/manager/IotHepler.java&#10;#&#9;app/src/main/java/com/sharing/app/main/ui/MainActivity.java&#10;#&#9;app/src/main/java/com/sharing/app/main/utils/DownLoadHelper.java&#10;#&#9;app/src/main/java/com/sharing/app/main/widget/ResultDialog.java&#10;#&#9;app/src/main/java/com/sharing/app/main/widget/ResultView.java&#10;#&#9;app/src/main/res/layout/act_main.xml&#10;#&#9;app/src/main/res/mipmap-xxhdpi/pic_default.png&#10;#&#9;app/src/main/res/values/strings.xml&#10;#&#9;baselib/src/main/java/com/chenyi/baselib/utils/http/HttpUtilBuilder.java&#10;#&#9;loadlibrary/build/intermediates/incremental/packageDebugResources/compile-file-map.properties&#10;#&#9;settings.gradle" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/hezongfa/PowerApp into ChargeFUZE&#10;&#10;# Conflicts:&#10;#&#9;phoneapp/build.gradle&#10;#&#9;phoneapp/src/main/AndroidManifest.xml&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/BatterBoxApp.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/BillListActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShareActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopDetailActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/wallet/RechargeListActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/aroute/ARouteHelper.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyJPushMessageReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/PushService.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/utils/UserUtil.java&#10;#&#9;phoneapp/src/main/res/layout/act_card_edit.xml&#10;#&#9;phoneapp/src/main/res/layout/act_share.xml&#10;#&#9;phoneapp/src/main/res/layout/item_bill.xml&#10;#&#9;phoneapp/src/main/res/layout/item_recharge_list.xml&#10;#&#9;phoneapp/src/main/res/values/styles.xml" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/hezongfa/PowerApp into DCPowerBank&#10;&#10;# Conflicts:&#10;#&#9;phoneapp/build.gradle&#10;#&#9;phoneapp/release/phoneapp.aab&#10;#&#9;phoneapp/src/main/AndroidManifest.xml&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/BatterBoxApp.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/BillListActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/MainActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShareActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopDetailActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/wallet/RechargeListActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/aroute/ARouteHelper.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyJPushMessageReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/PushService.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/utils/UserUtil.java&#10;#&#9;phoneapp/src/main/res/layout/act_card_edit.xml&#10;#&#9;phoneapp/src/main/res/layout/act_share.xml&#10;#&#9;phoneapp/src/main/res/layout/item_bill.xml&#10;#&#9;phoneapp/src/main/res/layout/item_recharge_list.xml&#10;#&#9;phoneapp/src/main/res/values/styles.xml" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/hezongfa/PowerApp into ChargeFUZE&#10;&#10;# Conflicts:&#10;#&#9;app/build.gradle&#10;#&#9;app/src/main/java/com/sharing/app/main/ui/MainActivity.java&#10;#&#9;baselib/src/main/java/com/chenyi/baselib/ui/BaseActivity.java&#10;#&#9;phoneapp/build.gradle&#10;#&#9;phoneapp/src/main/AndroidManifest.xml&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/BatterBoxApp.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/DeviceDetailActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/act/MainActivity.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyJPushMessageReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/MyReceiver.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/push/PushService.java&#10;#&#9;phoneapp/src/main/java/com/batterbox/power/phone/app/utils/UserUtil.java" />
+    <MESSAGE value="日志" />
+    <MESSAGE value="ass" />
+    <option name="LAST_COMMIT_MESSAGE" value="ass" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/device/DeviceHelper.java</url>
+          <line>133</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/utils/ApnUtils.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/utils/ApnUtils.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/utils/VideoHelper.java</url>
+          <line>160</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/utils/VideoHelper.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/ui/MainActivity.java</url>
+          <line>399</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/ui/MainActivity.java</url>
+          <line>563</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/utils/VideoHelper.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/MainActivity.java</url>
+          <line>485</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/PhotoListActivity.java</url>
+          <line>27</line>
+          <properties field="img" class="com.batterbox.power.phone.app.act.PhotoListActivity" />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/pic_default.jpg" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/iot/manager/IotHepler.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/heartbeat/HeartReceiver.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/http/HttpClient.java" />
+    <entry file="file://$PROJECT_DIR$/app/build.gradle" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/act_main.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sharing/app/main/ui/MainActivity.java" />
+    <entry file="file://$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/app/AppContextBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/AreaCodeEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/DeviceEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/ADEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/HttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="269" column="77" lean-forward="true" selection-start-line="269" selection-start-column="77" selection-end-line="269" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/Api.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="226" column="35" lean-forward="true" selection-start-line="226" selection-start-column="35" selection-end-line="226" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/OrderEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/entity/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/RegisterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="137" column="5" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/BatterBoxApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/banner/src/main/java/com/youth/banner/BannerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/banner/src/main/java/com/youth/banner/Banner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="173" column="15" selection-start-line="173" selection-start-column="15" selection-end-line="173" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/ADDataEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/aroute/ARouteHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="113" column="30" selection-start-line="113" selection-start-column="27" selection-end-line="113" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/entity/ResponseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding>
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/utils/ImageLoaderUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/MainBannerImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/layout/act_shop_detail_o.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="179" column="29" lean-forward="true" selection-start-line="179" selection-start-column="29" selection-end-line="179" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_main_scan.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/layout/act_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="150" column="50" lean-forward="true" selection-start-line="150" selection-start-column="50" selection-end-line="150" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopDetailActivity_o.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="83" column="13" lean-forward="true" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
+          <folding>
+            <element signature="e#1928#1929#0" expanded="true" />
+            <element signature="e#1975#1976#0" expanded="true" />
+            <element signature="e#5041#5067#0" expanded="true" />
+            <element signature="e#5070#5096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/entity/ShopDetailEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/http/DomainHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/GlideImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3026">
+          <caret line="528" column="30" selection-start-line="528" selection-start-column="30" selection-end-line="528" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/drawable/bg_ffffff_r10px_selected.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <folding>
+            <element signature="e#223#234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/layout/act_card_edit.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="265" column="28" selection-start-line="265" selection-start-column="28" selection-end-line="265" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/layout/act_recharge_list.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding>
+            <element signature="e#400#412#0" expanded="true" />
+            <element signature="e#653#672#0" expanded="true" />
+            <element signature="e#744#756#0" expanded="true" />
+            <element signature="e#913#925#0" expanded="true" />
+            <element signature="e#951#970#0" expanded="true" />
+            <element signature="e#1042#1054#0" expanded="true" />
+            <element signature="e#1161#1173#0" expanded="true" />
+            <element signature="e#1252#1270#0" expanded="true" />
+            <element signature="e#1105#1117#0" expanded="true" />
+            <element signature="e#2447#2459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/drawable/bg_borrow_count.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/mipmap-xxhdpi/ic_shop_nav_btn.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/wallet/MyWalletActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="55" column="9" selection-start-line="51" selection-start-column="8" selection-end-line="55" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/layout/dialog_shop_des.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/layout/dialog_shop_coupon.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baselib/src/main/java/com/chenyi/baselib/widget/RoundImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/drawable/bg_shop_coupon.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/wallet/RechargeListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#1712#1729#0" expanded="true" />
+            <element signature="e#4530#4558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/dialog/ShopDesDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/layout/act_my_wallet.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/dialog/ShopCouponDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/java/com/batterbox/power/phone/app/act/ShopDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="110" column="69" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phoneapp/src/main/res/layout/act_shop_detail.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="168" column="32" selection-start-line="168" selection-start-column="32" selection-end-line="168" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

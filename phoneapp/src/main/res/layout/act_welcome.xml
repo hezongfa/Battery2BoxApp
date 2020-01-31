@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange_ff6600">
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:scaleType="centerInside"-->
+    <!--android:src="@drawable/welcome" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginBottom="@dimen/x100"-->
+    <!--android:text=" @2018 Copyright www.ewgvip.com "-->
+    <!--android:textColor="@color/gray_9f9f9f"-->
+    <!--android:visibility="gone"-->
+    <!--android:textSize="@dimen/x36" />-->
+
+    <ImageView
+        android:id="@+id/act_welcome_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/welcome"
+        android:visibility="visible" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/act_welcome_skip_ad"-->
+    <!--android:layout_width="@dimen/x180"-->
+    <!--android:layout_height="@dimen/x90"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_marginRight="@dimen/x60"-->
+    <!--android:layout_marginTop="@dimen/x75"-->
+    <!--android:gravity="center"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/x45"-->
+    <!--android:visibility="gone" />-->
+
+
+</RelativeLayout>

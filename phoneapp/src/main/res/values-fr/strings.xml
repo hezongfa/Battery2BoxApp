@@ -1,0 +1,243 @@
+<resources>
+    <string name="app_name">Battery2Box</string>
+
+    <string name="app_1">Appuyez sur le bouton arrière et sortez.</string>
+    <string name="app_11">Oui</string>
+    <string name="app_13">Soumettre</string>
+    <string name="app_16">Annuler</string>
+    <string name="app_20">Succès</string>
+    <string name="app_28">Photographier</string>
+    <string name="app_29">Sélection à partir d \'un album de photos téléphoniques</string>
+    <string name="app_32">Supprimer</string>
+    <string name="app_53">Pas de données.</string>
+
+    <string name="m_1">€</string>
+
+    <string name="scan_1"> Entrez le code QR/ code à barres dans la boîte et il sera scanné automatiquement</string>
+    <string name="scan_2">Scansione</string>
+    <string name="scan_3">Album</string>
+    <string name="scan_4">Code bidimensionnel non valide</string>
+
+    <string name="refresh_1">Le menu déroulant peut être actualisé</string>
+    <string name="refresh_2">Les données sont en cours de mise à jour...</string>
+    <string name="refresh_3">Relâchez et actualisez immédiatement</string>
+    <string name="refresh_4"> </string>
+    <string name="refresh_5">Les données sont en cours de mise à jour...</string>
+    <string name="refresh_6"> </string>
+
+    <string name="login_0">Mémoriser le mot de passe</string>
+    <string name="login_1"> Commencer la session</string>
+    <string name="login_2"> Entrez votre téléphone:</string>
+    <string name="login_3"> Numéro de mobile</string>
+    <string name="login_4"> Mot de passe</string>
+    <string name="login_5"> Mot de passe</string>
+    <string name="login_6"> S\'inscrire</string>
+    <string name="login_7"> Vous avez oublié votre mot de passe</string>
+    <string name="login_8"> NSCRIVEZ-VOUS</string>
+    <string name="login_9"> Confirmer</string>
+    <string name="login_10"> Code</string>
+    <string name="login_11"> Confirmer</string>
+    <string name="login_12"> Vérification</string>
+    <string name="login_13"> RECEVOIR</string>
+    <string name="login_14"> S\'inscrire</string>
+    <string name="login_15"> J\'ACCEPTE LA</string>
+    <string name="login_16">DISPOSITIONS JURIDIQUES, CONDITIONS D\'UTILISATION ET CONFIDENTIALITÉ</string>
+    <string name="login_17"> Le mot de passe est incorrect. Veuillez le saisir à nouveau</string>
+    <string name="login_18"> Veuillez accepter les conditions d\'utilisation</string>
+    <string name="login_19">Enregistrement réussi</string>
+    <string name="login_20">Réussir</string>
+    <string name="login_21">téléphone</string>
+    <string name="login_22"> Recherche</string>
+    <string name="login_23"> Le plus utilisé</string>
+    <string name="login_24"> Choisissez votre pays</string>
+    <string name="login_25"> Ancien mot de passe</string>
+    <string name="login_26"> nouveau mot de passe</string>
+    <string name="login_27"> Mot de passe </string>
+    <string name="login_28"> Mot de passe</string>
+    <string name="login_29"> Confirmer</string>
+    <string name="login_30"> Changer le mot de passe</string>
+    <string name="login_31">Changement réussi</string>
+    <string name="login_32"> Politique de confidentialité</string>
+    <string name="login_33">Y</string>
+
+    <string name="main_1"> Recherche Battery2Box</string>
+    <string name="main_2">SCAN ET CHARGE</string>
+    <string name="main_3">Sac à main</string>
+    <string name="main_4">Cupones</string>
+    <string name="main_5">Registre de location</string>
+    <string name="main_6">Inviter un ami</string>
+    <string name="main_7">Consultation d\'entreprise</string>
+    <string name="main_8">L\'aide</string>
+    <string name="main_9">Paramètres</string>
+    <string name="main_10">Loué</string>
+    <string name="main_11">Temps de charge %s minutes</string>
+    <string name="main_12">Les détails</string>
+    <string name="main_13">Promotions actives</string>
+
+    <string name="borrow_1">INFORMATIONS À LOUER</string>
+    <string name="borrow_2">TAUX D\'UTILISATION</string>
+    <string name="borrow_3">Nouveaux utilisateurs: %s</string>
+    <string name="borrow_4">GRATUIT</string>
+    <string name="borrow_5">%s/Heure</string>
+    <string name="borrow_6">%s/Jour</string>
+    <string name="borrow_7">%s + IVA plus de 5 jours d\'utilisation</string>
+    <string name="borrow_8">( ( Après plus de 5 jours d\'utilisation continue sera facturé %s€ + IVA dans votre compte et vous pouvez conserver la batterie pour votre usage personnel sans avoir à la retourner)</string>
+    <string name="borrow_9">%s/Heure</string>
+    <string name="borrow_10">(Montant maximum %s / Jour)</string>
+    <string name="borrow_11">( Montant facturé toutes les 24 heures d\'utilisation continue)</string>
+    <string name="borrow_12">SUIVANT</string>
+    <string name="borrow_13">Retirez la batterie du chargeur de la position indiquée sur la figure</string>
+    <string name="borrow_14">attendez un moment pour retirer la batterie</string>
+    <string name="borrow_15">échec du bail</string>
+    <string name="borrow_16">Todo OK</string>
+    <string name="borrow_17">l peut être retourné à n\'importe lequel de nos points de charge</string>
+    <string name="borrow_18">Regardez les instructions de chargement</string>
+    <string name="borrow_19">Tarifs de facturation</string>
+    <string name="borrow_20">Temps libre</string>
+    <string name="borrow_21">Règle de dépôt</string>
+    <string name="borrow_22">Tarifs après le loyer, gratuit pendant le premier %1$s Minutes gratuites; moins d\'une heure est calculée comme une heure %2$s Euros par heure et en moins d\'une heure, ils sont calculés en une heure; Cinq euros toutes les 24 heures "%3$s Euros toutes les 24 heures</string>
+    <!--（该计费规则为订单计费规则，即租借时商家设备定计费规则，订单开始后计费规则则不会变更）-->
+    <string name="borrow_23">Après le retour de la batterie de chargement, lorsque le loyer est trop long, plus de 120 heures et que le loyer est supérieur à %1$s euros, le montant total est automatiquement rechargé sur la carte de %2$s euros +IVA</string>
+    <string name="borrow_24">%s/Heure</string>
+
+
+    <string name="wallet_1">DÉTAIL DE FACTURATION</string>
+    <string name="wallet_2">Ma bourse</string>
+    <string name="wallet_3">Moyen de paiement</string>
+    <string name="wallet_4">Carte de crédit ou de débit</string>
+    <string name="wallet_5">Pour entrer</string>
+    <string name="wallet_6">Solde total</string>
+    <string name="wallet_7">Recharger</string>
+    <string name="wallet_8">Numéro de carte</string>
+    <string name="wallet_9">Numéro de carte</string>
+    <string name="wallet_10">Nom du titulaire</string>
+    <string name="wallet_11">Nom du titulaire</string>
+    <string name="wallet_12">Durée de validité</string>
+    <string name="wallet_13">Année</string>
+    <string name="wallet_14">Mois</string>
+    <string name="wallet_15">Cvv</string>
+    <string name="wallet_16">Durée de validité</string>
+    <string name="wallet_17">Déconnecter</string>
+    <string name="wallet_18">Déconnecter？</string>
+    <string name="wallet_19">Détaché</string>
+    <string name="wallet_20">Temps restant</string>
+    <string name="wallet_21">Détails temporels</string>
+    <string name="wallet_22">Numéro commande：%s</string>
+    <string name="wallet_23">Reste %s Minutes</string>
+    <string name="wallet_24">Information de carte bancaire</string>
+    <string name="wallet_25">AJOUTER MODE DE PAIEMENT</string>
+    <string name="wallet_26">Sélectionner le montant des frais à facturer</string>
+    <string name="wallet_27">Le montant de la reconstruction ne peut être remboursé.</string>
+    <string name="wallet_28">Minutes</string>
+    <string name="wallet_29">Gratuit</string>
+
+    <string name="shop_1">Louer：%s</string>
+    <string name="shop_2">Retour：%s</string>
+    <string name="shop_3">Il y a une connexion Wi-Fi</string>
+    <string name="shop_4">Ne pas offrir le Wi-Fi</string>
+    <string name="shop_5">Interdit de fumer</string>
+    <string name="shop_6">Fumeur</string>
+    <string name="shop_7">Louer</string>
+    <string name="shop_8">Retour</string>
+
+    <string name="order__0">Inachevé</string>
+    <string name="order_0">Fait</string>
+    <string name="order_1">Date et heure</string>
+    <string name="order_2">Point de départ</string>
+    <string name="order_3">Montant total du paiement</string>
+    <string name="order_4">Problèmes d\'utilisation？</string>
+    <string name="order_5">Le numéro:%s</string>
+    <string name="order_6">Exécution</string>
+    <string name="order_7">Loué</string>
+    <string name="order_8">Rendu</string>
+    <string name="order_9">Annulé</string>
+    <string name="order_10">Heures supplémentaires</string>
+    <string name="order_11">Achat</string>
+    <string name="order_12">Pas payé</string>
+    <string name="order_13">Payé</string>
+    <string name="order_14">Les détails à louer</string>
+    <string name="order_15">Détails d\'utilisation</string>
+    <string name="order_16">Date et heure</string>
+    <string name="order_17">Point de départ</string>
+    <string name="order_18">Heure de retour</string>
+    <string name="order_19">Lieu de retour</string>
+    <string name="order_20">Tarif</string>
+    <string name="order_21">Le formulaire de facturation</string>
+    <string name="order_22">Durée d\'utilisation</string>
+    <string name="order_23">Premières minutes gratuites</string>
+    <string name="order_24">Limite de jour 24 heures</string>
+    <string name="order_25">Montant total du paiement</string>
+    <string name="order_26">Statut de paiement</string>
+    <string name="order_27">Procédé de paiement</string>
+    <string name="order_28">Discount Free Heures</string>
+    <string name="order_29">Acheter des batteries</string>
+    <string name="order_30">Voulez - vous payer 20 + € TVA pour acheter des batteries et terminer automatiquement le loyer?</string>
+    <string name="order_31">Tarifs de facturation</string>
+    <string name="order_32">Anomalie d\'ordre</string>
+    <string name="order_33">%s/Heure</string>
+    <string name="order_34">Carte de crédit</string>
+    <string name="order_35">Le solde</string>
+    <string name="order_36">Sans loyer</string>
+    <string name="order_37">Accepter</string>
+    <!--<string name="order_38">已解冻</string>-->
+    <!--<string name="order_39">信用卡</string>-->
+    <!--<string name="order_40">余额</string>-->
+    <!--<string name="order_41">免押金</string>-->
+    <string name="order_42">minutes</string>
+    <string name="order_43">Tarifs après le loyer, gratuit pendant le premier %1$s Minutes gratuites; moins d\'une heure est calculée comme une heure %2$s Euros par heure et en moins d\'une heure, ils sont calculés en une heure; Cinq euros toutes les 24 heures "%3$s Euros toutes les 24 heures</string>
+    <!--（该计费规则为订单计费规则，即租借时商家设备定计费规则，订单开始后计费规则则不会变更）-->
+
+    <string name="helper_1">SUGGESTIONS</string>
+    <string name="helper_2">Fréquemment</string>
+    <string name="helper_3">¿ QUEL EST TON PROBLÈME?</string>
+    <string name="helper_4">BATTERIE\nCASSÉE</string>
+    <string name="helper_5">HORS\nSERVICE</string>
+    <string name="helper_6">BATTERIE\nENDOMMAGÉE</string>
+    <string name="helper_7">Un autre\nproblème</string>
+    <string name="helper_8">Scannez la machine ou écrivez identifiant machine</string>
+    <string name="helper_9">SUGGESTIONS</string>
+    <string name="helper_10">Email</string>
+
+    <string name="setting_1">Paramètres</string>
+    <string name="setting_2">langues</string>
+    <string name="setting_3">Guide de l\'utilisateur</string>
+    <string name="setting_4">Politique de confidentialité</string>
+    <string name="setting_5">À propos de nous</string>
+    <string name="setting_6">Quitter l\'APP</string>
+
+    <string name="user_1">Photo de profil</string>
+    <string name="user_2">Nom</string>
+    <string name="user_3">Téléphones</string>
+    <string name="user_4">Email</string>
+    <string name="user_5">Non lié</string>
+    <string name="user_6">Informations utilisateur</string>
+    <string name="user_7">Nom</string>
+    <string name="user_8">Email</string>
+    <!--<string name="helper_4">BATERÍA\nATASCADA</string>-->
+    <!--<string name="helper_5">ESTACIÓN FUERA\nDE SERVICIO</string>-->
+    <!--<string name="helper_6">BATERÍA\nDAÑADA</string>-->
+    <!--<string name="helper_7">OTRO\nPROBLEMA</string>-->
+
+    <string name="cooperation_1">Bienvenue</string>
+    <string name="cooperation_2">S\'il vous plaît laissez vos informations de base et nous vous contacterons dès que possible.</string>
+    <string name="cooperation_3">L\'installation</string>
+    <string name="cooperation_4">La publicité</string>
+    <string name="cooperation_5">Autre</string>
+    <string name="cooperation_6">Nom de l\'entreprise</string>
+    <string name="cooperation_7">Personne de contact</string>
+    <string name="cooperation_8">Téléphone de contact</string>
+    <string name="cooperation_9">Envoyer</string>
+    <string name="cooperation_10">Email</string>
+    <string name="cooperation_11">Autre</string>
+
+
+    <string name="versino_1">Trouver une nouvelle version！</string>
+    <string name="versino_2">Mise à jour immédiate</string>
+    <string name="versino_3">Annuler</string>
+
+
+    <string name="share_1">%s Minutes par invitation.</string>
+    <string name="share_2">Inviter</string>
+    <string name="share_3">Minutes Gratuit</string>
+    <string name="share_4">Partager</string>
+</resources>

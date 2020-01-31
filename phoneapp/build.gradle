@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.batterbox.power.phone.app"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion 28
+        versionCode 20200119
+        versionName "1.1.0"
+//        manifestPlaceholders = [
+//                JPUSH_APPKEY   : '41e6095c3e68a57a10148949',
+//                JPUSH_CHANNEL  : 'batterbox'
+//                , JPUSH_PKGNAME: applicationId]
+        ndk {
+            abiFilters "armeabi",'armeabi-v7a','arm64-v8a'
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+        multiDexEnabled true
+
+        buildConfigField "String", "WECHATAPPID", "\"wx8e8f29e8df9ebd71\""
+        buildConfigField "String", "GOOGLEMAP_KEY", "\"AIzaSyBhOsW1Y3psD7ZQW4O8cRVvxnwEc4JyP_8\""
+        //        buildConfigField "String", "DOMAIN_H5", "\"https://h5.shuidp.cn/\""
+        buildConfigField "String", "DOMAIN_URL", "\"https://app.battery2box.com:8888/\""
+        buildConfigField "String", "DOMAIN_URL_DEV", "\"http://dev.battery2box.com:8888/\""
+//        buildConfigField "String", "DOMAIN_URL_TEST", "\"https://sdp-cloud-app-api.test.chenyi-tech.com/\""
+//        buildConfigField "String", "DOMAIN_H5_TEST", "\"https://sdp-cloud-app-h5.test.chenyi-tech.com/\""
+//        buildConfigField "String", "DOMAIN_H5_DEV", "\"https://sdp-cloud-app-h5-dev.chenyi-tech.com/\""
+    }
+    compileOptions {
+        sourceCompatibility rootProject.ext.javaVersion
+        targetCompatibility rootProject.ext.javaVersion
+    }
+    signingConfigs {
+        config {
+            storeFile file('Battery2Box.jks')
+            storePassword "Battery2Box"
+            keyAlias "Battery2Box"
+            keyPassword "Battery2Box"
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            multiDexEnabled true
+            //移除无用的resource文件
+//            shrinkResources false  //打包需要解决这个
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+
+        release {
+            //不显示log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            multiDexEnabled true
+            //移除无用的resource文件
+            shrinkResources true  //打包需要解决这个
+            //加载默认混淆配置文件及自定义混淆 配置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            pseudoLocalesEnabled true
+            signingConfig signingConfigs.config
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "${project.name}-${versionName}-${releaseTime()}/Battery2Box_Phone_${versionName}.apk"
+                }
+            }
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+
+static def releaseTime() {
+    return new Date().format("MMdd-HH-mm-ss", TimeZone.getTimeZone("GMT+8"))
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    implementation 'cn.jiguang.sdk:jpush:3.3.4'
+//    implementation 'cn.jiguang.sdk:jcore:2.1.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:3.1.0'
+    implementation project(':baselib')
+    implementation project(':loadlibrary')
+    implementation project(':slidemenulib')
+    implementation 'com.google.android.gms:play-services-maps:15.0.0'
+
+//    地图操作工具类，添加标记等
+    implementation 'com.google.maps.android:android-maps-utils:0.5+'
+
+    implementation 'com.google.android.gms:play-services-location:15.0.0'
+    implementation project(path: ':zbarlibary')
+//    implementation project(path: ':zbarLibrary')
+    implementation project(path: ':banner')
+
+//    implementation 'io.card:android-sdk:5.5.0'
+
+    //图片剪裁
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.6.0'
+
+    implementation 'io.card:android-sdk:5.5.1'
+
+}
