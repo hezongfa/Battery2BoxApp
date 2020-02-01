@@ -5,8 +5,10 @@ import com.batterbox.power.phone.app.entity.AreaCodeDataEntity;
 import com.batterbox.power.phone.app.entity.BillEntity;
 import com.batterbox.power.phone.app.entity.BorrowResultEntity;
 import com.batterbox.power.phone.app.entity.CardEntity;
+import com.batterbox.power.phone.app.entity.CouponEntity;
 import com.batterbox.power.phone.app.entity.DeviceEntity;
 import com.batterbox.power.phone.app.entity.LBShopEntity;
+import com.batterbox.power.phone.app.entity.LbsShopCouponEntity;
 import com.batterbox.power.phone.app.entity.OrderEntity;
 import com.batterbox.power.phone.app.entity.OrderStateEntity;
 import com.batterbox.power.phone.app.entity.RechargeEntity;
@@ -164,6 +166,17 @@ public class HttpClient extends BaseHttpClient<Api> {
         Observable<ResponseEntity<DeviceEntity>> observable = getInstance().getService().find_box(defaultPms(), url);
         query(observable, callBack);
     }
+
+    public void bs_findCouponsByShop(String shopId, NormalHttpCallBack<ResponseEntity<ArrayList<CouponEntity>>> callBack) {
+        Observable<ResponseEntity<ArrayList<CouponEntity>>> observable = getInstance().getService().bs_findCouponsByShop(defaultPms(), shopId);
+        query(observable, callBack);
+    }
+
+    public void bs_findShopCoupons(double lat, double lng, NormalHttpCallBack<ResponseEntity<ArrayList<LbsShopCouponEntity>>> callBack) {
+        Observable<ResponseEntity<ArrayList<LbsShopCouponEntity>>> observable = getInstance().getService().bs_findShopCoupons(defaultPms(), lat, lng);
+        query(observable, callBack);
+    }
+
 
     public void order_borrow(String boxCode, NormalHttpCallBack<ResponseEntity<BorrowResultEntity>> callBack) {
         Observable<ResponseEntity<BorrowResultEntity>> observable = getInstance().getService().order_borrow(defaultPms(), boxCode);

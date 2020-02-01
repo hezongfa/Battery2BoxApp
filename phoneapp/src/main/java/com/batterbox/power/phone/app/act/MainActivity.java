@@ -16,6 +16,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.batterbox.power.phone.app.BatterBoxApp;
 import com.batterbox.power.phone.app.MainBannerImageLoader;
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
@@ -239,6 +240,8 @@ public class MainActivity extends BaseActivity implements OnMapReadyCallback, Go
             if (task.isSuccessful()) {
                 Location location = task.getResult();
                 if (location != null) {
+                    BatterBoxApp.lat = location.getLatitude();
+                    BatterBoxApp.lng = location.getLongitude();
 //                    FQT.showShort(MainActivity.this, "location.getLongitude()=" + location.getLatitude());
                     googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13.0f));
                 }

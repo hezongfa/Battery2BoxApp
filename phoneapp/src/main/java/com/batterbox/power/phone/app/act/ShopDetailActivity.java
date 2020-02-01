@@ -113,8 +113,9 @@ public class ShopDetailActivity extends NavigationActivity {
                         initData(responseEntity.getData().shopName, responseEntity.getData().shopAdress, responseEntity.getData().rentCount, responseEntity.getData().returnCount, responseEntity.getData().la, responseEntity.getData().lo);
                         findViewById(R.id.act_shop_detail_coupon_iv).setVisibility(responseEntity.getData().couponCon > 0 ? View.VISIBLE : View.GONE);
                         findViewById(R.id.act_shop_detail_coupon_iv).setOnClickListener(v -> {
-                            ShopCouponDialog shopCouponDialog=new ShopCouponDialog();
-                            shopCouponDialog.show(getSupportFragmentManager(),ShopCouponDialog.class.getName());
+                            ShopCouponDialog shopCouponDialog = new ShopCouponDialog();
+                            shopCouponDialog.setShopEntity(responseEntity.getData());
+                            shopCouponDialog.show(getSupportFragmentManager());
                         });
                         if (responseEntity.getData().img != null) {
                             banner.setOnBannerListener(position -> {

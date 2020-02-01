@@ -6,8 +6,10 @@ import com.batterbox.power.phone.app.entity.AreaCodeDataEntity;
 import com.batterbox.power.phone.app.entity.BillEntity;
 import com.batterbox.power.phone.app.entity.BorrowResultEntity;
 import com.batterbox.power.phone.app.entity.CardEntity;
+import com.batterbox.power.phone.app.entity.CouponEntity;
 import com.batterbox.power.phone.app.entity.DeviceEntity;
 import com.batterbox.power.phone.app.entity.LBShopEntity;
+import com.batterbox.power.phone.app.entity.LbsShopCouponEntity;
 import com.batterbox.power.phone.app.entity.OrderEntity;
 import com.batterbox.power.phone.app.entity.OrderStateEntity;
 import com.batterbox.power.phone.app.entity.RechargeEntity;
@@ -98,6 +100,16 @@ public interface Api {
     Observable<ResponseEntity<DeviceEntity>> find_box(@HeaderMap Map<String, Object> map,
                                                       @Field("url") String url);
 
+    @FormUrlEncoded
+    @POST("bs/findCouponsByShop")
+    Observable<ResponseEntity<ArrayList<CouponEntity>>> bs_findCouponsByShop(@HeaderMap Map<String, Object> map,
+                                                                             @Field("shopId") String shopId);
+
+    @FormUrlEncoded
+    @POST("bs/findShopCoupons")
+    Observable<ResponseEntity<ArrayList<LbsShopCouponEntity>>> bs_findShopCoupons(@HeaderMap Map<String, Object> map,
+                                                                                  @Field("latitude") double latitude,
+                                                                                  @Field("longitude") double longitude);
 
     @FormUrlEncoded
     @POST("order/borrow")

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/x24"
+    android:layout_marginTop="@dimen/x24"
+    android:layout_marginEnd="@dimen/x24"
+    android:layout_marginBottom="@dimen/x10"
+    android:background="@drawable/bg_ffffff_r14px_4da9a9a9"
+    android:orientation="vertical"
+    android:padding="@dimen/x12">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/x12">
+
+        <ImageView
+            android:id="@+id/item_activity_shop_iv"
+            android:layout_width="@dimen/x213"
+            android:layout_height="@dimen/x117" />
+
+        <ImageView
+            android:id="@+id/item_activity_shop_rrv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/x20"
+            android:src="@mipmap/ic_goto_rr" />
+
+        <TextView
+            android:id="@+id/item_activity_shop_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x15"
+            android:layout_marginEnd="@dimen/x15"
+            android:layout_toStartOf="@id/item_activity_shop_rrv"
+            android:layout_toEndOf="@id/item_activity_shop_iv"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="#010101"
+            android:textSize="@dimen/x29" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_activity_shop_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/x20"
+        android:textColor="#FF4C4C4C"
+        android:textSize="@dimen/x22"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/item_activity_shop_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/x20"
+        android:textColor="#FF4C4C4C"
+        android:textSize="@dimen/x22"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/item_activity_shop_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/x20"
+        android:textColor="#FF4C4C4C"
+        android:textSize="@dimen/x22"
+        android:visibility="gone" />
+</LinearLayout>

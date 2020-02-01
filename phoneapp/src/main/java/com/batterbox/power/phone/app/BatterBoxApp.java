@@ -11,6 +11,9 @@ import com.chenyi.baselib.utils.StringUtil;
  * Description
  */
 public class BatterBoxApp extends AppContextBase {
+    public static double lat;
+    public static double lng;
+
     @Override
     public void onCreate() {
         super.onCreate();

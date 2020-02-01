@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <ImageView
+        android:id="@+id/dialog_shop_coupon_close_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -13,6 +14,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/bg_round_c"
         android:orientation="vertical"
         android:padding="@dimen/x28">
 
@@ -23,20 +25,23 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/dialog_shop_coupon_iv"
                 android:layout_width="@dimen/x214"
                 android:layout_height="@dimen/x118" />
 
             <TextView
+                android:id="@+id/dialog_shop_coupon_title_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/x34"
-                android:text="星巴克咖啡店"
                 android:textColor="#FF422806"
                 android:textSize="@dimen/x32" />
         </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/dialog_shop_coupon_rv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x20" />
     </LinearLayout>
 </LinearLayout>
