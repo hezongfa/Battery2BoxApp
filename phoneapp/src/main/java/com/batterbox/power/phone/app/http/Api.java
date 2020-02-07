@@ -244,5 +244,22 @@ public interface Api {
     Observable<ResponseEntity<ADDataEntity>> advert_find(@HeaderMap Map<String, Object> map,
                                                          @FieldMap Map<String, Object> map1);
 
+    @FormUrlEncoded
+    @POST("cp/myCoupons")
+    Observable<ResponseEntity<ArrayList<CouponEntity>>> cp_myCoupons(@HeaderMap Map<String, Object> map,
+                                                                     @Field("type") int type,
+                                                                     @Field("pageNum") int pageNum,
+                                                                     @Field("pageSize") int pageSize);
+
+    @FormUrlEncoded
+    @POST("cp/findCouponByCode")
+    Observable<ResponseEntity<CouponEntity>> cp_findCouponByCode(@HeaderMap Map<String, Object> map,
+                                                                 @Field("code") String code);
+
+    @FormUrlEncoded
+    @POST("cp/useMyCoupon")
+    Observable<ResponseEntity> cp_useMyCoupon(@HeaderMap Map<String, Object> map,
+                                                                 @Field("id") long id);
+
 
 }

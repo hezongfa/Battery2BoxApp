@@ -42,7 +42,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/x8"
+                    android:gravity="center"
                     android:text="@string/shop_8"
                     android:textColor="#878686"
                     android:textSize="@dimen/x18" />
@@ -68,7 +68,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/x8"
+                    android:gravity="center"
                     android:text="@string/shop_7"
                     android:textColor="#878686"
                     android:textSize="@dimen/x18" />
@@ -129,10 +129,10 @@
                     android:id="@+id/act_shop_detail_img_banner"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:delay_time="3200"
+                    app:delay_time="5000"
                     app:image_scale_type="fit_xy"
-                    app:is_auto_play="false"
-                    app:scroll_time="800" />
+                    app:is_auto_play="true"
+                    app:scroll_time="1500" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -169,16 +169,16 @@
                     android:id="@+id/act_shop_detail_coupon_iv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/x15"
                     android:background="@drawable/bg_shop_coupon"
                     android:paddingStart="@dimen/x40"
-                    android:layout_margin="@dimen/x15"
                     android:paddingTop="@dimen/x15"
                     android:paddingEnd="@dimen/x40"
                     android:paddingBottom="@dimen/x15"
-                    android:src="@mipmap/ic_shop_coupon" />
+                    android:src="@mipmap/ic_shop_coupon"
+                    android:visibility="gone" />
             </RelativeLayout>
 
             <LinearLayout
@@ -190,18 +190,12 @@
                 android:paddingBottom="@dimen/x84">
 
                 <LinearLayout
+                    android:id="@+id/act_shop_detail_service_ll"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/x85"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/x20"
-                        android:text="服务"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/x32" />
 
                     <ImageView
                         android:id="@+id/act_shop_detail_wifi_iv"
@@ -230,7 +224,7 @@
                     android:layout_height="@dimen/x85"
                     android:layout_marginEnd="@dimen/x20"
                     android:gravity="center_vertical"
-                    android:text="信息"
+                    android:text="Information"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/x32" />
 
@@ -265,7 +259,9 @@
                     android:layout_marginTop="@dimen/x24"
                     android:drawableStart="@mipmap/ic_shop_detail_net"
                     android:drawablePadding="@dimen/x18"
+                    android:ellipsize="end"
                     android:gravity="center_vertical"
+                    android:lines="1"
                     android:textColor="#4284FD"
                     android:textSize="@dimen/x28" />
 
@@ -281,17 +277,34 @@
                     android:textColor="#4284FD"
                     android:textSize="@dimen/x28" />
 
-                <TextView
-                    android:id="@+id/act_shop_detail_tel_tv"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/x2"
                     android:layout_marginTop="@dimen/x24"
-                    android:drawableStart="@mipmap/ic_shop_detail_tel"
-                    android:drawablePadding="@dimen/x18"
-                    android:gravity="center_vertical"
-                    android:textColor="#4284FD"
-                    android:textSize="@dimen/x28" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/act_shop_detail_tel_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/x2"
+                        android:layout_weight="1"
+                        android:drawableStart="@mipmap/ic_shop_detail_tel"
+                        android:drawablePadding="@dimen/x18"
+                        android:gravity="center_vertical"
+                        android:textColor="#4284FD"
+                        android:textSize="@dimen/x28" />
+
+                    <ImageView
+                        android:id="@+id/act_shop_detail_nav_iv"
+                        android:layout_width="@dimen/x73"
+                        android:layout_height="@dimen/x73"
+                        android:layout_marginEnd="@dimen/x20"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_shop_nav_btn" />
+
+                </LinearLayout>
+
 
                 <View
                     android:layout_width="match_parent"
@@ -302,16 +315,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <ImageView
-        android:id="@+id/act_shop_detail_nav_iv"
-        android:layout_width="@dimen/x73"
-        android:layout_height="@dimen/x73"
-        android:layout_above="@id/act_shop_detail_rl"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="@dimen/x20"
-        android:layout_marginBottom="@dimen/x40"
-        android:scaleType="fitXY"
-        android:src="@mipmap/ic_shop_nav_btn" />
 
     <RelativeLayout
         android:layout_width="match_parent"

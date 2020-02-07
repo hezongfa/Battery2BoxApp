@@ -183,8 +183,12 @@
             android:name=".act.wallet.RechargeListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".act.CouponActivity"
+            android:name=".act.user.CouponActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".act.user.GetCouponActivity"
+            android:screenOrientation="portrait" />
+
         <activity
             android:name=".act.PromotionActivity"
             android:screenOrientation="portrait" />

@@ -300,4 +300,19 @@ public class HttpClient extends BaseHttpClient<Api> {
         query(observable, callBack);
     }
 
+    public void cp_myCoupons(int type, int page, int pageSize, NormalHttpCallBack<ResponseEntity<ArrayList<CouponEntity>>> callBack) {
+        Observable<ResponseEntity<ArrayList<CouponEntity>>> observable = getInstance().getService().cp_myCoupons(defaultPms(), type, page, pageSize);
+        query(observable, callBack);
+    }
+
+    public void cp_findCouponByCode(String code, NormalHttpCallBack<ResponseEntity<CouponEntity>> callBack) {
+        Observable<ResponseEntity<CouponEntity>> observable = getInstance().getService().cp_findCouponByCode(defaultPms(), code);
+        query(observable, callBack);
+    }
+
+    public void cp_useMyCoupon(long id, NormalHttpCallBack<ResponseEntity> callBack) {
+        Observable<ResponseEntity> observable = getInstance().getService().cp_useMyCoupon
+                (defaultPms(), id);
+        query(observable, callBack);
+    }
 }

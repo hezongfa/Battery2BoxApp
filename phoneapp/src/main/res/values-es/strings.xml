@@ -238,4 +238,15 @@
     <string name="share_2">Invitaciones</string>
     <string name="share_3">Minutos Gratis</string>
     <string name="share_4">Compartir</string>
+
+    <string name="coupon_1">Coupons</string>
+    <string name="coupon_2">¿Tienes un codigo de descuento?\nIntrodúcelo y consigue minutos gratis</string>
+    <string name="coupon_3">Batería</string>
+    <string name="coupon_4">Negocios</string>
+    <string name="coupon_5">Añadir Código</string>
+    <string name="coupon_6">Código Descuento</string>
+    <string name="coupon_7">Introduce tu código</string>
+    <string name="coupon_8">Canjear</string>
+    <string name="coupon_9">Cancelar</string>
+    <string name="coupon_10">Usar</string>
 </resources>

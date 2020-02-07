@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/lay_sw_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x30"
+        android:background="@drawable/bg_text_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/x20">
+
+        <ImageView
+            android:id="@+id/lay_coupon_get_top_scan_iv"
+            android:layout_width="@dimen/x55"
+            android:layout_height="@dimen/x55"
+            android:layout_marginEnd="@dimen/x20"
+            android:src="@mipmap/ic_coupon_scan" />
+
+        <EditText
+            android:id="@+id/lay_coupon_get_top_et"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x90"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/coupon_7"
+            android:paddingStart="@dimen/x20"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x26" />
+
+
+        <Button
+            android:id="@+id/lay_coupon_get_top_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x60"
+            android:layout_marginStart="@dimen/x30"
+            android:background="@mipmap/pic_enter_btn_bg"
+            android:paddingStart="@dimen/x20"
+            android:paddingEnd="@dimen/x20"
+            android:text="@string/coupon_8"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x26" />
+    </LinearLayout>
+</LinearLayout>

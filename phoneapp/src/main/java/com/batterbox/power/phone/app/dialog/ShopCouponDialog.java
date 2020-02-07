@@ -62,6 +62,7 @@ public class ShopCouponDialog extends BaseDialogFragment {
         rv.setAdapter(adapter = new QuickRecycleAdapter<CouponEntity>(getContext(), R.layout.item_dialog_shop_coupon) {
             @Override
             protected void onSetItemData(BaseViewHolder holder, CouponEntity item, int viewType) {
+                ImageLoaderUtil.load(context, StringUtil.fixNullStr(item.img), holder.getView(R.id.item_dialog_shop_coupon_iv));
                 holder.setText(R.id.item_dialog_shop_coupon_price_tv, StringUtil.fixNullStr(item.typeValue) + "" + getString(R.string.m_1));
                 holder.setText(R.id.item_dialog_shop_coupon_type_tv, StringUtil.fixNullStr(item.typeName));
                 holder.setText(R.id.item_dialog_shop_coupon_name_tv, StringUtil.fixNullStr(item.name));

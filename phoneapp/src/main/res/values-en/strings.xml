@@ -239,4 +239,15 @@
     <string name="share_2">Invitation</string>
     <string name="share_3">Minutes Free</string>
     <string name="share_4">Share</string>
+
+    <string name="coupon_1">Coupons</string>
+    <string name="coupon_2">You have a discount code?\nEnter it and get free minutes</string>
+    <string name="coupon_3">Battery</string>
+    <string name="coupon_4">Business</string>
+    <string name="coupon_5">Business</string>
+    <string name="coupon_6">Discount Code</string>
+    <string name="coupon_7">Discount Code</string>
+    <string name="coupon_8">Exchange</string>
+    <string name="coupon_9">Cancel</string>
+    <string name="coupon_10">Use</string>
 </resources>

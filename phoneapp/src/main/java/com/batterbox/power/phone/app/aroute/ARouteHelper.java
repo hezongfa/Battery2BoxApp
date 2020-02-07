@@ -43,6 +43,7 @@ public class ARouteHelper {
 
     public static final String RECHARGE_LIST = "/app/user/recharge_list";
     public static final String COUPON = "/app/coupon";
+    public static final String COUPON_GET = "/app/coupon_get";
     public static final String PROMOTION = "/app/promotion";
     public static final String TIME_RECORD = "/app/time_record";
     public static final String SHARE = "/app/SHARE";
@@ -167,6 +168,10 @@ public class ARouteHelper {
     public static Postcard coupon() {
         return ARouter.getInstance().build(COUPON);
     }
+    public static Postcard coupon_get() {
+        return ARouter.getInstance().build(COUPON_GET);
+    }
+
 
     public static Postcard promotion() {
         return ARouter.getInstance().build(PROMOTION);

@@ -154,7 +154,6 @@
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:viewmodel:1.1.1@aar" level="project" />
     <orderEntry type="module" module-name="baselib" />
     <orderEntry type="module" module-name="loadlibrary" />
-    <orderEntry type="module" module-name="PowerApp-slidemenulib" />
     <orderEntry type="module" module-name="zbarlibary" />
     <orderEntry type="module" module-name="PowerApp-banner" />
   </component>

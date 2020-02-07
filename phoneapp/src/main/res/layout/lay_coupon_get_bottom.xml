@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/lay_coupon_get_bottom_clear_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x70"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginEnd="@dimen/x80"
+        android:layout_marginBottom="@dimen/x30"
+        android:background="@mipmap/pic_enter_btn_bg"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20"
+        android:text="@string/coupon_9"
+        android:textSize="@dimen/x28" />
+
+    <Button
+        android:id="@+id/lay_coupon_get_bottom_use_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x70"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/x80"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginBottom="@dimen/x30"
+        android:background="@mipmap/pic_enter_btn_bg"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20"
+        android:text="@string/coupon_10"
+        android:textSize="@dimen/x28" />
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/pic_s_head_bg" />
+
+    <TextView
+        android:id="@+id/lay_sw_nav_bar_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x80"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/x10"
+        android:layout_marginTop="@dimen/x46"
+        android:gravity="center"
+        android:text="@string/coupon_1"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/x40" />
+
+    <TextView
+        android:id="@+id/lay_sw_nav_bar_sub_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay_sw_nav_bar_tv"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/x14"
+        android:paddingStart="@dimen/x120"
+        android:paddingEnd="@dimen/x120"
+        android:text="@string/coupon_2"
+        android:textColor="#4a2f09"
+        android:textSize="@dimen/x25" />
+
+    <ImageButton
+        android:id="@+id/lay_sw_nav_bar_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x46"
+        android:background="@android:color/transparent"
+        android:paddingStart="@dimen/x30"
+        android:paddingTop="@dimen/x30"
+        android:paddingEnd="@dimen/x30"
+        android:paddingBottom="@dimen/x30"
+        android:src="@mipmap/ic_nav_back_r" />
+
+    <TextView
+        android:id="@+id/lay_sw_nav_bar_right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/x46"
+        android:background="@android:color/transparent"
+        android:paddingStart="@dimen/x30"
+        android:paddingTop="@dimen/x30"
+        android:paddingEnd="@dimen/x30"
+        android:paddingBottom="@dimen/x30"
+        android:text="Detalles"
+        android:textColor="#4a2f09"
+        android:textSize="@dimen/x25" />
+</RelativeLayout>

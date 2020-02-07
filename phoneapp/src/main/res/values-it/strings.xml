@@ -240,4 +240,15 @@
     <string name="share_2">Inviti</string>
     <string name="share_3">Verbale omaggio</string>
     <string name="share_4">Invita un amico</string>
+
+    <string name="coupon_1">Buoni</string>
+    <string name="coupon_2">Hai un codice sconto?\nInseriscilo e ottieni minuti gratuiti</string>
+    <string name="coupon_3">Batteria</string>
+    <string name="coupon_4">Affari</string>
+    <string name="coupon_5">Aggiungi codice</string>
+    <string name="coupon_6">Codice Sconto</string>
+    <string name="coupon_7">Inserisci il tuo codice</string>
+    <string name="coupon_8">Scambio</string>
+    <string name="coupon_9">Annullare</string>
+    <string name="coupon_10">Uso</string>
 </resources>

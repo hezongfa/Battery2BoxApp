@@ -9,6 +9,8 @@ import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.DrawerLayout;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.AnimationSet;
@@ -70,7 +72,6 @@ import java.util.List;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
-import ke.tang.slidemenu.SlideMenu;
 import permissions.dispatcher.NeedsPermission;
 import permissions.dispatcher.OnNeverAskAgain;
 import permissions.dispatcher.RuntimePermissions;
@@ -134,8 +135,8 @@ public class MainActivity extends BaseActivity implements OnMapReadyCallback, Go
         setContentView(R.layout.act_main);
         StatusBarCompat.setStatusBarColor(this, Color.parseColor("#ffb331"));
         mainMenuHelper = new MainMenuHelper(this);
-        SlideMenu slideMenu = findViewById(R.id.slideMenu);
-        findViewById(R.id.act_main_menu_btn).setOnClickListener(v -> slideMenu.open(false, true));
+        DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
+        findViewById(R.id.act_main_menu_btn).setOnClickListener(v -> drawerLayout.openDrawer(Gravity.START));
         mapView = findViewById(R.id.mapview);
         selectLocationIv = findViewById(R.id.act_main_select_location_iv);
         deviceUseTimeTv = findViewById(R.id.act_main_borrow_cur_time_tv);
@@ -193,7 +194,7 @@ public class MainActivity extends BaseActivity implements OnMapReadyCallback, Go
     @Override
     protected void onResume() {
         super.onResume();
-        mainMenuHelper.setData();
+//        mainMenuHelper.setData();
         if (!UserUtil.isLogin()) {
             UserUtil.gotoLogin();
             return;
@@ -208,6 +209,7 @@ public class MainActivity extends BaseActivity implements OnMapReadyCallback, Go
             public void onSuccess(ResponseEntity<UserEntity> responseEntity) {
                 if (responseEntity != null) {
                     UserUtil.saveUserInfo(responseEntity.getData());
+                    mainMenuHelper.setData();
                 }
             }
 

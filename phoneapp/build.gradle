@@ -99,7 +99,6 @@ dependencies {
     annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:3.1.0'
     implementation project(':baselib')
     implementation project(':loadlibrary')
-    implementation project(':slidemenulib')
     implementation 'com.google.android.gms:play-services-maps:15.0.0'
 
 //    地图操作工具类，添加标记等

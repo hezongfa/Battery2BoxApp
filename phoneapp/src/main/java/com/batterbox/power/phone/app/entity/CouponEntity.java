@@ -32,5 +32,22 @@ public class CouponEntity extends BaseEntity {
     public String effectiveTime;
     public String remarke;
 
+    //是否可以使用：1=可以使用；2=不可以使用
+    public int isUse;
+    public String useTime;
+
     public boolean isExpain;
+
+
+//      "id": 1,//记录id
+//              "name": "10分钟充电卷",//优惠卷名称
+//              "type": 1,
+//              "typeName": "充电卷",//类型名称
+//              "typeValue": 10,//值
+//              "registtime": "2020-02-03 16:04:58",//领取时间
+//              "effectiveTime": "05/02/2020",//过期时间
+//              "useTime": null,//使用时间，null就是没使用
+//              "remarke": "这是免费时长的充电卷",//说明
+//              "img": "http://dev.battery2box.com:8890/330e645c-09bb-4dc6-b701-4c2e9d777989.jpg",//图片
+//              "isUse": 1//是否可以使用：1=可以使用；2=不可以使用
 }

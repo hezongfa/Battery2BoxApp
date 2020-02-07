@@ -230,4 +230,15 @@
     <string name="share_2">邀请</string>
     <string name="share_3">赠送分钟</string>
     <string name="share_4">分享</string>
+
+    <string name="coupon_1">优惠券</string>
+    <string name="coupon_2">你有折扣码吗？\n输入并获得免费分钟</string>
+    <string name="coupon_3">充电优惠卷</string>
+    <string name="coupon_4">商家优惠卷</string>
+    <string name="coupon_5">添加优惠卷</string>
+    <string name="coupon_6">折扣码</string>
+    <string name="coupon_7">输入您的代码</string>
+    <string name="coupon_8">领取</string>
+    <string name="coupon_9">取消</string>
+    <string name="coupon_10">使用</string>
 </resources>

@@ -238,4 +238,15 @@
     <string name="share_2">Einladung</string>
     <string name="share_3">Minutens Freier</string>
     <string name="share_4">Share_title</string>
+
+    <string name="coupon_1">Gutscheine</string>
+    <string name="coupon_2">Sie haben einen Rabattcode?\nGeben Sie es ein und erhalten Sie Freiminuten</string>
+    <string name="coupon_3">Batterie</string>
+    <string name="coupon_4">Geschäft</string>
+    <string name="coupon_5">Code hinzufügen</string>
+    <string name="coupon_6">Discount Code</string>
+    <string name="coupon_7">Geben Sie Ihren Code ein</string>
+    <string name="coupon_8">Einlösen</string>
+    <string name="coupon_9">Abbrechen</string>
+    <string name="coupon_10">Tragen</string>
 </resources>

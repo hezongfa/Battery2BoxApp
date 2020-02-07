@@ -2,7 +2,6 @@ package com.batterbox.power.phone.app.act.wallet;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.View;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -17,6 +16,8 @@ import com.batterbox.power.phone.app.utils.UserUtil;
 import com.chenyi.baselib.entity.ResponseEntity;
 import com.chenyi.baselib.ui.NavigationActivity;
 import com.chenyi.baselib.utils.StringUtil;
+
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * Created by ass on 2019-08-03.
@@ -34,15 +35,19 @@ public class MyWalletActivity extends NavigationActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initNavigationRight(getString(R.string.wallet_1), new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ARouteHelper.user_bill().navigation();
-            }
-        });
+        StatusBarCompat.translucentStatusBar(this, true);
+        setNavigationVisible(false);
+//        initNavigationRight(getString(R.string.wallet_1), new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ARouteHelper.user_bill().navigation();
+//            }
+//        });
+        findViewById(R.id.act_my_wallet_back_btn).setOnClickListener(v -> finish());
         findViewById(R.id.act_my_wallet_cart_submit_tv).setOnClickListener(v -> ARouteHelper.mycard().navigation());
         findViewById(R.id.act_my_wallet_balance_submit_tv).setOnClickListener(v -> recharge_getRechargeTable());
         findViewById(R.id.act_my_wallet_time_submit_tv).setOnClickListener(v -> ARouteHelper.time_record().navigation());
+        findViewById(R.id.act_my_wallet_bill_submit_tv).setOnClickListener(v -> ARouteHelper.user_bill().navigation());
     }
 
     @Override

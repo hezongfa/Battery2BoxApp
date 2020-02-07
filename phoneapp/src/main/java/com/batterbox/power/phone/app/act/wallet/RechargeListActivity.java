@@ -45,7 +45,7 @@ public class RechargeListActivity extends NavigationActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setNavigationTitle(R.string.wallet_7);
+        setNavigationTitle(R.string.wallet_6);
         rv = findViewById(R.id.act_recharge_list_rv);
         rv.setLayoutManager(new GridLayoutManager(this, 2));
         rv.setAdapter(adapter = new QuickRecycleAdapter<RechargeEntity>(this, R.layout.item_recharge_list) {
