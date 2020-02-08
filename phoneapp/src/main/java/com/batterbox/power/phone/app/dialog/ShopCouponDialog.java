@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.batterbox.power.phone.app.R;
+import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.entity.CouponEntity;
 import com.batterbox.power.phone.app.entity.LbsShopCouponEntity;
 import com.batterbox.power.phone.app.entity.ShopDetailEntity;
@@ -63,6 +64,13 @@ public class ShopCouponDialog extends BaseDialogFragment {
             @Override
             protected void onSetItemData(BaseViewHolder holder, CouponEntity item, int viewType) {
                 ImageLoaderUtil.load(context, StringUtil.fixNullStr(item.img), holder.getView(R.id.item_dialog_shop_coupon_iv));
+                holder.setOnClickListener(R.id.item_dialog_shop_coupon_iv, v -> {
+                    if (!StringUtil.isEmpty(item.img)) {
+                        ArrayList<String> list = new ArrayList<>();
+                        list.add(item.img);
+                        ARouteHelper.show_big_imgs(list, item.img);
+                    }
+                });
                 holder.setText(R.id.item_dialog_shop_coupon_price_tv, StringUtil.fixNullStr(item.typeValue) + "" + getString(R.string.m_1));
                 holder.setText(R.id.item_dialog_shop_coupon_type_tv, StringUtil.fixNullStr(item.typeName));
                 holder.setText(R.id.item_dialog_shop_coupon_name_tv, StringUtil.fixNullStr(item.name));

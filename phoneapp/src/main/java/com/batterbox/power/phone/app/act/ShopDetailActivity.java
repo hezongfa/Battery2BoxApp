@@ -129,7 +129,7 @@ public class ShopDetailActivity extends NavigationActivity {
                         }
                         findViewById(R.id.act_shop_detail_wifi_iv).setVisibility(responseEntity.getData().wifi == 1 ? View.VISIBLE : View.GONE);
                         findViewById(R.id.act_shop_detail_smoke_iv).setVisibility(responseEntity.getData().smoke == 1 ? View.VISIBLE : View.GONE);
-                        findViewById(R.id.act_shop_detail_service_ll).setVisibility((findViewById(R.id.act_shop_detail_wifi_iv).getVisibility() == View.VISIBLE &&
+                        findViewById(R.id.act_shop_detail_service_ll).setVisibility((findViewById(R.id.act_shop_detail_wifi_iv).getVisibility() == View.VISIBLE ||
                                 findViewById(R.id.act_shop_detail_smoke_iv).getVisibility() == View.VISIBLE) ? View.VISIBLE : View.GONE);
                         ((TextView) findViewById(R.id.act_shop_detail_web_tv)).setText(StringUtil.fixNullStr(responseEntity.getData().url));
                         if (!StringUtil.isEmpty(responseEntity.getData().url)) {

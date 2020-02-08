@@ -6,6 +6,7 @@
     <string name="app_13">Invia</string>
     <string name="app_16">Annulla</string>
     <string name="app_20">Successo</string>
+    <string name="app_22">Sei sicuro di cancellare?</string>
     <string name="app_28">Facendo foto</string>
     <string name="app_29">Seleziona dall \'album del telefono</string>
     <string name="app_32">eliminare</string>
@@ -131,6 +132,7 @@
     <string name="wallet_27">L\'importo della ricostituzione non è rimborsabile</string>
     <string name="wallet_28">Minuti</string>
     <string name="wallet_29">GRATIS</string>
+    <string name="wallet_30">Confermare ricarica?</string>
 
     <string name="shop_1">Disponibile per noleggio：%s</string>
     <string name="shop_2">Disponibile per restituzione：%s</string>
@@ -251,4 +253,6 @@
     <string name="coupon_8">Scambio</string>
     <string name="coupon_9">Annullare</string>
     <string name="coupon_10">Uso</string>
+    <string name="coupon_11">Buono sconto</string>
+    <string name="coupon_12">Regola di utilizzo</string>
 </resources>

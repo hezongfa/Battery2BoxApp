@@ -260,6 +260,9 @@ public interface Api {
     @POST("cp/useMyCoupon")
     Observable<ResponseEntity> cp_useMyCoupon(@HeaderMap Map<String, Object> map,
                                                                  @Field("id") long id);
-
+    @FormUrlEncoded
+    @POST("cp/deleMyCoupon")
+    Observable<ResponseEntity> cp_deleMyCoupon(@HeaderMap Map<String, Object> map,
+                                              @Field("id") long id);
 
 }

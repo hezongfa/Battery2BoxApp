@@ -6,6 +6,7 @@
     <string name="app_13">Senden</string>
     <string name="app_16">Abbrechen</string>
     <string name="app_20">Erfolg</string>
+    <string name="app_22">Sind Sie sicher, zu löschen?</string>
     <string name="app_28">Fotos machen</string>
     <string name="app_29">Wählen Sie aus dem Telefonalbum</string>
     <string name="app_53">Keine Daten</string>
@@ -130,6 +131,7 @@
     <string name="wallet_27">Die Menge der Rekonstitution wird nicht zurückerstattet</string>
     <string name="wallet_28">Minuten</string>
     <string name="wallet_29">KOSTENLOS</string>
+    <string name="wallet_30">Bestätigen Sie die Aufladung？</string>
 
     <string name="shop_1"> Miete %s</string>
     <string name="shop_2"> Rückkehr %s</string>
@@ -249,4 +251,6 @@
     <string name="coupon_8">Einlösen</string>
     <string name="coupon_9">Abbrechen</string>
     <string name="coupon_10">Tragen</string>
+    <string name="coupon_11">Rabatt-Gutschein</string>
+    <string name="coupon_12">Regel der Verwendung</string>
 </resources>

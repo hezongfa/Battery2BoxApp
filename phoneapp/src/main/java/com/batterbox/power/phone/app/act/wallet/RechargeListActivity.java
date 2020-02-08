@@ -26,6 +26,8 @@ import com.chenyi.baselib.widget.recycleviewadapter.QuickRecycleAdapter;
 
 import java.util.ArrayList;
 
+import qiu.niorgai.StatusBarCompat;
+
 /**
  * Created by ass on 2019-09-04.
  * Description
@@ -46,6 +48,8 @@ public class RechargeListActivity extends NavigationActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setNavigationTitle(R.string.wallet_6);
+        setNavigationBarBgColor(Color.parseColor("#f1bf39"));
+        StatusBarCompat.setStatusBarColor(this, Color.parseColor("#f1bf39"));
         rv = findViewById(R.id.act_recharge_list_rv);
         rv.setLayoutManager(new GridLayoutManager(this, 2));
         rv.setAdapter(adapter = new QuickRecycleAdapter<RechargeEntity>(this, R.layout.item_recharge_list) {
@@ -73,7 +77,9 @@ public class RechargeListActivity extends NavigationActivity {
         });
         findViewById(R.id.act_recharge_list_submit_btn).setOnClickListener(v -> {
             if (selectRechargeEntity == null) return;
-            HttpClient.getInstance().recharge_getRechargeTable(selectRechargeEntity.rcId, new NormalHttpCallBack<ResponseEntity>(RechargeListActivity.this) {
+            DialogUtils.showDialog(getSupportFragmentManager(), null, getString(R.string.wallet_30), getString(R.string.app_16), v12 -> {
+
+            }, getString(R.string.app_11), v1 -> HttpClient.getInstance().recharge_getRechargeTable(selectRechargeEntity.rcId, new NormalHttpCallBack<ResponseEntity>(RechargeListActivity.this) {
                 @Override
                 public void onStart() {
 
@@ -88,7 +94,8 @@ public class RechargeListActivity extends NavigationActivity {
                 public void onFail(ResponseEntity responseEntity, String msg) {
                     FQT.showShort(RechargeListActivity.this, msg);
                 }
-            });
+            }));
+
         });
     }
 

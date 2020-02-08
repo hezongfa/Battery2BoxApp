@@ -6,6 +6,7 @@
     <string name="app_13">Enviar</string>
     <string name="app_16">Cancelar</string>
     <string name="app_20">Sucesso</string>
+    <string name="app_22">Tem certeza de apagar?</string>
     <string name="app_28">Tirando fotos</string>
     <string name="app_29">Selecionar a partir do álbum de telefone</string>
     <string name="app_32">Excluir</string>
@@ -131,6 +132,7 @@
     <string name="wallet_27">O montante Da reconstituição não é reembolsável</string>
     <string name="wallet_28">Minutos</string>
     <string name="wallet_29">LIVRE</string>
+    <string name="wallet_30">Confirmar recarga?</string>
 
     <string name="shop_1">Alugar：%s</string>
     <string name="shop_2">Retorno：%s</string>
@@ -251,4 +253,6 @@
     <string name="coupon_8">Resgatar</string>
     <string name="coupon_9">Cancelar</string>
     <string name="coupon_10">Usar</string>
+    <string name="coupon_11">Cupom de desconto</string>
+    <string name="coupon_12">Regra de utilização</string>
 </resources>

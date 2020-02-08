@@ -6,6 +6,7 @@
     <string name="app_13">Soumettre</string>
     <string name="app_16">Annuler</string>
     <string name="app_20">Succès</string>
+    <string name="app_22">Confirm delete？</string>
     <string name="app_28">Photographier</string>
     <string name="app_29">Sélection à partir d \'un album de photos téléphoniques</string>
     <string name="app_32">Supprimer</string>
@@ -130,6 +131,7 @@
     <string name="wallet_27">Le montant de la reconstruction ne peut être remboursé.</string>
     <string name="wallet_28">Minutes</string>
     <string name="wallet_29">Gratuit</string>
+    <string name="wallet_30">Confirmez la recharge?</string>
 
     <string name="shop_1">Louer：%s</string>
     <string name="shop_2">Retour：%s</string>
@@ -251,4 +253,6 @@
     <string name="coupon_8">Échangez</string>
     <string name="coupon_9">Annuler</string>
     <string name="coupon_10">Porter</string>
+    <string name="coupon_11">Coupon de réduction</string>
+    <string name="coupon_12">Règles d \'utilisation</string>
 </resources>

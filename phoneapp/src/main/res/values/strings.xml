@@ -53,7 +53,7 @@
     <string name="main_1">搜索附近的Battery2Box</string>
     <string name="main_2">扫码租借</string>
     <string name="main_3">我的钱包</string>
-    <string name="main_4">优惠券</string>
+    <string name="main_4">我的优惠券</string>
     <string name="main_5">租借记录</string>
     <string name="main_6">邀请好友</string>
     <string name="main_7">商户合作</string>
@@ -121,6 +121,8 @@
     <string name="wallet_27">充值金额不能退还</string>
     <string name="wallet_28">分钟</string>
     <string name="wallet_29">赠送</string>
+    <string name="wallet_30">确认充值？</string>
+
 
     <string name="shop_1">可借：%s</string>
     <string name="shop_2">可还：%s</string>
@@ -241,4 +243,6 @@
     <string name="coupon_8">领取</string>
     <string name="coupon_9">取消</string>
     <string name="coupon_10">使用</string>
+    <string name="coupon_11">优惠券</string>
+    <string name="coupon_12">使用规则</string>
 </resources>

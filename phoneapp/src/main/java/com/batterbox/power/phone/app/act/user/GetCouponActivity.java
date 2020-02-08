@@ -2,8 +2,6 @@ package com.batterbox.power.phone.app.act.user;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -56,28 +54,28 @@ public class GetCouponActivity extends NavListActivity<CouponEntity> {
         setRefreshEnable(false);
         setLoadMoreEnable(false);
         searchEt = findViewById(R.id.lay_coupon_get_top_et);
-        searchEt.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                searchCode();
-            }
-        });
+//        searchEt.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {
+//                searchCode();
+//            }
+//        });
         findViewById(R.id.lay_coupon_get_top_scan_iv).setOnClickListener(v -> ScanBarCodeHelper.scan(GetCouponActivity.this, result -> {
             if (!StringUtil.isEmpty(result.getContent())) {
-                searchEt.setText(result.getContent());
+                searchCode(result.getContent());
             }
         }));
-        findViewById(R.id.lay_coupon_get_top_btn).setOnClickListener(v -> searchCode());
+        findViewById(R.id.lay_coupon_get_top_btn).setOnClickListener(v -> searchCode(searchEt.getText().toString()));
         bottomLay.setVisibility(View.GONE);
         findViewById(R.id.lay_coupon_get_bottom_clear_btn).setOnClickListener(v -> {
             searchEt.setText("");
@@ -155,8 +153,8 @@ public class GetCouponActivity extends NavListActivity<CouponEntity> {
 
     }
 
-    private void searchCode() {
-        HttpClient.getInstance().cp_findCouponByCode(searchEt.getText().toString(), new NormalHttpCallBack<ResponseEntity<CouponEntity>>() {
+    private void searchCode(String code) {
+        HttpClient.getInstance().cp_findCouponByCode(code, new NormalHttpCallBack<ResponseEntity<CouponEntity>>() {
             @Override
             public void onStart() {
 

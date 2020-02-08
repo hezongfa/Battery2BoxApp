@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -7,17 +7,19 @@
     <RelativeLayout
         android:id="@+id/item_dialog_shop_coupon_rl"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/x10"
+        android:layout_height="@dimen/x146"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_marginEnd="@dimen/x20"
         android:layout_marginBottom="@dimen/x10"
-        android:background="@drawable/bg_coupon_item"
-        android:padding="@dimen/x18">
+        android:background="@drawable/bg_coupon_item">
 
         <LinearLayout
             android:id="@+id/item_dialog_shop_coupon_ll"
             android:layout_width="@dimen/x160"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/x12"
             android:layout_marginEnd="@dimen/x7"
             android:gravity="center"
             android:orientation="vertical">
@@ -45,14 +47,18 @@
             android:layout_height="@dimen/x120"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/x10" />
+            android:layout_marginStart="@dimen/x10"
+            android:layout_marginEnd="@dimen/x12" />
 
         <TextView
             android:id="@+id/item_dialog_shop_coupon_name_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x12"
             android:layout_toStartOf="@id/item_dialog_shop_coupon_iv"
             android:layout_toEndOf="@id/item_dialog_shop_coupon_ll"
+            android:ellipsize="end"
+            android:lines="1"
             android:text="店铺优惠券"
             android:textColor="#FF313131"
             android:textSize="@dimen/x24" />
@@ -65,6 +71,8 @@
             android:layout_marginTop="@dimen/x12"
             android:layout_toStartOf="@id/item_dialog_shop_coupon_iv"
             android:layout_toEndOf="@id/item_dialog_shop_coupon_ll"
+            android:ellipsize="end"
+            android:lines="1"
             android:text="店铺优惠券"
             android:textColor="#777777"
             android:textSize="@dimen/x24" />
@@ -78,17 +86,38 @@
             android:layout_toEndOf="@id/item_dialog_shop_coupon_ll"
             android:drawableEnd="@mipmap/ic_expain"
             android:drawablePadding="@dimen/x18"
-            android:text="使用规则"
+            android:text="@string/coupon_12"
             android:textColor="#777777"
             android:textSize="@dimen/x24" />
+
+        <ImageView
+            android:id="@+id/item_dialog_shop_coupon_unable_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x146"
+            android:scaleType="fitXY"
+            android:src="@mipmap/pic_coupon_unable"
+            android:visibility="gone" />
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/item_dialog_shop_coupon_delete_iv"
+        android:layout_width="@dimen/x50"
+        android:layout_height="@dimen/x50"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/x10"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_rr_delete"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/item_dialog_shop_coupon_des_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/item_dialog_shop_coupon_rl"
+        android:layout_marginStart="@dimen/x20"
         android:layout_marginTop="@dimen/x4"
-        android:layout_marginBottom="@dimen/x10"
+        android:layout_marginEnd="@dimen/x20"
+        android:layout_marginBottom="@dimen/x4"
         android:background="@drawable/bg_coupon_item_des"
         android:lineSpacingExtra="@dimen/x10"
         android:paddingStart="@dimen/x25"
@@ -97,4 +126,4 @@
         android:paddingBottom="@dimen/x18"
         android:textColor="#777777"
         android:textSize="@dimen/x24" />
-</LinearLayout>
+</RelativeLayout>

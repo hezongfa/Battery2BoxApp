@@ -6,10 +6,12 @@
     <string name="app_13">Enviar</string>
     <string name="app_16">Cancelación</string>
     <string name="app_20">El éxito</string>
+    <string name="app_22">¿Borrar?</string>
     <string name="app_28">Fotos</string>
     <string name="app_29">Seleccione el álbum de fotos del teléfono móvil</string>
     <string name="app_32">Borrar</string>
     <string name="app_53">Datos no disponibles</string>
+
 
 
     <string name="m_1">€</string>
@@ -64,7 +66,7 @@
     <string name="main_1">Buscar Battery2Box</string>
     <string name="main_2">ESCANEA Y CARGA</string>
     <string name="main_3">Monedero</string>
-    <string name="main_4">Cupones</string>
+    <string name="main_4">Mis Cupones</string>
     <string name="main_5">Registro Alquiler</string>
     <string name="main_6">Invitar a un Amigo</string>
     <string name="main_7">Consulta De Negocios</string>
@@ -130,15 +132,16 @@
     <string name="wallet_27">El importe recargado no es reembolsable</string>
     <string name="wallet_28">Minutos</string>
     <string name="wallet_29">GRATIS</string>
+    <string name="wallet_30">¿Confirmación?</string>
 
-    <string name="shop_1">Alquilar：%s</string>
-    <string name="shop_2">Devolver：%s</string>
+    <string name="shop_1">Alquire：%s</string>
+    <string name="shop_2">Vacío：%s</string>
     <string name="shop_3">Hay  Wi-Fi</string>
     <string name="shop_4">No ofrecer Wi-Fi</string>
     <string name="shop_5">Prohibido fumar</string>
     <string name="shop_6">Fumador</string>
-    <string name="shop_7">Alquilar</string>
-    <string name="shop_8">Devolver</string>
+    <string name="shop_7">Alquire</string>
+    <string name="shop_8">Vacío</string>
 
     <string name="order__0">Inacabado</string>
     <string name="order_0">Hecho</string>
@@ -249,4 +252,6 @@
     <string name="coupon_8">Canjear</string>
     <string name="coupon_9">Cancelar</string>
     <string name="coupon_10">Usar</string>
+    <string name="coupon_11">Cupón descuento</string>
+    <string name="coupon_12">Normas de uso</string>
 </resources>

@@ -14,9 +14,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
             android:text="@string/wallet_26"
             android:textColor="#FFAB6C09"
-            android:layout_gravity="center_horizontal"
             android:textSize="@dimen/x47" />
 
         <TextView
@@ -24,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/x14"
+            android:gravity="center"
             android:text="@string/wallet_27"
             android:textColor="#FF95610D"
             android:textSize="@dimen/x28" />

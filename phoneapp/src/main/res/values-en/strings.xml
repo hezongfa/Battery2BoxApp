@@ -6,6 +6,7 @@
     <string name="app_13">Submit</string>
     <string name="app_16">Cancel</string>
     <string name="app_20">Success</string>
+    <string name="app_22">Are you sure to delete?</string>
     <string name="app_28">Taking pictures</string>
     <string name="app_29">Select from the phone album</string>
     <string name="app_32">Delete</string>
@@ -130,6 +131,7 @@
     <string name="wallet_27">The amount of replenishment is not repayable</string>
     <string name="wallet_28">Minutes</string>
     <string name="wallet_29">Giving</string>
+    <string name="wallet_30">Confirm recharge?</string>
 
     <string name="shop_1">Rent：%s</string>
     <string name="shop_2">Return：%s</string>
@@ -244,10 +246,12 @@
     <string name="coupon_2">You have a discount code?\nEnter it and get free minutes</string>
     <string name="coupon_3">Battery</string>
     <string name="coupon_4">Business</string>
-    <string name="coupon_5">Business</string>
+    <string name="coupon_5">Add Code</string>
     <string name="coupon_6">Discount Code</string>
-    <string name="coupon_7">Discount Code</string>
+    <string name="coupon_7">Enter your code</string>
     <string name="coupon_8">Exchange</string>
     <string name="coupon_9">Cancel</string>
     <string name="coupon_10">Use</string>
+    <string name="coupon_11">Discount coupon</string>
+    <string name="coupon_12">Usage rule</string>
 </resources>

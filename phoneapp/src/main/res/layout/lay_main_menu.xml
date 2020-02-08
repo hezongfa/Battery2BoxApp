@@ -14,13 +14,13 @@
         android:background="@mipmap/pic_bg_menu"
         android:orientation="vertical">
 
-        <ImageView
+        <com.chenyi.baselib.widget.RoundImageView
             android:id="@+id/lay_main_menu_head_iv"
             android:layout_width="@dimen/x150"
             android:layout_height="@dimen/x150"
-            android:src="@mipmap/ic_launcher"
             android:layout_marginStart="@dimen/x50"
-            android:layout_marginTop="@dimen/x60" />
+            android:layout_marginTop="@dimen/x60"
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:id="@+id/lay_main_menu_name_tv"
@@ -59,6 +59,7 @@
                     android:gravity="center_vertical"
                     android:paddingStart="@dimen/x30"
                     android:text="@string/main_3"
+                    android:textAllCaps="true"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/x30" />
 
@@ -92,6 +93,7 @@
                     android:gravity="center_vertical"
                     android:paddingStart="@dimen/x30"
                     android:text="@string/main_4"
+                    android:textAllCaps="true"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/x30" />
 
@@ -121,6 +123,7 @@
                 android:gravity="center_vertical"
                 android:paddingStart="@dimen/x30"
                 android:text="@string/main_13"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/x30" />
 
@@ -133,6 +136,7 @@
                 android:gravity="center_vertical"
                 android:paddingStart="@dimen/x30"
                 android:text="@string/main_5"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/x30" />
 
@@ -145,6 +149,7 @@
                 android:gravity="center_vertical"
                 android:paddingStart="@dimen/x30"
                 android:text="@string/main_6"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/x30" />
 
@@ -157,6 +162,7 @@
                 android:gravity="center_vertical"
                 android:paddingStart="@dimen/x30"
                 android:text="@string/main_7"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/x30" />
 
@@ -169,6 +175,7 @@
                 android:gravity="center_vertical"
                 android:paddingStart="@dimen/x30"
                 android:text="@string/main_8"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/x30" />
 
@@ -181,6 +188,7 @@
                 android:gravity="center_vertical"
                 android:paddingStart="@dimen/x30"
                 android:text="@string/main_9"
+                android:textAllCaps="true"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/x30" />
         </LinearLayout>

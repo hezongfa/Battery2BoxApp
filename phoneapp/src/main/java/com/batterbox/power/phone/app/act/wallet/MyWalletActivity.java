@@ -48,6 +48,7 @@ public class MyWalletActivity extends NavigationActivity {
         findViewById(R.id.act_my_wallet_balance_submit_tv).setOnClickListener(v -> recharge_getRechargeTable());
         findViewById(R.id.act_my_wallet_time_submit_tv).setOnClickListener(v -> ARouteHelper.time_record().navigation());
         findViewById(R.id.act_my_wallet_bill_submit_tv).setOnClickListener(v -> ARouteHelper.user_bill().navigation());
+        findViewById(R.id.act_my_wallet_coupon_submit_tv).setOnClickListener(v -> ARouteHelper.coupon().navigation());
     }
 
     @Override

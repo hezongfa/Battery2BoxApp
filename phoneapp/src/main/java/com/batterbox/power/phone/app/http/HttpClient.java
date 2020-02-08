@@ -315,4 +315,10 @@ public class HttpClient extends BaseHttpClient<Api> {
                 (defaultPms(), id);
         query(observable, callBack);
     }
+    public void cp_deleMyCoupon(long id, NormalHttpCallBack<ResponseEntity> callBack) {
+        Observable<ResponseEntity> observable = getInstance().getService().cp_deleMyCoupon
+                (defaultPms(), id);
+        query(observable, callBack);
+    }
+
 }
