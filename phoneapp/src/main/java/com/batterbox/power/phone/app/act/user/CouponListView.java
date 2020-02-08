@@ -44,14 +44,14 @@ public class CouponListView extends BasePagerListView<CouponEntity> implements N
             protected void onSetItemData(BaseViewHolder holder, CouponEntity item, int viewType) {
                 holder.setVisible(R.id.item_dialog_shop_coupon_delete_iv, true);
                 holder.setOnClickListener(R.id.item_dialog_shop_coupon_delete_iv, v -> delete(item.id));
-                if (item.isUse == 2) {
+                if (item.isUse != 1) {
                     holder.setVisible(R.id.item_dialog_shop_coupon_unable_iv, true);
                 } else {
                     holder.setVisible(R.id.item_dialog_shop_coupon_unable_iv, false);
                 }
                 ImageLoaderUtil.load(context, StringUtil.fixNullStr(item.img), holder.getView(R.id.item_dialog_shop_coupon_iv));
                 holder.setOnClickListener(R.id.item_dialog_shop_coupon_iv, v -> {
-                    if (item.isUse == 2) {
+                    if (item.isUse != 1) {
                         return;
                     }
                     if (!StringUtil.isEmpty(item.img)) {
@@ -66,7 +66,7 @@ public class CouponListView extends BasePagerListView<CouponEntity> implements N
                 holder.setText(R.id.item_dialog_shop_coupon_time_tv, StringUtil.fixNullStr(item.registtime) + " - " + StringUtil.fixNullStr(item.effectiveTime));
                 holder.setText(R.id.item_dialog_shop_coupon_des_tv, StringUtil.fixNullStr(item.remarke));
                 holder.setOnClickListener(R.id.item_dialog_shop_coupon_rule_tv, v -> {
-                    if (item.isUse == 2) {
+                    if (item.isUse != 1) {
                         return;
                     }
                     item.isExpain = !item.isExpain;
@@ -89,7 +89,7 @@ public class CouponListView extends BasePagerListView<CouponEntity> implements N
                 holder.setOnClickListener(R.id.item_dialog_shop_coupon_rl, new OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (item.isUse == 2) {
+                        if (item.isUse != 1) {
                             return;
                         }
                         use(item.id);
