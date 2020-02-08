@@ -68,7 +68,7 @@ public class ShopCouponDialog extends BaseDialogFragment {
                     if (!StringUtil.isEmpty(item.img)) {
                         ArrayList<String> list = new ArrayList<>();
                         list.add(item.img);
-                        ARouteHelper.show_big_imgs(list, item.img);
+                        ARouteHelper.show_big_imgs(list, item.img).navigation();
                     }
                 });
                 holder.setText(R.id.item_dialog_shop_coupon_price_tv, StringUtil.fixNullStr(item.typeValue) + "" + getString(R.string.m_1));

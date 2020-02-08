@@ -254,4 +254,6 @@
     <string name="coupon_10">Use</string>
     <string name="coupon_11">Discount coupon</string>
     <string name="coupon_12">Usage rule</string>
+    <string name="coupon_13">Whether to use the voucher</string>
+
 </resources>
