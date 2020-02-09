@@ -2,6 +2,8 @@ package com.chenyi.baselib.utils;
 
 import android.content.Context;
 
+import com.chenyi.baselib.utils.print.FQL;
+
 import java.util.Locale;
 
 import static com.chenyi.baselib.utils.StringUtil.text;
@@ -12,7 +14,7 @@ import static com.chenyi.baselib.utils.StringUtil.text;
  */
 
 public class LanguageUtil {
-    public static final String CN = "cn";
+    public static final String ZH = "zh";
     public static final String EN = "en";
     public static final String ES = "es";// 西班牙
     public static final String DE = "de";// 德语
@@ -27,10 +29,10 @@ public class LanguageUtil {
     public static String getCurLanguageName(Context context) {
         String name = null;
         String language = getLanguage();
-        if (LanguageUtil.CN.equals(language)) {
-            name = text(context, com.chenyi.tao.shop.baselib.R.string.l_3);
-        } else if (LanguageUtil.ES.equals(language)) {
+        if (LanguageUtil.ZH.equals(language)) {
             name = text(context, com.chenyi.tao.shop.baselib.R.string.l_1);
+        } else if (LanguageUtil.ES.equals(language)) {
+            name = text(context, com.chenyi.tao.shop.baselib.R.string.l_3);
         } else if (LanguageUtil.EN.equals(language)) {
             name = text(context, com.chenyi.tao.shop.baselib.R.string.l_2);
         } else if (LanguageUtil.DE.equals(language)) {
@@ -40,6 +42,8 @@ public class LanguageUtil {
         } else if (LanguageUtil.IT.equals(language)) {
             name = text(context, com.chenyi.tao.shop.baselib.R.string.l_6);
         } else if (LanguageUtil.PT.equals(language)) {
+            name = text(context, com.chenyi.tao.shop.baselib.R.string.l_7);
+        } else {
             name = text(context, com.chenyi.tao.shop.baselib.R.string.l_7);
         }
 
@@ -60,9 +64,19 @@ public class LanguageUtil {
         SharedPreferencesUtil.getInstance().saveString("cur_language", language);
     }
 
+    public static void initLanguage(Context context) {
+        String curLanguage = getLanguage();
+        if (StringUtil.isEmpty(curLanguage)) {
+            Locale locale = context.getResources().getConfiguration().locale;
+            String language = locale.getLanguage();
+            FQL.d("language--" + language);
+            saveLanguage(StringUtil.fixNullStr(language, LanguageUtil.ES));
+        }
+    }
+
     public static Locale getLocaleByLanguage(String language) {
         Locale locale = null;
-        if (LanguageUtil.CN.equals(language)) {
+        if (LanguageUtil.ZH.equals(language)) {
             locale = Locale.SIMPLIFIED_CHINESE;
         } else if (LanguageUtil.ES.equals(language)) {
             locale = new Locale(ES);
@@ -76,6 +90,8 @@ public class LanguageUtil {
             locale = Locale.ITALIAN;
         } else if (LanguageUtil.PT.equals(language)) {
             locale = new Locale(PT);
+        } else {
+            locale = new Locale(ES);
         }
         return locale;
     }

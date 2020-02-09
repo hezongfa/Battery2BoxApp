@@ -190,7 +190,7 @@ public class OrderListActivity extends NavListActivity<OrderEntity> {
                     ArrayList<OrderEntity> finishList = new ArrayList<>();
                     ArrayList<OrderEntity> unfinishList = new ArrayList<>();
                     for (OrderEntity orderEntity : responseEntity.getData()) {
-                        if (orderEntity.state == 0 || orderEntity.state == 1 || (orderEntity.state == 2 && orderEntity.payState == 2)) {
+                        if (orderEntity.state == 0 || orderEntity.state == 1 ) {
                             if (unfinishList.size() == 0 && !adapter.getData().contains(unfOrderEntity)) {
                                 unfinishList.add(unfOrderEntity);
                             }

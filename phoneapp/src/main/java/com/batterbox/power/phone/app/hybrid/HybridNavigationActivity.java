@@ -52,7 +52,7 @@ public class HybridNavigationActivity extends HybridBaseNavigationActivity imple
     public String getLanguage() {
         String language = LanguageUtil.getLanguage();
         if (StringUtil.isEmpty(language)) {
-            language = LanguageUtil.CN;
+            language = LanguageUtil.ZH;
         }
         return language;
     }

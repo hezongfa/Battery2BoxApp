@@ -43,7 +43,7 @@ public class SelectLanguageActivity extends NavListActivity<LanguageEntity> {
         findViewById(R.id.act_nav_list_mainLay).setBackgroundResource(R.mipmap.pic_bg);
         ArrayList<LanguageEntity> languageEntities = new ArrayList<>();
         languageEntities.add(new LanguageEntity(getString(R.string.l_3), 1, LanguageUtil.ES));
-        languageEntities.add(new LanguageEntity(getString(R.string.l_1), 2, LanguageUtil.CN));
+        languageEntities.add(new LanguageEntity(getString(R.string.l_1), 2, LanguageUtil.ZH));
         languageEntities.add(new LanguageEntity(getString(R.string.l_2), 3, LanguageUtil.EN));
         languageEntities.add(new LanguageEntity(getString(R.string.l_4), 4, LanguageUtil.DE));
         languageEntities.add(new LanguageEntity(getString(R.string.l_5), 5, LanguageUtil.FR));
