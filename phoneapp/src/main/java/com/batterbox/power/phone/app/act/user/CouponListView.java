@@ -141,7 +141,7 @@ public class CouponListView extends BasePagerListView<CouponEntity> implements N
     private void delete(long id) {
         DialogUtils.showDialog(((BaseActivity) getContext()).getSupportFragmentManager(), null, getContext().getString(R.string.app_22), getContext().getString(R.string.app_16), v -> {
 
-        }, getContext().getString(R.string.app_11), new OnClickListener() {
+        }, getContext().getString(R.string.coupon_14), new OnClickListener() {
             @Override
             public void onClick(View v) {
                 HttpClient.getInstance().cp_deleMyCoupon(id, new NormalHttpCallBack<ResponseEntity>(getContext()) {
@@ -167,7 +167,7 @@ public class CouponListView extends BasePagerListView<CouponEntity> implements N
     private void use(long id){
         DialogUtils.showDialog(((BaseActivity) getContext()).getSupportFragmentManager(), null, getContext().getString(R.string.coupon_13), getContext().getString(R.string.app_16), v -> {
 
-        }, getContext().getString(R.string.app_11), new OnClickListener() {
+        }, getContext().getString(R.string.coupon_10), new OnClickListener() {
             @Override
             public void onClick(View v) {
                 HttpClient.getInstance().cp_useMyCoupon(id, new NormalHttpCallBack<ResponseEntity>(getContext()) {

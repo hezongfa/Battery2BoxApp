@@ -70,7 +70,7 @@ public class LanguageUtil {
             Locale locale = context.getResources().getConfiguration().locale;
             String language = locale.getLanguage();
             FQL.d("language--" + language);
-            saveLanguage(StringUtil.fixNullStr(language, LanguageUtil.ES));
+            saveLanguage(StringUtil.fixNullStr(language, LanguageUtil.EN));
         }
     }
 

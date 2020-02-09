@@ -254,4 +254,5 @@
     <string name="coupon_11">Rabatt-Gutschein</string>
     <string name="coupon_12">Regel der Verwendung</string>
     <string name="coupon_13">Gibt an, ob der Gutschein verwendet wird</string>
+    <string name="coupon_14">Löschen</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@mipmap/pic_bg_p"
     android:orientation="vertical">
 
@@ -42,19 +42,34 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/x26" />
 
-        <EditText
-            android:id="@+id/act_change_pwd_pwd_et"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:gravity="center_vertical"
-            android:hint="@string/login_27"
-            android:imeOptions="actionNext"
-            android:inputType="textPassword"
-            android:paddingStart="@dimen/x30"
-            android:paddingEnd="@dimen/x30"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/x26" />
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/act_change_pwd_pwd_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/login_27"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x26" />
+
+            <ImageView
+                android:id="@+id/act_change_pwd_pwd_hide_iv"
+                android:layout_width="@dimen/x70"
+                android:layout_height="@dimen/x70"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/x10"
+                android:scaleType="center"
+                android:src="@mipmap/ic_pwd_hide" />
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -76,19 +91,35 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/x26" />
 
-        <EditText
-            android:id="@+id/act_change_pwd_new_pwd_et"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:gravity="center_vertical"
-            android:hint="@string/login_28"
-            android:imeOptions="actionNext"
-            android:inputType="textPassword"
-            android:paddingStart="@dimen/x30"
-            android:paddingEnd="@dimen/x30"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/x26" />
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/act_change_pwd_new_pwd_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/login_28"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x26" />
+
+            <ImageView
+                android:id="@+id/act_change_pwd_new_pwd_hide_iv"
+                android:layout_width="@dimen/x70"
+                android:layout_height="@dimen/x70"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/x10"
+                android:scaleType="center"
+                android:src="@mipmap/ic_pwd_hide" />
+        </RelativeLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -104,25 +135,40 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:minWidth="@dimen/x124"
-            android:text="@string/login_9"
             android:paddingStart="@dimen/x10"
             android:paddingEnd="@dimen/x10"
+            android:text="@string/login_9"
             android:textColor="@android:color/black"
             android:textSize="@dimen/x26" />
 
-        <EditText
-            android:id="@+id/act_change_pwd_pwd_et2"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:gravity="center_vertical"
-            android:hint="@string/login_29"
-            android:imeOptions="actionDone"
-            android:inputType="textPassword"
-            android:paddingStart="@dimen/x30"
-            android:paddingEnd="@dimen/x30"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/x26" />
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/act_change_pwd_pwd_et2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/login_29"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x26" />
+
+            <ImageView
+                android:id="@+id/act_change_pwd_pwd_hide_iv2"
+                android:layout_width="@dimen/x70"
+                android:layout_height="@dimen/x70"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/x10"
+                android:scaleType="center"
+                android:src="@mipmap/ic_pwd_hide" />
+        </RelativeLayout>
     </LinearLayout>
 
     <Button

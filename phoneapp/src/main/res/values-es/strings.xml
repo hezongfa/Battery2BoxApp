@@ -14,6 +14,7 @@
 
 
 
+
     <string name="m_1">€</string>
 
     <string name="scan_1">Coloquen el código qr/código de barras en el recuadro y lo escanearán automáticamente</string>
@@ -43,7 +44,7 @@
     <string name="login_12">De Verificación</string>
     <string name="login_13">RECIBIR</string>
     <string name="login_14">Registrarse</string>
-    <string name="login_15">Acepto las</string>
+    <string name="login_15">Si Pulsar Registrarse,Acepto las</string>
     <string name="login_16"> Aviso Legal, Condiciones de uso </string>
     <string name="login_17">La contraseña no es consistente dos veces</string>
     <string name="login_18">Por favor, acceda al protocolo de usuario</string>
@@ -255,4 +256,6 @@
     <string name="coupon_11">Cupón descuento</string>
     <string name="coupon_12">Normas de uso</string>
     <string name="coupon_13">Usar el cupón</string>
+    <string name="coupon_14">Eliminar</string>
+
 </resources>

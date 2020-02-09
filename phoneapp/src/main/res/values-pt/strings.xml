@@ -256,4 +256,5 @@
     <string name="coupon_11">Cupom de desconto</string>
     <string name="coupon_12">Regra de utilização</string>
     <string name="coupon_13">Se deve USAR o voucher</string>
+    <string name="coupon_14">Deletar</string>
 </resources>

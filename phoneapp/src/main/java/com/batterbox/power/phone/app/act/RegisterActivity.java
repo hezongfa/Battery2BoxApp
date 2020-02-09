@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.InputType;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
@@ -28,6 +29,7 @@ import com.batterbox.power.phone.app.utils.UserUtil;
 import com.chenyi.baselib.entity.ResponseEntity;
 import com.chenyi.baselib.ui.NavigationActivity;
 import com.chenyi.baselib.utils.StringUtil;
+import com.chenyi.baselib.utils.ViewUtil;
 import com.chenyi.baselib.utils.print.FQT;
 
 /**
@@ -119,6 +121,33 @@ public class RegisterActivity extends NavigationActivity {
         //配置给TextView
         pTv.setMovementMethod(LinkMovementMethod.getInstance());
         pTv.setText(sb);
+
+        findViewById(R.id.act_register_pwd_hide_iv).setOnClickListener(v -> {
+            if (v.getTag() != null && StringUtil.isEquals(v.getTag(), "show")) {
+                v.setTag("hide");
+                pwdEt.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD | InputType.TYPE_CLASS_TEXT);
+                ((ImageView) findViewById(R.id.act_register_pwd_hide_iv)).setImageResource(R.mipmap.ic_pwd_hide);
+                ViewUtil.setEditCursorLast(pwdEt);
+            } else {
+                v.setTag("show");
+                pwdEt.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                ((ImageView) findViewById(R.id.act_register_pwd_hide_iv)).setImageResource(R.mipmap.ic_pwd_show);
+                ViewUtil.setEditCursorLast(pwdEt);
+            }
+        });
+        findViewById(R.id.act_register_pwd_hide_iv2).setOnClickListener(v -> {
+            if (v.getTag() != null && StringUtil.isEquals(v.getTag(), "show")) {
+                v.setTag("hide");
+                pwdEt2.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD | InputType.TYPE_CLASS_TEXT);
+                ((ImageView) findViewById(R.id.act_register_pwd_hide_iv2)).setImageResource(R.mipmap.ic_pwd_hide);
+                ViewUtil.setEditCursorLast(pwdEt2);
+            } else {
+                v.setTag("show");
+                pwdEt2.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                ((ImageView) findViewById(R.id.act_register_pwd_hide_iv2)).setImageResource(R.mipmap.ic_pwd_show);
+                ViewUtil.setEditCursorLast(pwdEt2);
+            }
+        });
     }
 
     @Override

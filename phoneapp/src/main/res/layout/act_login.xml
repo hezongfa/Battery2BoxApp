@@ -33,8 +33,8 @@
             android:id="@+id/act_login_area_tv"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:drawableEnd="@mipmap/ic_arrow_down_orange"
+            android:gravity="center"
             android:minWidth="@dimen/x124"
             android:paddingStart="@dimen/x10"
             android:paddingEnd="@dimen/x10"
@@ -75,18 +75,33 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/x26" />
 
-        <EditText
-            android:id="@+id/act_login_pwd_et"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:gravity="center_vertical"
-            android:hint="@string/login_4"
-            android:inputType="textPassword"
-            android:paddingStart="@dimen/x30"
-            android:paddingEnd="@dimen/x30"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/x26" />
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/act_login_pwd_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/login_4"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x26" />
+
+            <ImageView
+                android:id="@+id/act_login_pwd_hide_iv"
+                android:layout_width="@dimen/x70"
+                android:layout_height="@dimen/x70"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/x10"
+                android:scaleType="center"
+                android:src="@mipmap/ic_pwd_hide" />
+        </RelativeLayout>
     </LinearLayout>
 
     <TextView

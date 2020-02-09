@@ -246,4 +246,5 @@
     <string name="coupon_11">优惠券</string>
     <string name="coupon_12">使用规则</string>
     <string name="coupon_13">是否使用该券</string>
+    <string name="coupon_14">删除</string>
 </resources>
