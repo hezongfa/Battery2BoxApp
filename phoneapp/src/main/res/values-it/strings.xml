@@ -134,14 +134,14 @@
     <string name="wallet_29">GRATIS</string>
     <string name="wallet_30">Confermare ricarica?</string>
 
-    <string name="shop_1">Disponibile per noleggio：%s</string>
-    <string name="shop_2">Disponibile per restituzione：%s</string>
+    <string name="shop_1">Noleggio：%s</string>
+    <string name="shop_2">Vuoto：%s</string>
     <string name="shop_3">Servizio Wi-Fi</string>
     <string name="shop_4">Senza Wi-Fi</string>
     <string name="shop_5">Divieto di fumo</string>
     <string name="shop_6">disponibile area fumo</string>
-    <string name="shop_7">Disponibile per noleggio</string>
-    <string name="shop_8">Disponibile per restituzione</string>
+    <string name="shop_7">Noleggio</string>
+    <string name="shop_8">Vuoto</string>
 
     <string name="order__0">Incompleta</string>
     <string name="order_0">Completato</string>

@@ -29,6 +29,7 @@ import com.batterbox.power.phone.app.entity.DeviceEntity;
 import com.batterbox.power.phone.app.entity.LBShopEntity;
 import com.batterbox.power.phone.app.entity.LocMap;
 import com.batterbox.power.phone.app.entity.OrderEntity;
+import com.batterbox.power.phone.app.entity.ShopDetailEntity;
 import com.batterbox.power.phone.app.entity.UserEntity;
 import com.batterbox.power.phone.app.http.HttpClient;
 import com.batterbox.power.phone.app.http.NormalHttpCallBack;
@@ -263,6 +264,8 @@ public class MainActivity extends BaseActivity implements OnMapReadyCallback, Go
         selectLocationIv.startAnimation(animationSet);
     }
 
+    ArrayList<Marker> markers = new ArrayList<>();
+
     private void getLB(LatLng latLng) {
         if (latLng == null) return;
         HttpClient.getInstance().bs(latLng.latitude, latLng.longitude, new NormalHttpCallBack<ResponseEntity<ArrayList<LBShopEntity>>>() {
@@ -275,6 +278,18 @@ public class MainActivity extends BaseActivity implements OnMapReadyCallback, Go
             public void onSuccess(ResponseEntity<ArrayList<LBShopEntity>> responseEntity) {
                 if (responseEntity != null && responseEntity.getData() != null) {
                     for (LBShopEntity lbShopEntity : responseEntity.getData()) {
+//                        if (!showLBShops.contains(lbShopEntity)) {
+//                            Marker marker = googleMap.addMarker(new MarkerOptions().position(new LatLng(lbShopEntity.la, lbShopEntity.lo)).icon(BitmapDescriptorFactory.fromResource(lbShopEntity.getIconRes())));
+//                            marker.setTag(lbShopEntity);
+//                            markers.add(marker);
+//                            showLBShops.add(lbShopEntity);
+//                        } else {
+//                            for (Marker marker : markers) {
+//                                if (marker.getTag() != null && marker.getTag() instanceof LBShopEntity && marker.getTag().equals(lbShopEntity)) {
+//                                    marker.setTag(lbShopEntity);
+//                                }
+//                            }
+//                        }
                         if (!showLBShops.contains(lbShopEntity)) {
                             Marker marker = googleMap.addMarker(new MarkerOptions().position(new LatLng(lbShopEntity.la, lbShopEntity.lo)).icon(BitmapDescriptorFactory.fromResource(lbShopEntity.getIconRes())));
                             marker.setTag(lbShopEntity);
@@ -388,26 +403,51 @@ public class MainActivity extends BaseActivity implements OnMapReadyCallback, Go
     public boolean onMarkerClick(Marker marker) {
         if (marker.getTag() instanceof LBShopEntity) {
             LBShopEntity lbShopEntity = (LBShopEntity) marker.getTag();
-            ShopDesDialog shopDesDialog = new ShopDesDialog();
-            shopDesDialog.setLbShopEntity(lbShopEntity);
-            shopDesDialog.setOnNavListener(lbShopEntity1 -> {
-                List<LocMap> locMaps = LocMapUtil.getLocMapList(MainActivity.this);
-                if (locMaps.size() > 0) {
-                    ArrayList<String> list = new ArrayList<>();
-                    for (LocMap locMap : locMaps) {
-                        list.add(locMap.appName);
+            HttpClient.getInstance().bs_findShopDetail(lbShopEntity.shopId, new NormalHttpCallBack<ResponseEntity<ShopDetailEntity>>(this) {
+                @Override
+                public void onStart() {
+
+                }
+
+                @Override
+                public void onSuccess(ResponseEntity<ShopDetailEntity> responseEntity) {
+                    if (responseEntity != null && responseEntity.getData() != null) {
+                        lbShopEntity.rentCount = responseEntity.getData().rentCount;
+                        lbShopEntity.returnCount = responseEntity.getData().returnCount;
                     }
-                    DialogUtils.showListDialog(MainActivity.this, null, list, position -> {
-                        LocMap locMap = locMaps.get(position);
-                        LocMapUtil.navigationByLocMap(MainActivity.this, MathsUtil.round(lbShopEntity1.la, 6), MathsUtil.round(lbShopEntity1.lo, 6), StringUtil.fixNullStr(lbShopEntity1.shopName, "location"), StringUtil.fixNullStr(lbShopEntity1.shopAdress), locMap.packageName);
-                    });
-                } else {
-                    FQT.showShort(MainActivity.this, "no map app client");
+                    showDesDialog(lbShopEntity);
+                }
+
+                @Override
+                public void onFail(ResponseEntity<ShopDetailEntity> responseEntity, String msg) {
+                    showDesDialog(lbShopEntity);
                 }
             });
-            shopDesDialog.show(getSupportFragmentManager(), ShopDesDialog.class.getName());
+
+
         }
         return true;
+    }
+
+    private void showDesDialog(LBShopEntity lbShopEntity) {
+        ShopDesDialog shopDesDialog = new ShopDesDialog();
+        shopDesDialog.setLbShopEntity(lbShopEntity);
+        shopDesDialog.setOnNavListener(lbShopEntity1 -> {
+            List<LocMap> locMaps = LocMapUtil.getLocMapList(MainActivity.this);
+            if (locMaps.size() > 0) {
+                ArrayList<String> list = new ArrayList<>();
+                for (LocMap locMap : locMaps) {
+                    list.add(locMap.appName);
+                }
+                DialogUtils.showListDialog(MainActivity.this, null, list, position -> {
+                    LocMap locMap = locMaps.get(position);
+                    LocMapUtil.navigationByLocMap(MainActivity.this, MathsUtil.round(lbShopEntity1.la, 6), MathsUtil.round(lbShopEntity1.lo, 6), StringUtil.fixNullStr(lbShopEntity1.shopName, "location"), StringUtil.fixNullStr(lbShopEntity1.shopAdress), locMap.packageName);
+                });
+            } else {
+                FQT.showShort(MainActivity.this, "no map app client");
+            }
+        });
+        shopDesDialog.show(getSupportFragmentManager(), ShopDesDialog.class.getName());
     }
 
     @NeedsPermission({Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION})

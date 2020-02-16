@@ -2,6 +2,7 @@ package com.batterbox.power.phone.app.entity;
 
 import com.batterbox.power.phone.app.R;
 import com.chenyi.baselib.entity.BaseEntity;
+import com.chenyi.baselib.utils.StringUtil;
 
 /**
  * Created by ass on 2019-07-30.
@@ -103,9 +104,12 @@ public class LBShopEntity extends BaseEntity {
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof LBShopEntity) {
-            if (((LBShopEntity) obj).la == la && ((LBShopEntity) obj).lo == lo) {
+            if (StringUtil.isEquals(((LBShopEntity) obj).shopId,shopId)){
                 return true;
             }
+//            if (((LBShopEntity) obj).la == la && ((LBShopEntity) obj).lo == lo) {
+//                return true;
+//            }
         }
         return super.equals(obj);
     }
