@@ -1,5 +1,6 @@
 package com.batterbox.power.phone.app.utils;
 
+import com.batterbox.power.phone.app.BatterBoxApp;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.entity.UserEntity;
 import com.chenyi.baselib.app.AppContextBase;
@@ -60,7 +61,7 @@ public class UserUtil {
     public static void saveUserInfo(UserEntity userEntity) {
         cleanUserInfo();
         AppContextBase.getInstance().getConstACache().put("userEntity", userEntity, 60 * 60 * 24 * 30);//30天
-//        BatterBoxApp.register_user_push();
+        BatterBoxApp.register_user_push();
     }
 
     public static UserEntity getUserInfo() {
@@ -69,7 +70,7 @@ public class UserUtil {
 
     public static void cleanUserInfo() {
         AppContextBase.getInstance().getConstACache().remove("userEntity");
-//        BatterBoxApp.clean_user_push();
+        BatterBoxApp.clean_user_push();
     }
 
 }

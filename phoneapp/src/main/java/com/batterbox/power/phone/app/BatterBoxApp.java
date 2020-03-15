@@ -1,9 +1,14 @@
 package com.batterbox.power.phone.app;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.batterbox.power.phone.app.entity.UserEntity;
 import com.batterbox.power.phone.app.utils.RefreshLanguageHelper;
+import com.batterbox.power.phone.app.utils.UserUtil;
 import com.chenyi.baselib.app.AppContextBase;
 import com.chenyi.baselib.utils.LanguageUtil;
+import com.chenyi.baselib.utils.print.FQL;
+
+import cn.jpush.android.api.JPushInterface;
 
 /**
  * Created by ass on 2019-07-29.
@@ -22,23 +27,23 @@ public class BatterBoxApp extends AppContextBase {
             ARouter.openDebug();   // Turn on debugging mode (If you are running in InstantRun mode, you must turn on debug mode! Online version needs to be closed, otherwise there is a security risk)
         }
         ARouter.init(this);
-//        JPushInterface.setDebugMode(true);
-//        JPushInterface.init(this);
-//        String registrationID = JPushInterface.getRegistrationID(this);
-//        FQL.d("registrationID ==" + registrationID);
-//        register_user_push();
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
+        String registrationID = JPushInterface.getRegistrationID(this);
+        FQL.d("registrationID ==" + registrationID);
+        register_user_push();
         RefreshLanguageHelper.init(this);
     }
 
-//    public static void register_user_push() {
-//        if (UserUtil.isLogin()) {
-//            UserEntity userEntity = UserUtil.getUserInfo();
-//            if (userEntity != null) {
-//                JPushInterface.setAlias(getInstance(), 1000, String.valueOf(userEntity.mId));
-//            }
-//        }
-//    }
-//    public static void clean_user_push(){
-//        JPushInterface.setAlias(getInstance(), 1000, "");
-//    }
+    public static void register_user_push() {
+        if (UserUtil.isLogin()) {
+            UserEntity userEntity = UserUtil.getUserInfo();
+            if (userEntity != null) {
+                JPushInterface.setAlias(getInstance(), 1000, String.valueOf(userEntity.mId));
+            }
+        }
+    }
+    public static void clean_user_push(){
+        JPushInterface.setAlias(getInstance(), 1000, "");
+    }
 }
