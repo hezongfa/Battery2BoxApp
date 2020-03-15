@@ -106,6 +106,7 @@
     <string name="wallet_12">有效期</string>
     <string name="wallet_13">年</string>
     <string name="wallet_14">月</string>
+    <string name="wallet_13_14"> 月 / 年</string>
     <string name="wallet_15">请输入cvv</string>
     <string name="wallet_16">请输入有效期</string>
     <string name="wallet_17">解除绑定</string>

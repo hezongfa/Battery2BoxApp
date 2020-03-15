@@ -15,6 +15,7 @@ import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -31,6 +32,8 @@ import com.chenyi.baselib.ui.NavigationActivity;
 import com.chenyi.baselib.utils.StringUtil;
 import com.chenyi.baselib.utils.ViewUtil;
 import com.chenyi.baselib.utils.print.FQT;
+
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * Created by ass on 2019-07-29.
@@ -55,7 +58,15 @@ public class RegisterActivity extends NavigationActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setNavigationTitle(R.string.login_14);
+        StatusBarCompat.translucentStatusBar(this, true);
+        setNavigationVisible(false);
+        LinearLayout mainLay = findViewById(R.id.act_register_main_ly);
+        View view = getLayoutInflater().inflate(R.layout.lay_sw_nav_bar, null);
+        mainLay.addView(view, 0);
+        view.findViewById(R.id.lay_sw_nav_bar_back_btn).setOnClickListener(v1 -> finish());
+        ((TextView) view.findViewById(R.id.lay_sw_nav_bar_tv)).setText(R.string.login_14);
+        view.findViewById(R.id.lay_sw_nav_bar_sub_tv).setVisibility(View.GONE);
+
         areaCodeTv = findViewById(R.id.act_register_area_tv);
         areaCodeTv.setText("+" + areaCode);
         phoneEt = findViewById(R.id.act_register_phone_et);
@@ -69,9 +80,9 @@ public class RegisterActivity extends NavigationActivity {
         checkIv.setOnClickListener(v -> {
             isCheckAgreement = !isCheckAgreement;
             if (isCheckAgreement) {
-                checkIv.setImageResource(R.mipmap.ic_check_yes);
+                checkIv.setImageResource(R.mipmap.ic_choose);
             } else {
-                checkIv.setImageResource(R.mipmap.ic_check_no);
+                checkIv.setImageResource(R.mipmap.ic_un_choose);
             }
         });
         findViewById(R.id.act_register_submit_btn).setOnClickListener(v -> submit());
@@ -96,7 +107,7 @@ public class RegisterActivity extends NavigationActivity {
             }
         };
         s1.setSpan(clickableSpan, 0, s1.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        ForegroundColorSpan foregroundColorSpan = new ForegroundColorSpan(Color.parseColor("#016CC9"));
+        ForegroundColorSpan foregroundColorSpan = new ForegroundColorSpan(Color.parseColor("#ca7800"));
         s1.setSpan(foregroundColorSpan, 0, s1.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         sb.append(s1);
         sb.append(" ");
@@ -115,7 +126,7 @@ public class RegisterActivity extends NavigationActivity {
             }
         };
         s2.setSpan(clickableSpan2, 0, s2.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        ForegroundColorSpan foregroundColorSpan2 = new ForegroundColorSpan(Color.parseColor("#016CC9"));
+        ForegroundColorSpan foregroundColorSpan2 = new ForegroundColorSpan(Color.parseColor("#ca7800"));
         s2.setSpan(foregroundColorSpan2, 0, s2.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         sb.append(s2);
         //配置给TextView

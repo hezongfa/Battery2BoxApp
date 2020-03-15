@@ -131,6 +131,8 @@ public class DatePicker {
             if (hasSelectTime) {
                 wv_hours.setVisibility(View.VISIBLE);
                 wv_mins.setVisibility(View.VISIBLE);
+                view.findViewById(R.id.hours1).setVisibility(View.VISIBLE);
+                view.findViewById(R.id.min1).setVisibility(View.VISIBLE);
 
                 wv_hours.setAdapter(new NumericWheelAdapter(0, 23));
                 wv_hours.setCyclic(true);// 可循环滚动
@@ -144,6 +146,8 @@ public class DatePicker {
             } else {
                 wv_hours.setVisibility(View.GONE);
                 wv_mins.setVisibility(View.GONE);
+                view.findViewById(R.id.hours1).setVisibility(View.VISIBLE);
+                view.findViewById(R.id.min1).setVisibility(View.VISIBLE);
             }
         } else {
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 3.0f);
@@ -151,6 +155,9 @@ public class DatePicker {
             wv_day.setVisibility(View.GONE);
             wv_hours.setVisibility(View.GONE);
             wv_mins.setVisibility(View.GONE);
+            view.findViewById(R.id.day1).setVisibility(View.GONE);
+            view.findViewById(R.id.hours1).setVisibility(View.GONE);
+            view.findViewById(R.id.min1).setVisibility(View.GONE);
         }
 
         // 添加"年"监听

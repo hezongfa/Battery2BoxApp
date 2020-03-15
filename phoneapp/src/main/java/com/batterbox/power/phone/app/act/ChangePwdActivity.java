@@ -3,8 +3,11 @@ package com.batterbox.power.phone.app.act;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.InputType;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.batterbox.power.phone.app.R;
@@ -16,6 +19,8 @@ import com.chenyi.baselib.ui.NavigationActivity;
 import com.chenyi.baselib.utils.StringUtil;
 import com.chenyi.baselib.utils.ViewUtil;
 import com.chenyi.baselib.utils.print.FQT;
+
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * Created by ass on 2019-08-17.
@@ -33,7 +38,15 @@ public class ChangePwdActivity extends NavigationActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setNavigationTitle(R.string.login_30);
+        StatusBarCompat.translucentStatusBar(this, true);
+        setNavigationVisible(false);
+        LinearLayout mainLay = findViewById(R.id.act_change_pwd_main_ly);
+        View view = getLayoutInflater().inflate(R.layout.lay_sw_nav_bar, null);
+        mainLay.addView(view, 0);
+        view.findViewById(R.id.lay_sw_nav_bar_back_btn).setOnClickListener(v1 -> finish());
+        ((TextView) view.findViewById(R.id.lay_sw_nav_bar_tv)).setText(R.string.login_30);
+        view.findViewById(R.id.lay_sw_nav_bar_sub_tv).setVisibility(View.GONE);
+
         oldPwdEt = findViewById(R.id.act_change_pwd_pwd_et);
         pwdEt = findViewById(R.id.act_change_pwd_new_pwd_et);
         pwdEt2 = findViewById(R.id.act_change_pwd_pwd_et2);

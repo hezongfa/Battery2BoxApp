@@ -71,7 +71,8 @@ public class ShopCouponDialog extends BaseDialogFragment {
                         ARouteHelper.show_big_imgs(list, item.img).navigation();
                     }
                 });
-                holder.setText(R.id.item_dialog_shop_coupon_price_tv, StringUtil.fixNullStr(item.typeValue) + "" + getString(R.string.m_1));
+                holder.setText(R.id.item_dialog_shop_coupon_price_tv, StringUtil.fixNullStr(item.typeValue));
+                holder.setText(R.id.item_dialog_shop_coupon_type_center_tv, StringUtil.fixNullStr(item.typeCenterName));
                 holder.setText(R.id.item_dialog_shop_coupon_type_tv, StringUtil.fixNullStr(item.typeName));
                 holder.setText(R.id.item_dialog_shop_coupon_name_tv, StringUtil.fixNullStr(item.name));
                 holder.setText(R.id.item_dialog_shop_coupon_time_tv, StringUtil.fixNullStr(item.registtime) + " - " + StringUtil.fixNullStr(item.effectiveTime));

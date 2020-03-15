@@ -24,6 +24,7 @@ public class CouponEntity extends BaseEntity {
     public String name;
     public int type;
     public String img;
+    public String typeCenterName;
     public String typeName;
     public String typeValue;
     public String limitValue;

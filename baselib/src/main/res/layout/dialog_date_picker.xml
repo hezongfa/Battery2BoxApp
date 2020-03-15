@@ -15,7 +15,7 @@
             android:background="@android:color/transparent"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
-            android:text="取消"
+            android:text="@string/app_16"
             android:textColor="#323232" />
 
         <Button
@@ -26,7 +26,7 @@
             android:background="@android:color/transparent"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
-            android:text="确定"
+            android:text="@string/app_11"
             android:textColor="#323232" />
     </RelativeLayout>
 
@@ -45,11 +45,13 @@
             android:layout_weight="5.0" />
 
         <TextView
+            android:id="@+id/year1"
             android:layout_width="wrap_content"
-            android:textSize="13sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="年" />
+            android:text="年"
+            android:visibility="gone"
+            android:textSize="13sp" />
 
         <com.chenyi.baselib.widget.wheelview.WheelView
             android:id="@+id/month"
@@ -57,12 +59,15 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="2.0dip"
             android:layout_weight="3.0" />
+
         <TextView
+            android:id="@+id/month1"
             android:layout_width="wrap_content"
-            android:textSize="13sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="月" />
+            android:text="月"
+            android:visibility="gone"
+            android:textSize="13sp" />
 
         <com.chenyi.baselib.widget.wheelview.WheelView
             android:id="@+id/day"
@@ -71,12 +76,14 @@
             android:layout_marginLeft="2.0dip"
             android:layout_marginRight="5.0dip"
             android:layout_weight="3.0" />
+
         <TextView
+            android:id="@+id/day1"
             android:layout_width="wrap_content"
-            android:textSize="13sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="日" />
+            android:text="日"
+            android:textSize="13sp" />
 
         <com.chenyi.baselib.widget.wheelview.WheelView
             android:id="@+id/hours"
@@ -86,12 +93,14 @@
             android:layout_marginRight="5.0dip"
             android:layout_weight="3.0"
             android:visibility="visible" />
+
         <TextView
+            android:id="@+id/hours1"
             android:layout_width="wrap_content"
-            android:textSize="13sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="时" />
+            android:text="时"
+            android:textSize="13sp" />
 
         <com.chenyi.baselib.widget.wheelview.WheelView
             android:id="@+id/min"
@@ -100,12 +109,14 @@
             android:layout_marginLeft="2.0dip"
             android:layout_weight="3.0"
             android:visibility="visible" />
+
         <TextView
+            android:id="@+id/min1"
             android:layout_width="wrap_content"
-            android:textSize="13sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="分" />
+            android:text="分"
+            android:textSize="13sp" />
     </LinearLayout>
 
 </LinearLayout>

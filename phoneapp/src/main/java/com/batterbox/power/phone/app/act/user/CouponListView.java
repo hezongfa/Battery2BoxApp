@@ -60,7 +60,8 @@ public class CouponListView extends BasePagerListView<CouponEntity> implements N
                         ARouteHelper.show_big_imgs(list, item.img).navigation();
                     }
                 });
-                holder.setText(R.id.item_dialog_shop_coupon_price_tv, StringUtil.fixNullStr(item.typeValue) + "" + context.getString(R.string.m_1));
+                holder.setText(R.id.item_dialog_shop_coupon_price_tv, StringUtil.fixNullStr(item.typeValue));
+                holder.setText(R.id.item_dialog_shop_coupon_type_center_tv, StringUtil.fixNullStr(item.typeCenterName));
                 holder.setText(R.id.item_dialog_shop_coupon_type_tv, StringUtil.fixNullStr(item.typeName));
                 holder.setText(R.id.item_dialog_shop_coupon_name_tv, StringUtil.fixNullStr(item.name));
                 holder.setText(R.id.item_dialog_shop_coupon_time_tv, StringUtil.fixNullStr(item.registtime) + " - " + StringUtil.fixNullStr(item.effectiveTime));
@@ -164,7 +165,7 @@ public class CouponListView extends BasePagerListView<CouponEntity> implements N
         });
     }
 
-    private void use(long id){
+    private void use(long id) {
         DialogUtils.showDialog(((BaseActivity) getContext()).getSupportFragmentManager(), null, getContext().getString(R.string.coupon_13), getContext().getString(R.string.app_16), v -> {
 
         }, getContext().getString(R.string.coupon_10), new OnClickListener() {

@@ -117,6 +117,7 @@
     <string name="wallet_12">Termo de validade</string>
     <string name="wallet_13">Ano</string>
     <string name="wallet_14">Mês</string>
+    <string name="wallet_13_14"> Mês / Ano</string>
     <string name="wallet_15">Cvv</string>
     <string name="wallet_16">Termo de validade</string>
     <string name="wallet_17">Independência</string>

@@ -116,6 +116,7 @@
     <string name="wallet_12">Durée de validité</string>
     <string name="wallet_13">Année</string>
     <string name="wallet_14">Mois</string>
+    <string name="wallet_13_14"> Mois / Année</string>
     <string name="wallet_15">Cvv</string>
     <string name="wallet_16">Durée de validité</string>
     <string name="wallet_17">Déconnecter</string>

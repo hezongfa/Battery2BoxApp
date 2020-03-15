@@ -116,6 +116,7 @@
     <string name="wallet_12">Validity</string>
     <string name="wallet_13">Year</string>
     <string name="wallet_14">Month</string>
+    <string name="wallet_13_14"> Month / Year</string>
     <string name="wallet_15">Cvv</string>
     <string name="wallet_16">Validity</string>
     <string name="wallet_17">Unbound</string>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/act_editpwd_main_ly"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/pic_bg_p"
+    android:background="@mipmap/pic_bg_p1"
     android:orientation="vertical">
 
     <ImageView
@@ -28,7 +29,7 @@
         android:layout_marginStart="@dimen/x55"
         android:layout_marginTop="@dimen/x30"
         android:layout_marginEnd="@dimen/x55"
-        android:background="@drawable/bg_text_input">
+        android:background="@drawable/bg_text_input_l">
 
         <TextView
             android:id="@+id/act_editpwd_area_tv"
@@ -111,7 +112,7 @@
         android:layout_marginStart="@dimen/x55"
         android:layout_marginTop="@dimen/x30"
         android:layout_marginEnd="@dimen/x55"
-        android:background="@drawable/bg_text_input">
+        android:background="@drawable/bg_text_input_l">
 
         <TextView
             android:layout_width="wrap_content"
@@ -160,7 +161,7 @@
         android:layout_marginStart="@dimen/x55"
         android:layout_marginTop="@dimen/x30"
         android:layout_marginEnd="@dimen/x55"
-        android:background="@drawable/bg_text_input">
+        android:background="@drawable/bg_text_input_l">
 
         <TextView
             android:layout_width="wrap_content"
@@ -207,11 +208,11 @@
         android:id="@+id/act_editpwd_submit_btn"
         style="?android:attr/borderlessButtonStyle"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x90"
+        android:layout_height="@dimen/x80"
         android:layout_marginStart="@dimen/x55"
         android:layout_marginTop="@dimen/x50"
         android:layout_marginEnd="@dimen/x55"
-        android:background="@drawable/bg_btn_yellow_r90px"
+        android:background="@mipmap/pic_enter_btn_bg"
         android:text="@string/app_13"
         android:textAllCaps="false"
         android:textColor="@android:color/black"

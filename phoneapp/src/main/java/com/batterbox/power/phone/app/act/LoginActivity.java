@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.InputType;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -22,6 +24,8 @@ import com.chenyi.baselib.utils.SharedPreferencesUtil;
 import com.chenyi.baselib.utils.StringUtil;
 import com.chenyi.baselib.utils.ViewUtil;
 import com.chenyi.baselib.utils.print.FQT;
+
+import qiu.niorgai.StatusBarCompat;
 
 /**
  * Created by ass on 2019-07-29.
@@ -43,7 +47,16 @@ public class LoginActivity extends NavigationActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setNavigationTitle(R.string.login_1);
+        StatusBarCompat.translucentStatusBar(this, true);
+        setNavigationVisible(false);
+        LinearLayout mainLay = findViewById(R.id.act_login_main_ly);
+        View view = getLayoutInflater().inflate(R.layout.lay_sw_nav_bar, null);
+        mainLay.addView(view, 0);
+        view.findViewById(R.id.lay_sw_nav_bar_back_btn).setOnClickListener(v1 -> finish());
+        ((TextView) view.findViewById(R.id.lay_sw_nav_bar_tv)).setText(R.string.login_1);
+        view.findViewById(R.id.lay_sw_nav_bar_sub_tv).setVisibility(View.GONE);
+
+
         rememberTv = findViewById(R.id.act_login_remember_tv);
         areaCodeTv = findViewById(R.id.act_login_area_tv);
         areaCodeTv.setText("+" + areaCode);

@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.InputType;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -20,6 +22,8 @@ import com.chenyi.baselib.utils.StringUtil;
 import com.chenyi.baselib.utils.ViewUtil;
 import com.chenyi.baselib.utils.print.FQT;
 
+import qiu.niorgai.StatusBarCompat;
+
 /**
  * Created by ass on 2019-07-29.
  * Description
@@ -30,7 +34,7 @@ public class ForgetPwdActivity extends NavigationActivity {
     TextView areaCodeTv;
     TextView codeTv;
     String areaCode = "34";
-//    Disposable disposable;
+    //    Disposable disposable;
     String verCode = "";
 
     @Override
@@ -41,7 +45,15 @@ public class ForgetPwdActivity extends NavigationActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setNavigationTitle(R.string.login_7);
+        StatusBarCompat.translucentStatusBar(this, true);
+        setNavigationVisible(false);
+        LinearLayout mainLay = findViewById(R.id.act_editpwd_main_ly);
+        View view = getLayoutInflater().inflate(R.layout.lay_sw_nav_bar, null);
+        mainLay.addView(view, 0);
+        view.findViewById(R.id.lay_sw_nav_bar_back_btn).setOnClickListener(v1 -> finish());
+        ((TextView) view.findViewById(R.id.lay_sw_nav_bar_tv)).setText(R.string.login_7);
+        view.findViewById(R.id.lay_sw_nav_bar_sub_tv).setVisibility(View.GONE);
+
         areaCodeTv = findViewById(R.id.act_editpwd_area_tv);
         areaCodeTv.setText("+" + areaCode);
         phoneEt = findViewById(R.id.act_editpwd_phone_et);

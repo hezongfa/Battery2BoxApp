@@ -118,6 +118,7 @@
     <string name="wallet_12">Validez</string>
     <string name="wallet_13">Año</string>
     <string name="wallet_14">Mes</string>
+    <string name="wallet_13_14"> Mes / Año</string>
     <string name="wallet_15">Cvv</string>
     <string name="wallet_16">Validez</string>
     <string name="wallet_17">Borrar método de Pago</string>
