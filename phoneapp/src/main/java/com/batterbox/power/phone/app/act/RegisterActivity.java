@@ -41,12 +41,12 @@ import qiu.niorgai.StatusBarCompat;
  */
 @Route(path = ARouteHelper.REGISTER)
 public class RegisterActivity extends NavigationActivity {
-    EditText phoneEt, pwdEt, pwdEt2;//, codeEt
+    EditText phoneEt, pwdEt, pwdEt2, emailEt;//, codeEt
     TextView areaCodeTv;
     TextView codeTv;
     ImageView checkIv;
     String areaCode = "34";
-    boolean isCheckAgreement = false;
+    boolean isCheckAgreement = true;
     //    Disposable disposable;
     String verCode = "";
 
@@ -73,6 +73,7 @@ public class RegisterActivity extends NavigationActivity {
         pwdEt = findViewById(R.id.act_register_pwd_et);
         pwdEt2 = findViewById(R.id.act_register_pwd_et2);
 //        codeEt = findViewById(R.id.act_register_code_et);
+        emailEt = findViewById(R.id.act_register_email_et);
         checkIv = findViewById(R.id.act_register_check_iv);
         codeTv = findViewById(R.id.act_register_code_tv);
         codeTv.setOnClickListener(v -> getVerCode());
@@ -159,6 +160,7 @@ public class RegisterActivity extends NavigationActivity {
                 ViewUtil.setEditCursorLast(pwdEt2);
             }
         });
+
     }
 
     @Override
@@ -284,7 +286,7 @@ public class RegisterActivity extends NavigationActivity {
     }
 
     private void register() {
-        HttpClient.getInstance().register(areaCode, phoneEt.getText().toString(), verCode, pwdEt.getText().toString(), new NormalHttpCallBack<ResponseEntity>(this) {
+        HttpClient.getInstance().register(areaCode, phoneEt.getText().toString(), verCode, pwdEt.getText().toString(), emailEt.getText().toString(), new NormalHttpCallBack<ResponseEntity>(this) {
             @Override
             public void onStart() {
 

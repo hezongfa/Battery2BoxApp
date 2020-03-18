@@ -93,6 +93,9 @@ public class RechargeListActivity extends NavigationActivity {
                 @Override
                 public void onFail(ResponseEntity responseEntity, String msg) {
                     FQT.showShort(RechargeListActivity.this, msg);
+                    if(responseEntity.getCode()==10117){
+                        ARouteHelper.wallet_card_edit().navigation();
+                    }
                 }
             }));
 

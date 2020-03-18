@@ -62,7 +62,8 @@ public interface Api {
                                         @Field("areaCode") String areaCode,
                                         @Field("phone") String username,
                                         @Field("vCode") String vCode,
-                                        @Field("pwd") String password);
+                                        @Field("pwd") String password,
+                                        @Field("email") String email);
 
     @FormUrlEncoded
     @POST("openApi/pwdLogin")

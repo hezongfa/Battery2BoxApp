@@ -243,8 +243,8 @@ public class MainActivity extends BaseActivity implements OnMapReadyCallback, Go
             if (task.isSuccessful()) {
                 Location location = task.getResult();
                 if (location != null) {
-                    BatterBoxApp.lat = location.getLatitude();
-                    BatterBoxApp.lng = location.getLongitude();
+//                    BatterBoxApp.lat = location.getLatitude();
+//                    BatterBoxApp.lng = location.getLongitude();
 //                    FQT.showShort(MainActivity.this, "location.getLongitude()=" + location.getLatitude());
                     googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13.0f));
                 }
@@ -268,6 +268,8 @@ public class MainActivity extends BaseActivity implements OnMapReadyCallback, Go
 
     private void getLB(LatLng latLng) {
         if (latLng == null) return;
+        BatterBoxApp.lat = latLng.latitude;
+        BatterBoxApp.lng = latLng.longitude;
         HttpClient.getInstance().bs(latLng.latitude, latLng.longitude, new NormalHttpCallBack<ResponseEntity<ArrayList<LBShopEntity>>>() {
             @Override
             public void onStart() {

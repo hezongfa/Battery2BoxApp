@@ -129,8 +129,8 @@ public class HttpClient extends BaseHttpClient<Api> {
         query(observable, callBack);
     }
 
-    public void register(String areaCode, String username, String code, String password, NormalHttpCallBack<ResponseEntity> callBack) {
-        Observable<ResponseEntity> observable = getInstance().getService().register(defaultPms(), areaCode, username, code, password);
+    public void register(String areaCode, String username, String code, String password, String email,NormalHttpCallBack<ResponseEntity> callBack) {
+        Observable<ResponseEntity> observable = getInstance().getService().register(defaultPms(), areaCode, username, code, password,email);
         query(observable, callBack);
     }
 
