@@ -91,7 +91,7 @@
     <orderEntry type="jdk" jdkName="Android API 28 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.support:multidex-instrumentation:1.0.2@aar" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:/Users/ass/Desktop/PowerApp/baselib/libs/SaaS_AppAnalytics_Android_SDK_V4.0.25.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:E.\projects\Battery2BoxApp\baselib\libs\SaaS_AppAnalytics_Android_SDK_V4.0.25.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:logging-interceptor:3.9.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:converter-gson:2.3.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:adapter-rxjava2:2.3.0@jar" level="project" />

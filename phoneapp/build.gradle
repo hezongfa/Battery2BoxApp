@@ -7,8 +7,8 @@ android {
         applicationId "com.batterbox.power.phone.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion 28
-        versionCode 20200215
-        versionName "1.25"
+        versionCode 20200325
+        versionName "1.26"
         manifestPlaceholders = [
                 JPUSH_APPKEY   : '41e6095c3e68a57a10148949',
                 JPUSH_CHANNEL  : 'batterbox'
