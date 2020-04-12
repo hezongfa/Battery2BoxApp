@@ -129,8 +129,8 @@ public class HttpClient extends BaseHttpClient<Api> {
         query(observable, callBack);
     }
 
-    public void register(String areaCode, String username, String code, String password, String email,NormalHttpCallBack<ResponseEntity> callBack) {
-        Observable<ResponseEntity> observable = getInstance().getService().register(defaultPms(), areaCode, username, code, password,email);
+    public void register(String areaCode, String username, String code, String password, String email, NormalHttpCallBack<ResponseEntity> callBack) {
+        Observable<ResponseEntity> observable = getInstance().getService().register(defaultPms(), areaCode, username, code, password, email);
         query(observable, callBack);
     }
 
@@ -172,8 +172,12 @@ public class HttpClient extends BaseHttpClient<Api> {
         query(observable, callBack);
     }
 
-    public void bs_findShopCoupons(double lat, double lng, NormalHttpCallBack<ResponseEntity<ArrayList<LbsShopCouponEntity>>> callBack) {
-        Observable<ResponseEntity<ArrayList<LbsShopCouponEntity>>> observable = getInstance().getService().bs_findShopCoupons(defaultPms(), lat, lng);
+    public void bs_findShopCoupons(String shopName, double lat, double lng, NormalHttpCallBack<ResponseEntity<ArrayList<LbsShopCouponEntity>>> callBack) {
+        Map<String, Object> map = defaultPms();
+        if (!StringUtil.isEmpty(shopName)) {
+            map.put("shopName", shopName);
+        }
+        Observable<ResponseEntity<ArrayList<LbsShopCouponEntity>>> observable = getInstance().getService().bs_findShopCoupons(defaultPms(), map, lat, lng);
         query(observable, callBack);
     }
 
@@ -315,6 +319,7 @@ public class HttpClient extends BaseHttpClient<Api> {
                 (defaultPms(), id);
         query(observable, callBack);
     }
+
     public void cp_deleMyCoupon(long id, NormalHttpCallBack<ResponseEntity> callBack) {
         Observable<ResponseEntity> observable = getInstance().getService().cp_deleMyCoupon
                 (defaultPms(), id);

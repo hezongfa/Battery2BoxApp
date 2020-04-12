@@ -107,8 +107,9 @@ public interface Api {
                                                                              @Field("shopId") String shopId);
 
     @FormUrlEncoded
-    @POST("bs/findShopCoupons")
+    @POST("bs/newFindShopCoupons")
     Observable<ResponseEntity<ArrayList<LbsShopCouponEntity>>> bs_findShopCoupons(@HeaderMap Map<String, Object> map,
+                                                                                  @FieldMap Map<String, Object> map1,
                                                                                   @Field("latitude") double latitude,
                                                                                   @Field("longitude") double longitude);
 

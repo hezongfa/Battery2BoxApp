@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/x24"
+    android:layout_marginTop="@dimen/x24"
+    android:layout_marginEnd="@dimen/x24"
+    android:layout_marginBottom="@dimen/x10"
+    android:background="@drawable/bg_ffffff_r15px_s"
+    android:orientation="vertical"
+    android:padding="@dimen/x20">
+
+    <LinearLayout
+        android:id="@+id/item_promotion_shop_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/x10"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_promotion_shop_iv"
+            android:layout_width="@dimen/x113"
+            android:layout_height="@dimen/x113" />
+
+        <TextView
+            android:id="@+id/item_promotion_dis_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x3"
+            android:drawableBottom="@mipmap/ic_p_nav"
+            android:gravity="center"
+            android:text="3.5 Km"
+            android:textColor="#353535"
+            android:textSize="@dimen/x18" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_promotion_shop_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/item_promotion_shop_ll"
+        android:drawableEnd="@mipmap/ic_goto_rr"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="NOMBRE DEL ESTABLECIMIENTO"
+        android:textColor="#353535"
+        android:textSize="@dimen/x28" />
+
+
+    <TextView
+        android:id="@+id/item_promotion_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_promotion_shop_name_tv"
+        android:layout_marginTop="@dimen/x5"
+        android:layout_toEndOf="@id/item_promotion_shop_ll"
+        android:drawableStart="@mipmap/ic_p_time"
+        android:drawablePadding="@dimen/x8"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:text="Lun - Dom 11:00 - 20:00"
+        android:textColor="#696969"
+        android:textSize="@dimen/x22" />
+
+    <TextView
+        android:id="@+id/item_promotion_location_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_promotion_time_tv"
+        android:layout_marginStart="@dimen/x2"
+        android:layout_marginTop="@dimen/x3"
+        android:layout_toEndOf="@id/item_promotion_shop_ll"
+        android:drawableStart="@mipmap/ic_p_location"
+        android:drawablePadding="@dimen/x6"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:text="Dirección del establecimiento"
+        android:textColor="#696969"
+        android:textSize="@dimen/x22" />
+
+    <TextView
+        android:id="@+id/item_promotion_coupon_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_promotion_location_tv"
+        android:layout_marginTop="@dimen/x3"
+        android:layout_toEndOf="@id/item_promotion_shop_ll"
+        android:drawableStart="@mipmap/ic_p_p"
+        android:drawablePadding="@dimen/x6"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:text="Oferta"
+        android:textColor="#696969"
+        android:textSize="@dimen/x22" />
+</RelativeLayout>

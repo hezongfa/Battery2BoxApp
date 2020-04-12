@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x347"
+        android:scaleType="fitXY"
+        android:src="@mipmap/pic_s_head_bg" />
+
+    <TextView
+        android:id="@+id/lay_promotion_bartitle_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x80"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/x10"
+        android:layout_marginTop="@dimen/x46"
+        android:gravity="center"
+        android:text="@string/main_13"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/x40" />
+
+    <ImageButton
+        android:id="@+id/lay_promotion_barback_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x46"
+        android:background="@android:color/transparent"
+        android:paddingStart="@dimen/x30"
+        android:paddingTop="@dimen/x30"
+        android:paddingEnd="@dimen/x30"
+        android:paddingBottom="@dimen/x30"
+        android:src="@mipmap/ic_nav_back_r" />
+
+    <EditText
+        android:id="@+id/lay_promotion_baret"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x90"
+        android:layout_below="@id/lay_promotion_bartitle_tv"
+        android:layout_marginStart="@dimen/x44"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_marginEnd="@dimen/x44"
+        android:background="@drawable/bg_ffffff_r15px"
+        android:drawableStart="@mipmap/ic_n_search"
+        android:drawablePadding="@dimen/x10"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/x12"
+        android:paddingEnd="@dimen/x20"
+        android:textColor="@color/black_101010"
+        android:textSize="@dimen/x32" />
+</RelativeLayout>

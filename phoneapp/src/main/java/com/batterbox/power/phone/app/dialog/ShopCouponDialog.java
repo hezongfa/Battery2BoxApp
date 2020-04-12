@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.entity.CouponEntity;
-import com.batterbox.power.phone.app.entity.LbsShopCouponEntity;
 import com.batterbox.power.phone.app.entity.ShopDetailEntity;
 import com.batterbox.power.phone.app.http.HttpClient;
 import com.batterbox.power.phone.app.http.NormalHttpCallBack;
@@ -32,14 +31,14 @@ import java.util.ArrayList;
  */
 public class ShopCouponDialog extends BaseDialogFragment {
     ShopDetailEntity shopEntity;
-    LbsShopCouponEntity lbsShopCouponEntity;
+//    LbsShopCouponEntity lbsShopCouponEntity;
     QuickRecycleAdapter<CouponEntity> adapter;
     ImageView iv;
     TextView titleTv;
-
-    public void setLbsShopCouponEntity(LbsShopCouponEntity lbsShopCouponEntity) {
-        this.lbsShopCouponEntity = lbsShopCouponEntity;
-    }
+//
+//    public void setLbsShopCouponEntity(LbsShopCouponEntity lbsShopCouponEntity) {
+//        this.lbsShopCouponEntity = lbsShopCouponEntity;
+//    }
 
     public void setShopEntity(ShopDetailEntity shopEntity) {
         this.shopEntity = shopEntity;
@@ -116,11 +115,12 @@ public class ShopCouponDialog extends BaseDialogFragment {
 
                 }
             });
-        } else if (lbsShopCouponEntity != null) {
-            titleTv.setText(StringUtil.fixNullStr(lbsShopCouponEntity.shopName));
-            ImageLoaderUtil.load_round(getContext(), lbsShopCouponEntity.shopIco, iv, 20);
-            adapter.replaceAll(lbsShopCouponEntity.shopCoupons);
         }
+//        else if (lbsShopCouponEntity != null) {
+//            titleTv.setText(StringUtil.fixNullStr(lbsShopCouponEntity.shopName));
+//            ImageLoaderUtil.load_round(getContext(), lbsShopCouponEntity.shopIco, iv, 20);
+//            adapter.replaceAll(lbsShopCouponEntity.shopCoupons);
+//        }
         return dialog;
     }
 
