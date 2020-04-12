@@ -328,3 +328,9 @@ public void *(***);
 
 -dontwarn cn.bertsir.zbar.**
 -keep class cn.bertsir.zbar.** { *;}
+
+-dontwarn cn.jpush.**
+-keep class cn.jpush.** { *; }
+
+-dontwarn cn.jiguang.**
+-keep class cn.jiguang.** { *; }
