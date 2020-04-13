@@ -25,7 +25,7 @@
 
         <TextView
             android:id="@+id/item_promotion_dis_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/x3"
             android:drawableBottom="@mipmap/ic_p_nav"
