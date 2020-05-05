@@ -10,6 +10,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.vlayout.LayoutHelper;
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper;
 import com.batterbox.power.phone.app.R;
+import com.batterbox.power.phone.app.act.main.MainActivity;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.entity.LanguageEntity;
 import com.chenyi.baselib.ui.NavListActivity;

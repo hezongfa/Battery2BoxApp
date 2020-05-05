@@ -1,6 +1,7 @@
 package com.batterbox.power.phone.app.entity;
 
 import com.chenyi.baselib.entity.BaseEntity;
+import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by ass on 2019-07-29.
@@ -22,6 +23,7 @@ public class UserEntity extends BaseEntity {
      * "isFacebook": 0，
      * "isWeixin": 0，
      */
+    @SerializedName("mid")
     public int mId;
     public String headImg;
     public int sex;

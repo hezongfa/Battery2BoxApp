@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.batterbox.power.phone.app.AppConfigUtil;
 import com.batterbox.power.phone.app.R;
+import com.batterbox.power.phone.app.act.main.MainActivity;
 import com.chenyi.baselib.ui.BaseActivity;
 
 import java.lang.ref.WeakReference;

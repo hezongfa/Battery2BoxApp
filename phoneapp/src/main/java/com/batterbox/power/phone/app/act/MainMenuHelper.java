@@ -3,7 +3,9 @@ package com.batterbox.power.phone.app.act;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.batterbox.power.phone.app.BatterBoxApp;
 import com.batterbox.power.phone.app.R;
+import com.batterbox.power.phone.app.act.main.MainActivity;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.entity.UserEntity;
 import com.batterbox.power.phone.app.utils.CnyUtil;
@@ -32,7 +34,7 @@ public class MainMenuHelper {
         mainActivity.findViewById(R.id.lay_main_menu_record_tv).setOnClickListener(v -> ARouteHelper.order_list().navigation());
         mainActivity.findViewById(R.id.lay_main_menu_coupon_tv).setOnClickListener(v -> ARouteHelper.coupon().navigation());
         mainActivity.findViewById(R.id.lay_main_menu_activity_tv).setOnClickListener(v -> ARouteHelper.promotion().navigation());
-        mainActivity.findViewById(R.id.lay_main_menu_help_tv).setOnClickListener(v -> ARouteHelper.helper_detail(mainActivity.pt == null ? "" : String.valueOf(mainActivity.pt.latitude), mainActivity.pt == null ? "" : String.valueOf(mainActivity.pt.longitude)).navigation());
+        mainActivity.findViewById(R.id.lay_main_menu_help_tv).setOnClickListener(v -> ARouteHelper.helper_detail(BatterBoxApp.lat + "", BatterBoxApp.lng + "").navigation());
         mainActivity.findViewById(R.id.lay_main_menu_more_tv).setOnClickListener(v -> ARouteHelper.setting().navigation());
         mainActivity.findViewById(R.id.lay_main_menu_head_ll).setOnClickListener(v -> ARouteHelper.user_info().navigation());
         mainActivity.findViewById(R.id.lay_main_menu_business_tv).setOnClickListener(v -> ARouteHelper.cooperation().navigation());

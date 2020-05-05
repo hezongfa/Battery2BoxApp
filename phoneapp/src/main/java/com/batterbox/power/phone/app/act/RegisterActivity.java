@@ -20,12 +20,14 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.batterbox.power.phone.app.R;
+import com.batterbox.power.phone.app.act.main.MainActivity;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.entity.AreaCodeEntity;
 import com.batterbox.power.phone.app.entity.UserEntity;
 import com.batterbox.power.phone.app.http.DomainHelper;
 import com.batterbox.power.phone.app.http.HttpClient;
 import com.batterbox.power.phone.app.http.NormalHttpCallBack;
+import com.batterbox.power.phone.app.utils.ImUtil;
 import com.batterbox.power.phone.app.utils.UserUtil;
 import com.chenyi.baselib.entity.ResponseEntity;
 import com.chenyi.baselib.ui.NavigationActivity;
@@ -317,6 +319,7 @@ public class RegisterActivity extends NavigationActivity {
                 if (responseEntity != null && responseEntity.getData() != null) {
                     UserUtil.saveToken(responseEntity.getData().token);
                     UserUtil.saveUserInfo(responseEntity.getData());
+                    ImUtil.login();
                     MainActivity.goToMain(RegisterActivity.this, true);
                     finish();
                 }

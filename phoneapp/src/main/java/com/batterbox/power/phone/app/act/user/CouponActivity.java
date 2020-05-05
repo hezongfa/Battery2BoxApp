@@ -39,7 +39,7 @@ public class CouponActivity extends NavTabPagerActivity {
         mainLay.addView(v, 0);
         v.findViewById(R.id.lay_sw_nav_bar_back_btn).setOnClickListener(v1 -> finish());
         mainLay.addView(getLayoutInflater().inflate(R.layout.lay_coupon_bottom, null));
-        findViewById(R.id.lay_coupon_bottom_btn).setOnClickListener(v12 -> ARouteHelper.coupon_get().navigation());
+        findViewById(R.id.lay_coupon_bottom_btn).setOnClickListener(v12 -> ARouteHelper.coupon_get(null).navigation());
     }
 
     @Override

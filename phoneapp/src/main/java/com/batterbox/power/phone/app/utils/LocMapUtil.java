@@ -169,10 +169,10 @@ public class LocMapUtil {
 //            Intent intent = Intent.getIntent("intent://map/marker?location="
 //                    + lat + ","
 //                    + lng + "&title="
-//                    + StringUtil.fixNullStr(address) + "&coord_type=" + type
+//                    + StringUtil.fixNullStr(adress) + "&coord_type=" + type
 //                    + "#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");// &src=yourCompanyName|yourAppName
 //            Intent intent = new Intent(Intent.ACTION_VIEW,
-//                    Uri.parse("baidumap://map/marker?location=" + lat + "," + lng + "&title=" + StringUtil.fixNullStr(address) + "&content=" + StringUtil.fixNullStr(address) + "&traffic=on&src=andr.baidu.openAPIdemo"));
+//                    Uri.parse("baidumap://map/marker?location=" + lat + "," + lng + "&title=" + StringUtil.fixNullStr(adress) + "&content=" + StringUtil.fixNullStr(adress) + "&traffic=on&src=andr.baidu.openAPIdemo"));
             Intent intent = new Intent();
             intent.setData(Uri.parse("baidumap://map/marker?location=" + lat + "," + lng + "&title=" + StringUtil.fixNullStr(title) + "&content=" + StringUtil.fixNullStr(address) + "&traffic=on&src=andr.baidu.openAPIdemo"));
             context.startActivity(intent); // 启动调用

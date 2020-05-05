@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mBaseView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x147"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/pic_bar_bg" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x46">
+
+
+            <ImageButton
+                android:id="@+id/fragment_main_chat_friends_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/x20"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/ic_friend" />
+
+            <ImageButton
+                android:id="@+id/fragment_main_chat_menu_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/x20"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/ic_main_chat_menu" />
+
+            <EditText
+                android:id="@+id/lay_promotion_baret"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x71"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/x44"
+                android:layout_marginEnd="@dimen/x44"
+                android:layout_toStartOf="@id/fragment_main_chat_menu_btn"
+                android:layout_toEndOf="@id/fragment_main_chat_friends_btn"
+                android:background="@drawable/bg_ffffff_r15px"
+                android:drawableStart="@mipmap/ic_n_search"
+                android:drawablePadding="@dimen/x10"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/x12"
+                android:paddingEnd="@dimen/x20"
+                android:textColor="@color/black_101010"
+                android:textSize="@dimen/x32" />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/x20"
+        android:paddingTop="@dimen/x28"
+
+        android:paddingBottom="@dimen/x28"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/fragment_main_chat_notification_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_main_chat_l"
+            android:drawablePadding="@dimen/x5"
+            android:gravity="center"
+            android:paddingStart="@dimen/x25"
+            android:paddingEnd="@dimen/x25"
+            android:text="@string/main_chat_10"
+            android:textColor="#868686"
+            android:textSize="@dimen/x20" />
+
+        <TextView
+            android:id="@+id/fragment_main_chat_msg_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_main_chat_r"
+            android:drawableBottom="@mipmap/pic_li"
+            android:drawablePadding="@dimen/x5"
+            android:gravity="center"
+            android:paddingStart="@dimen/x25"
+            android:paddingEnd="@dimen/x25"
+            android:text="@string/main_chat_11"
+            android:textColor="#868686"
+            android:textSize="@dimen/x20" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginEnd="@dimen/x20"
+        android:background="@color/line"
+        android:visibility="gone" />
+
+    <com.tencent.qcloud.tim.uikit.modules.conversation.ConversationLayout
+        android:id="@+id/conversation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

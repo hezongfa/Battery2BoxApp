@@ -7,6 +7,7 @@ import com.batterbox.power.phone.app.entity.DeviceEntity;
 import com.batterbox.power.phone.app.entity.LBShopEntity;
 import com.batterbox.power.phone.app.entity.OrderEntity;
 import com.batterbox.power.phone.app.entity.OrderStateEntity;
+import com.batterbox.power.phone.app.entity.SearchUserEntity;
 
 import java.util.ArrayList;
 
@@ -37,6 +38,7 @@ public class ARouteHelper {
     public static final String SETTING_CHANGEPWD = "/app/setting/change_pwd";
     public static final String USER_INFO = "/app/user/info";
     public static final String USER_INFO_EDIT = "/app/user/info_edit";
+    public static final String USER_QRCODE= "/app/user/qrcode";
     public static final String COOPERATION = "/app/cooperation";
     public static final String USER_BILL = "/app/user/bill";
     public static final String HYBRID_NAV = "/hybrid/nav";
@@ -50,6 +52,24 @@ public class ARouteHelper {
 
     public static final String PHOTO_LIST = "/app/photo_list";
     public static final String SHOW_BIG_IMGS = "/app/show_big_imgs";
+
+
+    public static final String CHAT_FRIENDS = "/app/chat/friends";
+    public static final String CHAT_ADD_MORE = "/app/chat/add_more";
+    public static final String CHAT_SEARCH_USER = "/app/chat/search_user";
+
+    public static Postcard chat_search_user() {
+        return ARouter.getInstance().build(CHAT_SEARCH_USER);
+    }
+
+    public static Postcard chat_friends() {
+        return ARouter.getInstance().build(CHAT_FRIENDS);
+    }
+
+    public static Postcard chat_add_more(SearchUserEntity searchUserEntity, String userId) {
+        return ARouter.getInstance().build(CHAT_ADD_MORE).withObject("searchUserEntity", searchUserEntity).withString("userId", userId);
+    }
+
     public static Postcard show_big_imgs(ArrayList<String> img, String url) {
         return ARouter.getInstance().build(SHOW_BIG_IMGS).withObject("img", img).withString("url", url);
     }
@@ -145,6 +165,10 @@ public class ARouteHelper {
         return ARouter.getInstance().build(USER_INFO_EDIT).withString("title", title).withString("content", content).withString("hint", hint);
     }
 
+    public static Postcard user_qrcode() {
+        return ARouter.getInstance().build(USER_QRCODE);
+    }
+
     public static Postcard cooperation() {
         return ARouter.getInstance().build(COOPERATION);
     }
@@ -168,8 +192,9 @@ public class ARouteHelper {
     public static Postcard coupon() {
         return ARouter.getInstance().build(COUPON);
     }
-    public static Postcard coupon_get() {
-        return ARouter.getInstance().build(COUPON_GET);
+
+    public static Postcard coupon_get(String code) {
+        return ARouter.getInstance().build(COUPON_GET).withString("code", code);
     }
 
 

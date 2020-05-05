@@ -62,6 +62,7 @@ public class UserUtil {
         cleanUserInfo();
         AppContextBase.getInstance().getConstACache().put("userEntity", userEntity, 60 * 60 * 24 * 30);//30天
         BatterBoxApp.register_user_push();
+
     }
 
     public static UserEntity getUserInfo() {

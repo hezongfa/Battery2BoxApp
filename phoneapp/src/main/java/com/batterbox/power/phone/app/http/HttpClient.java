@@ -12,6 +12,7 @@ import com.batterbox.power.phone.app.entity.LbsShopCouponEntity;
 import com.batterbox.power.phone.app.entity.OrderEntity;
 import com.batterbox.power.phone.app.entity.OrderStateEntity;
 import com.batterbox.power.phone.app.entity.RechargeEntity;
+import com.batterbox.power.phone.app.entity.SearchUserEntity;
 import com.batterbox.power.phone.app.entity.SharePageEntity;
 import com.batterbox.power.phone.app.entity.ShopDetailEntity;
 import com.batterbox.power.phone.app.entity.TimeRecordEntity;
@@ -258,6 +259,12 @@ public class HttpClient extends BaseHttpClient<Api> {
         query(observable, callBack);
     }
 
+    public void us_updateJiguangId(String registrationID, NormalHttpCallBack<ResponseEntity> callBack) {
+        Observable<ResponseEntity> observable = getInstance().getService().us_updateJiguangId(defaultPms(), registrationID);
+        query(observable, callBack);
+    }
+
+
     public void bs_findShopDetail(String shopId, NormalHttpCallBack<ResponseEntity<ShopDetailEntity>> callBack) {
         Observable<ResponseEntity<ShopDetailEntity>> observable = getInstance().getService().bs_findShopDetail(defaultPms(), shopId);
         query(observable, callBack);
@@ -323,6 +330,18 @@ public class HttpClient extends BaseHttpClient<Api> {
     public void cp_deleMyCoupon(long id, NormalHttpCallBack<ResponseEntity> callBack) {
         Observable<ResponseEntity> observable = getInstance().getService().cp_deleMyCoupon
                 (defaultPms(), id);
+        query(observable, callBack);
+    }
+
+    public void im_getSign(NormalHttpCallBack<ResponseEntity<String>> callBack) {
+        Observable<ResponseEntity<String>> observable = getInstance().getService().im_getSign
+                (defaultPms(), defaultPms());
+        query(observable, callBack);
+    }
+
+    public void im_searchMember(String data, NormalHttpCallBack<ResponseEntity<SearchUserEntity>> callBack) {
+        Observable<ResponseEntity<SearchUserEntity>> observable = getInstance().getService().im_searchMember
+                (defaultPms(), data);
         query(observable, callBack);
     }
 

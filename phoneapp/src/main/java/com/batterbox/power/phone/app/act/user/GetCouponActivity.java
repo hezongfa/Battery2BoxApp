@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.vlayout.LayoutHelper;
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper;
@@ -33,6 +34,8 @@ import qiu.niorgai.StatusBarCompat;
  */
 @Route(path = ARouteHelper.COUPON_GET)
 public class GetCouponActivity extends NavListActivity<CouponEntity> {
+    @Autowired
+    public String code;
     EditText searchEt;
 
     @Override
@@ -56,6 +59,7 @@ public class GetCouponActivity extends NavListActivity<CouponEntity> {
         setRefreshEnable(false);
         setLoadMoreEnable(false);
         searchEt = findViewById(R.id.lay_coupon_get_top_et);
+
 //        searchEt.addTextChangedListener(new TextWatcher() {
 //            @Override
 //            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -110,6 +114,7 @@ public class GetCouponActivity extends NavListActivity<CouponEntity> {
         });
     }
 
+
     @Override
     protected QuickDelegateAdapter getAdapter() {
         return new QuickDelegateAdapter<CouponEntity>(this, R.layout.item_dialog_shop_coupon) {
@@ -160,7 +165,10 @@ public class GetCouponActivity extends NavListActivity<CouponEntity> {
     @Override
     protected void onDelayLoad(@Nullable Bundle savedInstanceState) {
         super.onDelayLoad(savedInstanceState);
-
+        searchEt.setText(StringUtil.fixNullStr(code));
+        if (searchEt.getText().length() > 0) {
+            searchCode(searchEt.getText().toString());
+        }
     }
 
     private void searchCode(String code) {

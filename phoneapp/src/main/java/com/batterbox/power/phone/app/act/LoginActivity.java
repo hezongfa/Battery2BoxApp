@@ -17,6 +17,7 @@ import com.batterbox.power.phone.app.entity.AreaCodeEntity;
 import com.batterbox.power.phone.app.entity.UserEntity;
 import com.batterbox.power.phone.app.http.HttpClient;
 import com.batterbox.power.phone.app.http.NormalHttpCallBack;
+import com.batterbox.power.phone.app.utils.ImUtil;
 import com.batterbox.power.phone.app.utils.UserUtil;
 import com.chenyi.baselib.entity.ResponseEntity;
 import com.chenyi.baselib.ui.NavigationActivity;
@@ -130,6 +131,7 @@ public class LoginActivity extends NavigationActivity {
                 if (responseEntity != null && responseEntity.getData() != null) {
                     UserUtil.saveToken(responseEntity.getData().token);
                     UserUtil.saveUserInfo(responseEntity.getData());
+                    ImUtil.login();
                     if (isRemember) {
                         SharedPreferencesUtil.getInstance().saveString("R_areaCode", areaCode);
                         SharedPreferencesUtil.getInstance().saveString("R_phone", phoneEt.getText().toString());

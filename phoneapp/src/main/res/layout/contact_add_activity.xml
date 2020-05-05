@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/x75">
+
+        <com.chenyi.baselib.widget.RoundImageView
+            android:id="@+id/contact_add_activity_iv"
+            android:layout_width="@dimen/x162"
+            android:layout_height="@dimen/x162"
+            android:layout_marginStart="@dimen/x60"
+            android:layout_marginEnd="@dimen/x30" />
+
+        <TextView
+            android:id="@+id/contact_add_activity_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x3"
+            android:layout_toEndOf="@id/contact_add_activity_iv"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x32" />
+
+        <TextView
+            android:id="@+id/contact_add_activity_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contact_add_activity_name_tv"
+            android:layout_marginTop="@dimen/x3"
+            android:layout_toEndOf="@id/contact_add_activity_iv"
+            android:textColor="@color/gray_888888"
+            android:textSize="@dimen/x32" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:layout_marginStart="@dimen/x26"
+        android:layout_marginTop="@dimen/x28"
+        android:layout_marginEnd="@dimen/x26"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/contact_add_activity_phone_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/x40"
+        android:paddingEnd="@dimen/x40"
+        android:text="@string/main_chat_9"
+        android:textColor="@color/gray_333333"
+        android:textSize="@dimen/x32" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:layout_marginStart="@dimen/x26"
+        android:layout_marginEnd="@dimen/x26"
+        android:background="@color/line" />
+
+
+    <EditText
+        android:id="@+id/add_wording"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x189"
+        android:layout_marginStart="@dimen/x46"
+        android:layout_marginTop="@dimen/x40"
+        android:layout_marginEnd="@dimen/x46"
+        android:background="@drawable/bg_chat_ver_input"
+        android:gravity="start|top"
+        android:hint="@string/main_chat_7"
+        android:maxLength="100"
+        android:padding="10dp"
+        android:textCursorDrawable="@drawable/my_cursor"
+        android:textSize="@dimen/x24" />
+
+    <Button
+        android:id="@+id/lay_coupon_bottom_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x70"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/x40"
+        android:background="@mipmap/pic_enter_btn_bg"
+        android:onClick="add"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20"
+        android:text="@string/main_chat_8"
+        android:textSize="@dimen/x28" />
+</LinearLayout>

@@ -3,7 +3,7 @@
     package="cn.bingoogolapple.progressbar" >
 
     <uses-sdk
-        android:minSdkVersion="18"
+        android:minSdkVersion="21"
         android:targetSdkVersion="22" />
 
 </manifest>

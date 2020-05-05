@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_pop_main_chat_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:drawableStart="@mipmap/ic_main_chat_add"
+        android:drawablePadding="@dimen/x10"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/x10"
+        android:paddingEnd="@dimen/x10"
+        android:text="@string/main_chat_1"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/x24" />
+
+    <View
+        android:id="@+id/item_pop_main_chat_iv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10"
+        android:background="@android:color/white" />
+</LinearLayout>

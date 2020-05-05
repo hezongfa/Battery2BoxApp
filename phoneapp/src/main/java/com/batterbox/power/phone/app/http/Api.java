@@ -13,6 +13,7 @@ import com.batterbox.power.phone.app.entity.LbsShopCouponEntity;
 import com.batterbox.power.phone.app.entity.OrderEntity;
 import com.batterbox.power.phone.app.entity.OrderStateEntity;
 import com.batterbox.power.phone.app.entity.RechargeEntity;
+import com.batterbox.power.phone.app.entity.SearchUserEntity;
 import com.batterbox.power.phone.app.entity.SharePageEntity;
 import com.batterbox.power.phone.app.entity.ShopDetailEntity;
 import com.batterbox.power.phone.app.entity.TimeRecordEntity;
@@ -187,6 +188,12 @@ public interface Api {
     Observable<ResponseEntity<SharePageEntity>> us_myInvitation(@HeaderMap Map<String, Object> map,
                                                                 @FieldMap Map<String, Object> map1);
 
+
+    @FormUrlEncoded
+    @POST("us/updateJiguangId")
+    Observable<ResponseEntity> us_updateJiguangId(@HeaderMap Map<String, Object> map,
+                                                  @Field("registrationID") String registrationID);
+
     @FormUrlEncoded
     @POST("bs/findShopDetail")
     Observable<ResponseEntity<ShopDetailEntity>> bs_findShopDetail(@HeaderMap Map<String, Object> map,
@@ -261,10 +268,22 @@ public interface Api {
     @FormUrlEncoded
     @POST("cp/useMyCoupon")
     Observable<ResponseEntity> cp_useMyCoupon(@HeaderMap Map<String, Object> map,
-                                                                 @Field("id") long id);
+                                              @Field("id") long id);
+
     @FormUrlEncoded
     @POST("cp/deleMyCoupon")
     Observable<ResponseEntity> cp_deleMyCoupon(@HeaderMap Map<String, Object> map,
-                                              @Field("id") long id);
+                                               @Field("id") long id);
+
+    @FormUrlEncoded
+    @POST("im/getSign")
+    Observable<ResponseEntity<String>> im_getSign(@HeaderMap Map<String, Object> map,
+                                                  @FieldMap Map<String, Object> map1);
+
+    @FormUrlEncoded
+    @POST("im/searchMember")
+    Observable<ResponseEntity<SearchUserEntity>> im_searchMember(@HeaderMap Map<String, Object> map,
+                                                                 @Field("data") String data);
+
 
 }

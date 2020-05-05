@@ -1,1 +1,1 @@
-include ':baselib', ':loadlibrary', ':phoneapp', ':slidemenulib', ':banner', ':zbarlibary'
+include ':baselib', ':loadlibrary', ':phoneapp', ':slidemenulib', ':banner', ':zbarlibary', ':tuikit'

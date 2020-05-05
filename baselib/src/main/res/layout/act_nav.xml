@@ -5,51 +5,59 @@
     android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/act_nav_rl"
+        android:id="@+id/act_nav_t"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x100"
-        android:background="@color/yellow_f0c517">
+        android:layout_height="@dimen/x147"
+        android:background="@mipmap/pic_bar_bg">
 
-        <TextView
-            android:id="@+id/act_nav_back_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:drawableStart="@mipmap/ic_nav_back_r"
-            android:gravity="center"
-            android:paddingStart="@dimen/x30"
-            android:paddingEnd="@dimen/x30" />
 
-        <TextView
-            android:id="@+id/act_nav_title_tv"
+        <RelativeLayout
+            android:id="@+id/act_nav_rl"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="@dimen/x150"
-            android:layout_marginEnd="@dimen/x150"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:lines="1"
-            android:textColor="@color/white"
-            android:textSize="@dimen/x36" />
+            android:layout_height="@dimen/x100"
+            android:layout_alignParentBottom="true">
 
-        <TextView
-            android:id="@+id/act_nav_right_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:gravity="center"
-            android:paddingStart="@dimen/x20"
-            android:paddingEnd="@dimen/x20"
-            android:textColor="@color/white"
-            android:textSize="@dimen/x28" />
+            <TextView
+                android:id="@+id/act_nav_back_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableStart="@mipmap/ic_nav_back_r"
+                android:gravity="center"
+                android:paddingStart="@dimen/x30"
+                android:paddingEnd="@dimen/x30" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/x2"
-            android:layout_alignParentBottom="true"
-            android:background="@color/gray_f7f7f7"
-            android:visibility="gone" />
+            <TextView
+                android:id="@+id/act_nav_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/x150"
+                android:layout_marginEnd="@dimen/x150"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x36" />
+
+            <TextView
+                android:id="@+id/act_nav_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingStart="@dimen/x20"
+                android:paddingEnd="@dimen/x20"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x28" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x2"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_f7f7f7"
+                android:visibility="gone" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <FrameLayout

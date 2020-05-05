@@ -26,8 +26,6 @@ import com.chenyi.baselib.widget.recycleviewadapter.QuickRecycleAdapter;
 
 import java.util.ArrayList;
 
-import qiu.niorgai.StatusBarCompat;
-
 /**
  * Created by ass on 2019-09-04.
  * Description
@@ -48,8 +46,8 @@ public class RechargeListActivity extends NavigationActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setNavigationTitle(R.string.wallet_6);
-        setNavigationBarBgColor(Color.parseColor("#f1bf39"));
-        StatusBarCompat.setStatusBarColor(this, Color.parseColor("#f1bf39"));
+//        setNavigationBarBgColor(Color.parseColor("#f1bf39"));
+//        StatusBarCompat.setStatusBarColor(this, Color.parseColor("#f1bf39"));
         rv = findViewById(R.id.act_recharge_list_rv);
         rv.setLayoutManager(new GridLayoutManager(this, 2));
         rv.setAdapter(adapter = new QuickRecycleAdapter<RechargeEntity>(this, R.layout.item_recharge_list) {

@@ -125,7 +125,7 @@ public abstract class BaseFragment extends Fragment {
             EventBus.getDefault().unregister(subscriber);
         }
     }
-    protected <T extends View> T  findViewById(int id) {
+    public  <T extends View> T  findViewById(int id) {
         return contentView.findViewById(id);
     }
 

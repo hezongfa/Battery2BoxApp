@@ -14,6 +14,8 @@ import com.chenyi.baselib.utils.StringUtil;
 import com.chenyi.baselib.utils.sys.KeyBoardUtil;
 import com.chenyi.tao.shop.baselib.R;
 
+import qiu.niorgai.StatusBarCompat;
+
 
 /**
  * Created by ass on 2018/11/28.
@@ -29,7 +31,7 @@ public abstract class BaseNavActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_nav);
-
+        StatusBarCompat.translucentStatusBar(this, true);
         emptyTv = findViewById(R.id.act_nav_empty_tv);
         ViewGroup contentView = findViewById(R.id.act_nav_content_fl);
         getLayoutInflater().inflate(getLayoutId(), contentView);
@@ -68,7 +70,7 @@ public abstract class BaseNavActivity extends BaseActivity {
     //-----bar------start
 
     protected void setNavigationVisible(boolean visible) {
-        barLay.setVisibility(visible ? View.VISIBLE : View.GONE);
+        findViewById(R.id.act_nav_t).setVisibility(visible ? View.VISIBLE : View.GONE);
     }
 
     /**
