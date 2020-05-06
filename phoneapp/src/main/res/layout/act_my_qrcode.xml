@@ -53,4 +53,5 @@
             android:layout_centerHorizontal="true"
             android:text="@string/user_14" />
     </RelativeLayout>
+
 </LinearLayout>

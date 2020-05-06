@@ -26,6 +26,7 @@ import com.batterbox.power.phone.app.entity.LBShopEntity;
 import com.batterbox.power.phone.app.entity.LocMap;
 import com.batterbox.power.phone.app.entity.OrderEntity;
 import com.batterbox.power.phone.app.entity.ShopDetailEntity;
+import com.batterbox.power.phone.app.event.RefreshSearchLbsShopEvent;
 import com.batterbox.power.phone.app.http.HttpClient;
 import com.batterbox.power.phone.app.http.NormalHttpCallBack;
 import com.batterbox.power.phone.app.utils.CountDownHelper;
@@ -58,6 +59,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -257,6 +260,7 @@ public class MainMapFragment extends BaseFragment implements OnMapReadyCallback,
 
             @Override
             public void onSuccess(ResponseEntity<ArrayList<LBShopEntity>> responseEntity) {
+                EventBus.getDefault().post(new RefreshSearchLbsShopEvent(responseEntity.getData()));
                 if (responseEntity != null && responseEntity.getData() != null) {
                     for (LBShopEntity lbShopEntity : responseEntity.getData()) {
 //                        if (!showLBShops.contains(lbShopEntity)) {

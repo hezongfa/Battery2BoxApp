@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/fragment_main_search_ll"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x147"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/pic_bar_bg" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x46">
+
+
+            <EditText
+                android:id="@+id/fragment_main_search_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x71"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/x44"
+                android:layout_marginEnd="@dimen/x44"
+                android:background="@drawable/bg_ffffff_r15px"
+                android:drawableStart="@mipmap/ic_n_search"
+                android:drawablePadding="@dimen/x10"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/x12"
+                android:paddingEnd="@dimen/x20"
+                android:textColor="@color/black_101010"
+                android:textSize="@dimen/x32" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <com.batterbox.power.phone.app.act.main.MainSearchListView
+        android:id="@+id/fragment_main_search_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

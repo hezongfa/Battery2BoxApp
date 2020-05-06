@@ -49,8 +49,11 @@ public class ScanUtil {
                         ARouteHelper.shop_detail(lbShopEntity).navigation();
                     }
                 } else if (scanUrl.contains("?shopUrl=")) {
-                    String webUrl = scanUrl + "&device=Android&token=" + StringUtil.fixNullStr(UserUtil.getToken());
-                    ARouteHelper.hybrid_nav(webUrl).navigation();
+                    String[] ss = scanUrl.split("\\?shopUrl=");
+                    if (ss.length > 1) {
+                        String webUrl = scanUrl.split("\\?shopUrl=")[1] + "&device=Android&token=" + StringUtil.fixNullStr(UserUtil.getToken());
+                        ARouteHelper.hybrid_nav(webUrl).navigation();
+                    }
                 }
 
             }

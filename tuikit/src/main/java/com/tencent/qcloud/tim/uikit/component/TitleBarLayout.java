@@ -1,6 +1,7 @@
 package com.tencent.qcloud.tim.uikit.component;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
@@ -50,11 +51,23 @@ public class TitleBarLayout extends LinearLayout implements ITitleBarLayout {
         mCenterTitle = findViewById(R.id.page_title);
         mLeftIcon = findViewById(R.id.page_title_left_icon);
         mRightIcon = findViewById(R.id.page_title_right_icon);
-        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) mTitleLayout.getLayoutParams();
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) mTitleLayout.getLayoutParams();
         params.height = ScreenUtil.getPxByDp(50);
         mTitleLayout.setLayoutParams(params);
         setBackgroundColor(getResources().getColor(R.color.status_bar_color));
     }
+
+    public void setPBg(int res) {
+        RelativeLayout p = findViewById(R.id.page_title_layout_p);
+//        findViewById(R.id.page_title_layout_p_bg).setVisibility(VISIBLE);
+//        ((ImageView) findViewById(R.id.page_title_layout_p_bg)).setImageResource(res);
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) p.getLayoutParams();
+        params.height = ScreenUtil.getPxByDp(68);
+        p.setLayoutParams(params);
+        p.setBackgroundResource(res);
+        mTitleLayout.setBackgroundColor(Color.TRANSPARENT);
+    }
+
 
     @Override
     public void setOnLeftClickListener(OnClickListener listener) {

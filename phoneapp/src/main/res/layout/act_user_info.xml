@@ -133,11 +133,13 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/x1"
+        android:visibility="gone"
         android:background="@color/line" />
 
     <RelativeLayout
         android:id="@+id/act_user_info_sex_rl"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="@dimen/x100"
         android:background="@android:color/white">
 
@@ -167,12 +169,14 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/x1"
+        android:visibility="gone"
         android:background="@color/line" />
 
     <RelativeLayout
         android:id="@+id/act_user_info_qrcode_rl"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x100"
+        android:visibility="gone"
         android:background="@android:color/white">
 
         <TextView

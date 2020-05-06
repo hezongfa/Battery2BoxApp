@@ -47,7 +47,9 @@ public class ChatFragment extends BaseFragment {
 
         //获取单聊面板的标题栏
         mTitleBar = mChatLayout.getTitleBar();
-
+//        mTitleBar.setPBg(R.mipmap.pic_bar_bg);
+//        mTitleBar.setLeftIcon(R.mipmap.ic_nav_back_r);
+//        mTitleBar.getMiddleTitle().setTextColor(Color.WHITE);
         //单聊面板标记栏返回按钮点击事件，这里需要开发者自行控制
         mTitleBar.setOnLeftClickListener(new View.OnClickListener() {
             @Override

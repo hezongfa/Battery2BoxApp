@@ -217,6 +217,12 @@
     <string name="user_6">Información del usuario</string>
     <string name="user_7">Nombre</string>
     <string name="user_8">Email</string>
+    <string name="user_9">性别</string>
+    <string name="user_10">男</string>
+    <string name="user_11">女</string>
+    <string name="user_12">未设置</string>
+    <string name="user_13">我的二维码</string>
+    <string name="user_14">扫描二维码以添加联系人</string>
     <!--<string name="helper_4">BATERÍA\nATASCADA</string>-->
     <!--<string name="helper_5">ESTACIÓN FUERA\nDE SERVICIO</string>-->
     <!--<string name="helper_6">BATERÍA\nDAÑADA</string>-->
@@ -258,5 +264,59 @@
     <string name="coupon_12">Normas de uso</string>
     <string name="coupon_13">Usar el cupón</string>
     <string name="coupon_14">Eliminar</string>
+
+
+    <string name="main_tab_1">聊天</string>
+    <string name="main_tab_2">商铺</string>
+    <string name="main_tab_3">搜索</string>
+    <string name="main_tab_4">Battery2Box</string>
+    <string name="main_tab_5">敬请期待</string>
+
+
+    <string name="main_chat_1">添加好友</string>
+    <string name="main_chat_2">扫一扫</string>
+    <string name="main_chat_3">删除</string>
+    <string name="main_chat_4">个人资料</string>
+    <string name="main_chat_5">添加</string>
+    <string name="main_chat_6">地址:</string>
+    <string name="main_chat_7">验证信息</string>
+    <string name="main_chat_8">添加</string>
+    <string name="main_chat_9">手机:</string>
+    <string name="main_chat_10">通知</string>
+    <string name="main_chat_11">聊天</string>
+
+
+    // 云通信
+    <string name="chat_top">置顶聊天</string>
+    <string name="chat_delete">删除聊天</string>
+    <string name="quit_chat_top">取消置顶</string>
+
+    // "+"menu相关
+    <string name="add_friend">添加好友</string>
+    <string name="add_group">添加群聊</string>
+    <string name="start_conversation">发起会话</string>
+    <string name="create_group_chat">创建群聊</string>
+    <string name="create_chat_room">创建聊天室</string>
+    <string name="create_private_group">创建讨论组</string>
+    <string name="hint_add_user_id">请输入ID</string>
+    <string name="hint_add_wording">请输入验证消息</string>
+
+    <string name="user_id">对方ID</string>
+    <string name="add_wording">验证消息</string>
+
+    // 群信息相关
+    <string name="tips_empty_group_member">请选择群成员</string>
+    <string name="tips_empty_group_type">请选择加群方式</string>
+    <string name="no_friend_apply">暂无好友申请</string>
+
+    // 新朋友
+    <string name="request_agree">同意</string>
+    <string name="request_accepted">已接受</string>
+    <string name="request_waiting">等待验证</string>
+
+    <string name="test_custom_action">自定义消息</string>
+    <string name="test_custom_message">查看详情>></string>
+    <string name="video_call">视频通话</string>
+    <string name="audio_call">音频通话</string>
 
 </resources>

@@ -1,12 +1,10 @@
 package com.batterbox.power.phone.app.utils;
 
-import com.batterbox.power.phone.app.BatterBoxApp;
 import com.batterbox.power.phone.app.http.HttpClient;
 import com.batterbox.power.phone.app.http.NormalHttpCallBack;
 import com.chenyi.baselib.entity.ResponseEntity;
 import com.chenyi.baselib.utils.StringUtil;
 import com.chenyi.baselib.utils.print.FQL;
-import com.chenyi.baselib.utils.print.FQT;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.base.IUIKitCallBack;
 
@@ -36,13 +34,13 @@ public class ImUtil {
 
                                     String msg = "im登陆成功--";
                                     FQL.d("TUIKit", msg);
-                                    FQT.showShort(BatterBoxApp.getInstance(), msg);
+//                                    FQT.showShort(BatterBoxApp.getInstance(), msg);
                                 }
 
                                 @Override
                                 public void onError(String module, int errCode, String errMsg) {
                                     FQL.d("TUIKit", "module=" + module + ";errCode==" + errCode + ";errMsg==" + errMsg);
-                                    FQT.showShort(BatterBoxApp.getInstance(), "im登陆失败--" + errMsg);
+//                                    FQT.showShort(BatterBoxApp.getInstance(), "im登陆失败--" + errMsg);
                                 }
                             });
                         }
