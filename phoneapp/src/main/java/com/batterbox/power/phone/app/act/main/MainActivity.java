@@ -86,7 +86,6 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.act_m_scan_iv).setOnClickListener(v -> ScanUtil.scan(MainActivity.this));
 
         mainMenuHelper = new MainMenuHelper(this);
-
     }
 
     public void showMenu() {
@@ -186,13 +185,13 @@ public class MainActivity extends BaseActivity {
     private void processDefIndex() {
         if (curIndex != -1) {
             if (curIndex == 0) {
-                changeContentFragment(homeTv);
+                changeContentFragment(userTv);
             } else if (curIndex == 1) {
                 changeContentFragment(cartTv);
             } else if (curIndex == 2) {
                 changeContentFragment(teamTv);
             } else if (curIndex == 3) {
-                changeContentFragment(userTv);
+                changeContentFragment(homeTv);
             }
         }
     }
@@ -269,7 +268,7 @@ public class MainActivity extends BaseActivity {
                 ft.show(mainChatFragment);
                 homeTv.setTextColor(selectedColor);
                 homeTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_chat_press, 0, 0);
-                curIndex = 0;
+                curIndex = 3;
                 break;
 
             case R.id.act_main_cart:
@@ -301,7 +300,8 @@ public class MainActivity extends BaseActivity {
                 ft.show(userFragment);
                 userTv.setTextColor(selectedColor);
                 userTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_logo_press, 0, 0);
-                curIndex = 3;
+
+                curIndex = 0;
                 break;
             default:
                 break;

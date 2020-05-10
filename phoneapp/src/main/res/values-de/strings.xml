@@ -263,11 +263,11 @@
     <string name="coupon_13">Gibt an, ob der Gutschein verwendet wird</string>
     <string name="coupon_14">Löschen</string>
 
-    <string name="main_tab_1">聊天</string>
-    <string name="main_tab_2">商铺</string>
-    <string name="main_tab_3">搜索</string>
+    <string name="main_tab_1">Chat</string>
+    <string name="main_tab_2">Shops</string>
+    <string name="main_tab_3">Suche</string>
     <string name="main_tab_4">Battery2Box</string>
-    <string name="main_tab_5">敬请期待</string>
+    <string name="main_tab_5">In Kürze</string>
 
 
     <string name="main_chat_1">添加好友</string>

@@ -266,11 +266,11 @@
     <string name="coupon_14">Eliminar</string>
 
 
-    <string name="main_tab_1">聊天</string>
-    <string name="main_tab_2">商铺</string>
-    <string name="main_tab_3">搜索</string>
+    <string name="main_tab_1">Chats</string>
+    <string name="main_tab_2">Comerciante</string>
+    <string name="main_tab_3">Buscar</string>
     <string name="main_tab_4">Battery2Box</string>
-    <string name="main_tab_5">敬请期待</string>
+    <string name="main_tab_5">Por favor.</string>
 
 
     <string name="main_chat_1">添加好友</string>

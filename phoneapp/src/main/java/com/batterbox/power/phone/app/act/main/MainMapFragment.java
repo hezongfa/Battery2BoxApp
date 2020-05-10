@@ -216,7 +216,7 @@ public class MainMapFragment extends BaseFragment implements OnMapReadyCallback,
         if (googleMap == null) return;
         this.googleMap = googleMap;
         googleMap.setOnMarkerClickListener(this);
-//        MainActivityPermissionsDispatcher.userLocationWithPermissionCheck(this);
+        MainMapFragmentPermissionsDispatcher.userLocationWithPermissionCheck(this);
     }
 
     private void locCur() {

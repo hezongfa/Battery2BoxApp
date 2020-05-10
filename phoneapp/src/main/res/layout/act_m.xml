@@ -26,23 +26,23 @@
             android:layout_alignParentBottom="true"
             android:background="@mipmap/pic_main_bottom_bg"
             android:orientation="horizontal">
-
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/act_main_home"
+                    android:id="@+id/act_main_user"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:drawablePadding="@dimen/x4"
                     android:gravity="center"
-                    android:text="@string/main_tab_1"
+                    android:text="@string/main_tab_4"
                     android:textColor="@color/gray_666666"
                     android:textSize="10dp" />
             </FrameLayout>
+
 
             <FrameLayout
                 android:id="@+id/act_main_cart_fl"
@@ -90,13 +90,13 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/act_main_user"
+                    android:id="@+id/act_main_home"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:drawablePadding="@dimen/x4"
                     android:gravity="center"
-                    android:text="@string/main_tab_4"
+                    android:text="@string/main_tab_1"
                     android:textColor="@color/gray_666666"
                     android:textSize="10dp" />
             </FrameLayout>

@@ -265,11 +265,11 @@
     <string name="coupon_13">Utiliser le ticket</string>
     <string name="coupon_14">Delete</string>
 
-    <string name="main_tab_1">聊天</string>
-    <string name="main_tab_2">商铺</string>
-    <string name="main_tab_3">搜索</string>
+    <string name="main_tab_1">Bavarder</string>
+    <string name="main_tab_2">Magasin</string>
+    <string name="main_tab_3">Chercher</string>
     <string name="main_tab_4">Battery2Box</string>
-    <string name="main_tab_5">敬请期待</string>
+    <string name="main_tab_5">À vos souhaits.</string>
 
 
     <string name="main_chat_1">添加好友</string>

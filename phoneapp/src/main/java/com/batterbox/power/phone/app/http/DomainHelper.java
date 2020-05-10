@@ -38,7 +38,7 @@ public class DomainHelper {
     }
 
     public static int getDomainType() {
-        return SharedPreferencesUtil.getInstance().getInt("DomainType", 2);
+        return SharedPreferencesUtil.getInstance().getInt("DomainType", 0);
     }
 
     public static void initDomain() {
