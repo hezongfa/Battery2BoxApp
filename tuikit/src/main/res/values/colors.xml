@@ -48,8 +48,8 @@
     <color name="tab_text_normal_color">#888888</color>
 
     // 积极钮色值
-    <color name="btn_positive">#00a4ff</color>
-    <color name="btn_positive_hover">#006eff</color>
+    <color name="btn_positive">#edb049</color>
+    <color name="btn_positive_hover">#CF9535</color>
 
     // 积极按钮文本色值
     <color name="text_positive">#ffffff</color>
