@@ -210,9 +210,9 @@ public class MainActivity extends BaseActivity {
 
     private void changeContentFragment(View view) {
         int id = view.getId();
-        if (R.id.act_main_home != id && !UserUtil.checkLogin()) {
-            return;
-        }
+//        if (R.id.act_main_home != id && !UserUtil.checkLogin()) {
+//            return;
+//        }
         RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) findViewById(R.id.main_layContent).getLayoutParams();
         if (R.id.act_main_user == id) {
             lp.setMargins(0, 0, 0, ViewUtil.getDimen(this,R.dimen.x30));

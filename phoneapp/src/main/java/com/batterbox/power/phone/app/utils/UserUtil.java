@@ -6,6 +6,8 @@ import com.batterbox.power.phone.app.entity.UserEntity;
 import com.chenyi.baselib.app.AppContextBase;
 import com.chenyi.baselib.utils.SharedPreferencesUtil;
 import com.chenyi.baselib.utils.StringUtil;
+import com.tencent.imsdk.TIMCallBack;
+import com.tencent.imsdk.TIMManager;
 
 public class UserUtil {
 
@@ -72,6 +74,17 @@ public class UserUtil {
     public static void cleanUserInfo() {
         AppContextBase.getInstance().getConstACache().remove("userEntity");
         BatterBoxApp.clean_user_push();
+        TIMManager.getInstance().logout(new TIMCallBack() {
+            @Override
+            public void onError(int i, String s) {
+
+            }
+
+            @Override
+            public void onSuccess() {
+
+            }
+        });
     }
 
 }
