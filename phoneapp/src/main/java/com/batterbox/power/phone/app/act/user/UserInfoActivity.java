@@ -1,6 +1,7 @@
 package com.batterbox.power.phone.app.act.user;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
+import com.batterbox.power.phone.app.entity.SelectAreaEntity;
 import com.batterbox.power.phone.app.entity.UserEntity;
 import com.batterbox.power.phone.app.http.HttpClient;
 import com.batterbox.power.phone.app.http.NormalHttpCallBack;
@@ -26,9 +28,13 @@ import com.chenyi.baselib.utils.StringUtil;
 import com.chenyi.baselib.utils.ViewUtil;
 import com.chenyi.baselib.utils.print.FQT;
 import com.chenyi.baselib.widget.PhotoPickHelper;
+import com.chenyi.baselib.widget.dialog.BottomListDialog;
+import com.chenyi.baselib.widget.dialog.DialogUtils;
 import com.yalantis.ucrop.UCrop;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import permissions.dispatcher.NeedsPermission;
 import permissions.dispatcher.OnNeverAskAgain;
@@ -41,7 +47,7 @@ import permissions.dispatcher.RuntimePermissions;
 @RuntimePermissions
 @Route(path = ARouteHelper.USER_INFO)
 public class UserInfoActivity extends NavigationActivity {
-    TextView nameTv, phoneTv, emailTv;
+    TextView nameTv, phoneTv, emailTv, areaTv, sexTv;
     ImageView headIv;
     String tempCameraPath;
 
@@ -58,6 +64,8 @@ public class UserInfoActivity extends NavigationActivity {
         phoneTv = findViewById(R.id.act_user_info_phone_tv);
         emailTv = findViewById(R.id.act_user_info_email_tv);
         headIv = findViewById(R.id.act_user_info_iv);
+        areaTv = findViewById(R.id.act_user_info_area_tv);
+        sexTv = findViewById(R.id.act_user_info_sex_tv);
         findViewById(R.id.act_user_info_photo_rl).setOnClickListener(v -> UserInfoActivityPermissionsDispatcher.pickPhotoWithPermissionCheck(UserInfoActivity.this));
         findViewById(R.id.act_user_info_name_rl).setOnClickListener(v -> {
             UserEntity userEntity = UserUtil.getUserInfo();
@@ -72,6 +80,14 @@ public class UserInfoActivity extends NavigationActivity {
             }
         });
         findViewById(R.id.act_user_info_qrcode_rl).setOnClickListener(v -> ARouteHelper.user_qrcode().navigation());
+        findViewById(R.id.act_user_info_area_rl).setOnClickListener(v -> ARouteHelper.user_selectarea().navigation(UserInfoActivity.this, 123));
+        findViewById(R.id.act_user_info_sex_rl).setOnClickListener(v -> {
+                    ArrayList<String> sexs = new ArrayList<>();
+                    sexs.add(getString(R.string.user_10));
+                    sexs.add(getString(R.string.user_11));
+                    DialogUtils.showListDialog(UserInfoActivity.this, getString(R.string.user_9), sexs, position -> updateInfo(null, null, null, String.valueOf(position + 1),null));
+                }
+        );
     }
 
     @Override
@@ -83,6 +99,8 @@ public class UserInfoActivity extends NavigationActivity {
             nameTv.setText(StringUtil.fixNullStr(userEntity.userName));
             phoneTv.setText(StringUtil.fixNullStr(userEntity.phone));
             emailTv.setText(StringUtil.fixNullStr(userEntity.email));
+            sexTv.setText(userEntity.sex == 1 ? getString(R.string.user_10) : getString(R.string.user_11));
+            areaTv.setText(StringUtil.fixNullStr(userEntity.address));
         }
     }
 
@@ -94,11 +112,15 @@ public class UserInfoActivity extends NavigationActivity {
             if (requestCode == 121 && data != null) {
                 String content = data.getStringExtra("content");
                 //名字
-                updateInfo(content, null, null);
+                updateInfo(content, null, null, null,null);
             } else if (requestCode == 122 && data != null) {
                 String content = data.getStringExtra("content");
                 //email
-                updateInfo(null, null, content);
+                updateInfo(null, null, content, null,null);
+            } else if (requestCode == 123) {
+                SelectAreaEntity selectAreaEntity = (SelectAreaEntity) data.getSerializableExtra("selectAreaEntity");
+//                refreshArea(selectAreaEntity.path);
+                updateInfo(null, null, null, null,selectAreaEntity.path);
             } else if (requestCode == (PhotoPickHelper.CAMERA_REQUEST_CODE)) {
                 String path = tempCameraPath;
                 ucrop(path);
@@ -113,6 +135,29 @@ public class UserInfoActivity extends NavigationActivity {
         }
     }
 
+    private void refreshArea(String path) {
+        HttpClient.getInstance().im_getAreaName(path, new NormalHttpCallBack<ResponseEntity<String>>(this) {
+            @Override
+            public void onStart() {
+
+            }
+
+            @Override
+            public void onSuccess(ResponseEntity<String> responseEntity) {
+                UserEntity userEntity = UserUtil.getUserInfo();
+                if (userEntity != null) {
+                    userEntity.address = StringUtil.fixNullStr(responseEntity.getData());
+                    areaTv.setText(StringUtil.fixNullStr(responseEntity.getData()));
+                    UserUtil.saveUserInfo(userEntity);
+                }
+            }
+
+            @Override
+            public void onFail(ResponseEntity<String> responseEntity, String msg) {
+            }
+        });
+    }
+
     private void uploadImg(String path) {
         HttpClient.getInstance().uploadImg(path, new NormalHttpCallBack<ResponseEntity<String>>(this) {
             @Override
@@ -124,7 +169,7 @@ public class UserInfoActivity extends NavigationActivity {
             public void onSuccess(ResponseEntity<String> responseEntity) {
                 if (responseEntity != null && responseEntity.getData() != null) {
 //                    ImageLoaderUtil.load_round(UserInfoActivity.this, path, headIv, ViewUtil.getDimen(UserInfoActivity.this, R.dimen.x10));
-                    updateInfo(null, responseEntity.getData(), null);
+                    updateInfo(null, responseEntity.getData(), null, null,null);
 //                    if (!StringUtil.isEmpty(responseEntity.getData())) {
 //                        UserEntity userEntity = UserUtil.getUserInfo();
 //                        if (userEntity != null) {
@@ -142,8 +187,8 @@ public class UserInfoActivity extends NavigationActivity {
         });
     }
 
-    private void updateInfo(String nickName, String logoUrl, String email) {
-        HttpClient.getInstance().us_setUserInfo(nickName, logoUrl, email, new NormalHttpCallBack<ResponseEntity>(this) {
+    private void updateInfo(String nickName, String logoUrl, String email, String sex,String path) {
+        HttpClient.getInstance().us_setUserInfo(nickName, logoUrl, email, sex,path, new NormalHttpCallBack<ResponseEntity>(this) {
             @Override
             public void onStart() {
 
@@ -164,6 +209,13 @@ public class UserInfoActivity extends NavigationActivity {
                     if (!StringUtil.isEmpty(email)) {
                         userEntity.email = email;
                         emailTv.setText(StringUtil.fixNullStr(userEntity.email));
+                    }
+                    if (!StringUtil.isEmpty(sex)) {
+                        userEntity.sex = StringUtil.stringToInteger(sex);
+                        sexTv.setText(userEntity.sex == 1 ? getString(R.string.user_10) : getString(R.string.user_11));
+                    }
+                    if (!StringUtil.isEmpty(path)) {
+                        refreshArea(path);
                     }
                     UserUtil.saveUserInfo(userEntity);
                 }

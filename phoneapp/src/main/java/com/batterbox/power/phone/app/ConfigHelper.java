@@ -19,7 +19,7 @@ public class ConfigHelper {
         config.setShowRead(true);
         config.setAppCacheDir(BatterBoxApp.getInstance().getFilesDir().getPath());
         TUIKit.getConfigs().setGeneralConfig(config);
-        TUIKit.getConfigs().setCustomFaceConfig(initCustomFaceConfig());
+//        TUIKit.getConfigs().setCustomFaceConfig(initCustomFaceConfig());
         return TUIKit.getConfigs();
     }
 

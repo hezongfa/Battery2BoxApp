@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.batterbox.power.phone.app.BatterBoxApp;
 import com.batterbox.power.phone.app.R;
@@ -36,7 +37,7 @@ import java.util.List;
  */
 public class MainChatFragment extends BaseFragment {
 
-
+    private int curIndex = 0;
     private View mBaseView;
     private ConversationLayout mConversationLayout;
     private ListView mConversationPopList;
@@ -61,6 +62,20 @@ public class MainChatFragment extends BaseFragment {
     }
 
     private void initView() {
+        findViewById(R.id.fragment_main_chat_notification_tv).setOnClickListener(v -> {
+            curIndex = 0;
+            ((TextView) findViewById(R.id.fragment_main_chat_notification_tv)).setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.mipmap.ic_main_chat_l, 0, R.mipmap.pic_li);
+            ((TextView) findViewById(R.id.fragment_main_chat_msg_tv)).setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.mipmap.ic_main_chat_r, 0, 0);
+            findViewById(R.id.fragment_main_chat_notify_view).setVisibility(View.VISIBLE);
+            mConversationLayout.setVisibility(View.GONE);
+        });
+        findViewById(R.id.fragment_main_chat_msg_tv).setOnClickListener(v -> {
+            ((TextView) findViewById(R.id.fragment_main_chat_msg_tv)).setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.mipmap.ic_main_chat_r, 0, R.mipmap.pic_li);
+            ((TextView) findViewById(R.id.fragment_main_chat_notification_tv)).setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.mipmap.ic_main_chat_l, 0, 0);
+            curIndex = 1;
+            findViewById(R.id.fragment_main_chat_notify_view).setVisibility(View.GONE);
+            mConversationLayout.setVisibility(View.VISIBLE);
+        });
         findViewById(R.id.fragment_main_chat_friends_btn).setOnClickListener(v -> ARouteHelper.chat_friends().navigation());
         findViewById(R.id.fragment_main_chat_menu_btn).setOnClickListener(v -> showPop(v));
 
@@ -69,9 +84,8 @@ public class MainChatFragment extends BaseFragment {
         // 从布局文件中获取会话列表面板
         mConversationLayout = mBaseView.findViewById(R.id.conversation_layout);
 //        mMenu = new Menu(getActivity(), (TitleBarLayout) mConversationLayout.getTitleBar(), Menu.MENU_TYPE_CONVERSATION);
-        // 会话列表面板的默认UI和交互初始化
-        mConversationLayout.initDefault();
         // 通过API设置ConversataonLayout各种属性的样例，开发者可以打开注释，体验效果
+        mConversationLayout.initDefault();
 //        ConversationLayoutHelper.customizeConversation(mConversationLayout);
         mConversationLayout.getConversationList().setOnItemClickListener(new ConversationListLayout.OnItemClickListener() {
             @Override
@@ -88,6 +102,12 @@ public class MainChatFragment extends BaseFragment {
         });
 //        initTitleAction();
 //        initPopMenuAction();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mConversationLayout.loadData();
     }
 
     void showPop(View mAttachView) {
@@ -210,8 +230,6 @@ public class MainChatFragment extends BaseFragment {
         intent.putExtra(Constants.CHAT_INFO, chatInfo);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         BatterBoxApp.getInstance().startActivity(intent);
-
-
 
 
     }

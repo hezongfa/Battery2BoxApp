@@ -14,8 +14,9 @@ import com.tencent.qcloud.tim.uikit.utils.ToastUtil;
 
 public class ConversationLayout extends RelativeLayout implements IConversationLayout {
 
-//    private TitleBarLayout mTitleBarLayout;
+    //    private TitleBarLayout mTitleBarLayout;
     private ConversationListLayout mConversationList;
+    private IConversationAdapter adapter;
 
     public ConversationLayout(Context context) {
         super(context);
@@ -46,8 +47,12 @@ public class ConversationLayout extends RelativeLayout implements IConversationL
 //        mTitleBarLayout.getLeftGroup().setVisibility(View.GONE);
 //        mTitleBarLayout.setRightIcon(R.drawable.conversation_more);
 
-        final IConversationAdapter adapter = new ConversationListAdapter();
+        adapter = new ConversationListAdapter();
         mConversationList.setAdapter(adapter);
+//        loadData();
+    }
+
+    public void loadData() {
         ConversationManagerKit.getInstance().loadConversation(new IUIKitCallBack() {
             @Override
             public void onSuccess(Object data) {

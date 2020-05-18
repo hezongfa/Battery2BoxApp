@@ -9,10 +9,12 @@ import com.batterbox.power.phone.app.entity.CouponEntity;
 import com.batterbox.power.phone.app.entity.DeviceEntity;
 import com.batterbox.power.phone.app.entity.LBShopEntity;
 import com.batterbox.power.phone.app.entity.LbsShopCouponEntity;
+import com.batterbox.power.phone.app.entity.NotifyDataEntity;
 import com.batterbox.power.phone.app.entity.OrderEntity;
 import com.batterbox.power.phone.app.entity.OrderStateEntity;
 import com.batterbox.power.phone.app.entity.RechargeEntity;
 import com.batterbox.power.phone.app.entity.SearchUserEntity;
+import com.batterbox.power.phone.app.entity.SelectAreaEntity;
 import com.batterbox.power.phone.app.entity.SharePageEntity;
 import com.batterbox.power.phone.app.entity.ShopDetailEntity;
 import com.batterbox.power.phone.app.entity.TimeRecordEntity;
@@ -208,7 +210,7 @@ public class HttpClient extends BaseHttpClient<Api> {
         query(observable, callBack);
     }
 
-    public void us_setUserInfo(String nickName, String logoUrl, String email, NormalHttpCallBack<ResponseEntity> callBack) {
+    public void us_setUserInfo(String nickName, String logoUrl, String email, String sex, String path, NormalHttpCallBack<ResponseEntity> callBack) {
         Map<String, Object> map = defaultPms();
         if (!StringUtil.isEmpty(nickName)) {
             map.put("nickName", nickName);
@@ -218,6 +220,12 @@ public class HttpClient extends BaseHttpClient<Api> {
         }
         if (!StringUtil.isEmpty(email)) {
             map.put("email", email);
+        }
+        if (!StringUtil.isEmpty(sex)) {
+            map.put("sex", sex);
+        }
+        if (!StringUtil.isEmpty(path)) {
+            map.put("path", path);
         }
         Observable<ResponseEntity> observable = getInstance().getService().us_setUserInfo(defaultPms(), map);
         query(observable, callBack);
@@ -342,6 +350,27 @@ public class HttpClient extends BaseHttpClient<Api> {
     public void im_searchMember(String data, NormalHttpCallBack<ResponseEntity<SearchUserEntity>> callBack) {
         Observable<ResponseEntity<SearchUserEntity>> observable = getInstance().getService().im_searchMember
                 (defaultPms(), data);
+        query(observable, callBack);
+    }
+
+    public void im_getAreaData(long id, NormalHttpCallBack<ResponseEntity<ArrayList<SelectAreaEntity>>> callBack) {
+        Map<String, Object> map = defaultPms();
+        if (id > 0) {
+            map.put("id", id);
+        }
+        Observable<ResponseEntity<ArrayList<SelectAreaEntity>>> observable = getInstance().getService().im_getAreaData
+                (map, map);
+        query(observable, callBack);
+    }
+
+    public void im_getAreaName(String path, NormalHttpCallBack<ResponseEntity<String>> callBack) {
+        Observable<ResponseEntity<String>> observable = getInstance().getService().im_getAreaName
+                (defaultPms(), path);
+        query(observable, callBack);
+    }
+
+    public void message_list(int page, int pageSize, NormalHttpCallBack<ResponseEntity<ArrayList<NotifyDataEntity>>> callBack) {
+        Observable<ResponseEntity<ArrayList<NotifyDataEntity>>> observable = getInstance().getService().message_list(defaultPms(), page, pageSize);
         query(observable, callBack);
     }
 

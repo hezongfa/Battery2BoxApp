@@ -35,7 +35,6 @@ public class FriendListActivity extends NavigationActivity {
         super.onCreate(savedInstanceState);
         mContactListView = findViewById(R.id.contact_list_view);
         mContactListView.setSingleSelectMode(true);
-        mContactListView.loadDataSource(ContactListView.DataSource.CONTACT_LIST);
         mContactListView.setOnItemClickListener(new ContactListView.OnItemClickListener() {
             @Override
             public void onItemClick(int position, ContactItemBean contact) {
@@ -84,6 +83,12 @@ public class FriendListActivity extends NavigationActivity {
 //                }
 //            }
 //        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mContactListView.loadDataSource(ContactListView.DataSource.CONTACT_LIST);
     }
 
     public void startConversation(ContactItemBean mSelectedItem) {

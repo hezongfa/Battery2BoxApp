@@ -26,6 +26,15 @@ import java.util.List;
 
 public class ChatLayout extends AbsChatLayout implements GroupChatManagerKit.GroupNotifyHandler {
 
+    public interface OnTitleChange{
+        void onTitleChange(String str);
+    }
+    private OnTitleChange onTitleChange;
+
+    public void setOnTitleChange(OnTitleChange onTitleChange) {
+        this.onTitleChange = onTitleChange;
+    }
+
     private GroupInfo mGroupInfo;
     private GroupChatManagerKit mGroupChatManager;
     private C2CChatManagerKit mC2CChatManager;
@@ -131,6 +140,9 @@ public class ChatLayout extends AbsChatLayout implements GroupChatManagerKit.Gro
     @Override
     public void onGroupNameChanged(String newName) {
         getTitleBar().setTitle(newName, TitleBarLayout.POSITION.MIDDLE);
+        if (onTitleChange!=null){
+            onTitleChange.onTitleChange(newName);
+        }
     }
 
     @Override

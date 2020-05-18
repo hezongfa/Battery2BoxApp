@@ -38,4 +38,5 @@ public class UserEntity extends BaseEntity {
     public int isFacebook;
     public int isWeixin;
     public int remainingTime;
+    public String address;
 }

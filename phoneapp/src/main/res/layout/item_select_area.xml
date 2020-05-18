@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_select_area_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_select_area_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x86"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/x26"
+        android:paddingEnd="@dimen/x26"
+        android:text="adfadf"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/x28" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x2"
+        android:background="@color/line" />
+</LinearLayout>

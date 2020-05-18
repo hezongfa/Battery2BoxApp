@@ -206,6 +206,9 @@
         <activity
             android:name=".act.user.MyQrCodeActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".act.user.SelectAreaActivity"
+            android:screenOrientation="portrait" />
 
 
         <meta-data

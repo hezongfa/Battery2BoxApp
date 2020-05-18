@@ -147,7 +147,7 @@ public class ChatLayoutHelper {
 //
 //        // TODO 可以disable更多面板上的各个功能，可以打开下面代码测试
 //        inputLayout.disableCaptureAction(true);
-//        inputLayout.disableSendFileAction(true);
+        inputLayout.disableSendFileAction(true);
 //        inputLayout.disableSendPhotoAction(true);
 //        inputLayout.disableVideoRecordAction(true);
         // TODO 可以自己增加一些功能，可以打开下面代码测试
@@ -164,20 +164,20 @@ public class ChatLayoutHelper {
 //        inputLayout.addAction(videoCall);
 
         // 增加一个欢迎提示富文本
-        InputMoreActionUnit unit = new InputMoreActionUnit();
-        unit.setIconResId(R.drawable.custom);
-        unit.setTitleId(R.string.test_custom_action);
-        unit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Gson gson = new Gson();
-                CustomMessage customMessage = new CustomMessage();
-                String data = gson.toJson(customMessage);
-                MessageInfo info = MessageInfoUtil.buildCustomMessage(data);
-                layout.sendMessage(info, false);
-            }
-        });
-        inputLayout.addAction(unit);
+//        InputMoreActionUnit unit = new InputMoreActionUnit();
+//        unit.setIconResId(R.drawable.custom);
+//        unit.setTitleId(R.string.test_custom_action);
+//        unit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Gson gson = new Gson();
+//                CustomMessage customMessage = new CustomMessage();
+//                String data = gson.toJson(customMessage);
+//                MessageInfo info = MessageInfoUtil.buildCustomMessage(data);
+//                layout.sendMessage(info, false);
+//            }
+//        });
+//        inputLayout.addAction(unit);
     }
 
     public static class CustomInputFragment extends BaseInputFragment {

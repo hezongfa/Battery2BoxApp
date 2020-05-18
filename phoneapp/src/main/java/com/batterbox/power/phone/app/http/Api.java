@@ -10,10 +10,12 @@ import com.batterbox.power.phone.app.entity.CouponEntity;
 import com.batterbox.power.phone.app.entity.DeviceEntity;
 import com.batterbox.power.phone.app.entity.LBShopEntity;
 import com.batterbox.power.phone.app.entity.LbsShopCouponEntity;
+import com.batterbox.power.phone.app.entity.NotifyDataEntity;
 import com.batterbox.power.phone.app.entity.OrderEntity;
 import com.batterbox.power.phone.app.entity.OrderStateEntity;
 import com.batterbox.power.phone.app.entity.RechargeEntity;
 import com.batterbox.power.phone.app.entity.SearchUserEntity;
+import com.batterbox.power.phone.app.entity.SelectAreaEntity;
 import com.batterbox.power.phone.app.entity.SharePageEntity;
 import com.batterbox.power.phone.app.entity.ShopDetailEntity;
 import com.batterbox.power.phone.app.entity.TimeRecordEntity;
@@ -284,6 +286,20 @@ public interface Api {
     @POST("im/searchMember")
     Observable<ResponseEntity<SearchUserEntity>> im_searchMember(@HeaderMap Map<String, Object> map,
                                                                  @Field("data") String data);
+    @FormUrlEncoded
+    @POST("im/getAreaData")
+    Observable<ResponseEntity<ArrayList<SelectAreaEntity>>> im_getAreaData(@HeaderMap Map<String, Object> map,
+                                                                           @FieldMap Map<String, Object> map1);
 
+
+    @FormUrlEncoded
+    @POST("im/getAreaName")
+    Observable<ResponseEntity<String>> im_getAreaName(@HeaderMap Map<String, Object> map,
+                                                                 @Field("path") String path);
+    @FormUrlEncoded
+    @POST("message/list")
+    Observable<ResponseEntity<ArrayList<NotifyDataEntity>>> message_list(@HeaderMap Map<String, Object> map,
+                                                                         @Field("pageNum") int pageNum,
+                                                                         @Field("pageSize") int pageSize);
 
 }

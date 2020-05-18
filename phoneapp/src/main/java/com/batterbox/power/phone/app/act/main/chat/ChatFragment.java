@@ -1,11 +1,13 @@
 package com.batterbox.power.phone.app.act.main.chat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.batterbox.power.phone.app.BatterBoxApp;
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.act.main.Constants;
 import com.batterbox.power.phone.app.act.main.chat.helper.ChatLayoutHelper;
@@ -17,10 +19,10 @@ import com.tencent.qcloud.tim.uikit.modules.chat.ChatLayout;
 import com.tencent.qcloud.tim.uikit.modules.chat.base.ChatInfo;
 import com.tencent.qcloud.tim.uikit.modules.chat.layout.message.MessageLayout;
 import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;
+import com.tencent.qcloud.tim.uikit.utils.TUIKitConstants;
 
 
 public class ChatFragment extends BaseFragment {
-
     private View mBaseView;
     private ChatLayout mChatLayout;
     private TitleBarLayout mTitleBar;
@@ -36,7 +38,11 @@ public class ChatFragment extends BaseFragment {
     private void initView() {
         //从布局文件中获取聊天面板组件
         mChatLayout = mBaseView.findViewById(R.id.chat_layout);
-
+        mChatLayout.setOnTitleChange(str -> {
+            if (getActivity() instanceof ChatActivity) {
+                ((ChatActivity) getActivity()).setTitleStr(str);
+            }
+        });
         //单聊组件的默认UI和交互初始化
         mChatLayout.initDefault();
 
@@ -47,6 +53,7 @@ public class ChatFragment extends BaseFragment {
 
         //获取单聊面板的标题栏
         mTitleBar = mChatLayout.getTitleBar();
+        mTitleBar.setVisibility(View.GONE);
 //        mTitleBar.setPBg(R.mipmap.pic_bar_bg);
 //        mTitleBar.setLeftIcon(R.mipmap.ic_nav_back_r);
 //        mTitleBar.getMiddleTitle().setTextColor(Color.WHITE);
@@ -82,12 +89,15 @@ public class ChatFragment extends BaseFragment {
                 }
                 ChatInfo info = new ChatInfo();
                 info.setId(messageInfo.getFromUser());
-//                Intent intent = new Intent(BatterBoxApp.getInstance(), FriendProfileActivity.class);
-//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                intent.putExtra(TUIKitConstants.ProfileType.CONTENT, info);
-//                BatterBoxApp.getInstance().startActivity(intent);
+                Intent intent = new Intent(BatterBoxApp.getInstance(), FriendProfileActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra(TUIKitConstants.ProfileType.CONTENT, info);
+                BatterBoxApp.getInstance().startActivity(intent);
             }
         });
+        if (mChatInfo != null && getActivity() instanceof ChatActivity) {
+            ((ChatActivity) getActivity()).setTitleStr(mChatInfo.getChatName());
+        }
     }
 
     @Override

@@ -69,5 +69,6 @@
     <string name="profile_remark_edit">修改备注</string>
     <string name="profile_chat">发送消息</string>
     <string name="profile_del">删除好友</string>
+    <string name="profile_del1">您确认删除好友?</string>
 
 </resources>

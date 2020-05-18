@@ -175,25 +175,27 @@ public class MainActivity extends BaseActivity {
         super.onNewIntent(intent);
         if (intent != null) {
             curIndex = intent.getIntExtra("curIndex", -1);
-            processDefIndex();
         }
+        processDefIndex();
     }
 
     /**
      * 登录成功后 打开主页 默认选中defIndex的tab
      */
     private void processDefIndex() {
-        if (curIndex != -1) {
-            if (curIndex == 0) {
-                changeContentFragment(userTv);
-            } else if (curIndex == 1) {
-                changeContentFragment(cartTv);
-            } else if (curIndex == 2) {
-                changeContentFragment(teamTv);
-            } else if (curIndex == 3) {
-                changeContentFragment(homeTv);
-            }
+        if (curIndex < 0) {
+            curIndex = 0;
         }
+        if (curIndex == 0) {
+            changeContentFragment(userTv);
+        } else if (curIndex == 1) {
+            changeContentFragment(cartTv);
+        } else if (curIndex == 2) {
+            changeContentFragment(teamTv);
+        } else if (curIndex == 3) {
+            changeContentFragment(homeTv);
+        }
+
     }
 
     private void resetView() {
@@ -215,9 +217,9 @@ public class MainActivity extends BaseActivity {
         }
         RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) findViewById(R.id.main_layContent).getLayoutParams();
         if (R.id.act_main_user == id) {
-            lp.setMargins(0, 0, 0, ViewUtil.getDimen(this,R.dimen.x30));
+            lp.setMargins(0, 0, 0, ViewUtil.getDimen(this, R.dimen.x30));
         } else {
-            lp.setMargins(0, 0, 0, ViewUtil.getDimen(this,R.dimen.x110));
+            lp.setMargins(0, 0, 0, ViewUtil.getDimen(this, R.dimen.x110));
         }
         findViewById(R.id.main_layContent).setLayoutParams(lp);
 

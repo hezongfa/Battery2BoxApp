@@ -9,12 +9,14 @@ import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.act.WelcomeActivity;
 import com.batterbox.power.phone.app.act.main.Constants;
 import com.chenyi.baselib.ui.BaseActivity;
+import com.chenyi.baselib.ui.NavigationActivity;
+import com.chenyi.baselib.utils.StringUtil;
 import com.chenyi.baselib.utils.print.FQL;
 import com.tencent.qcloud.tim.uikit.modules.chat.base.ChatInfo;
 
 import java.util.Set;
 
-public class ChatActivity extends BaseActivity {
+public class ChatActivity extends NavigationActivity {
 
     private static final String TAG = ChatActivity.class.getSimpleName();
 
@@ -24,9 +26,13 @@ public class ChatActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        StatusBarCompat.translucentStatusBar(this, true);
-        setContentView(R.layout.chat_activity);
+//        setContentView(R.layout.chat_activity);
         chat(getIntent());
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.chat_activity;
     }
 
     @Override
@@ -40,6 +46,10 @@ public class ChatActivity extends BaseActivity {
     protected void onResume() {
         FQL.i(TAG, "onResume");
         super.onResume();
+    }
+
+    public void setTitleStr(String str) {
+        setNavigationTitle(StringUtil.fixNullStr(str));
     }
 
     private void chat(Intent intent) {
@@ -89,4 +99,5 @@ public class ChatActivity extends BaseActivity {
         startActivity(intent);
         finish();
     }
+
 }

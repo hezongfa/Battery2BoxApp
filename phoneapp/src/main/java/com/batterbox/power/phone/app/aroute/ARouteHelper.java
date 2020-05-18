@@ -39,6 +39,7 @@ public class ARouteHelper {
     public static final String USER_INFO = "/app/user/info";
     public static final String USER_INFO_EDIT = "/app/user/info_edit";
     public static final String USER_QRCODE= "/app/user/qrcode";
+    public static final String USER_SELECTAREA= "/app/user/selectArea";
     public static final String COOPERATION = "/app/cooperation";
     public static final String USER_BILL = "/app/user/bill";
     public static final String HYBRID_NAV = "/hybrid/nav";
@@ -168,6 +169,10 @@ public class ARouteHelper {
     public static Postcard user_qrcode() {
         return ARouter.getInstance().build(USER_QRCODE);
     }
+    public static Postcard user_selectarea() {
+        return ARouter.getInstance().build(USER_SELECTAREA);
+    }
+
 
     public static Postcard cooperation() {
         return ARouter.getInstance().build(COOPERATION);

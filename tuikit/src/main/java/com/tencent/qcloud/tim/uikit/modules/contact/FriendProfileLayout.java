@@ -30,6 +30,7 @@ import com.tencent.qcloud.tim.uikit.component.CircleImageView;
 import com.tencent.qcloud.tim.uikit.component.LineControllerView;
 import com.tencent.qcloud.tim.uikit.component.SelectionActivity;
 import com.tencent.qcloud.tim.uikit.component.TitleBarLayout;
+import com.tencent.qcloud.tim.uikit.component.dialog.TUIKitDialog;
 import com.tencent.qcloud.tim.uikit.component.picture.imageEngine.impl.GlideEngine;
 import com.tencent.qcloud.tim.uikit.modules.chat.GroupChatManagerKit;
 import com.tencent.qcloud.tim.uikit.modules.chat.base.ChatInfo;
@@ -396,25 +397,44 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
     }
 
     private void delete() {
-        List<String> identifiers = new ArrayList<>();
-        identifiers.add(mId);
-        TIMFriendshipManager.getInstance().deleteFriends(identifiers, TIMDelFriendType.TIM_FRIEND_DEL_BOTH, new TIMValueCallBack<List<TIMFriendResult>>() {
-            @Override
-            public void onError(int i, String s) {
-                TUIKitLog.e(TAG, "deleteFriends err code = " + i + ", desc = " + s);
-                ToastUtil.toastShortMessage("Error code = " + i + ", desc = " + s);
-            }
+        new TUIKitDialog(getContext())
+                .builder()
+                .setCancelable(true)
+                .setCancelOutside(true)
+                .setTitle(getContext().getString(R.string.profile_del1))
+                .setDialogWidth(0.75f)
+                .setPositiveButton(getContext().getString(R.string.sure), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        List<String> identifiers = new ArrayList<>();
+                        identifiers.add(mId);
+                        TIMFriendshipManager.getInstance().deleteFriends(identifiers, TIMDelFriendType.TIM_FRIEND_DEL_BOTH, new TIMValueCallBack<List<TIMFriendResult>>() {
+                            @Override
+                            public void onError(int i, String s) {
+                                TUIKitLog.e(TAG, "deleteFriends err code = " + i + ", desc = " + s);
+                                ToastUtil.toastShortMessage("Error code = " + i + ", desc = " + s);
+                            }
 
-            @Override
-            public void onSuccess(List<TIMFriendResult> timUserProfiles) {
-                TUIKitLog.i(TAG, "deleteFriends success");
-                ConversationManagerKit.getInstance().deleteConversation(mId, false);
-                if (mListener != null) {
-                    mListener.onDeleteFriendClick(mId);
-                }
-                ((Activity) getContext()).finish();
-            }
-        });
+                            @Override
+                            public void onSuccess(List<TIMFriendResult> timUserProfiles) {
+                                TUIKitLog.i(TAG, "deleteFriends success");
+                                ConversationManagerKit.getInstance().deleteConversation(mId, false);
+                                if (mListener != null) {
+                                    mListener.onDeleteFriendClick(mId);
+                                }
+                                ((Activity) getContext()).finish();
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton(getContext().getString(R.string.cancel), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                })
+                .show();
+
     }
 
     private void chat() {
