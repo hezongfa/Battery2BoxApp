@@ -36,7 +36,7 @@ public class AddMoreActivity extends NavigationActivity {
     private EditText mAddWording;
     private boolean mIsGroup = false;
     ImageView iv;
-    TextView nameTv, addressTv, phoneTv;
+    TextView nameTv, addressTv;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,7 +52,6 @@ public class AddMoreActivity extends NavigationActivity {
         iv = findViewById(R.id.contact_add_activity_iv);
         nameTv = findViewById(R.id.contact_add_activity_name_tv);
         addressTv = findViewById(R.id.contact_add_activity_address_tv);
-        phoneTv = findViewById(R.id.contact_add_activity_phone_tv);
     }
 
     @Override
@@ -67,7 +66,8 @@ public class AddMoreActivity extends NavigationActivity {
             ImageLoaderUtil.load(this, StringUtil.fixNullStr(searchUserEntity.headImg), iv);
             nameTv.setText(StringUtil.fixNullStr(searchUserEntity.username));
             addressTv.setText(getString(R.string.main_chat_6) + StringUtil.fixNullStr(searchUserEntity.adress));
-//            phoneTv.setText(StringUtil.fixNullStr(searchUserEntity));
+            //TODO 图片
+//            nameTv.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,searchUserEntity.sex==1?R.mipmap.,0);
         }
     }
 
@@ -83,7 +83,6 @@ public class AddMoreActivity extends NavigationActivity {
         if (TextUtils.isEmpty(userId)) {
             return;
         }
-
         TIMFriendRequest timFriendRequest = new TIMFriendRequest(userId);
         timFriendRequest.setAddWording(mAddWording.getText().toString());
         timFriendRequest.setAddSource("android");

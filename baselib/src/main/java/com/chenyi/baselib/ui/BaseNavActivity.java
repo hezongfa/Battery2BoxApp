@@ -62,6 +62,7 @@ public abstract class BaseNavActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
+        KeyBoardUtil.hideSoftKeyboard(this);
         super.onDestroy();
     }
 

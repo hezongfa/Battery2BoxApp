@@ -1,6 +1,7 @@
 package com.batterbox.power.phone.app.http;
 
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
+import com.batterbox.power.phone.app.utils.ImUtil;
 import com.batterbox.power.phone.app.utils.UserUtil;
 import com.chenyi.baselib.entity.ResponseEntity;
 import com.chenyi.baselib.utils.StringUtil;
@@ -41,6 +42,7 @@ public abstract class NormalHttpCallBack<T extends ResponseEntity> extends HttpC
 //            FQT.showShort(ShopkeeperApp.getInstance(), text(ShopkeeperApp.getInstance(), R.string.app_18));
             UserUtil.cleanToken();
             UserUtil.cleanUserInfo();
+            ImUtil.logout();
             ARouteHelper.login().navigation();
         }
         onFail(responseEntity, StringUtil.fixNullStr(responseEntity.getMsg(), "error"));

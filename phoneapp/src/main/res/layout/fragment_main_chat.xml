@@ -47,8 +47,8 @@
                 android:background="@android:color/transparent"
                 android:src="@mipmap/ic_main_chat_menu" />
 
-            <EditText
-                android:id="@+id/lay_promotion_baret"
+            <TextView
+                android:id="@+id/fragment_main_chat_search_tv"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/x71"
                 android:layout_centerVertical="true"

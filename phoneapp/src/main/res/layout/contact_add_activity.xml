@@ -7,7 +7,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="@dimen/x75">
 
         <com.chenyi.baselib.widget.RoundImageView
@@ -45,23 +44,6 @@
         android:layout_marginEnd="@dimen/x26"
         android:background="@color/line" />
 
-    <TextView
-        android:id="@+id/contact_add_activity_phone_tv"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x100"
-        android:gravity="center_vertical"
-        android:paddingStart="@dimen/x40"
-        android:paddingEnd="@dimen/x40"
-        android:text="@string/main_chat_9"
-        android:textColor="@color/gray_333333"
-        android:textSize="@dimen/x32" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x2"
-        android:layout_marginStart="@dimen/x26"
-        android:layout_marginEnd="@dimen/x26"
-        android:background="@color/line" />
 
 
     <EditText

@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- <uses-feature android:name="android.hardware.camera" /> -->
     <!-- <uses-feature android:name="android.hardware.camera2" /> -->
     <!-- <uses-feature android:name="android.hardware.camera.autofocus" /> -->
@@ -53,7 +54,8 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".act.MainActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
@@ -189,8 +191,9 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".act.main.chat.ChatActivity"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity
             android:name=".act.main.chat.SearchUserActivity"
             android:screenOrientation="portrait" />
@@ -209,6 +212,10 @@
         <activity
             android:name=".act.user.SelectAreaActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".act.main.chat.SearchFriendListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
 
 
         <meta-data

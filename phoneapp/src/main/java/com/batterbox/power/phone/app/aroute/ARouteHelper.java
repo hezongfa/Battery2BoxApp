@@ -8,6 +8,7 @@ import com.batterbox.power.phone.app.entity.LBShopEntity;
 import com.batterbox.power.phone.app.entity.OrderEntity;
 import com.batterbox.power.phone.app.entity.OrderStateEntity;
 import com.batterbox.power.phone.app.entity.SearchUserEntity;
+import com.batterbox.power.phone.app.entity.SelectAreaEntity;
 
 import java.util.ArrayList;
 
@@ -169,8 +170,8 @@ public class ARouteHelper {
     public static Postcard user_qrcode() {
         return ARouter.getInstance().build(USER_QRCODE);
     }
-    public static Postcard user_selectarea() {
-        return ARouter.getInstance().build(USER_SELECTAREA);
+    public static Postcard user_selectarea(ArrayList<SelectAreaEntity> list) {
+        return ARouter.getInstance().build(USER_SELECTAREA).withObject("list",list);
     }
 
 

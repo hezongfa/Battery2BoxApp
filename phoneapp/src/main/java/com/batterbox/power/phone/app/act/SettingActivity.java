@@ -9,6 +9,7 @@ import com.batterbox.power.phone.app.BuildConfig;
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.http.DomainHelper;
+import com.batterbox.power.phone.app.utils.ImUtil;
 import com.batterbox.power.phone.app.utils.UserUtil;
 import com.chenyi.baselib.ui.NavigationActivity;
 
@@ -31,6 +32,7 @@ public class SettingActivity extends NavigationActivity {
         findViewById(R.id.act_setting_logout_btn).setOnClickListener(v -> {
             UserUtil.cleanToken();
             UserUtil.cleanUserInfo();
+            ImUtil.logout();
             finish();
         });
         findViewById(R.id.act_setting_change_pwd_tv).setOnClickListener(v -> ARouteHelper.setting_changepwd().navigation());

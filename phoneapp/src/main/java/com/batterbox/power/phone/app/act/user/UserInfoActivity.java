@@ -80,7 +80,7 @@ public class UserInfoActivity extends NavigationActivity {
             }
         });
         findViewById(R.id.act_user_info_qrcode_rl).setOnClickListener(v -> ARouteHelper.user_qrcode().navigation());
-        findViewById(R.id.act_user_info_area_rl).setOnClickListener(v -> ARouteHelper.user_selectarea().navigation(UserInfoActivity.this, 123));
+        findViewById(R.id.act_user_info_area_rl).setOnClickListener(v -> ARouteHelper.user_selectarea(null).navigation(UserInfoActivity.this, 123));
         findViewById(R.id.act_user_info_sex_rl).setOnClickListener(v -> {
                     ArrayList<String> sexs = new ArrayList<>();
                     sexs.add(getString(R.string.user_10));
@@ -100,7 +100,7 @@ public class UserInfoActivity extends NavigationActivity {
             phoneTv.setText(StringUtil.fixNullStr(userEntity.phone));
             emailTv.setText(StringUtil.fixNullStr(userEntity.email));
             sexTv.setText(userEntity.sex == 1 ? getString(R.string.user_10) : getString(R.string.user_11));
-            areaTv.setText(StringUtil.fixNullStr(userEntity.address));
+            refreshArea(userEntity.madress);
         }
     }
 
@@ -144,12 +144,7 @@ public class UserInfoActivity extends NavigationActivity {
 
             @Override
             public void onSuccess(ResponseEntity<String> responseEntity) {
-                UserEntity userEntity = UserUtil.getUserInfo();
-                if (userEntity != null) {
-                    userEntity.address = StringUtil.fixNullStr(responseEntity.getData());
                     areaTv.setText(StringUtil.fixNullStr(responseEntity.getData()));
-                    UserUtil.saveUserInfo(userEntity);
-                }
             }
 
             @Override
@@ -215,6 +210,7 @@ public class UserInfoActivity extends NavigationActivity {
                         sexTv.setText(userEntity.sex == 1 ? getString(R.string.user_10) : getString(R.string.user_11));
                     }
                     if (!StringUtil.isEmpty(path)) {
+                        userEntity.madress=path;
                         refreshArea(path);
                     }
                     UserUtil.saveUserInfo(userEntity);

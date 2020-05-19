@@ -225,7 +225,7 @@ public class HttpClient extends BaseHttpClient<Api> {
             map.put("sex", sex);
         }
         if (!StringUtil.isEmpty(path)) {
-            map.put("path", path);
+            map.put("adress", path);
         }
         Observable<ResponseEntity> observable = getInstance().getService().us_setUserInfo(defaultPms(), map);
         query(observable, callBack);
@@ -362,6 +362,12 @@ public class HttpClient extends BaseHttpClient<Api> {
                 (map, map);
         query(observable, callBack);
     }
+    public void im_getQrUrl(NormalHttpCallBack<ResponseEntity<String>> callBack) {
+        Observable<ResponseEntity<String>> observable = getInstance().getService().im_getQrUrl
+                (defaultPms(), defaultPms());
+        query(observable, callBack);
+    }
+
 
     public void im_getAreaName(String path, NormalHttpCallBack<ResponseEntity<String>> callBack) {
         Observable<ResponseEntity<String>> observable = getInstance().getService().im_getAreaName

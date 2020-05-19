@@ -19,6 +19,8 @@ public class ContactItemBean extends BaseIndexPinyinBean {
     private boolean isGroup;
     private boolean isFriend = true;
     private boolean isEnable = true;
+    private String phone;
+    private String address;
 
     public ContactItemBean() {
     }
@@ -106,6 +108,12 @@ public class ContactItemBean extends BaseIndexPinyinBean {
         setRemark(friend.getRemark());
         setNickname(friend.getTimUserProfile().getNickName());
         setAvatarurl(friend.getTimUserProfile().getFaceUrl());
+        if (friend.getCustomInfo()!=null) {
+            if (friend.getCustomInfo().containsKey("AreaCode"))
+                setAddress(new String(friend.getCustomInfo().get("AreaCode")));
+            if (friend.getCustomInfo().containsKey("Phone"))
+                setPhone(new String(friend.getCustomInfo().get("Phone")));
+        }
         return this;
     }
 
@@ -150,5 +158,21 @@ public class ContactItemBean extends BaseIndexPinyinBean {
         setAvatarurl(group.getFaceUrl());
         setGroup(true);
         return this;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

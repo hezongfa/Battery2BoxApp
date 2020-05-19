@@ -163,7 +163,7 @@ public class MainActivity extends BaseActivity {
     protected void exit() {
         if (System.currentTimeMillis() - temp < 2000) {
             finish();
-            android.os.Process.killProcess(android.os.Process.myPid());
+//            android.os.Process.killProcess(android.os.Process.myPid());
         } else {
             FQT.showShort(getApplicationContext(), getString(R.string.app_1));
         }

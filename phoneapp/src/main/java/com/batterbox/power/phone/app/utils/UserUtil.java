@@ -74,17 +74,7 @@ public class UserUtil {
     public static void cleanUserInfo() {
         AppContextBase.getInstance().getConstACache().remove("userEntity");
         BatterBoxApp.clean_user_push();
-        TIMManager.getInstance().logout(new TIMCallBack() {
-            @Override
-            public void onError(int i, String s) {
 
-            }
-
-            @Override
-            public void onSuccess() {
-
-            }
-        });
     }
 
 }

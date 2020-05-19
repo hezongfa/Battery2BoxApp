@@ -13,6 +13,8 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.chenyi.baselib.utils.StringUtil;
 import com.tencent.imsdk.TIMCallBack;
 import com.tencent.imsdk.TIMFriendshipManager;
 import com.tencent.imsdk.TIMUserProfile;
@@ -50,14 +52,14 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
 
     private final int CHANGE_REMARK_CODE = 200;
 
-    private TitleBarLayout mTitleBar;
+    //    private TitleBarLayout mTitleBar;
     private CircleImageView mHeadImageView;
-    private TextView mNickNameView;
-    private LineControllerView mIDView;
+    private TextView mNickNameView, mAddressView, mPhoneView;
+//    private LineControllerView mIDView;
     private LineControllerView mAddWordingView;
-    private LineControllerView mRemarkView;
+    private TextView mRemarkView;
     private LineControllerView mAddBlackView;
-    private LineControllerView mChatTopView;
+    //    private LineControllerView mChatTopView;
     private TextView mDeleteView;
     private TextView mChatView;
 
@@ -67,7 +69,9 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
     private OnButtonClickListener mListener;
     private String mId;
     private String mNickname;
+    private String mAddress;
     private String mRemark;
+    private String mPhone;
     private String mAddWords;
 
     public FriendProfileLayout(Context context) {
@@ -90,41 +94,43 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
 
         mHeadImageView = findViewById(R.id.avatar);
         mNickNameView = findViewById(R.id.name);
-        mIDView = findViewById(R.id.id);
+        mAddressView = findViewById(R.id.address);
+        mPhoneView = findViewById(R.id.phone);
+//        mIDView = findViewById(R.id.id);
         mAddWordingView = findViewById(R.id.add_wording);
         mAddWordingView.setCanNav(false);
         mAddWordingView.setSingleLine(false);
         mRemarkView = findViewById(R.id.remark);
         mRemarkView.setOnClickListener(this);
-        mChatTopView = findViewById(R.id.chat_to_top);
+//        mChatTopView = findViewById(R.id.chat_to_top);
         mAddBlackView = findViewById(R.id.blackList);
         mDeleteView = findViewById(R.id.btnDel);
         mDeleteView.setOnClickListener(this);
         mChatView = findViewById(R.id.btnChat);
         mChatView.setOnClickListener(this);
-        mTitleBar = findViewById(R.id.friend_titlebar);
-        mTitleBar.setTitle(getResources().getString(R.string.profile_detail), TitleBarLayout.POSITION.MIDDLE);
-        mTitleBar.getRightGroup().setVisibility(View.GONE);
-        mTitleBar.setOnLeftClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((Activity) getContext()).finish();
-            }
-        });
+//        mTitleBar = findViewById(R.id.friend_titlebar);
+//        mTitleBar.setTitle(getResources().getString(R.string.profile_detail), TitleBarLayout.POSITION.MIDDLE);
+//        mTitleBar.getRightGroup().setVisibility(View.GONE);
+//        mTitleBar.setOnLeftClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ((Activity) getContext()).finish();
+//            }
+//        });
     }
 
     public void initData(Object data) {
         if (data instanceof ChatInfo) {
             mChatInfo = (ChatInfo) data;
             mId = mChatInfo.getId();
-            mChatTopView.setVisibility(View.VISIBLE);
-            mChatTopView.setChecked(ConversationManagerKit.getInstance().isTopConversation(mId));
-            mChatTopView.setCheckListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    ConversationManagerKit.getInstance().setConversationTop(mId, isChecked);
-                }
-            });
+//            mChatTopView.setVisibility(View.VISIBLE);
+//            mChatTopView.setChecked(ConversationManagerKit.getInstance().isTopConversation(mId));
+//            mChatTopView.setCheckListener(new CompoundButton.OnCheckedChangeListener() {
+//                @Override
+//                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                    ConversationManagerKit.getInstance().setConversationTop(mId, isChecked);
+//                }
+//            });
             loadUserProfile();
             return;
         } else if (data instanceof ContactItemBean) {
@@ -132,7 +138,7 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
             mId = mContactInfo.getId();
             mNickname = mContactInfo.getNickname();
             mRemarkView.setVisibility(VISIBLE);
-            mRemarkView.setContent(mContactInfo.getRemark());
+            mRemarkView.setText(mRemark = mContactInfo.getRemark());
             mAddBlackView.setChecked(mContactInfo.isBlackList());
             mAddBlackView.setCheckListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
@@ -202,39 +208,41 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
         } else {
             mNickNameView.setText(mId);
         }
-        mIDView.setContent(mId);
+//        mIDView.setContent(mId);
     }
 
     private void updateViews(ContactItemBean bean) {
         mContactInfo = bean;
-        mChatTopView.setVisibility(View.VISIBLE);
-        boolean top = ConversationManagerKit.getInstance().isTopConversation(mId);
-        if (mChatTopView.isChecked() != top) {
-            mChatTopView.setChecked(top);
-        }
-        mChatTopView.setCheckListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                ConversationManagerKit.getInstance().setConversationTop(mId, isChecked);
-            }
-        });
+//        mChatTopView.setVisibility(View.VISIBLE);
+//        boolean top = ConversationManagerKit.getInstance().isTopConversation(mId);
+//        if (mChatTopView.isChecked() != top) {
+//            mChatTopView.setChecked(top);
+//        }
+//        mChatTopView.setCheckListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                ConversationManagerKit.getInstance().setConversationTop(mId, isChecked);
+//            }
+//        });
         mId = bean.getId();
         mNickname = bean.getNickname();
+        mAddress = bean.getAddress();
+        mPhone = bean.getPhone();
         if (bean.isFriend()) {
             mRemarkView.setVisibility(VISIBLE);
-            mRemarkView.setContent(bean.getRemark());
-            mAddBlackView.setVisibility(VISIBLE);
-            mAddBlackView.setChecked(bean.isBlackList());
-            mAddBlackView.setCheckListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked) {
-                        addBlack();
-                    } else {
-                        deleteBlack();
-                    }
-                }
-            });
+            mRemarkView.setText(mRemark = bean.getRemark());
+//            mAddBlackView.setVisibility(VISIBLE);
+//            mAddBlackView.setChecked(bean.isBlackList());
+//            mAddBlackView.setCheckListener(new CompoundButton.OnCheckedChangeListener() {
+//                @Override
+//                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                    if (isChecked) {
+//                        addBlack();
+//                    } else {
+//                        deleteBlack();
+//                    }
+//                }
+//            });
             mDeleteView.setVisibility(VISIBLE);
         } else {
             mRemarkView.setVisibility(GONE);
@@ -247,11 +255,12 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
         } else {
             mNickNameView.setText(mId);
         }
-
+        mAddressView.setText(getContext().getString(R.string.main_chat_6) + StringUtil.fixNullStr(mAddress));
+        mPhoneView.setText(getContext().getString(R.string.main_chat_9) + StringUtil.fixNullStr(mPhone));
         if (!TextUtils.isEmpty(bean.getAvatarurl())) {
             GlideEngine.loadImage(mHeadImageView, Uri.parse(bean.getAvatarurl()));
         }
-        mIDView.setContent(mId);
+//        mIDView.setContent(mId);
     }
 
     private void loadUserProfile() {
@@ -264,6 +273,7 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
             public void onError(int i, String s) {
                 TUIKitLog.e(TAG, "loadUserProfile err code = " + i + ", desc = " + s);
                 ToastUtil.toastShortMessage("Error code = " + i + ", desc = " + s);
+                ((Activity) getContext()).finish();
             }
 
             @Override
@@ -272,9 +282,23 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
                     return;
                 }
                 final TIMUserProfile profile = timUserProfiles.get(0);
+                if (!bean.isFriend()){
+
+                    return;
+                }
                 bean.setNickname(profile.getNickName());
                 bean.setId(profile.getIdentifier());
                 bean.setAvatarurl(profile.getFaceUrl());
+
+                if (profile.getCustomInfo() != null) {
+                    if (profile.getCustomInfo().containsKey("AreaCode")) {
+
+                        bean.setAddress(new String(profile.getCustomInfo().get("AreaCode")));
+                    }
+                    if (profile.getCustomInfo().containsKey("Phone")) {
+                        bean.setPhone(new String(profile.getCustomInfo().get("Phone")));
+                    }
+                }
                 updateViews(bean);
             }
         });
@@ -313,6 +337,14 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
                             bean.setFriend(true);
                             bean.setRemark(friend.getRemark());
                             bean.setAvatarurl(friend.getTimUserProfile().getFaceUrl());
+                            if (friend.getCustomInfo() != null) {
+                                if (friend.getCustomInfo().containsKey("AreaCode")) {
+                                    bean.setAddress(new String(friend.getCustomInfo().get("AreaCode")));
+                                }
+                                if (friend.getCustomInfo().containsKey("Phone")) {
+                                    bean.setPhone(new String(friend.getCustomInfo().get("Phone")));
+                                }
+                            }
                             break;
                         }
                     }
@@ -453,12 +485,12 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
         } else if (v.getId() == R.id.remark) {
             Bundle bundle = new Bundle();
             bundle.putString(TUIKitConstants.Selection.TITLE, getResources().getString(R.string.profile_remark_edit));
-            bundle.putString(TUIKitConstants.Selection.INIT_CONTENT, mRemarkView.getContent());
+            bundle.putString(TUIKitConstants.Selection.INIT_CONTENT, mRemark);
             bundle.putInt(TUIKitConstants.Selection.LIMIT, 20);
             SelectionActivity.startTextSelection(TUIKit.getAppContext(), bundle, new SelectionActivity.OnResultReturnListener() {
                 @Override
                 public void onReturn(Object text) {
-                    mRemarkView.setContent(text.toString());
+                    mRemarkView.setText(mRemark = text.toString());
                     if (TextUtils.isEmpty(text.toString())) {
                         text = "";
                     }

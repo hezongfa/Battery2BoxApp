@@ -5,6 +5,8 @@ import com.batterbox.power.phone.app.http.NormalHttpCallBack;
 import com.chenyi.baselib.entity.ResponseEntity;
 import com.chenyi.baselib.utils.StringUtil;
 import com.chenyi.baselib.utils.print.FQL;
+import com.tencent.imsdk.TIMCallBack;
+import com.tencent.imsdk.TIMManager;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.base.IUIKitCallBack;
 
@@ -13,6 +15,19 @@ import com.tencent.qcloud.tim.uikit.base.IUIKitCallBack;
  * Description
  */
 public class ImUtil {
+    public static void logout() {
+        TIMManager.getInstance().logout(new TIMCallBack() {
+            @Override
+            public void onError(int i, String s) {
+
+            }
+
+            @Override
+            public void onSuccess() {
+
+            }
+        });
+    }
 
     public static void login() {
         if (UserUtil.isLogin()) {

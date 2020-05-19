@@ -2,45 +2,75 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:background="@android:color/white"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.tencent.qcloud.tim.uikit.component.TitleBarLayout
-        android:id="@+id/friend_titlebar"
-        android:visibility="gone"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/page_title_height" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/white"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp">
 
         <com.tencent.qcloud.tim.uikit.component.CircleImageView
             android:id="@+id/avatar"
-            android:layout_width="115dp"
-            android:layout_height="115dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/default_user_icon" />
+            android:layout_width="81dp"
+            android:src="@drawable/default_user_icon"
+            android:layout_height="81dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp" />
 
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/text_gray1"
-            android:textSize="16sp" />
-    </LinearLayout>
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/avatar"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x32" />
 
-    <com.tencent.qcloud.tim.uikit.component.LineControllerView
-        android:id="@+id/id"
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginTop="@dimen/x30"
+            android:layout_toEndOf="@id/avatar"
+            android:textColor="@color/gray_888888"
+            android:textSize="@dimen/x32" />
+    </RelativeLayout>
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:name="@string/profile_id" />
+        android:layout_height="@dimen/x2"
+        android:layout_marginStart="@dimen/x26"
+        android:layout_marginTop="@dimen/x28"
+        android:layout_marginEnd="@dimen/x26"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/x32"
+        android:padding="@dimen/x40"
+        android:text="@string/main_chat_9"
+        android:layout_marginStart="@dimen/x32"
+        android:textColor="@color/gray_666666"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/remark"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/x32"
+        android:padding="@dimen/x40"
+        android:layout_marginStart="@dimen/x32"
+        android:text="@string/profile_remark"
+        android:textColor="@color/gray_666666"
+        android:layout_height="wrap_content"/>
+<!--    <com.tencent.qcloud.tim.uikit.component.LineControllerView-->
+<!--        android:id="@+id/id"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:name="@string/profile_id" />-->
 
     <com.tencent.qcloud.tim.uikit.component.LineControllerView
         android:id="@+id/add_wording"
@@ -50,27 +80,27 @@
         android:visibility="gone"
         app:name="@string/profile_add_wording" />
 
-    <com.tencent.qcloud.tim.uikit.component.LineControllerView
-        android:id="@+id/remark"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:canNav="true"
-        app:name="@string/profile_remark" />
+<!--    <com.tencent.qcloud.tim.uikit.component.LineControllerView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:canNav="true"-->
+<!--        app:name="@string/profile_remark" />-->
 
-    <com.tencent.qcloud.tim.uikit.component.LineControllerView
-        android:id="@+id/chat_to_top"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:visibility="gone"
-        app:isSwitch="true"
-        app:name="@string/chat_to_top" />
+<!--    <com.tencent.qcloud.tim.uikit.component.LineControllerView-->
+<!--        android:id="@+id/chat_to_top"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:visibility="gone"-->
+<!--        app:isSwitch="true"-->
+<!--        app:name="@string/chat_to_top" />-->
 
     <com.tencent.qcloud.tim.uikit.component.LineControllerView
         android:id="@+id/blackList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_marginTop="10dp"
         app:isSwitch="true"
         app:name="@string/profile_black" />
@@ -83,30 +113,32 @@
         android:paddingLeft="@dimen/btn_margin_left"
         android:paddingRight="@dimen/btn_margin_right">
 
-        <TextView
-            android:id="@+id/btnChat"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="@color/bg_positive_btn"
-            android:clickable="true"
-            android:gravity="center"
-            android:text="@string/profile_chat"
-            android:textColor="@color/positive_text"
-            android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/btnDel"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:layout_marginTop="10dp"
-            android:background="@color/bg_negative_btn"
+        <Button
+            android:id="@+id/btnChat"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x70"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/x40"
             android:clickable="true"
-            android:gravity="center"
+            android:background="@mipmap/pic_enter_btn_bg"
+            android:paddingStart="@dimen/x20"
+            android:paddingEnd="@dimen/x20"
+            android:text="@string/profile_chat"
+            android:textSize="@dimen/x28" />
+
+        <Button
+            android:id="@+id/btnDel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x70"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/x20"
+            android:clickable="true"
+            android:background="@mipmap/pic_enter_btn_bg"
+            android:paddingStart="@dimen/x20"
+            android:paddingEnd="@dimen/x20"
             android:text="@string/profile_del"
-            android:textColor="@color/negative_text"
-            android:textSize="14sp" />
+            android:textSize="@dimen/x28" />
 
     </LinearLayout>
 

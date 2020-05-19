@@ -48,14 +48,14 @@ public class FriendListActivity extends NavigationActivity {
                     Intent intent = new Intent(BatterBoxApp.getInstance(), NewFriendActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     BatterBoxApp.getInstance().startActivity(intent);
-                } else if (position == 1) {
+//                } else if (position == 1) {
 //                    Intent intent = new Intent(BatterBoxApp.getInstance(), GroupListActivity.class);
 //                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //                    BatterBoxApp.getInstance().startActivity(intent);
 //                } else if (position == 2) {
-                    Intent intent = new Intent(BatterBoxApp.getInstance(), BlackListActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    BatterBoxApp.getInstance().startActivity(intent);
+//                    Intent intent = new Intent(BatterBoxApp.getInstance(), BlackListActivity.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    BatterBoxApp.getInstance().startActivity(intent);
                 } else {
                     Intent intent = new Intent(BatterBoxApp.getInstance(), FriendProfileActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

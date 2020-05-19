@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">AssLib</string>
     <string name="digits_pwd">qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890.</string>
     <string name="digits_money">.1234567890</string>
 
@@ -91,4 +90,318 @@
     <string name="l_6">Italiano</string>
     <string name="l_7">Português</string>
 
+
+
+
+
+    <string name="app_name">Battery2Box</string>
+
+    <string name="m_1">€</string>
+
+    <string name="scan_1">将二维码/条码放入框内, 即可自动扫描</string>
+    <string name="scan_2">扫一扫</string>
+    <string name="scan_3">相册</string>
+    <string name="scan_4">无效的二维码</string>
+
+    <string name="refresh_1">下拉可以刷新</string>
+    <string name="refresh_2">正在刷新...</string>
+    <string name="refresh_3">释放立即刷新</string>
+    <string name="refresh_4">刷新完成</string>
+    <string name="refresh_5">正在加载...</string>
+    <string name="refresh_6">加载完成</string>
+
+    <string name="login_0">记住密码</string>
+    <string name="login_1">登录</string>
+    <string name="login_2">手机号码登录:</string>
+    <string name="login_3">请输入手机号码</string>
+    <string name="login_4">请输入密码</string>
+    <string name="login_5">密码</string>
+    <string name="login_6">注册新账号</string>
+    <string name="login_7">忘记密码</string>
+    <string name="login_8">注册新账号</string>
+    <string name="login_9">确认密码</string>
+    <string name="login_10">验证码</string>
+    <string name="login_11">请再次输入密码</string>
+    <string name="login_12">请输入验证码</string>
+    <string name="login_13">获取验证码</string>
+    <string name="login_14">注册</string>
+    <string name="login_15">登录即视为同意</string>
+    <string name="login_16"> 法律条款，用户协议 </string>
+    <string name="login_17">密码输入不一致</string>
+    <string name="login_18">请同意用户协议</string>
+    <string name="login_19">注册成功</string>
+    <string name="login_20">获取成功</string>
+    <string name="login_21">手机号</string>
+    <string name="login_22">搜索</string>
+    <string name="login_23">热门</string>
+    <string name="login_24">选择您的国家</string>
+    <string name="login_25">原密码</string>
+    <string name="login_26">新密码</string>
+    <string name="login_27">请输入原密码</string>
+    <string name="login_28">请输入新密码</string>
+    <string name="login_29">请再次输入新密码</string>
+    <string name="login_30">修改密码</string>
+    <string name="login_31">修改成功</string>
+    <string name="login_32"> 隐私政策 </string>
+    <string name="login_33">和</string>
+
+    <string name="main_1">搜索附近的Battery2Box</string>
+    <string name="main_2">扫码租借</string>
+    <string name="main_3">我的钱包</string>
+    <string name="main_4">我的优惠券</string>
+    <string name="main_5">租借记录</string>
+    <string name="main_6">邀请好友</string>
+    <string name="main_7">商户合作</string>
+    <string name="main_8">帮助中心</string>
+    <string name="main_9">更多</string>
+    <string name="main_10">租借中</string>
+    <string name="main_11">已为您续航%s分钟</string>
+    <string name="main_12">查看详情</string>
+    <string name="main_13">促销活动</string>
+
+    <string name="borrow_1">租借信息</string>
+    <string name="borrow_2">费用说明</string>
+    <string name="borrow_3">新用户使用%s</string>
+    <string name="borrow_4">免费</string>
+    <string name="borrow_5">%s/小时</string>
+    <string name="borrow_6">%s/天</string>
+    <string name="borrow_7">%s/超过5天不归还</string>
+    <string name="borrow_8">( 连续超过5天不归还电池，将会在您的账户上扣取%s，扣费成功后，您可以把电池留给自己使用，不需要归还）</string>
+    <string name="borrow_9">%s/小时</string>
+    <string name="borrow_10">(封顶 %s / 天)</string>
+    <string name="borrow_11">(每24小时收费)</string>
+    <string name="borrow_12">同意并租借</string>
+    <string name="borrow_13">请及时从上图指示位置取走充电宝</string>
+    <string name="borrow_14">若充电宝未弹出，请稍等片刻</string>
+    <string name="borrow_15">租借失败</string>
+    <string name="borrow_16">租借成功</string>
+    <string name="borrow_17">可在全国任意机柜归还</string>
+    <string name="borrow_18">查看充电宝使用说明</string>
+    <string name="borrow_19">计费规则</string>
+    <string name="borrow_20">分时计费</string>
+    <string name="borrow_21">押金规则</string>
+    <string name="borrow_22">自借出后开始计时，前%1$s分钟内免费；超过部分按照每1小时%2$s€计费，不足1小时按照1小时计算；每24小时%3$s€封顶</string>
+    <string name="borrow_22_1">Cuando liberar tu batería ，los primeros %1$s minutos son gratuitos；El tiempo superior será facturada a %2$s Euro por hora y el tiempo inferior a 1 hora es por hora；Hay límite de %3$s Euro en 24 horas ,Pasado mas de 5 días de uso continuado se cargara %4$s Euro + IVA y podrás quedarte con la batería para uso personal sin tener que devolverla ,La norma de facturación no se cambia después del inicio de la Alquile .</string>
+    <!--（该计费规则为订单计费规则，即租借时商家设备定计费规则，订单开始后计费规则则不会变更）-->
+    <string name="borrow_23">租借充电宝需缴纳%1$s€押金。充电宝归还后，押金自动退还。当租借时间过长，租金达到%2$s€时，将自动扣除押金</string>
+    <string name="borrow_24">%s/小时</string>
+
+
+    <string name="wallet_1">账单</string>
+    <string name="wallet_2">我的钱包</string>
+    <string name="wallet_3">付款方式</string>
+    <string name="wallet_4">借记卡和信用卡</string>
+    <string name="wallet_5">进入</string>
+    <string name="wallet_6">余额</string>
+    <string name="wallet_7">充值</string>
+    <string name="wallet_8">卡号</string>
+    <string name="wallet_9">请输入卡号</string>
+    <string name="wallet_10">持卡人姓名</string>
+    <string name="wallet_11">请输入持卡人姓名</string>
+    <string name="wallet_12">有效期</string>
+    <string name="wallet_13">年</string>
+    <string name="wallet_14">月</string>
+    <string name="wallet_13_14"> 月 / 年</string>
+    <string name="wallet_15">请输入cvv</string>
+    <string name="wallet_16">请输入有效期</string>
+    <string name="wallet_17">解除绑定</string>
+    <string name="wallet_18">确定解除绑定？</string>
+    <string name="wallet_19">已解绑</string>
+    <string name="wallet_20">剩余抵扣时间</string>
+    <string name="wallet_21">时间明细</string>
+    <string name="wallet_22">订单号：%s</string>
+    <string name="wallet_23">剩余%s分钟</string>
+    <string name="wallet_24">银行卡信息</string>
+    <string name="wallet_25">绑定银行卡</string>
+    <string name="wallet_26">请选择充值金额</string>
+    <string name="wallet_27">充值金额不能退还</string>
+    <string name="wallet_28">分钟</string>
+    <string name="wallet_29">赠送</string>
+    <string name="wallet_30">确认充值？</string>
+
+
+    <string name="shop_1">可借：%s</string>
+    <string name="shop_2">可还：%s</string>
+    <string name="shop_3">提供Wi-Fi</string>
+    <string name="shop_4">不提供Wi-Fi</string>
+    <string name="shop_5">禁烟</string>
+    <string name="shop_6">允许抽烟</string>
+    <string name="shop_7">可借</string>
+    <string name="shop_8">可还</string>
+
+    <string name="order__0">未完成</string>
+    <string name="order_0">已完成</string>
+    <string name="order_1">租借时间</string>
+    <string name="order_2">租借地点</string>
+    <string name="order_3">费用合计</string>
+    <string name="order_4">使用中出现问题？</string>
+    <string name="order_5">订单号:%s</string>
+    <string name="order_6">执行中</string>
+    <string name="order_7">租借中</string>
+    <string name="order_8">已归还</string>
+    <string name="order_9">已撤销</string>
+    <string name="order_10">超时结算</string>
+    <string name="order_11">用户购买</string>
+    <string name="order_12">未支付</string>
+    <string name="order_13">已支付</string>
+    <string name="order_14">订单详情</string>
+    <string name="order_15">使用详情</string>
+    <string name="order_16">租借时间</string>
+    <string name="order_17">租借地点</string>
+    <string name="order_18">归还时间</string>
+    <string name="order_19">归还地点</string>
+    <string name="order_20">价格明细</string>
+    <string name="order_21">计费标准</string>
+    <string name="order_22">使用时长</string>
+    <string name="order_23">免费时长</string>
+    <string name="order_24">每天封顶消费</string>
+    <string name="order_25">支付金额</string>
+    <string name="order_26">支付状态</string>
+    <string name="order_27">支付类型</string>
+    <string name="order_28">抵扣时长</string>
+    <string name="order_29">买电池</string>
+    <string name="order_30">我同意扣除20欧元购买充电宝并自动结束订单</string>
+    <string name="order_31">计费规则</string>
+    <string name="order_32">订单异常</string>
+    <string name="order_33">%s/小时</string>
+    <string name="order_34">信用卡支付</string>
+    <string name="order_35">余额支付</string>
+    <string name="order_36">免租金</string>
+    <string name="order_37">同意</string>
+    <!--<string name="order_38">已解冻</string>-->
+    <!--<string name="order_39">信用卡</string>-->
+    <!--<string name="order_40">余额</string>-->
+    <!--<string name="order_41">免押金</string>-->
+    <string name="order_42">分钟</string>
+    <string name="order_43">自借出后开始计时，前%1$s分钟免费；超过部分按照每1小时%2$s€计费，不足1小时按1小时计算；每24小时%3$s€封顶</string>
+    <!--（该计费规则为订单计费规则，即租借时商家设备定计费规则，订单开始后计费规则则不会变更）-->
+
+    <string name="helper_1">建议</string>
+    <string name="helper_2">常见问题</string>
+    <string name="helper_3">选择您发现的问题</string>
+    <string name="helper_4">电池不能充电</string>
+    <string name="helper_5">设备没有网络</string>
+    <string name="helper_6">充电线断了</string>
+    <string name="helper_7">其他问题</string>
+    <string name="helper_8">扫描设备二维码</string>
+    <string name="helper_9">建议</string>
+    <string name="helper_10">请输入您的邮箱</string>
+
+    <string name="setting_1">设置</string>
+    <string name="setting_2">语言</string>
+    <string name="setting_3">用户协议</string>
+    <string name="setting_4">隐私政策</string>
+    <string name="setting_5">关于我们</string>
+    <string name="setting_6">退出登录</string>
+
+    <string name="user_1">头像</string>
+    <string name="user_2">昵称</string>
+    <string name="user_3">手机</string>
+    <string name="user_4">邮箱</string>
+    <string name="user_5">未绑定</string>
+    <string name="user_6">用户信息</string>
+    <string name="user_7">请输入昵称</string>
+    <string name="user_8">请输入邮箱</string>
+    <string name="user_9">性别</string>
+    <string name="user_10">男</string>
+    <string name="user_11">女</string>
+    <string name="user_12">未设置</string>
+    <string name="user_13">我的二维码</string>
+    <string name="user_14">扫描二维码以添加联系人</string>
+    <string name="user_15">地区</string>
+
+    <!--<string name="helper_4">BATERÍA\nATASCADA</string>-->
+    <!--<string name="helper_5">ESTACIÓN FUERA\nDE SERVICIO</string>-->
+    <!--<string name="helper_6">BATERÍA\nDAÑADA</string>-->
+    <!--<string name="helper_7">OTRO\nPROBLEMA</string>-->
+
+    <string name="cooperation_1">欢迎您加入</string>
+    <string name="cooperation_2">请留下您的基础信息，我们将尽快联络您</string>
+    <string name="cooperation_3">装机合作</string>
+    <string name="cooperation_4">广告合作</string>
+    <string name="cooperation_5">其他</string>
+    <string name="cooperation_6">商户名称</string>
+    <string name="cooperation_7">联系人</string>
+    <string name="cooperation_8">联系电话</string>
+    <string name="cooperation_9">提交</string>
+    <string name="cooperation_10">联系邮箱</string>
+    <string name="cooperation_11">其他</string>
+
+
+    <string name="versino_1">发现新版本！</string>
+    <string name="versino_2">立即更新</string>
+    <string name="versino_3">取消</string>
+
+    <string name="share_1">邀请一个好友注册成功免费得到%s分钟</string>
+    <string name="share_2">邀请</string>
+    <string name="share_3">赠送分钟</string>
+    <string name="share_4">分享</string>
+
+    <string name="coupon_1">优惠券</string>
+    <string name="coupon_2">你有折扣码吗？\n输入并获得免费分钟</string>
+    <string name="coupon_3">充电优惠卷</string>
+    <string name="coupon_4">商家优惠卷</string>
+    <string name="coupon_5">添加优惠卷</string>
+    <string name="coupon_6">折扣码</string>
+    <string name="coupon_7">输入您的代码</string>
+    <string name="coupon_8">领取</string>
+    <string name="coupon_9">取消</string>
+    <string name="coupon_10">使用</string>
+    <string name="coupon_11">优惠券</string>
+    <string name="coupon_12">使用规则</string>
+    <string name="coupon_13">是否使用该券</string>
+    <string name="coupon_14">删除</string>
+
+    <string name="main_tab_1">聊天</string>
+    <string name="main_tab_2">商铺</string>
+    <string name="main_tab_3">搜索</string>
+    <string name="main_tab_4">Battery2Box</string>
+    <string name="main_tab_5">敬请期待</string>
+
+
+    <string name="main_chat_1">添加好友</string>
+    <string name="main_chat_2">扫一扫</string>
+    <string name="main_chat_3">删除</string>
+    <string name="main_chat_4">个人资料</string>
+    <string name="main_chat_5">添加</string>
+    <string name="main_chat_6">地址：</string>
+    <string name="main_chat_7">验证信息</string>
+    <string name="main_chat_8">添加</string>
+    <string name="main_chat_9">手机：</string>
+    <string name="main_chat_10">通知</string>
+    <string name="main_chat_11">聊天</string>
+
+
+    // 云通信
+    <string name="chat_top">置顶聊天</string>
+    <string name="chat_delete">删除聊天</string>
+    <string name="quit_chat_top">取消置顶</string>
+
+    // "+"menu相关
+    <string name="add_friend">添加好友</string>
+    <string name="add_group">添加群聊</string>
+    <string name="start_conversation">发起会话</string>
+    <string name="create_group_chat">创建群聊</string>
+    <string name="create_chat_room">创建聊天室</string>
+    <string name="create_private_group">创建讨论组</string>
+    <string name="hint_add_user_id">请输入ID</string>
+    <string name="hint_add_wording">请输入验证消息</string>
+
+    <string name="user_id">对方ID</string>
+    <string name="add_wording">验证消息</string>
+
+    // 群信息相关
+    <string name="tips_empty_group_member">请选择群成员</string>
+    <string name="tips_empty_group_type">请选择加群方式</string>
+    <string name="no_friend_apply">暂无好友申请</string>
+
+    // 新朋友
+    <string name="request_agree">同意</string>
+    <string name="request_accepted">已接受</string>
+    <string name="request_waiting">等待验证</string>
+
+    <string name="test_custom_action">自定义消息</string>
+    <string name="test_custom_message">查看详情>></string>
+    <string name="video_call">视频通话</string>
+    <string name="audio_call">音频通话</string>
 </resources>

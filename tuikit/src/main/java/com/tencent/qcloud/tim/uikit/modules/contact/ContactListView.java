@@ -125,8 +125,8 @@ public class ContactListView extends LinearLayout {
                         .setTop(true).setBaseIndexTag(ContactItemBean.INDEX_STRING_TOP));
 //                mData.add((ContactItemBean) new ContactItemBean(getResources().getString(R.string.group)).
 //                        setTop(true).setBaseIndexTag(ContactItemBean.INDEX_STRING_TOP));
-                mData.add((ContactItemBean) new ContactItemBean(getResources().getString(R.string.blacklist)).
-                        setTop(true).setBaseIndexTag(ContactItemBean.INDEX_STRING_TOP));
+//                mData.add((ContactItemBean) new ContactItemBean(getResources().getString(R.string.blacklist)).
+//                        setTop(true).setBaseIndexTag(ContactItemBean.INDEX_STRING_TOP));
                 loadFriendListDataAsync();
                 break;
             default:

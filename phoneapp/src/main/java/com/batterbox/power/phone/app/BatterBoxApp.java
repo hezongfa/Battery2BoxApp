@@ -119,6 +119,7 @@ public class BatterBoxApp extends AppContextBase {
         private IMEventListener mIMEventListener = new IMEventListener() {
             @Override
             public void onNewMessages(List<TIMMessage> msgs) {
+                FQL.d("onNewMessages",msgs.toString());
 //                if (CustomMessage.convert2VideoCallData(msgs) != null) {
 //                    // 会弹出接电话的对话框，不再需要通知
 //                    return;

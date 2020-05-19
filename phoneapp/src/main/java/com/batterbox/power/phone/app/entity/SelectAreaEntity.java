@@ -1,8 +1,8 @@
 package com.batterbox.power.phone.app.entity;
 
-import com.chenyi.baselib.entity.BaseEntity;
+import com.tencent.qcloud.tim.uikit.component.indexlib.IndexBar.bean.BaseIndexPinyinBean;
 
-public class SelectAreaEntity extends BaseEntity {
+public class SelectAreaEntity  extends BaseIndexPinyinBean {
     public long id;
     public long pid;
     public String path;
@@ -14,5 +14,10 @@ public class SelectAreaEntity extends BaseEntity {
             level=s.length-2;
         }
         return level;
+    }
+
+    @Override
+    public String getTarget() {
+        return name;
     }
 }

@@ -3,7 +3,10 @@ package com.tencent.qcloud.tim.uikit.component.video;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
+import android.media.MediaMetadataRetriever;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -16,10 +19,15 @@ import com.tencent.qcloud.tim.uikit.component.video.listener.ClickListener;
 import com.tencent.qcloud.tim.uikit.component.video.listener.ErrorListener;
 import com.tencent.qcloud.tim.uikit.component.video.listener.JCameraListener;
 import com.tencent.qcloud.tim.uikit.component.video.util.DeviceUtil;
+import com.tencent.qcloud.tim.uikit.modules.chat.layout.inputmore.InputMoreFragment;
+import com.tencent.qcloud.tim.uikit.modules.message.MessageInfo;
+import com.tencent.qcloud.tim.uikit.modules.message.MessageInfoUtil;
 import com.tencent.qcloud.tim.uikit.utils.FileUtil;
 import com.tencent.qcloud.tim.uikit.utils.TUIKitConstants;
 import com.tencent.qcloud.tim.uikit.utils.TUIKitLog;
 import com.tencent.qcloud.tim.uikit.utils.ToastUtil;
+
+import java.io.IOException;
 
 public class CameraActivity extends Activity {
 
@@ -90,7 +98,7 @@ public class CameraActivity extends Activity {
                 intent.putExtra(TUIKitConstants.VIDEO_TIME, duration);
                 intent.putExtra(TUIKitConstants.CAMERA_IMAGE_PATH, path);
                 intent.putExtra(TUIKitConstants.CAMERA_VIDEO_PATH, url);
-                firstFrame.getWidth();
+//                firstFrame.getWidth();
                 //setResult(-1, intent);
                 if (mCallBack != null) {
                     mCallBack.onSuccess(intent);
@@ -108,11 +116,82 @@ public class CameraActivity extends Activity {
         jCameraView.setRightClickListener(new ClickListener() {
             @Override
             public void onClick() {
-                ToastUtil.toastShortMessage("Right");
+                int state = getIntent().getIntExtra(TUIKitConstants.CAMERA_TYPE, JCameraView.BUTTON_STATE_BOTH);
+                if (state == JCameraView.BUTTON_STATE_ONLY_CAPTURE) {
+                    Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                    intent.setType("image/*");
+                    intent.addCategory(Intent.CATEGORY_OPENABLE);
+                    startActivityForResult(intent, 1016);
+                } else if (state == JCameraView.BUTTON_STATE_ONLY_RECORDER) {
+                    Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                    intent.setType("video/*");
+                    intent.addCategory(Intent.CATEGORY_OPENABLE);
+                    startActivityForResult(intent, 1017);
+                }
+
             }
         });
         //jCameraView.setVisibility(View.GONE);
         TUIKitLog.i(TAG, DeviceUtil.getDeviceModel());
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode != -1) {
+            return;
+        }
+        if (requestCode == 1016) {
+            Uri uri = data.getData();//得到uri，后面就是将uri转化成file的过程。
+            String path = FileUtil.getPathFromUri(uri);
+            if (mCallBack != null) {
+                mCallBack.onSuccess(path);
+            }
+            finish();
+        } else if (requestCode == 1017) {
+            Uri uri = data.getData();//得到uri，后面就是将uri转化成file的过程。
+            String path = FileUtil.getPathFromUri(uri);
+            try {
+                // 获取预览图
+                MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+//                AssetFileDescriptor afd = getAssets().openFd(path);
+//            mmr.setDataSource(afd.getFileDescriptor()); // failed
+//                mmr.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+                mmr.setDataSource(path);
+                Bitmap previewBitmap = mmr.getFrameAtTime();
+
+                // 缩放
+                int PREVIEW_VIDEO_IMAGE_HEIGHT = 300; // Pixels
+                int videoWidth = Integer.parseInt(mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH));
+                int videoHeight = Integer.parseInt(mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT));
+                int videoViewWidth = PREVIEW_VIDEO_IMAGE_HEIGHT * videoWidth / videoHeight;
+                int videoViewHeight = PREVIEW_VIDEO_IMAGE_HEIGHT;
+                Bitmap scaledBitmap = Bitmap.createScaledBitmap(previewBitmap, videoViewWidth, videoViewHeight, true);
+
+                // 获取时长
+                String strDuration = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
+                int duration = Integer.parseInt(strDuration) / 1000;
+
+                Intent intent = new Intent();
+                intent.putExtra(TUIKitConstants.IMAGE_WIDTH, scaledBitmap.getWidth());
+                intent.putExtra(TUIKitConstants.IMAGE_HEIGHT, scaledBitmap.getHeight());
+                intent.putExtra(TUIKitConstants.VIDEO_TIME, duration);
+                String scaledPath = FileUtil.saveBitmap("JCamera", scaledBitmap);
+                intent.putExtra(TUIKitConstants.CAMERA_IMAGE_PATH, scaledPath);
+                intent.putExtra(TUIKitConstants.CAMERA_VIDEO_PATH, path);
+                mmr.release();
+                //setResult(-1, intent);
+                if (mCallBack != null) {
+                    mCallBack.onSuccess(intent);
+                }
+                finish();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 
     @Override

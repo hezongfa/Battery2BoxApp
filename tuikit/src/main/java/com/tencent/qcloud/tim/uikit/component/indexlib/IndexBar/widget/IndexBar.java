@@ -51,6 +51,10 @@ public class IndexBar extends View {
     //手指按下时的背景色
     private int mPressedBackground;
 
+    public void setPressedBackground(int mPressedBackground) {
+        this.mPressedBackground = mPressedBackground;
+    }
+
     //以下是帮助类
     //汉语->拼音，拼音->tag
     private IIndexBarDataHelper mDataHelper;

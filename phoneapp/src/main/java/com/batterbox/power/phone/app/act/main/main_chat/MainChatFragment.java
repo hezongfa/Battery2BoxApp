@@ -13,6 +13,7 @@ import com.batterbox.power.phone.app.BatterBoxApp;
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.act.main.Constants;
 import com.batterbox.power.phone.app.act.main.chat.ChatActivity;
+import com.batterbox.power.phone.app.act.main.chat.SearchFriendListActivity;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.utils.PopUtil;
 import com.batterbox.power.phone.app.utils.ScanUtil;
@@ -62,6 +63,7 @@ public class MainChatFragment extends BaseFragment {
     }
 
     private void initView() {
+        findViewById(R.id.fragment_main_chat_search_tv).setOnClickListener(v -> startActivity(new Intent(getContext(), SearchFriendListActivity.class)));
         findViewById(R.id.fragment_main_chat_notification_tv).setOnClickListener(v -> {
             curIndex = 0;
             ((TextView) findViewById(R.id.fragment_main_chat_notification_tv)).setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.mipmap.ic_main_chat_l, 0, R.mipmap.pic_li);
@@ -112,15 +114,12 @@ public class MainChatFragment extends BaseFragment {
 
     void showPop(View mAttachView) {
         List<PopUtil.PopItem> list = Arrays.asList(new PopUtil.PopItem(getString(R.string.main_chat_1), R.mipmap.ic_main_chat_add)
-                , new PopUtil.PopItem(getString(R.string.main_chat_2), R.mipmap.ic_main_chat_scan)
+//                , new PopUtil.PopItem(getString(R.string.main_chat_2), R.mipmap.ic_main_chat_scan)
                 , new PopUtil.PopItem(getString(R.string.main_chat_3), R.mipmap.ic_main_chat_del));
         PopUtil.showMenuPop(getContext(), mAttachView, list, (popItem, position) -> {
             switch (position) {
                 case 0:
                     ARouteHelper.chat_search_user().navigation();
-                    break;
-                case 1:
-                    ScanUtil.scan((BaseActivity) getActivity());
                     break;
                 case 2:
                     break;

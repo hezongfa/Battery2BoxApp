@@ -97,7 +97,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
     annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:3.1.0'
-    implementation project(':baselib')
+
     implementation project(':loadlibrary')
     implementation 'com.google.android.gms:play-services-maps:15.0.0'
 

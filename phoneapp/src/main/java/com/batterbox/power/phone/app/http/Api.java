@@ -290,12 +290,16 @@ public interface Api {
     @POST("im/getAreaData")
     Observable<ResponseEntity<ArrayList<SelectAreaEntity>>> im_getAreaData(@HeaderMap Map<String, Object> map,
                                                                            @FieldMap Map<String, Object> map1);
-
+    @FormUrlEncoded
+    @POST("im/getQrUrl")
+    Observable<ResponseEntity<String>> im_getQrUrl(@HeaderMap Map<String, Object> map,
+                                                                           @FieldMap Map<String, Object> map1);
 
     @FormUrlEncoded
     @POST("im/getAreaName")
     Observable<ResponseEntity<String>> im_getAreaName(@HeaderMap Map<String, Object> map,
                                                                  @Field("path") String path);
+
     @FormUrlEncoded
     @POST("message/list")
     Observable<ResponseEntity<ArrayList<NotifyDataEntity>>> message_list(@HeaderMap Map<String, Object> map,

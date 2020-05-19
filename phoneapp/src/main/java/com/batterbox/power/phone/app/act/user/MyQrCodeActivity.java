@@ -10,10 +10,14 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.entity.UserEntity;
+import com.batterbox.power.phone.app.http.HttpClient;
+import com.batterbox.power.phone.app.http.NormalHttpCallBack;
 import com.batterbox.power.phone.app.utils.UserUtil;
+import com.chenyi.baselib.entity.ResponseEntity;
 import com.chenyi.baselib.ui.NavigationActivity;
 import com.chenyi.baselib.utils.ImageLoaderUtil;
 import com.chenyi.baselib.utils.StringUtil;
+import com.chenyi.baselib.utils.print.FQT;
 
 import cn.bertsir.zbar.utils.QRUtils;
 
@@ -40,14 +44,34 @@ public class MyQrCodeActivity extends NavigationActivity {
         super.onDelayLoad(savedInstanceState);
         UserEntity userEntity = UserUtil.getUserInfo();
         if (userEntity != null) {
-            ImageLoaderUtil.load(this, StringUtil.fixNullStr(userEntity.headImg),findViewById(R.id.act_my_qrcode_user_iv));
-            ((TextView)findViewById(R.id.act_my_name_tv)).setText(StringUtil.fixNullStr(userEntity.userName));
+            ImageLoaderUtil.load(this, StringUtil.fixNullStr(userEntity.headImg), findViewById(R.id.act_my_qrcode_user_iv));
+            ((TextView) findViewById(R.id.act_my_name_tv)).setText(StringUtil.fixNullStr(userEntity.userName));
 //            ((TextView)findViewById(R.id.act_my_name_tv)).setText(StringUtil.fixNullStr(userEntity.userName));
-            Bitmap bitmap=QRUtils.getInstance().createQRCode(userEntity.mId+"",400,400);
-            if (bitmap!=null){
-                ((ImageView)findViewById(R.id.act_my_qrcode_iv)).setImageBitmap(bitmap);
-            }
+//            Bitmap bitmap = QRUtils.getInstance().createQRCode(userEntity.mId + "", 400, 400);
+//            if (bitmap != null) {
+//                ((ImageView) findViewById(R.id.act_my_qrcode_iv)).setImageBitmap(bitmap);
+//            }
+            HttpClient.getInstance().im_getQrUrl(new NormalHttpCallBack<ResponseEntity<String>>(this) {
+                @Override
+                public void onStart() {
 
+                }
+
+                @Override
+                public void onSuccess(ResponseEntity<String> responseEntity) {
+                    if (!StringUtil.isEmpty(responseEntity.getData())) {
+                        Bitmap bitmap = QRUtils.getInstance().createQRCode(responseEntity.getData(), 400, 400);
+                        if (bitmap != null) {
+                            ((ImageView) findViewById(R.id.act_my_qrcode_iv)).setImageBitmap(bitmap);
+                        }
+                    }
+                }
+
+                @Override
+                public void onFail(ResponseEntity<String> responseEntity, String msg) {
+                    FQT.showShort(MyQrCodeActivity.this, msg);
+                }
+            });
         }
     }
 }
