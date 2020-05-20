@@ -1,5 +1,6 @@
 package com.tencent.qcloud.tim.uikit.modules.conversation.interfaces;
 
+
 import android.support.v7.widget.RecyclerView;
 
 import com.tencent.qcloud.tim.uikit.modules.conversation.base.ConversationInfo;

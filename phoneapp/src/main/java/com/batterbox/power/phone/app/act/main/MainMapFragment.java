@@ -130,7 +130,6 @@ public class MainMapFragment extends BaseFragment implements OnMapReadyCallback,
 
     @Override
     protected void findView() {
-        findViewById(R.id.act_main_menu_iv).setOnClickListener(v -> ((MainActivity) getActivity()).showMenu());
         mapView = findViewById(R.id.mapview);
         selectLocationIv = findViewById(R.id.act_main_select_location_iv);
         deviceUseTimeTv = findViewById(R.id.act_main_borrow_cur_time_tv);

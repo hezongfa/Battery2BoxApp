@@ -21,6 +21,7 @@ import java.util.List;
 
 public class ConversationListAdapter extends IConversationAdapter {
 
+
     private boolean mHasShowUnreadDot = true;
     private int mItemAvatarRadius = ScreenUtil.getPxByDp(5);
     private int mTopTextSize;
@@ -29,6 +30,8 @@ public class ConversationListAdapter extends IConversationAdapter {
     private List<ConversationInfo> mDataSource = new ArrayList<>();
     private ConversationListLayout.OnItemClickListener mOnItemClickListener;
     private ConversationListLayout.OnItemLongClickListener mOnItemLongClickListener;
+
+
 
     public ConversationListAdapter() {
 

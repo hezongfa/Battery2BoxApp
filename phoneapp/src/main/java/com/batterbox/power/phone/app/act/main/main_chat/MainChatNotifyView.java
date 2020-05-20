@@ -19,6 +19,7 @@ import com.chenyi.baselib.entity.ResponseEntity;
 import com.chenyi.baselib.ui.BasePagerListView;
 import com.chenyi.baselib.utils.ImageLoaderUtil;
 import com.chenyi.baselib.utils.StringUtil;
+import com.chenyi.baselib.utils.print.FQT;
 import com.chenyi.baselib.widget.vlayoutadapter.BaseViewHolder;
 import com.chenyi.baselib.widget.vlayoutadapter.QuickDelegateAdapter;
 
@@ -73,6 +74,22 @@ public class MainChatNotifyView extends BasePagerListView<NotifyDataEntity> {
                         ARouteHelper.hybrid_nav(item.jumpUrl).navigation();
                     }
                 });
+                holder.setOnClickListener(R.id.item_chat_notify_view_delete_iv, v -> HttpClient.getInstance().message_delete(item.id, new NormalHttpCallBack<ResponseEntity>(getContext()) {
+                    @Override
+                    public void onStart() {
+
+                    }
+
+                    @Override
+                    public void onSuccess(ResponseEntity responseEntity) {
+                        remove(item);
+                    }
+
+                    @Override
+                    public void onFail(ResponseEntity responseEntity, String msg) {
+                        FQT.showShort(getContext(), msg);
+                    }
+                }));
             }
 
             @Override

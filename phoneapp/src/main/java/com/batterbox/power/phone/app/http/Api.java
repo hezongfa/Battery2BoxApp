@@ -305,5 +305,8 @@ public interface Api {
     Observable<ResponseEntity<ArrayList<NotifyDataEntity>>> message_list(@HeaderMap Map<String, Object> map,
                                                                          @Field("pageNum") int pageNum,
                                                                          @Field("pageSize") int pageSize);
-
+    @FormUrlEncoded
+    @POST("message/delete")
+    Observable<ResponseEntity> message_delete(@HeaderMap Map<String, Object> map,
+                                                      @Field("id") long id);
 }

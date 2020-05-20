@@ -63,11 +63,10 @@ public class AddMoreActivity extends NavigationActivity {
     protected void onDelayLoad(@Nullable Bundle savedInstanceState) {
         super.onDelayLoad(savedInstanceState);
         if (searchUserEntity != null) {
-            ImageLoaderUtil.load(this, StringUtil.fixNullStr(searchUserEntity.headImg), iv);
+            ImageLoaderUtil.load(this, StringUtil.fixNullStr(searchUserEntity.headImg), iv,R.drawable.default_head);
             nameTv.setText(StringUtil.fixNullStr(searchUserEntity.username));
             addressTv.setText(getString(R.string.main_chat_6) + StringUtil.fixNullStr(searchUserEntity.adress));
-            //TODO 图片
-//            nameTv.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,searchUserEntity.sex==1?R.mipmap.,0);
+            nameTv.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, searchUserEntity.sex == 1 ? R.mipmap.ic_sex_1 : searchUserEntity.sex == 2 ? R.mipmap.ic_sex_2 : R.mipmap.ic_sex_0, 0);
         }
     }
 

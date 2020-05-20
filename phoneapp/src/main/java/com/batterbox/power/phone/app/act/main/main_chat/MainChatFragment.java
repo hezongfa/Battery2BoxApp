@@ -1,6 +1,7 @@
 package com.batterbox.power.phone.app.act.main.main_chat;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,17 +21,26 @@ import com.batterbox.power.phone.app.utils.ScanUtil;
 import com.chenyi.baselib.ui.BaseActivity;
 import com.chenyi.baselib.ui.BaseFragment;
 import com.tencent.imsdk.TIMConversationType;
+import com.tencent.imsdk.TIMFriendshipManager;
+import com.tencent.imsdk.TIMValueCallBack;
+import com.tencent.imsdk.friendship.TIMFriendPendencyRequest;
+import com.tencent.imsdk.friendship.TIMFriendPendencyResponse;
+import com.tencent.imsdk.friendship.TIMPendencyType;
 import com.tencent.qcloud.tim.uikit.component.action.PopDialogAdapter;
 import com.tencent.qcloud.tim.uikit.component.action.PopMenuAction;
 import com.tencent.qcloud.tim.uikit.modules.chat.base.ChatInfo;
 import com.tencent.qcloud.tim.uikit.modules.conversation.ConversationLayout;
 import com.tencent.qcloud.tim.uikit.modules.conversation.ConversationListLayout;
+import com.tencent.qcloud.tim.uikit.modules.conversation.ConversationManagerKit;
 import com.tencent.qcloud.tim.uikit.modules.conversation.base.ConversationInfo;
 import com.tencent.qcloud.tim.uikit.utils.PopWindowUtil;
+import com.tencent.qcloud.tim.uikit.utils.ToastUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import q.rorbin.badgeview.QBadgeView;
 
 /**
  * Created by ass on 2020-05-02.
@@ -46,7 +56,7 @@ public class MainChatFragment extends BaseFragment {
     private PopupWindow mConversationPopWindow;
     private List<PopMenuAction> mConversationPopActions = new ArrayList<>();
 //    private Menu mMenu;
-
+QBadgeView contactCountBadge;
     @Override
     protected int getLayout() {
         return R.layout.fragment_main_chat;
@@ -63,6 +73,13 @@ public class MainChatFragment extends BaseFragment {
     }
 
     private void initView() {
+        contactCountBadge = new QBadgeView(getContext());
+        contactCountBadge.bindTarget(findViewById(R.id.fragment_main_chat_friends_rl))
+                .setShowShadow(false)
+                .setBadgeTextSize(8, true)
+                .setGravityOffset(3, 3, true)
+                .setBadgeTextColor(Color.WHITE);
+
         findViewById(R.id.fragment_main_chat_search_tv).setOnClickListener(v -> startActivity(new Intent(getContext(), SearchFriendListActivity.class)));
         findViewById(R.id.fragment_main_chat_notification_tv).setOnClickListener(v -> {
             curIndex = 0;
@@ -102,6 +119,22 @@ public class MainChatFragment extends BaseFragment {
                 startPopShow(view, position, conversationInfo);
             }
         });
+        final TIMFriendPendencyRequest timFriendPendencyRequest = new TIMFriendPendencyRequest();
+        timFriendPendencyRequest.setTimPendencyGetType(TIMPendencyType.TIM_PENDENCY_COME_IN);
+        TIMFriendshipManager.getInstance().getPendencyList(timFriendPendencyRequest, new TIMValueCallBack<TIMFriendPendencyResponse>() {
+            @Override
+            public void onError(int i, String s) {
+                ToastUtil.toastShortMessage("Error code = " + i + ", desc = " + s);
+            }
+
+            @Override
+            public void onSuccess(TIMFriendPendencyResponse timFriendPendencyResponse) {
+                if (timFriendPendencyResponse.getItems() != null) {
+                    int pendingRequest = timFriendPendencyResponse.getItems().size();
+                    contactCountBadge.setBadgeNumber(pendingRequest);
+                }
+            }
+        });
 //        initTitleAction();
 //        initPopMenuAction();
     }
@@ -115,7 +148,8 @@ public class MainChatFragment extends BaseFragment {
     void showPop(View mAttachView) {
         List<PopUtil.PopItem> list = Arrays.asList(new PopUtil.PopItem(getString(R.string.main_chat_1), R.mipmap.ic_main_chat_add)
 //                , new PopUtil.PopItem(getString(R.string.main_chat_2), R.mipmap.ic_main_chat_scan)
-                , new PopUtil.PopItem(getString(R.string.main_chat_3), R.mipmap.ic_main_chat_del));
+//                , new PopUtil.PopItem(getString(R.string.main_chat_3), R.mipmap.ic_main_chat_del)
+        );
         PopUtil.showMenuPop(getContext(), mAttachView, list, (popItem, position) -> {
             switch (position) {
                 case 0:

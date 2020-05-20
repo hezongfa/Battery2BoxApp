@@ -75,7 +75,7 @@ public class SearchUserActivity extends NavListActivity<SearchUserEntity> {
             @Override
             protected void onSetItemData(BaseViewHolder holder, SearchUserEntity item, int viewType) {
                 holder.setText(R.id.item_search_user_tv, StringUtil.fixNullStr(item.username));
-                ImageLoaderUtil.load(context, StringUtil.fixNullStr(item.headImg), holder.getView(R.id.item_search_user_iv));
+                ImageLoaderUtil.load(context, StringUtil.fixNullStr(item.headImg), holder.getView(R.id.item_search_user_iv),R.drawable.default_head);
                 holder.itemView.setOnClickListener(v -> {
                     item.phone = et.getText().toString();
                     ARouteHelper.chat_add_more(item, null).navigation();

@@ -56,7 +56,7 @@ public class MyReceiver extends BroadcastReceiver {
 //				//i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //				i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP );
 //				context.startActivity(i);
-                MainActivity.goToMain(context, 3, true);
+                MainActivity.goToMain(context, 2, true);
             } else if (JPushInterface.ACTION_RICHPUSH_CALLBACK.equals(intent.getAction())) {
                 Log.d(TAG, "[MyReceiver] 用户收到到RICH PUSH CALLBACK: " + bundle.getString(JPushInterface.EXTRA_EXTRA));
                 //在这里根据 JPushInterface.EXTRA_EXTRA 的内容处理代码，比如打开新的Activity， 打开一个网页等..

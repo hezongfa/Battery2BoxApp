@@ -5,44 +5,38 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.batterbox.power.phone.app.R;
-import com.batterbox.power.phone.app.act.MainMenuHelper;
 import com.batterbox.power.phone.app.act.main.main_chat.MainChatFragment;
-import com.batterbox.power.phone.app.entity.UserEntity;
-import com.batterbox.power.phone.app.http.HttpClient;
-import com.batterbox.power.phone.app.http.NormalHttpCallBack;
 import com.batterbox.power.phone.app.utils.RefreshLanguageHelper;
 import com.batterbox.power.phone.app.utils.ScanUtil;
 import com.batterbox.power.phone.app.utils.UserUtil;
-import com.chenyi.baselib.entity.ResponseEntity;
 import com.chenyi.baselib.ui.BaseActivity;
 import com.chenyi.baselib.ui.BaseFragment;
 import com.chenyi.baselib.utils.ViewUtil;
 import com.chenyi.baselib.utils.print.FQT;
+import com.tencent.qcloud.tim.uikit.base.IUIKitCallBack;
+import com.tencent.qcloud.tim.uikit.modules.conversation.ConversationManagerKit;
 
 import q.rorbin.badgeview.QBadgeView;
 import qiu.niorgai.StatusBarCompat;
 
 public class MainActivity extends BaseActivity {
     MainChatFragment mainChatFragment;
-    MainShopFragment mainShopFragment;
+    MainUserFragment mainUserFragment;
     MainSearchFragment mainSearchFragment;
-    MainMapFragment userFragment;
-    TextView homeTv, cartTv, teamTv, userTv;
+    MainMapFragment mainMapFragment;
+    TextView homeTv, shopTv, chatTv, userTv;
     int defColor, selectedColor;
     int curIndex = -1;
 
-    QBadgeView cartCountBadge;
+    QBadgeView chatCountBadge;
 
-    MainMenuHelper mainMenuHelper;
+//    MainMenuHelper mainMenuHelper;
 
     public static void goToMain(Context context, boolean newTask) {
         Intent intent = new Intent(context, MainActivity.class);
@@ -64,18 +58,18 @@ public class MainActivity extends BaseActivity {
         if (getIntent() != null) {
             curIndex = getIntent().getIntExtra("curIndex", 0);
         }
-        defColor = ContextCompat.getColor(this, R.color.gray_666666);
-        selectedColor = ContextCompat.getColor(this, R.color.orange_ff6600);
+        defColor = Color.parseColor("#555555");
+        selectedColor = Color.parseColor("#eea636");
         homeTv = findViewById(R.id.act_main_home);
-        cartTv = findViewById(R.id.act_main_cart);
-        teamTv = findViewById(R.id.act_main_team);
+        shopTv = findViewById(R.id.act_main_shop);
+        chatTv = findViewById(R.id.act_main_chat);
         userTv = findViewById(R.id.act_main_user);
         homeTv.setOnClickListener(this::changeContentFragment);
-        cartTv.setOnClickListener(this::changeContentFragment);
-        teamTv.setOnClickListener(this::changeContentFragment);
+        shopTv.setOnClickListener(this::changeContentFragment);
+        chatTv.setOnClickListener(this::changeContentFragment);
         userTv.setOnClickListener(this::changeContentFragment);
-        cartCountBadge = new QBadgeView(this);
-        cartCountBadge.bindTarget(findViewById(R.id.act_main_cart_fl))
+        chatCountBadge = new QBadgeView(this);
+        chatCountBadge.bindTarget(findViewById(R.id.act_main_chat_fl))
                 .setShowShadow(false)
                 .setBadgeTextSize(8, true)
                 .setGravityOffset(16, 0, true)
@@ -84,13 +78,24 @@ public class MainActivity extends BaseActivity {
 //        changeContentFragment(homeTv);
         processDefIndex();
         findViewById(R.id.act_m_scan_iv).setOnClickListener(v -> ScanUtil.scan(MainActivity.this));
+        ConversationManagerKit.getInstance().addUnreadWatcher(new ConversationManagerKit.MessageUnreadWatcher() {
+            @Override
+            public void updateUnread(int count) {
+                chatCountBadge.setBadgeNumber(count);
+            }
+        });
+        ConversationManagerKit.getInstance().loadConversation(new IUIKitCallBack() {
+            @Override
+            public void onSuccess(Object data) {
+                
+            }
 
-        mainMenuHelper = new MainMenuHelper(this);
-    }
+            @Override
+            public void onError(String module, int errCode, String errMsg) {
 
-    public void showMenu() {
-        DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
-        drawerLayout.openDrawer(Gravity.START);
+            }
+        });
+//        mainMenuHelper = new MainMenuHelper(this);
     }
 
     protected void onSaveInstanceState(Bundle outState) {
@@ -103,27 +108,8 @@ public class MainActivity extends BaseActivity {
         super.onResume();
         if (!UserUtil.isLogin()) {
             UserUtil.gotoLogin();
-            return;
         }
-        HttpClient.getInstance().user_info(new NormalHttpCallBack<ResponseEntity<UserEntity>>() {
-            @Override
-            public void onStart() {
 
-            }
-
-            @Override
-            public void onSuccess(ResponseEntity<UserEntity> responseEntity) {
-                if (responseEntity != null) {
-                    UserUtil.saveUserInfo(responseEntity.getData());
-                    mainMenuHelper.setData();
-                }
-            }
-
-            @Override
-            public void onFail(ResponseEntity<UserEntity> responseEntity, String msg) {
-
-            }
-        });
     }
 
 
@@ -145,18 +131,18 @@ public class MainActivity extends BaseActivity {
 //        if (!ft.isEmpty()) {
 //            if (mainChatFragment != null)
 //                ft.remove(mainChatFragment);
-//            if (mainShopFragment != null)
-//                ft.remove(mainShopFragment);
+//            if (mainUserFragment != null)
+//                ft.remove(mainUserFragment);
 //            if (mainSearchFragment != null)
 //                ft.remove(mainSearchFragment);
-//            if (userFragment != null)
-//                ft.remove(userFragment);
+//            if (mainMapFragment != null)
+//                ft.remove(mainMapFragment);
 //            ft.commit();
 //        }
         mainChatFragment = null;
-        mainShopFragment = null;
+        mainUserFragment = null;
         mainSearchFragment = null;
-        userFragment = null;
+        mainMapFragment = null;
         super.onDestroy();
     }
 
@@ -187,27 +173,27 @@ public class MainActivity extends BaseActivity {
             curIndex = 0;
         }
         if (curIndex == 0) {
-            changeContentFragment(userTv);
-        } else if (curIndex == 1) {
-            changeContentFragment(cartTv);
-        } else if (curIndex == 2) {
-            changeContentFragment(teamTv);
-        } else if (curIndex == 3) {
             changeContentFragment(homeTv);
+        } else if (curIndex == 1) {
+            changeContentFragment(shopTv);
+        } else if (curIndex == 2) {
+            changeContentFragment(chatTv);
+        } else if (curIndex == 3) {
+            changeContentFragment(userTv);
         }
 
     }
 
     private void resetView() {
         homeTv.setTextColor(defColor);
-        cartTv.setTextColor(defColor);
-        teamTv.setTextColor(defColor);
+        shopTv.setTextColor(defColor);
+        chatTv.setTextColor(defColor);
         userTv.setTextColor(defColor);
 
-        homeTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_chat_def, 0, 0);
-        cartTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_business_def, 0, 0);
-        teamTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_search_def, 0, 0);
-        userTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_logo_def, 0, 0);
+        homeTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_logo_def, 0, 0);
+        shopTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_search_def, 0, 0);
+        chatTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_chat_def, 0, 0);
+        userTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_user_def, 0, 0);
     }
 
     private void changeContentFragment(View view) {
@@ -216,7 +202,7 @@ public class MainActivity extends BaseActivity {
 //            return;
 //        }
         RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams) findViewById(R.id.main_layContent).getLayoutParams();
-        if (R.id.act_main_user == id) {
+        if (R.id.act_main_home == id) {
             lp.setMargins(0, 0, 0, ViewUtil.getDimen(this, R.dimen.x30));
         } else {
             lp.setMargins(0, 0, 0, ViewUtil.getDimen(this, R.dimen.x110));
@@ -234,8 +220,8 @@ public class MainActivity extends BaseActivity {
 //            }
         }
 
-        if (mainShopFragment != null) {
-            ft.hide(mainShopFragment);
+        if (mainUserFragment != null) {
+            ft.hide(mainUserFragment);
 //        } else {
 //            fragment5 = (Fragment5) getSupportFragmentManager().findFragmentByTag(Fragment5.class.getName());
 //            if (fragment5 != null) {
@@ -253,8 +239,8 @@ public class MainActivity extends BaseActivity {
         }
 
 
-        if (userFragment != null) {
-            ft.hide(userFragment);
+        if (mainMapFragment != null) {
+            ft.hide(mainMapFragment);
 //        } else {
 //            fragment3 = (Fragment3) getSupportFragmentManager().findFragmentByTag(Fragment3.class.getName());
 //            if (fragment3 != null) {
@@ -263,47 +249,49 @@ public class MainActivity extends BaseActivity {
         }
         switch (id) {
             case R.id.act_main_home:
-                if (mainChatFragment == null) {
-                    mainChatFragment = BaseFragment.newInstance(this, MainChatFragment.class);
-                    ft.add(R.id.main_layContent, mainChatFragment, mainChatFragment.getClass().getName());
+                if (mainMapFragment == null) {
+                    mainMapFragment = BaseFragment.newInstance(this, MainMapFragment.class);
+                    ft.add(R.id.main_layContent, mainMapFragment, mainMapFragment.getClass().getName());
                 }
-                ft.show(mainChatFragment);
+                ft.show(mainMapFragment);
+
                 homeTv.setTextColor(selectedColor);
-                homeTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_chat_press, 0, 0);
-                curIndex = 3;
+                homeTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_logo_press, 0, 0);
+                curIndex = 0;
                 break;
+            case R.id.act_main_shop:
 
-            case R.id.act_main_cart:
-                if (mainShopFragment == null) {
-                    mainShopFragment = BaseFragment.newInstance(this, MainShopFragment.class);
-                    ft.add(R.id.main_layContent, mainShopFragment, mainShopFragment.getClass().getName());
-                }
-                ft.show(mainShopFragment);
-                cartTv.setTextColor(selectedColor);
-                cartTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_b_pre, 0, 0);
-                curIndex = 1;
-                break;
-
-            case R.id.act_main_team:
                 if (mainSearchFragment == null) {
                     mainSearchFragment = BaseFragment.newInstance(this, MainSearchFragment.class);
                     ft.add(R.id.main_layContent, mainSearchFragment, mainSearchFragment.getClass().getName());
                 }
                 ft.show(mainSearchFragment);
-                teamTv.setTextColor(selectedColor);
-                teamTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_search_press, 0, 0);
+                shopTv.setTextColor(selectedColor);
+                shopTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_search_press, 0, 0);
+                curIndex = 1;
+                break;
+            case R.id.act_main_chat:
+
+                if (mainChatFragment == null) {
+                    mainChatFragment = BaseFragment.newInstance(this, MainChatFragment.class);
+                    ft.add(R.id.main_layContent, mainChatFragment, mainChatFragment.getClass().getName());
+                }
+                ft.show(mainChatFragment);
+                chatTv.setTextColor(selectedColor);
+                chatTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_chat_press, 0, 0);
                 curIndex = 2;
                 break;
-            case R.id.act_main_user:
-                if (userFragment == null) {
-                    userFragment = BaseFragment.newInstance(this, MainMapFragment.class);
-                    ft.add(R.id.main_layContent, userFragment, userFragment.getClass().getName());
-                }
-                ft.show(userFragment);
-                userTv.setTextColor(selectedColor);
-                userTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_logo_press, 0, 0);
 
-                curIndex = 0;
+
+            case R.id.act_main_user:
+                if (mainUserFragment == null) {
+                    mainUserFragment = BaseFragment.newInstance(this, MainUserFragment.class);
+                    ft.add(R.id.main_layContent, mainUserFragment, mainUserFragment.getClass().getName());
+                }
+                ft.show(mainUserFragment);
+                userTv.setTextColor(selectedColor);
+                userTv.setCompoundDrawablesWithIntrinsicBounds(0, R.mipmap.ic_main_tab_user_press, 0, 0);
+                curIndex = 3;
                 break;
             default:
                 break;

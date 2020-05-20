@@ -11,8 +11,9 @@ import com.tencent.qcloud.tim.uikit.component.CustomLinearLayoutManager;
 import com.tencent.qcloud.tim.uikit.modules.conversation.base.ConversationInfo;
 import com.tencent.qcloud.tim.uikit.modules.conversation.interfaces.IConversationAdapter;
 import com.tencent.qcloud.tim.uikit.modules.conversation.interfaces.IConversationListLayout;
+import com.yanzhenjie.recyclerview.SwipeRecyclerView;
 
-public class ConversationListLayout extends RecyclerView implements IConversationListLayout {
+public class ConversationListLayout extends SwipeRecyclerView implements IConversationListLayout {
 
     private ConversationListAdapter mAdapter;
 

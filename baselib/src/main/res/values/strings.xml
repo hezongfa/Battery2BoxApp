@@ -353,7 +353,7 @@
     <string name="coupon_14">删除</string>
 
     <string name="main_tab_1">聊天</string>
-    <string name="main_tab_2">商铺</string>
+    <string name="main_tab_2">我的</string>
     <string name="main_tab_3">搜索</string>
     <string name="main_tab_4">Battery2Box</string>
     <string name="main_tab_5">敬请期待</string>
@@ -374,7 +374,7 @@
 
     // 云通信
     <string name="chat_top">置顶聊天</string>
-    <string name="chat_delete">删除聊天</string>
+    <string name="chat_delete">删除</string>
     <string name="quit_chat_top">取消置顶</string>
 
     // "+"menu相关

@@ -1,9 +1,11 @@
 package com.tencent.qcloud.tim.uikit.modules.conversation;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
+import com.chenyi.baselib.utils.ViewUtil;
 import com.tencent.qcloud.tim.uikit.R;
 import com.tencent.qcloud.tim.uikit.base.IUIKitCallBack;
 import com.tencent.qcloud.tim.uikit.component.TitleBarLayout;
@@ -11,6 +13,11 @@ import com.tencent.qcloud.tim.uikit.modules.conversation.base.ConversationInfo;
 import com.tencent.qcloud.tim.uikit.modules.conversation.interfaces.IConversationAdapter;
 import com.tencent.qcloud.tim.uikit.modules.conversation.interfaces.IConversationLayout;
 import com.tencent.qcloud.tim.uikit.utils.ToastUtil;
+import com.yanzhenjie.recyclerview.OnItemMenuClickListener;
+import com.yanzhenjie.recyclerview.SwipeMenu;
+import com.yanzhenjie.recyclerview.SwipeMenuBridge;
+import com.yanzhenjie.recyclerview.SwipeMenuCreator;
+import com.yanzhenjie.recyclerview.SwipeMenuItem;
 
 public class ConversationLayout extends RelativeLayout implements IConversationLayout {
 
@@ -40,6 +47,38 @@ public class ConversationLayout extends RelativeLayout implements IConversationL
         inflate(getContext(), R.layout.conversation_layout, this);
 //        mTitleBarLayout = findViewById(R.id.conversation_title);
         mConversationList = findViewById(R.id.conversation_list);
+        // 设置监听器。
+
+
+// 创建菜单：
+        SwipeMenuCreator mSwipeMenuCreator = new SwipeMenuCreator() {
+            @Override
+            public void onCreateMenu(SwipeMenu leftMenu, SwipeMenu rightMenu, int position) {
+                SwipeMenuItem deleteItem = new SwipeMenuItem(getContext());
+                deleteItem.setWidth(ViewUtil.dip2px(getContext(), 80));
+                deleteItem.setHeight(LayoutParams.MATCH_PARENT);
+                deleteItem.setTextColor(Color.WHITE);
+                deleteItem.setBackgroundColor(Color.RED);
+                deleteItem.setText(R.string.chat_delete);
+                rightMenu.addMenuItem(deleteItem); // 在Item左侧添加一个菜单。
+            }
+        };
+        mConversationList.setSwipeMenuCreator(mSwipeMenuCreator);
+
+        OnItemMenuClickListener mItemMenuClickListener = new OnItemMenuClickListener() {
+            @Override
+            public void onItemClick(SwipeMenuBridge menuBridge, int position) {
+                // 任何操作必须先关闭菜单，否则可能出现Item菜单打开状态错乱。
+                menuBridge.closeMenu();
+
+                // 左侧还是右侧菜单：
+                int direction = menuBridge.getDirection();
+                // 菜单在Item中的Position：
+                int menuPosition = menuBridge.getPosition();
+                ConversationManagerKit.getInstance().deleteConversation(adapter.getItem(position).getId(), false);
+            }
+        };
+        mConversationList.setOnItemMenuClickListener(mItemMenuClickListener);
     }
 
     public void initDefault() {

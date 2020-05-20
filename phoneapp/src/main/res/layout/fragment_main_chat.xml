@@ -28,14 +28,21 @@
             android:layout_marginTop="@dimen/x46">
 
 
-            <ImageButton
-                android:id="@+id/fragment_main_chat_friends_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <RelativeLayout
+                android:id="@+id/fragment_main_chat_friends_rl"
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x100"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/x20"
-                android:background="@android:color/transparent"
-                android:src="@mipmap/ic_friend" />
+                android:layout_marginStart="@dimen/x20">
+
+                <ImageButton
+                    android:id="@+id/fragment_main_chat_friends_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@mipmap/ic_friend" />
+            </RelativeLayout>
 
             <ImageButton
                 android:id="@+id/fragment_main_chat_menu_btn"
@@ -55,7 +62,7 @@
                 android:layout_marginStart="@dimen/x44"
                 android:layout_marginEnd="@dimen/x44"
                 android:layout_toStartOf="@id/fragment_main_chat_menu_btn"
-                android:layout_toEndOf="@id/fragment_main_chat_friends_btn"
+                android:layout_toEndOf="@id/fragment_main_chat_friends_rl"
                 android:background="@drawable/bg_ffffff_r15px"
                 android:drawableStart="@mipmap/ic_n_search"
                 android:drawablePadding="@dimen/x10"
@@ -117,8 +124,8 @@
     <com.tencent.qcloud.tim.uikit.modules.conversation.ConversationLayout
         android:id="@+id/conversation_layout"
         android:layout_width="match_parent"
-        android:visibility="gone"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 
     <com.batterbox.power.phone.app.act.main.main_chat.MainChatNotifyView
         android:id="@+id/fragment_main_chat_notify_view"

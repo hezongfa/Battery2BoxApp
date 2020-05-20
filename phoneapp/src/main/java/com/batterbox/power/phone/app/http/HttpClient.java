@@ -380,4 +380,11 @@ public class HttpClient extends BaseHttpClient<Api> {
         query(observable, callBack);
     }
 
+    public void message_delete(long id, NormalHttpCallBack<ResponseEntity> callBack) {
+        Observable<ResponseEntity> observable = getInstance().getService().message_delete
+                (defaultPms(), id);
+        query(observable, callBack);
+    }
+
+
 }
