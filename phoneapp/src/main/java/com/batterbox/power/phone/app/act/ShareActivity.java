@@ -33,7 +33,7 @@ public class ShareActivity extends NavigationActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setNavigationTitle(R.string.main_6);
     }
 
     @Override

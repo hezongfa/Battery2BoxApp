@@ -13,6 +13,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.entity.SearchUserEntity;
+import com.batterbox.power.phone.app.utils.UserUtil;
 import com.chenyi.baselib.ui.NavigationActivity;
 import com.chenyi.baselib.utils.ImageLoaderUtil;
 import com.chenyi.baselib.utils.StringUtil;
@@ -52,6 +53,9 @@ public class AddMoreActivity extends NavigationActivity {
         iv = findViewById(R.id.contact_add_activity_iv);
         nameTv = findViewById(R.id.contact_add_activity_name_tv);
         addressTv = findViewById(R.id.contact_add_activity_address_tv);
+//        if (StringUtil.isEquals(userId, UserUtil.getUserId())){
+//            finish();
+//        }
     }
 
     @Override

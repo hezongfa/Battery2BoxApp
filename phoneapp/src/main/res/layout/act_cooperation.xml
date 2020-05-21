@@ -1,38 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@color/bg"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@mipmap/pic_bg"
         android:orientation="vertical"
         android:paddingStart="@dimen/x50"
         android:paddingEnd="@dimen/x50">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginTop="@dimen/x30"
-            android:text="@string/cooperation_1"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/x38" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cooperation_1"
+                android:textColor="@color/gray_666666"
+                android:textSize="@dimen/x32" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/x24"
-            android:text="@string/app_name"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/x50" />
+            <TextView
+                android:layout_marginStart="@dimen/x10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x32" />
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/x30"
             android:text="@string/cooperation_2"
-            android:textColor="@android:color/black"
+            android:textColor="@color/gray_666666"
             android:textSize="@dimen/x28" />
 
         <RelativeLayout
@@ -78,7 +84,7 @@
             android:id="@+id/act_cooperation_business_name_et"
             android:layout_width="match_parent"
             android:layout_height="@dimen/x90"
-            android:background="@drawable/bg_text_input"
+            android:background="@drawable/bg_ffffff_r20px"
             android:hint="@string/cooperation_6"
             android:paddingStart="@dimen/x30"
             android:paddingEnd="@dimen/x30"
@@ -90,7 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/x90"
             android:layout_marginTop="@dimen/x40"
-            android:background="@drawable/bg_text_input"
+            android:background="@drawable/bg_ffffff_r20px"
             android:hint="@string/cooperation_7"
             android:paddingStart="@dimen/x30"
             android:paddingEnd="@dimen/x30"
@@ -102,7 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/x90"
             android:layout_marginTop="@dimen/x40"
-            android:background="@drawable/bg_text_input"
+            android:background="@drawable/bg_ffffff_r20px"
             android:hint="@string/cooperation_8"
             android:inputType="phone"
             android:paddingStart="@dimen/x30"
@@ -115,7 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/x90"
             android:layout_marginTop="@dimen/x40"
-            android:background="@drawable/bg_text_input"
+            android:background="@drawable/bg_ffffff_r20px"
             android:hint="@string/cooperation_10"
             android:inputType="textEmailAddress"
             android:paddingStart="@dimen/x30"
@@ -141,16 +147,17 @@
         <Button
             android:id="@+id/act_cooperation_submit_btn"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/x90"
-            android:layout_marginStart="@dimen/x80"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x70"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/x50"
-            android:layout_marginEnd="@dimen/x80"
-            android:layout_marginBottom="@dimen/x50"
-            android:background="@drawable/bg_btn_yellow_r90px"
+            android:layout_marginBottom="@dimen/x30"
+            android:background="@mipmap/pic_enter_btn_bg"
+            android:paddingStart="@dimen/x30"
+            android:paddingEnd="@dimen/x30"
             android:text="@string/cooperation_9"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/x32" />
+            android:textSize="@dimen/x28" />
     </LinearLayout>
 </ScrollView>

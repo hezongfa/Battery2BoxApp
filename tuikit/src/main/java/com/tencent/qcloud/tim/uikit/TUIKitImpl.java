@@ -115,7 +115,6 @@ public class TUIKitImpl {
         sdkConfig.enableLogPrint(generalConfig.isLogPrint());
         sdkConfig.setTestEnv(generalConfig.isTestEnv());
         TIMManager.getInstance().init(context, sdkConfig);
-
         TIMUserConfig userConfig = new TIMUserConfig();
         userConfig.setReadReceiptEnabled(true);
         userConfig.setMessageReceiptListener(new TIMMessageReceiptListener() {

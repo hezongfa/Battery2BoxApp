@@ -14,7 +14,7 @@ import static com.chenyi.baselib.utils.StringUtil.text;
  */
 
 public class LanguageUtil {
-    public static final String ZH = "zh";
+    public static final String ZH = "cn";
     public static final String EN = "en";
     public static final String ES = "es";// 西班牙
     public static final String DE = "de";// 德语
@@ -52,6 +52,10 @@ public class LanguageUtil {
 
     public static String getLanguage() {
         String language = SharedPreferencesUtil.getInstance().getString("cur_language");
+        if (language != null && language.equals("zh")) {
+            language = ZH;
+            saveLanguage(ZH);
+        }
 //        if (StringUtil.isEmpty(language)) {
 //            language = cn;
 ////            saveLanguage();

@@ -11,13 +11,12 @@
         android:id="@+id/act_nav_tab_pager_tl_tab"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x88"
-        android:background="#f0c517"
-        app:tabIndicatorColor="#ffff00"
-        app:tabIndicatorHeight="@dimen/x6"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorHeight="@dimen/x4"
         app:tabPadding="0dp"
-        app:tabSelectedTextColor="@android:color/white"
+        app:tabSelectedTextColor="@android:color/black"
         app:tabTextAppearance="@style/TabLayoutTextStyle"
-        app:tabTextColor="@android:color/white" />
+        app:tabTextColor="@android:color/darker_gray" />
 
     <View
         android:layout_width="match_parent"

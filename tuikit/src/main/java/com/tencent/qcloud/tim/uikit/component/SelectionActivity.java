@@ -3,6 +3,7 @@ package com.tencent.qcloud.tim.uikit.component;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.text.TextUtils;
@@ -17,6 +18,8 @@ import com.tencent.qcloud.tim.uikit.utils.TUIKitConstants;
 import com.tencent.qcloud.tim.uikit.utils.ToastUtil;
 
 import java.util.ArrayList;
+
+import qiu.niorgai.StatusBarCompat;
 
 public class SelectionActivity extends Activity {
 
@@ -47,8 +50,13 @@ public class SelectionActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StatusBarCompat.translucentStatusBar(this,true);
         setContentView(R.layout.selection_activity);
         final TitleBarLayout titleBar = findViewById(R.id.edit_title_bar);
+        titleBar.setBackgroundResource(android.R.color.transparent);
+        titleBar.setLeftIcon(R.mipmap.ic_nav_back_r);
+        titleBar.getMiddleTitle().setTextColor(Color.WHITE);
+        titleBar.getRightTitle().setTextColor(Color.WHITE);
         radioGroup = findViewById(R.id.content_list_rg);
         input = findViewById(R.id.edit_content_et);
 

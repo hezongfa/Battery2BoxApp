@@ -1,22 +1,44 @@
 package com.batterbox.power.phone.app.act.main.chat;
 
+import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.act.WelcomeActivity;
 import com.batterbox.power.phone.app.act.main.Constants;
-import com.chenyi.baselib.ui.BaseActivity;
 import com.chenyi.baselib.ui.NavigationActivity;
 import com.chenyi.baselib.utils.StringUtil;
 import com.chenyi.baselib.utils.print.FQL;
+import com.chenyi.baselib.widget.PhotoPickHelper;
 import com.tencent.qcloud.tim.uikit.modules.chat.base.ChatInfo;
 
 import java.util.Set;
 
+import permissions.dispatcher.NeedsPermission;
+import permissions.dispatcher.OnNeverAskAgain;
+import permissions.dispatcher.RuntimePermissions;
+
+@RuntimePermissions
 public class ChatActivity extends NavigationActivity {
+
+    @NeedsPermission({Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE})
+    public void requestPermission() {
+    }
+
+    @OnNeverAskAgain({Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE})
+    void showNeverAskForCamera() {
+        PhotoPickHelper.showDefindDialog(this, getSupportFragmentManager());
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        ChatActivityPermissionsDispatcher.onRequestPermissionsResult(this, requestCode, grantResults);
+    }
 
     private static final String TAG = ChatActivity.class.getSimpleName();
 
@@ -28,6 +50,7 @@ public class ChatActivity extends NavigationActivity {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.chat_activity);
         chat(getIntent());
+        ChatActivityPermissionsDispatcher.requestPermissionWithPermissionCheck(this);
     }
 
     @Override

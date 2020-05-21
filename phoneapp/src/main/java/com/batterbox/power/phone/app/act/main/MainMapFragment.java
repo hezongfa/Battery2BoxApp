@@ -355,7 +355,7 @@ public class MainMapFragment extends BaseFragment implements OnMapReadyCallback,
 
             @Override
             public void onFail(ResponseEntity<OrderEntity> responseEntity, String msg) {
-                FQT.showShort(getContext(), msg);
+//                FQT.showShort(getContext(), msg);
                 findViewById(R.id.act_main_borrow_cur_rl).setVisibility(View.GONE);
             }
         });

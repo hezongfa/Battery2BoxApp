@@ -20,10 +20,11 @@ import com.chenyi.baselib.utils.print.FQL;
 import com.tencent.imsdk.TIMBackgroundParam;
 import com.tencent.imsdk.TIMCallBack;
 import com.tencent.imsdk.TIMConversation;
+import com.tencent.imsdk.TIMConversationType;
 import com.tencent.imsdk.TIMManager;
 import com.tencent.imsdk.TIMMessage;
-import com.tencent.imsdk.TIMOfflinePushNotification;
 import com.tencent.imsdk.session.SessionWrapper;
+import com.tencent.qcloud.tim.uikit.TIMOfflinePushNotification;
 import com.tencent.qcloud.tim.uikit.TUIKit;
 import com.tencent.qcloud.tim.uikit.base.IMEventListener;
 
@@ -107,7 +108,6 @@ public class BatterBoxApp extends AppContextBase {
 //            }
 
             registerActivityLifecycleCallbacks(new StatisticActivityLifecycleCallback());
-
         }
 
 
@@ -125,6 +125,10 @@ public class BatterBoxApp extends AppContextBase {
 //                    return;
 //                }
                 for (TIMMessage msg : msgs) {
+                    TIMConversationType type = msg.getConversation().getType();
+                    if (type == TIMConversationType.System|| type == TIMConversationType.Invalid) {
+                       continue;
+                    }
                     // 小米手机需要在设置里面把demo的"后台弹出权限"打开才能点击Notification跳转。TIMOfflinePushNotification后续不再维护，如有需要，建议应用自己调用系统api弹通知栏消息。
                     TIMOfflinePushNotification notification = new TIMOfflinePushNotification(BatterBoxApp.this, msg);
                     notification.doNotify(BatterBoxApp.this, R.drawable.default_user_icon);

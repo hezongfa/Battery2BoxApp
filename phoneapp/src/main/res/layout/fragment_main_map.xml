@@ -24,7 +24,7 @@
         android:layout_marginTop="@dimen/x64"
         android:layout_marginEnd="@dimen/x30"
         android:background="@drawable/bg_main_search"
-        android:visibility="invisible">
+        android:visibility="gone">
 
         <com.chenyi.baselib.widget.CircleImageView
             android:id="@+id/act_main_menu_btn"

@@ -12,7 +12,7 @@
         android:layout_marginTop="@dimen/x30"
         android:layout_marginBottom="@dimen/x30"
         android:text="@string/helper_3"
-        android:textColor="@android:color/white"
+        android:textColor="@color/gray_666666"
         android:textSize="@dimen/x28" />
 
     <LinearLayout
@@ -90,7 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/x100"
         android:layout_marginTop="@dimen/x30"
-        android:background="@drawable/bg_f2f2f2_r20px"
+        android:background="@drawable/bg_ffffff_r20px"
         android:orientation="horizontal">
 
         <ImageView
@@ -121,7 +121,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/x250"
         android:layout_marginTop="@dimen/x30"
-        android:background="@drawable/bg_f2f2f2_r20px"
+        android:background="@drawable/bg_ffffff_r20px"
         android:gravity="left"
         android:hint="@string/helper_9"
         android:padding="@dimen/x25"
@@ -133,7 +133,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/x100"
         android:layout_marginTop="@dimen/x30"
-        android:background="@drawable/bg_f2f2f2_r20px"
+        android:background="@drawable/bg_ffffff_r20px"
         android:gravity="center_vertical"
         android:hint="@string/helper_10"
         android:inputType="textEmailAddress"
@@ -149,15 +149,16 @@
     <Button
         android:id="@+id/view_helper_advice_submit_btn"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x90"
-        android:layout_marginStart="@dimen/x80"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x70"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/x50"
-        android:layout_marginEnd="@dimen/x80"
         android:layout_marginBottom="@dimen/x30"
-        android:background="@drawable/bg_btn_yellow_r90px"
+        android:background="@mipmap/pic_enter_btn_bg"
+        android:paddingStart="@dimen/x30"
+        android:paddingEnd="@dimen/x30"
         android:text="@string/app_13"
         android:textAllCaps="false"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/x36" />
+        android:textSize="@dimen/x28" />
 </LinearLayout>

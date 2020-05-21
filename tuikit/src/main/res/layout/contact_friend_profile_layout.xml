@@ -25,6 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:layout_toEndOf="@id/avatar"
+            android:gravity="center_vertical"
+            android:drawablePadding="3dp"
             android:textColor="@android:color/black"
             android:textSize="@dimen/x32" />
 
@@ -50,6 +52,7 @@
     <TextView
         android:id="@+id/phone"
         android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/x32"
         android:textSize="@dimen/x32"
         android:padding="@dimen/x40"
         android:text="@string/main_chat_9"

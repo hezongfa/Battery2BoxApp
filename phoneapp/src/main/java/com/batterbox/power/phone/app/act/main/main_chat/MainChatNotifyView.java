@@ -17,6 +17,7 @@ import com.batterbox.power.phone.app.http.HttpClient;
 import com.batterbox.power.phone.app.http.NormalHttpCallBack;
 import com.chenyi.baselib.entity.ResponseEntity;
 import com.chenyi.baselib.ui.BasePagerListView;
+import com.chenyi.baselib.ui.HeaderFooterViewModel;
 import com.chenyi.baselib.utils.ImageLoaderUtil;
 import com.chenyi.baselib.utils.StringUtil;
 import com.chenyi.baselib.utils.print.FQT;
@@ -32,6 +33,16 @@ public class MainChatNotifyView extends BasePagerListView<NotifyDataEntity> {
 
     public MainChatNotifyView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+    }
+
+    @Override
+    protected HeaderFooterViewModel getFooterView() {
+        return new HeaderFooterViewModel(R.layout.item_bottom_empty_view, null) {
+            @Override
+            public void setData(BaseViewHolder viewHolder, Object object) {
+
+            }
+        };
     }
 
     @Override

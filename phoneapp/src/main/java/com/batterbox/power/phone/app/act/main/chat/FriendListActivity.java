@@ -34,13 +34,13 @@ public class FriendListActivity extends NavigationActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContactListView = findViewById(R.id.contact_list_view);
-        mContactListView.setSingleSelectMode(true);
-        mContactListView.setOnItemClickListener(new ContactListView.OnItemClickListener() {
-            @Override
-            public void onItemClick(int position, ContactItemBean contact) {
-                startConversation(contact);
-            }
-        });
+        mContactListView.setSingleSelectMode(false);
+//        mContactListView.setOnItemClickListener(new ContactListView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(int position, ContactItemBean contact) {
+//                startConversation(contact);
+//            }
+//        });
         mContactListView.setOnItemClickListener(new ContactListView.OnItemClickListener() {
             @Override
             public void onItemClick(int position, ContactItemBean contact) {
@@ -113,4 +113,9 @@ public class FriendListActivity extends NavigationActivity {
 
         finish();
     }
+
+    public void getAddressValue(String path) {
+
+    }
+
 }

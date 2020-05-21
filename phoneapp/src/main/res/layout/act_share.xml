@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/pic_bg"
+    android:background="@color/bg"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
@@ -22,11 +22,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x180"
+        android:layout_height="@dimen/x220"
         android:layout_marginStart="@dimen/x32"
         android:layout_marginTop="@dimen/x30"
         android:layout_marginEnd="@dimen/x32"
-        android:background="@drawable/bg_round_x180"
+        android:background="@drawable/bg_round_c_white"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -51,7 +51,7 @@
                 android:layout_marginTop="@dimen/x10"
                 android:text="0"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/x43" />
+                android:textSize="@dimen/x53" />
         </LinearLayout>
 
         <View
@@ -84,22 +84,25 @@
                 android:layout_marginTop="@dimen/x10"
                 android:text="0"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/x43" />
+                android:textSize="@dimen/x53" />
         </LinearLayout>
 
     </LinearLayout>
 
+
     <Button
         android:id="@+id/act_share_btn"
         style="?android:attr/borderlessButtonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x90"
-        android:layout_marginStart="@dimen/x55"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x70"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/x50"
-        android:layout_marginEnd="@dimen/x55"
-        android:background="@drawable/bg_btn_yellow_r90px"
+        android:layout_marginBottom="@dimen/x30"
+        android:background="@mipmap/pic_enter_btn_bg"
+        android:paddingStart="@dimen/x60"
+        android:paddingEnd="@dimen/x60"
         android:text="@string/share_4"
         android:textAllCaps="false"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/x36" />
+        android:textSize="@dimen/x28" />
 </LinearLayout>

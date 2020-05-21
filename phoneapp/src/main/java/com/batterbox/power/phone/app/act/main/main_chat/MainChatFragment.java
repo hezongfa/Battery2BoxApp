@@ -55,8 +55,9 @@ public class MainChatFragment extends BaseFragment {
     private PopDialogAdapter mConversationPopAdapter;
     private PopupWindow mConversationPopWindow;
     private List<PopMenuAction> mConversationPopActions = new ArrayList<>();
-//    private Menu mMenu;
-QBadgeView contactCountBadge;
+    //    private Menu mMenu;
+    QBadgeView contactCountBadge;
+
     @Override
     protected int getLayout() {
         return R.layout.fragment_main_chat;
@@ -132,6 +133,8 @@ QBadgeView contactCountBadge;
                 if (timFriendPendencyResponse.getItems() != null) {
                     int pendingRequest = timFriendPendencyResponse.getItems().size();
                     contactCountBadge.setBadgeNumber(pendingRequest);
+                } else {
+                    contactCountBadge.setBadgeNumber(0);
                 }
             }
         });

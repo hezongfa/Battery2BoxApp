@@ -28,7 +28,7 @@ public class HelperActivity extends NavTabPagerActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setNavigationTitle(R.string.main_8);
-        findViewById(R.id.act_nav_tab_pager_ll).setBackgroundResource(R.mipmap.pic_bg);
+//        findViewById(R.id.act_nav_tab_pager_ll).setBackgroundResource(R.mipmap.pic_bg);
     }
 
     @Override

@@ -11,7 +11,7 @@
         android:layout_height="@dimen/x94"
         android:layout_marginStart="@dimen/x30"
         android:layout_marginEnd="@dimen/x30"
-        android:background="@drawable/bg_text_input"
+        android:background="@drawable/bg_ffffff_r20px"
         android:drawableEnd="@mipmap/ic_choced"
         android:gravity="center_vertical"
         android:paddingStart="@dimen/x40"

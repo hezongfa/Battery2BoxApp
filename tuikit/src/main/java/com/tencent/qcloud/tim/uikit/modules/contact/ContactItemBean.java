@@ -21,6 +21,7 @@ public class ContactItemBean extends BaseIndexPinyinBean {
     private boolean isEnable = true;
     private String phone;
     private String address;
+    private int gender;
 
     public ContactItemBean() {
     }
@@ -106,6 +107,7 @@ public class ContactItemBean extends BaseIndexPinyinBean {
         }
         setId(friend.getIdentifier());
         setRemark(friend.getRemark());
+        setGender(friend.getTimUserProfile().getGender());
         setNickname(friend.getTimUserProfile().getNickName());
         setAvatarurl(friend.getTimUserProfile().getFaceUrl());
         if (friend.getCustomInfo()!=null) {
@@ -174,5 +176,13 @@ public class ContactItemBean extends BaseIndexPinyinBean {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public int getGender() {
+        return gender;
+    }
+
+    public void setGender(int gender) {
+        this.gender = gender;
     }
 }

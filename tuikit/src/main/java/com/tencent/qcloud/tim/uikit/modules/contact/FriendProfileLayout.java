@@ -55,7 +55,7 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
     //    private TitleBarLayout mTitleBar;
     private CircleImageView mHeadImageView;
     private TextView mNickNameView, mAddressView, mPhoneView;
-//    private LineControllerView mIDView;
+    //    private LineControllerView mIDView;
     private LineControllerView mAddWordingView;
     private TextView mRemarkView;
     private LineControllerView mAddBlackView;
@@ -73,6 +73,7 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
     private String mRemark;
     private String mPhone;
     private String mAddWords;
+    private int mGender;
 
     public FriendProfileLayout(Context context) {
         super(context);
@@ -136,23 +137,25 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
         } else if (data instanceof ContactItemBean) {
             mContactInfo = (ContactItemBean) data;
             mId = mContactInfo.getId();
-            mNickname = mContactInfo.getNickname();
-            mRemarkView.setVisibility(VISIBLE);
-            mRemarkView.setText(mRemark = mContactInfo.getRemark());
-            mAddBlackView.setChecked(mContactInfo.isBlackList());
-            mAddBlackView.setCheckListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if (isChecked) {
-                        addBlack();
-                    } else {
-                        deleteBlack();
-                    }
-                }
-            });
-            if (!TextUtils.isEmpty(mContactInfo.getAvatarurl())) {
-                GlideEngine.loadImage(mHeadImageView, Uri.parse(mContactInfo.getAvatarurl()));
-            }
+            loadUserProfile();
+            return;
+//            mNickname = mContactInfo.getNickname();
+//            mRemarkView.setVisibility(VISIBLE);
+//            mRemarkView.setText(mRemark = mContactInfo.getRemark());
+//            mAddBlackView.setChecked(mContactInfo.isBlackList());
+//            mAddBlackView.setCheckListener(new CompoundButton.OnCheckedChangeListener() {
+//                @Override
+//                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                    if (isChecked) {
+//                        addBlack();
+//                    } else {
+//                        deleteBlack();
+//                    }
+//                }
+//            });
+//            if (!TextUtils.isEmpty(mContactInfo.getAvatarurl())) {
+//                GlideEngine.loadImage(mHeadImageView, Uri.parse(mContactInfo.getAvatarurl()));
+//            }
         } else if (data instanceof TIMFriendPendencyItem) {
             mPendencyItem = (TIMFriendPendencyItem) data;
             mId = mPendencyItem.getIdentifier();
@@ -209,6 +212,7 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
             mNickNameView.setText(mId);
         }
 //        mIDView.setContent(mId);
+
     }
 
     private void updateViews(ContactItemBean bean) {
@@ -228,9 +232,10 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
         mNickname = bean.getNickname();
         mAddress = bean.getAddress();
         mPhone = bean.getPhone();
+        mGender=bean.getGender();
         if (bean.isFriend()) {
             mRemarkView.setVisibility(VISIBLE);
-            mRemarkView.setText(mRemark = bean.getRemark());
+            mRemarkView.setText(getContext().getString(R.string.profile_remark) +"："+ (mRemark = bean.getRemark()));
 //            mAddBlackView.setVisibility(VISIBLE);
 //            mAddBlackView.setChecked(bean.isBlackList());
 //            mAddBlackView.setCheckListener(new CompoundButton.OnCheckedChangeListener() {
@@ -255,12 +260,31 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
         } else {
             mNickNameView.setText(mId);
         }
-        mAddressView.setText(getContext().getString(R.string.main_chat_6) + StringUtil.fixNullStr(mAddress));
+        mNickNameView.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, mGender == 1 ? R.mipmap.ic_sex_1 : mGender == 2 ? R.mipmap.ic_sex_2 : R.mipmap.ic_sex_0, 0);
+//        mAddressView.setText(getContext().getString(R.string.main_chat_6) + StringUtil.fixNullStr(mAddress));
+        setAddressValue(StringUtil.fixNullStr(mAddress));
+
         mPhoneView.setText(getContext().getString(R.string.main_chat_9) + StringUtil.fixNullStr(mPhone));
         if (!TextUtils.isEmpty(bean.getAvatarurl())) {
             GlideEngine.loadImage(mHeadImageView, Uri.parse(bean.getAvatarurl()));
         }
 //        mIDView.setContent(mId);
+    }
+
+    private void setAddressValue(String path) {
+        if (onAddressValueListener != null) {
+            onAddressValueListener.setAddressValue(mAddressView, path);
+        }
+    }
+
+    OnAddressValueListener onAddressValueListener;
+
+    public void setOnAddressValueListener(OnAddressValueListener onAddressValueListener) {
+        this.onAddressValueListener = onAddressValueListener;
+    }
+
+    public interface OnAddressValueListener {
+        void setAddressValue(TextView tv, String path);
     }
 
     private void loadUserProfile() {
@@ -282,19 +306,21 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
                     return;
                 }
                 final TIMUserProfile profile = timUserProfiles.get(0);
-                if (!bean.isFriend()){
 
-                    return;
-                }
+//                if (!bean.isFriend()){
+//
+//                    return;
+//                }
+                bean.setGender(profile.getGender());
                 bean.setNickname(profile.getNickName());
                 bean.setId(profile.getIdentifier());
                 bean.setAvatarurl(profile.getFaceUrl());
-
+                bean.setAddress(profile.getLocation());
                 if (profile.getCustomInfo() != null) {
-                    if (profile.getCustomInfo().containsKey("AreaCode")) {
-
-                        bean.setAddress(new String(profile.getCustomInfo().get("AreaCode")));
-                    }
+//                    if (profile.getCustomInfo().containsKey("AreaCode")) {
+//
+//                        bean.setAddress(new String(profile.getCustomInfo().get("AreaCode")));
+//                    }
                     if (profile.getCustomInfo().containsKey("Phone")) {
                         bean.setPhone(new String(profile.getCustomInfo().get("Phone")));
                     }
@@ -338,9 +364,9 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
                             bean.setRemark(friend.getRemark());
                             bean.setAvatarurl(friend.getTimUserProfile().getFaceUrl());
                             if (friend.getCustomInfo() != null) {
-                                if (friend.getCustomInfo().containsKey("AreaCode")) {
-                                    bean.setAddress(new String(friend.getCustomInfo().get("AreaCode")));
-                                }
+//                                if (friend.getCustomInfo().containsKey("AreaCode")) {
+//                                    bean.setAddress(new String(friend.getCustomInfo().get("AreaCode")));
+//                                }
                                 if (friend.getCustomInfo().containsKey("Phone")) {
                                     bean.setPhone(new String(friend.getCustomInfo().get("Phone")));
                                 }
@@ -490,7 +516,7 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
             SelectionActivity.startTextSelection(TUIKit.getAppContext(), bundle, new SelectionActivity.OnResultReturnListener() {
                 @Override
                 public void onReturn(Object text) {
-                    mRemarkView.setText(mRemark = text.toString());
+                    mRemarkView.setText(getContext().getString(R.string.profile_remark) +"："+(mRemark = text.toString()));
                     if (TextUtils.isEmpty(text.toString())) {
                         text = "";
                     }

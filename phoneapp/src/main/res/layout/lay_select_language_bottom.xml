@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <Button xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/lay_select_language_bottom_btn"
     style="?android:attr/borderlessButtonStyle"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/x90"
-    android:layout_marginStart="@dimen/x80"
-    android:layout_marginTop="@dimen/x30"
-    android:layout_marginEnd="@dimen/x80"
-    android:layout_marginBottom="@dimen/x40"
-    android:background="@drawable/bg_btn_yellow_r90px"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/x70"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/x50"
+    android:layout_marginBottom="@dimen/x50"
+    android:background="@mipmap/pic_enter_btn_bg"
+    android:paddingStart="@dimen/x30"
+    android:paddingEnd="@dimen/x30"
     android:text="@string/app_11"
     android:textAllCaps="false"
     android:textColor="@android:color/black"
-    android:textSize="@dimen/x36" />
+    android:textSize="@dimen/x28" />

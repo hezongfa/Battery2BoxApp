@@ -5,10 +5,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.tencent.qcloud.tim.uikit.component.TitleBarLayout
-        android:id="@+id/edit_title_bar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/page_title_height" />
+        android:layout_height="72dp"
+        android:background="@mipmap/pic_bar_bg">
+
+        <com.tencent.qcloud.tim.uikit.component.TitleBarLayout
+            android:id="@+id/edit_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/page_title_height"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/edit_content_et"
@@ -27,6 +34,5 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:orientation="vertical">
-    </RadioGroup>
+        android:orientation="vertical"></RadioGroup>
 </LinearLayout>
