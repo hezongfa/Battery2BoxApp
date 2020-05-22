@@ -69,7 +69,7 @@ public class NewFriendActivity extends NavigationActivity {
         timFriendPendencyRequest.setTimPendencyGetType(TIMPendencyType.TIM_PENDENCY_COME_IN);
         timFriendPendencyRequest.setSeq(0);
         timFriendPendencyRequest.setTimestamp(0);
-        timFriendPendencyRequest.setNumPerPage(10);
+        timFriendPendencyRequest.setNumPerPage(100);
         TIMFriendshipManager.getInstance().getPendencyList(timFriendPendencyRequest, new TIMValueCallBack<TIMFriendPendencyResponse>() {
             @Override
             public void onError(int i, String s) {

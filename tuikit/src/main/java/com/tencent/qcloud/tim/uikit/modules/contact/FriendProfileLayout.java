@@ -132,12 +132,12 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
 //                    ConversationManagerKit.getInstance().setConversationTop(mId, isChecked);
 //                }
 //            });
-            loadUserProfile();
+            loadUserProfile(false);
             return;
         } else if (data instanceof ContactItemBean) {
             mContactInfo = (ContactItemBean) data;
             mId = mContactInfo.getId();
-            loadUserProfile();
+            loadUserProfile(false);
             return;
 //            mNickname = mContactInfo.getNickname();
 //            mRemarkView.setVisibility(VISIBLE);
@@ -159,25 +159,8 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
         } else if (data instanceof TIMFriendPendencyItem) {
             mPendencyItem = (TIMFriendPendencyItem) data;
             mId = mPendencyItem.getIdentifier();
-            mNickname = mPendencyItem.getNickname();
-            mAddWordingView.setVisibility(View.VISIBLE);
-            mAddWordingView.setContent(mPendencyItem.getAddWording());
-            mRemarkView.setVisibility(GONE);
-            mAddBlackView.setVisibility(GONE);
-            mDeleteView.setText(R.string.refuse);
-            mDeleteView.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    refuse();
-                }
-            });
-            mChatView.setText(R.string.accept);
-            mChatView.setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    accept();
-                }
-            });
+            loadUserProfile(true);
+            return;
         } else if (data instanceof GroupApplyInfo) {
             final GroupApplyInfo info = (GroupApplyInfo) data;
             TIMGroupPendencyItem item = ((GroupApplyInfo) data).getPendencyItem();
@@ -215,6 +198,42 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
 
     }
 
+    private void updateViewsAdd(ContactItemBean bean) {
+        mAddress = bean.getAddress();
+        mPhone = bean.getPhone();
+        mGender = bean.getGender();
+        mNickname = mPendencyItem.getNickname();
+        if (!TextUtils.isEmpty(mNickname)) {
+            mNickNameView.setText(mNickname);
+        } else {
+            mNickNameView.setText(mId);
+        }
+        mNickNameView.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, mGender == 1 ? R.mipmap.ic_sex_1 : mGender == 2 ? R.mipmap.ic_sex_2 : R.mipmap.ic_sex_0, 0);
+        setAddressValue(StringUtil.fixNullStr(mAddress));
+        mPhoneView.setVisibility(GONE);
+        if (!TextUtils.isEmpty(bean.getAvatarurl())) {
+            GlideEngine.loadImage(mHeadImageView, Uri.parse(bean.getAvatarurl()));
+        }
+        mAddWordingView.setVisibility(View.VISIBLE);
+        mAddWordingView.setContent(StringUtil.fixNullStr(mPendencyItem.getAddWording()));
+        mRemarkView.setVisibility(GONE);
+        mAddBlackView.setVisibility(GONE);
+        mDeleteView.setText(R.string.refuse);
+        mDeleteView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                refuse();
+            }
+        });
+        mChatView.setText(R.string.accept);
+        mChatView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                accept();
+            }
+        });
+    }
+
     private void updateViews(ContactItemBean bean) {
         mContactInfo = bean;
 //        mChatTopView.setVisibility(View.VISIBLE);
@@ -232,10 +251,10 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
         mNickname = bean.getNickname();
         mAddress = bean.getAddress();
         mPhone = bean.getPhone();
-        mGender=bean.getGender();
+        mGender = bean.getGender();
         if (bean.isFriend()) {
             mRemarkView.setVisibility(VISIBLE);
-            mRemarkView.setText(getContext().getString(R.string.profile_remark) +"："+ (mRemark = bean.getRemark()));
+            mRemarkView.setText(getContext().getString(R.string.profile_remark) + "：" + (mRemark = bean.getRemark()));
 //            mAddBlackView.setVisibility(VISIBLE);
 //            mAddBlackView.setChecked(bean.isBlackList());
 //            mAddBlackView.setCheckListener(new CompoundButton.OnCheckedChangeListener() {
@@ -287,7 +306,7 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
         void setAddressValue(TextView tv, String path);
     }
 
-    private void loadUserProfile() {
+    private void loadUserProfile(final boolean isAdd) {
         ArrayList<String> list = new ArrayList<>();
         list.add(mId);
         final ContactItemBean bean = new ContactItemBean();
@@ -325,7 +344,11 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
                         bean.setPhone(new String(profile.getCustomInfo().get("Phone")));
                     }
                 }
-                updateViews(bean);
+                if (isAdd) {
+                    updateViewsAdd(bean);
+                } else {
+                    updateViews(bean);
+                }
             }
         });
         TIMFriendshipManager.getInstance().getBlackList(new TIMValueCallBack<List<TIMFriend>>() {
@@ -341,7 +364,11 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
                     for (TIMFriend friend : timFriends) {
                         if (TextUtils.equals(friend.getIdentifier(), mId)) {
                             bean.setBlackList(true);
-                            updateViews(bean);
+                            if (isAdd) {
+                                updateViewsAdd(bean);
+                            } else {
+                                updateViews(bean);
+                            }
                             break;
                         }
                     }
@@ -375,7 +402,11 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
                         }
                     }
                 }
-                updateViews(bean);
+                if (isAdd) {
+                    updateViewsAdd(bean);
+                } else {
+                    updateViews(bean);
+                }
             }
         });
     }
@@ -516,7 +547,7 @@ public class FriendProfileLayout extends LinearLayout implements View.OnClickLis
             SelectionActivity.startTextSelection(TUIKit.getAppContext(), bundle, new SelectionActivity.OnResultReturnListener() {
                 @Override
                 public void onReturn(Object text) {
-                    mRemarkView.setText(getContext().getString(R.string.profile_remark) +"："+(mRemark = text.toString()));
+                    mRemarkView.setText(getContext().getString(R.string.profile_remark) + "：" + (mRemark = text.toString()));
                     if (TextUtils.isEmpty(text.toString())) {
                         text = "";
                     }

@@ -219,7 +219,8 @@ public abstract class MessageContentHolder extends MessageEmptyHolder {
                 if (msg.isGroup()) {
                     isReadText.setVisibility(View.GONE);
                 } else {
-                    isReadText.setVisibility(View.VISIBLE);
+//                    isReadText.setVisibility(View.VISIBLE);
+                    isReadText.setVisibility(View.GONE);
                     LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) isReadText.getLayoutParams();
                     params.gravity = Gravity.CENTER_VERTICAL;
                     isReadText.setLayoutParams(params);

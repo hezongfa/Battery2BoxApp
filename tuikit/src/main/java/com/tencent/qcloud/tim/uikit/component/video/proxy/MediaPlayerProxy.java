@@ -16,12 +16,12 @@ public class MediaPlayerProxy implements IPlayer {
     private IPlayer mMediaPlayer;
 
     public MediaPlayerProxy() {
-        try {
-            Class.forName("tv.danmaku.ijk.media.player.IjkMediaPlayer").newInstance();
-            mMediaPlayer = new IjkMediaPlayerWrapper();
-        } catch (Exception e) {
+//        try {
+//            Class.forName("tv.danmaku.ijk.media.player.IjkMediaPlayer").newInstance();
+//            mMediaPlayer = new IjkMediaPlayerWrapper();
+//        } catch (Exception e) {
             mMediaPlayer = new SystemMediaPlayerWrapper();
-        }
+//        }
         TUIKitLog.i(TAG, "use mMediaPlayer: " + mMediaPlayer);
     }
 

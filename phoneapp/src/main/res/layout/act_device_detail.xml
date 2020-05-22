@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/pic_bg"
+    android:background="@android:color/white"
     android:orientation="vertical">
 
     <ImageView
@@ -163,17 +163,31 @@
 
     <Button
         android:id="@+id/act_device_detail_btn"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x90"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x70"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/x80"
-        android:layout_marginTop="@dimen/x50"
-        android:layout_marginEnd="@dimen/x80"
-        android:layout_marginBottom="@dimen/x50"
-        android:background="@drawable/bg_btn_yellow_r90px"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/x40"
+        android:background="@mipmap/pic_enter_btn_bg"
+        android:clickable="true"
+        android:paddingStart="@dimen/x20"
+        android:paddingEnd="@dimen/x20"
         android:text="@string/borrow_12"
-        android:textAllCaps="false"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/x36" />
+        android:textSize="@dimen/x28" />
+    <!--    <Button-->
+    <!--        android:id="@+id/act_device_detail_btn"-->
+    <!--        style="?android:attr/borderlessButtonStyle"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="@dimen/x70"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_marginTop="@dimen/x50"-->
+    <!--        android:layout_marginBottom="@dimen/x50"-->
+    <!--        android:paddingStart="@dimen/x30"-->
+    <!--        android:paddingEnd="@dimen/x30"-->
+    <!--        android:background="@mipmap/pic_enter_btn_bg"-->
+    <!--        android:text="@string/borrow_12"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textColor="@android:color/black"-->
+    <!--        android:textSize="@dimen/x28" />-->
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.batterbox.power.phone.app.act.main.chat;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -14,17 +15,22 @@ import android.widget.TextView;
 
 import com.batterbox.power.phone.app.BatterBoxApp;
 import com.batterbox.power.phone.app.R;
+import com.chenyi.baselib.utils.ImageLoaderUtil;
 import com.chenyi.baselib.utils.print.FQL;
 import com.tencent.imsdk.TIMFriendshipManager;
+import com.tencent.imsdk.TIMUserProfile;
 import com.tencent.imsdk.TIMValueCallBack;
 import com.tencent.imsdk.friendship.TIMFriendPendencyItem;
 import com.tencent.imsdk.friendship.TIMFriendResponse;
 import com.tencent.imsdk.friendship.TIMFriendResult;
 import com.tencent.imsdk.friendship.TIMPendencyType;
 import com.tencent.qcloud.tim.uikit.component.CircleImageView;
+import com.tencent.qcloud.tim.uikit.component.picture.imageEngine.ImageEngine;
 import com.tencent.qcloud.tim.uikit.utils.TUIKitConstants;
+import com.tencent.qcloud.tim.uikit.utils.TUIKitLog;
 import com.tencent.qcloud.tim.uikit.utils.ToastUtil;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -79,6 +85,27 @@ public class NewFriendListAdapter extends ArrayAdapter<TIMFriendPendencyItem> {
         }
         Resources res = getContext().getResources();
         mViewHolder.avatar.setImageResource(R.drawable.ic_personal_member);
+        if (data.getIdentifier() != null) {
+            TIMFriendshipManager.getInstance().getUsersProfile(Arrays.asList(data.getIdentifier()), false, new TIMValueCallBack<List<TIMUserProfile>>() {
+                @Override
+                public void onError(int i, String s) {
+                    TUIKitLog.e(TAG, "loadUserProfile err code = " + i + ", desc = " + s);
+                    ToastUtil.toastShortMessage("Error code = " + i + ", desc = " + s);
+                    ((Activity) getContext()).finish();
+                }
+
+                @Override
+                public void onSuccess(List<TIMUserProfile> timUserProfiles) {
+                    if (timUserProfiles == null || timUserProfiles.size() != 1) {
+                        return;
+                    }
+                    final TIMUserProfile profile = timUserProfiles.get(0);
+                    if (profile.getFaceUrl() != null) {
+                        ImageLoaderUtil.load(getContext(), profile.getFaceUrl(), mViewHolder.avatar, R.drawable.ic_personal_member);
+                    }
+                }
+            });
+        }
         mViewHolder.name.setText(TextUtils.isEmpty(data.getNickname()) ? data.getIdentifier() : data.getNickname());
         mViewHolder.des.setText(data.getAddWording());
         switch (data.getType()) {
