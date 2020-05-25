@@ -47,4 +47,5 @@ public class ShopDetailEntity extends BaseEntity {
     public String returnCount;
     public double la;
     public double lo;
+    public String shopSmUrl;
 }

@@ -1,6 +1,7 @@
 package com.tencent.qcloud.tim.uikit.component.video;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.AssetFileDescriptor;
@@ -13,6 +14,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.chenyi.baselib.utils.LanguageContextWrapper;
+import com.chenyi.baselib.utils.LanguageUtil;
+import com.chenyi.baselib.utils.StringUtil;
 import com.tencent.qcloud.tim.uikit.R;
 import com.tencent.qcloud.tim.uikit.base.IUIKitCallBack;
 import com.tencent.qcloud.tim.uikit.component.video.listener.ClickListener;
@@ -34,7 +38,10 @@ public class CameraActivity extends Activity {
     private static final String TAG = CameraActivity.class.getSimpleName();
     public static IUIKitCallBack mCallBack;
     private JCameraView jCameraView;
-
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LanguageContextWrapper.wrap(newBase, LanguageUtil.getLocaleByLanguage(StringUtil.fixNullStr(LanguageUtil.getLanguage(), LanguageUtil.ES))));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         TUIKitLog.i(TAG, "onCreate");
@@ -52,9 +59,9 @@ public class CameraActivity extends Activity {
         int state = getIntent().getIntExtra(TUIKitConstants.CAMERA_TYPE, JCameraView.BUTTON_STATE_BOTH);
         jCameraView.setFeatures(state);
         if (state == JCameraView.BUTTON_STATE_ONLY_CAPTURE) {
-            jCameraView.setTip("点击拍照");
+            jCameraView.setTip(getString(R.string.take_photo));
         } else if (state == JCameraView.BUTTON_STATE_ONLY_RECORDER) {
-            jCameraView.setTip("长按摄像");
+            jCameraView.setTip(getString(R.string.take_video));
         }
 
         jCameraView.setMediaQuality(JCameraView.MEDIA_QUALITY_MIDDLE);
@@ -70,7 +77,7 @@ public class CameraActivity extends Activity {
 
             @Override
             public void AudioPermissionError() {
-                ToastUtil.toastShortMessage("给点录音权限可以?");
+//                ToastUtil.toastShortMessage("给点录音权限可以?");
             }
         });
         //JCameraView监听

@@ -149,6 +149,12 @@ public class ShopDetailActivity extends NavigationActivity {
                         }
                         ((TextView) findViewById(R.id.act_shop_detail_time_tv)).setText(StringUtil.fixNullStr(responseEntity.getData().businessTime));
                         ((TextView) findViewById(R.id.act_shop_detail_address_tv)).setText(StringUtil.fixNullStr(responseEntity.getData().shopAdress));
+                        if (StringUtil.isEmpty(responseEntity.getData().shopSmUrl)){
+                            findViewById(R.id.act_shop_detail_menu_tv).setVisibility(View.GONE);
+                        }else{
+                            findViewById(R.id.act_shop_detail_menu_tv).setVisibility(View.VISIBLE);
+                            findViewById(R.id.act_shop_detail_menu_tv).setOnClickListener(v -> ARouteHelper.hybrid_nav(responseEntity.getData().shopSmUrl).navigation());
+                        }
                     }
                 }
 

@@ -144,6 +144,7 @@
     <string name="shop_6">Fumador</string>
     <string name="shop_7">Alquire</string>
     <string name="shop_8">Vacío</string>
+    <string name="shop_9">Menú</string>
 
     <string name="order__0">Inacabado</string>
     <string name="order_0">Hecho</string>
@@ -217,12 +218,12 @@
     <string name="user_6">Información del usuario</string>
     <string name="user_7">Nombre</string>
     <string name="user_8">Email</string>
-    <string name="user_9">性别</string>
-    <string name="user_10">男</string>
-    <string name="user_11">女</string>
-    <string name="user_12">未设置</string>
-    <string name="user_13">我的二维码</string>
-    <string name="user_14">扫描二维码以添加联系人</string>
+    <string name="user_9">Género</string>
+    <string name="user_10">Hombres</string>
+    <string name="user_11">Mujeres</string>
+    <string name="user_12">No configurado</string>
+    <string name="user_13">Mi código QR</string>
+    <string name="user_14">Escanear código binario para añadir contacto</string>
     <!--<string name="helper_4">BATERÍA\nATASCADA</string>-->
     <!--<string name="helper_5">ESTACIÓN FUERA\nDE SERVICIO</string>-->
     <!--<string name="helper_6">BATERÍA\nDAÑADA</string>-->
@@ -267,23 +268,23 @@
 
 
     <string name="main_tab_1">Chats</string>
-    <string name="main_tab_2">我的</string>
+    <string name="main_tab_2">Mía.</string>
     <string name="main_tab_3">Buscar</string>
     <string name="main_tab_4">Battery2Box</string>
     <string name="main_tab_5">Por favor.</string>
 
 
-    <string name="main_chat_1">添加好友</string>
-    <string name="main_chat_2">扫一扫</string>
-    <string name="main_chat_3">删除</string>
-    <string name="main_chat_4">个人资料</string>
-    <string name="main_chat_5">添加</string>
-    <string name="main_chat_6">地址:</string>
-    <string name="main_chat_7">验证信息</string>
-    <string name="main_chat_8">添加</string>
-    <string name="main_chat_9">手机:</string>
-    <string name="main_chat_10">通知</string>
-    <string name="main_chat_11">聊天</string>
+    <string name="main_chat_1">Añadir contactos</string>
+    <string name="main_chat_2">Escanear</string>
+    <string name="main_chat_3">Eliminar</string>
+    <string name="main_chat_4">Perfil</string>
+    <string name="main_chat_5">Enviar</string>
+    <string name="main_chat_6">Contactos:</string>
+    <string name="main_chat_7">Información de verificación</string>
+    <string name="main_chat_8">Enviar</string>
+    <string name="main_chat_9">Número de teléfono:</string>
+    <string name="main_chat_10">Anuncios</string>
+    <string name="main_chat_11">Charlar</string>
 
 
     // 云通信
@@ -292,7 +293,7 @@
     <string name="quit_chat_top">取消置顶</string>
 
     // "+"menu相关
-    <string name="add_friend">添加好友</string>
+    <string name="add_friend">Añadir amigo</string>
     <string name="add_group">添加群聊</string>
     <string name="start_conversation">发起会话</string>
     <string name="create_group_chat">创建群聊</string>
@@ -301,22 +302,94 @@
     <string name="hint_add_user_id">请输入ID</string>
     <string name="hint_add_wording">请输入验证消息</string>
 
-    <string name="user_id">对方ID</string>
-    <string name="add_wording">验证消息</string>
+    <string name="user_id">ID</string>
+    <string name="add_wording">Verificar mensaje</string>
 
     // 群信息相关
     <string name="tips_empty_group_member">请选择群成员</string>
     <string name="tips_empty_group_type">请选择加群方式</string>
-    <string name="no_friend_apply">暂无好友申请</string>
+    <string name="no_friend_apply">Solicitud de amistad</string>
 
     // 新朋友
-    <string name="request_agree">同意</string>
-    <string name="request_accepted">已接受</string>
-    <string name="request_waiting">等待验证</string>
+    <string name="request_agree">Consentimiento</string>
+    <string name="request_accepted">Aceptada.</string>
+    <string name="request_waiting">Esperando confirmación.</string>
 
     <string name="test_custom_action">自定义消息</string>
     <string name="test_custom_message">查看详情>></string>
     <string name="video_call">视频通话</string>
     <string name="audio_call">音频通话</string>
 
+    // -------------
+    <string name="pic">Imagen</string>
+    <string name="photo">Fotografía</string>
+    <string name="video">Cámara</string>
+    <string name="file">Documentación</string>
+    <string name="take_photo">Haga clic.</string>
+    <string name="take_video">Cámara larga</string>
+
+    <string name="cancel">Cancelar</string>
+    <string name="sure">Determinación</string>
+
+    <string name="un_download">未下载</string>
+    <string name="downloaded">已下载</string>
+    <string name="downloading">下载中...</string>
+    <string name="sending">发送中...</string>
+    <string name="sended">已发送</string>
+    <string name="has_read">已读</string>
+    <string name="unread">未读</string>
+    <string name="typing">Entrando...</string>
+
+    <string name="chat_to_top">置顶聊天</string>
+    <string name="send">Enviar</string>
+
+    <string name="group_id">群ID</string>
+    <string name="group_name">群聊名称</string>
+    <string name="group_icon">修改群头像</string>
+    <string name="group_notice">群公告</string>
+    <string name="group_members">群成员</string>
+    <string name="group_type">群类型</string>
+    <string name="add_group_member">添加成员</string>
+    <string name="remove_group_member">移除成员</string>
+    <string name="join_group_type">加群方式</string>
+    <string name="in_group_nick_name">我的群昵称</string>
+    <string name="dissolve">解散该群</string>
+    <string name="modify_group_name">修改群名称</string>
+    <string name="modify_group_notice">修改群公告</string>
+    <string name="modify_nick_name_in_goup">修改我的群昵称</string>
+
+    <string name="group_detail">群聊详情</string>
+    <string name="accept">同意</string>
+    <string name="refuse">拒绝</string>
+    <string name="group_apply_members">群申请</string>
+    <string name="accepted">已同意</string>
+    <string name="refused">已拒绝</string>
+    <string name="group_apply_tips">%1$d 条入群申请</string>
+    <string name="group_apply_click_handle">点击处理</string>
+    <string name="group_remove_member">移出群聊</string>
+    <string name="group_join_type">加群方式</string>
+    <string name="modify_group_name_success">修改群名称成功</string>
+    <string name="modify_group_notice_success">修改群公告成功</string>
+    <string name="exit_group">退出群聊</string>
+    <string name="modify_nickname_success">修改昵称成功</string>
+    <string name="view_original_image">Ver el mapa</string>
+
+    // 联系人相关
+    <string name="new_friend">Nuevo contacto</string>
+    <string name="group">我的群聊</string>
+    <string name="blacklist">黑名单</string>
+    <string name="contact_count">%d位联系人</string>
+    <string name="contact_title">通讯录</string>
+    <string name="conversation_title">腾讯·云通信</string>
+
+    // 好友资料
+    <string name="profile_detail">Información detallada</string>
+    <string name="profile_id">Cuenta</string>
+    <string name="profile_add_wording">Verificar mensaje</string>
+    <string name="profile_remark">Observaciones</string>
+    <string name="profile_black">加入黑名单</string>
+    <string name="profile_remark_edit">Observaciones revisadas</string>
+    <string name="profile_chat">Enviar mensaje</string>
+    <string name="profile_del">Eliminar amigo</string>
+    <string name="profile_del1">¿Estás seguro de borrar amigos?</string>
 </resources>
