@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.vlayout.LayoutHelper;
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper;
+import com.batterbox.power.phone.app.BatterBoxApp;
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.entity.OrderEntity;
@@ -65,10 +66,11 @@ public class OrderListActivity extends NavListActivity<OrderEntity> {
             @Override
             public boolean checkTouchRule(RecyclerView.ViewHolder holder) {
                 if (holder != null) {
-                    if (holder.itemView instanceof TextView) return true;
+                    if (holder.itemView instanceof TextView) return false;
                     OrderEntity entity = adapter.getItem(holder.getAdapterPosition());
                     if (entity != null) {
-                        if (!(entity.state == 2 && entity.payState == 2)) {
+                        //state=2 payState=2    或者  state=3  或者   state=4 payState=2   或者   state=5 payState=2
+                        if (entity.state == 3 || (entity.state == 2 || entity.state == 4 || entity.state == 5) && entity.payState == 2) {
                             return true;
                         }
                     }
@@ -133,39 +135,40 @@ public class OrderListActivity extends NavListActivity<OrderEntity> {
                     holder.setText(R.id.item_order_time_tv, StringUtil.fixNullStr(item.rentTime));
                     holder.setText(R.id.item_order_address_tv, StringUtil.fixNullStr(item.rentShopName));
                     holder.setText(R.id.item_order_price_tv, CnyUtil.getPriceByUnit(context, item.cost));
-                    if (item.state == 2 && item.payState == 2) {
-                        holder.setVisible(R.id.item_order_action_ll, false);
-                        holder.setOnClickListener(R.id.item_order_del_tv, new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                HttpClient.getInstance().order_delOrder(String.valueOf(item.orderId), new NormalHttpCallBack<ResponseEntity>((BaseActivity) OrderListActivity.this) {
-                                    @Override
-                                    public void onStart() {
-
-                                    }
-
-                                    @Override
-                                    public void onSuccess(ResponseEntity responseEntity) {
-                                        remove(item);
-                                    }
-
-                                    @Override
-                                    public void onFail(ResponseEntity responseEntity, String msg) {
-                                        FQT.showShort(OrderListActivity.this, msg);
-                                    }
-                                });
-                            }
-                        });
-                    } else {
-                        holder.setOnClickListener(R.id.item_order_error_tv, v -> ARouteHelper.helper_detail("0", "0").navigation());
+                    if ((item.state == 1 || item.state == 2 || item.state == 4 || item.state == 5) && item.payState == 2) {
+                        holder.setVisible(R.id.item_order_action_ll, true);
+                        holder.setOnClickListener(R.id.item_order_error_tv, v -> ARouteHelper.helper_detail(BatterBoxApp.lat + "", BatterBoxApp.lng + "").navigation());
                         holder.setOnClickListener(R.id.item_order_buy_tv, v -> DialogUtils.showDialog(getSupportFragmentManager(), null, getString(R.string.order_30), getString(R.string.app_16), new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
 
                             }
                         }, getString(R.string.order_37), v1 -> buy(item.orderId)));
-                    }
 
+                    } else {
+                        holder.setVisible(R.id.item_order_action_ll, false);
+                    }
+                    holder.setOnClickListener(R.id.item_order_del_tv, new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            HttpClient.getInstance().order_delOrder(String.valueOf(item.orderId), new NormalHttpCallBack<ResponseEntity>((BaseActivity) OrderListActivity.this) {
+                                @Override
+                                public void onStart() {
+
+                                }
+
+                                @Override
+                                public void onSuccess(ResponseEntity responseEntity) {
+                                    remove(item);
+                                }
+
+                                @Override
+                                public void onFail(ResponseEntity responseEntity, String msg) {
+                                    FQT.showShort(OrderListActivity.this, msg);
+                                }
+                            });
+                        }
+                    });
                 }
             }
 
@@ -190,7 +193,7 @@ public class OrderListActivity extends NavListActivity<OrderEntity> {
                     ArrayList<OrderEntity> finishList = new ArrayList<>();
                     ArrayList<OrderEntity> unfinishList = new ArrayList<>();
                     for (OrderEntity orderEntity : responseEntity.getData()) {
-                        if (orderEntity.state == 0 || orderEntity.state == 1 ) {
+                        if (orderEntity.state == 0 || orderEntity.state == 1) {
                             if (unfinishList.size() == 0 && !adapter.getData().contains(unfOrderEntity)) {
                                 unfinishList.add(unfOrderEntity);
                             }

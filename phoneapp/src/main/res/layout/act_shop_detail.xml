@@ -243,7 +243,6 @@
                     android:id="@+id/act_shop_detail_menu_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
                     android:layout_marginStart="@dimen/x5"
                     android:layout_marginTop="@dimen/x24"
                     android:drawableStart="@mipmap/ic_shop_detail_menu"
@@ -251,7 +250,9 @@
                     android:gravity="center_vertical"
                     android:text="@string/shop_9"
                     android:textColor="#4284FD"
-                    android:textSize="@dimen/x28" />
+                    android:textSize="@dimen/x28"
+                    android:visibility="gone" />
+
                 <TextView
                     android:id="@+id/act_shop_detail_address_tv"
                     android:layout_width="wrap_content"
@@ -331,8 +332,11 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x100"
-        android:background="#78000000">
+        android:layout_height="wrap_content"
+        android:background="#78000000"
+        android:minHeight="@dimen/x100"
+        android:paddingTop="@dimen/x4"
+        android:paddingBottom="@dimen/x4">
 
         <TextView
             android:id="@+id/act_shop_detail_title_tv"
@@ -340,7 +344,9 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/x25"
-            android:text="星巴克咖啡店"
+            android:layout_marginEnd="@dimen/x52"
+            android:ellipsize="end"
+            android:maxLines="2"
             android:textColor="@android:color/white"
             android:textSize="@dimen/x47" />
 

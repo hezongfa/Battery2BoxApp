@@ -223,7 +223,7 @@
     <string name="user_11">Mujeres</string>
     <string name="user_12">No configurado</string>
     <string name="user_13">Mi código QR</string>
-    <string name="user_14">Escanear código binario para añadir contacto</string>
+    <string name="user_14">Escáner mi código QR para añadir contactos</string>
     <!--<string name="helper_4">BATERÍA\nATASCADA</string>-->
     <!--<string name="helper_5">ESTACIÓN FUERA\nDE SERVICIO</string>-->
     <!--<string name="helper_6">BATERÍA\nDAÑADA</string>-->
@@ -268,7 +268,7 @@
 
 
     <string name="main_tab_1">Chats</string>
-    <string name="main_tab_2">Mía.</string>
+    <string name="main_tab_2">Yo</string>
     <string name="main_tab_3">Buscar</string>
     <string name="main_tab_4">Battery2Box</string>
     <string name="main_tab_5">Por favor.</string>
