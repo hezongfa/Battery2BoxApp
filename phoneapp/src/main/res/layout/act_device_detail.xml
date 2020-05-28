@@ -7,9 +7,11 @@
 
     <ImageView
         android:id="@+id/act_device_detail_iv"
-        android:layout_width="@dimen/x300"
-        android:layout_height="@dimen/x300"
+        android:layout_width="@dimen/x400"
+        android:layout_height="@dimen/x400"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_marginBottom="@dimen/x20"
         android:scaleType="centerInside"
         android:src="@mipmap/pic_device_detail_p" />
 

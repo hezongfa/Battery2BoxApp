@@ -1,59 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@android:color/white"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
 
-    <ImageView
-        android:id="@+id/act_borrow_result_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/x30"
-        android:scaleType="centerInside"
-        android:src="@mipmap/pic_borrow_1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/x70"
-        android:paddingStart="@dimen/x40"
-        android:gravity="center"
-        android:paddingEnd="@dimen/x40"
-        android:text="@string/borrow_13"
-        android:textColor="@color/black_191919"
-        android:textSize="@dimen/x32" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/x40"
-        android:paddingStart="@dimen/x40"
-        android:paddingEnd="@dimen/x40"
-        android:gravity="center"
-        android:text="@string/borrow_14"
-        android:textColor="@color/gray_666666"
-        android:textSize="@dimen/x28" />
-
-    <ProgressBar
-        android:id="@+id/act_borrow_result_pb"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/x100"
-        android:layout_marginTop="@dimen/x50"
-        android:layout_marginEnd="@dimen/x100" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/act_borrow_result_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/x10"
-        android:textColor="@color/black_191919"
-        android:text="0%"
-        android:textSize="@dimen/x36" />
+        <ImageView
+            android:id="@+id/act_borrow_result_iv"
+            android:layout_width="@dimen/x350"
+            android:layout_height="@dimen/x350"
+            android:layout_marginTop="@dimen/x30"
+            android:scaleType="centerInside"
+            android:src="@mipmap/pic_borrow_1" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/act_borrow_result_tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x70"
+            android:gravity="center"
+            android:paddingStart="@dimen/x40"
+            android:paddingEnd="@dimen/x40"
+            android:text="@string/borrow_13"
+            android:textColor="@color/black_191919"
+            android:textSize="@dimen/x32" />
+
+        <LinearLayout
+            android:layout_width="@dimen/x140"
+            android:layout_height="@dimen/x140"
+            android:layout_marginTop="@dimen/x40"
+            android:background="@drawable/bg_ffffff_r20px_999999"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_333333"
+                android:textSize="@dimen/x24"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/act_borrow_result_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textColor="@color/gray_333333"
+                android:textSize="@dimen/x60" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x40"
+            android:gravity="center"
+            android:paddingStart="@dimen/x40"
+            android:paddingEnd="@dimen/x40"
+            android:text="@string/borrow_14"
+            android:textColor="@color/gray_666666"
+            android:textSize="@dimen/x28" />
+
+        <ProgressBar
+            android:id="@+id/act_borrow_result_pb"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x100"
+            android:layout_marginTop="@dimen/x50"
+            android:layout_marginEnd="@dimen/x100" />
+
+        <TextView
+            android:id="@+id/act_borrow_result_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x10"
+            android:text="0%"
+            android:textColor="@color/black_191919"
+            android:textSize="@dimen/x36" />
+
+    </LinearLayout>
+</ScrollView>

@@ -59,7 +59,7 @@ public class DeviceDetailActivity extends NavigationActivity {
                 @Override
                 public void onSuccess(ResponseEntity<BorrowResultEntity> responseEntity) {
                     if (responseEntity != null && responseEntity.getData() != null) {
-                        ARouteHelper.borrow_result(responseEntity.getData()).navigation();
+                        ARouteHelper.borrow_result(responseEntity.getData(),deviceEntity).navigation();
                         finish();
                     }
                 }

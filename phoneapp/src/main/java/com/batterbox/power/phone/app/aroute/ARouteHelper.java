@@ -106,12 +106,14 @@ public class ARouteHelper {
         return ARouter.getInstance().build(DEVICE_DETAIL).withObject("deviceEntity", deviceEntity);
     }
 
-    public static Postcard borrow_result(BorrowResultEntity borrowResultEntity) {
-        return ARouter.getInstance().build(BORROW_RESULT).withObject("borrowResultEntity", borrowResultEntity);
+    public static Postcard borrow_result(BorrowResultEntity borrowResultEntity,DeviceEntity deviceEntity) {
+        return ARouter.getInstance().build(BORROW_RESULT).withObject("borrowResultEntity", borrowResultEntity)
+                .withObject("deviceEntity",deviceEntity);
     }
 
-    public static Postcard borrow_success(OrderStateEntity orderStateEntity) {
-        return ARouter.getInstance().build(BORROW_SUCCESS).withObject("orderStateEntity", orderStateEntity);
+    public static Postcard borrow_success(OrderStateEntity orderStateEntity,DeviceEntity deviceEntity) {
+        return ARouter.getInstance().build(BORROW_SUCCESS).withObject("orderStateEntity", orderStateEntity)
+                .withObject("deviceEntity",deviceEntity);
     }
 
     public static Postcard order_list() {

@@ -3,6 +3,7 @@ package com.batterbox.power.phone.app.act;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -12,6 +13,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.aroute.ARouteHelper;
 import com.batterbox.power.phone.app.entity.BorrowResultEntity;
+import com.batterbox.power.phone.app.entity.DeviceEntity;
 import com.batterbox.power.phone.app.entity.OrderStateEntity;
 import com.batterbox.power.phone.app.http.HttpClient;
 import com.batterbox.power.phone.app.http.NormalHttpCallBack;
@@ -35,6 +37,8 @@ import io.reactivex.disposables.Disposable;
 public class BorrowResultActivity extends NavigationActivity {
     @Autowired
     public BorrowResultEntity borrowResultEntity;
+    @Autowired
+    public DeviceEntity deviceEntity;
     Disposable disposable;
     ProgressBar progressBar;
     TextView progressTv;
@@ -97,6 +101,9 @@ public class BorrowResultActivity extends NavigationActivity {
             }
         }, 1, TimeUnit.MILLISECONDS);
         ImageView iv = findViewById(R.id.act_borrow_result_iv);
+        iv.setVisibility(View.VISIBLE);
+        findViewById(R.id.act_borrow_result_tip_tv).setVisibility(View.VISIBLE);
+        ((TextView) findViewById(R.id.act_borrow_result_num_tv)).setText(borrowResultEntity.btBay + "");
         switch (borrowResultEntity.btBay) {
             case 1:
                 iv.setImageResource(R.mipmap.pic_borrow_1);
@@ -112,6 +119,10 @@ public class BorrowResultActivity extends NavigationActivity {
                 break;
             case 5:
                 iv.setImageResource(R.mipmap.pic_borrow_5);
+                break;
+            default:
+                iv.setVisibility(View.GONE);
+                findViewById(R.id.act_borrow_result_tip_tv).setVisibility(View.INVISIBLE);
                 break;
         }
     }
@@ -135,7 +146,7 @@ public class BorrowResultActivity extends NavigationActivity {
                     if (responseEntity.getData().state == 1) {
                         if (disposable != null) CountDownHelper.cancelCountDown(disposable);
                         //订单状态：‘0’= 执行中；‘1’= 租借中；‘2’= 已归还；；‘3’= 已撤销；
-                        ARouteHelper.borrow_success(responseEntity.getData()).navigation();
+                        ARouteHelper.borrow_success(responseEntity.getData(),deviceEntity).navigation();
                         finish();
                     }
                 }
