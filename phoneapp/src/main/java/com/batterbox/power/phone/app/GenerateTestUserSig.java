@@ -41,7 +41,10 @@ public class GenerateTestUserSig {
      * 进入腾讯云云通信[控制台](https://console.cloud.tencent.com/avc ) 创建应用，即可看到 SDKAppId，
      * 它是腾讯云用于区分客户的唯一标识。
      */
-    public static final int SDKAPPID = 1400319075;
+    //dev
+//    public static final int SDKAPPID = 1400319075;
+    //product
+    public static final int SDKAPPID = 1400376244;
 
 
     /**
