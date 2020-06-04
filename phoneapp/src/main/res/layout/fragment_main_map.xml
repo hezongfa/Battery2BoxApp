@@ -62,6 +62,7 @@
 
     <com.youth.banner.Banner
         android:id="@+id/act_main_shop_ad_banner"
+        android:layout_marginTop="@dimen/x64"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x100"
         android:layout_below="@id/act_main_shop_search_ll"
