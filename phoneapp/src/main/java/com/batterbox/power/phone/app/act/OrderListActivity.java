@@ -71,11 +71,11 @@ public class OrderListActivity extends NavListActivity<OrderEntity> {
                     if (entity != null) {
                         //state=2 payState=2    或者  state=3  或者   state=4 payState=2   或者   state=5 payState=2
                         if (entity.state == 3 || (entity.state == 2 || entity.state == 4 || entity.state == 5) && entity.payState == 2) {
-                            return true;
+                            return false;
                         }
                     }
                 }
-                return false;
+                return true;
             }
 
             @Override
@@ -135,7 +135,7 @@ public class OrderListActivity extends NavListActivity<OrderEntity> {
                     holder.setText(R.id.item_order_time_tv, StringUtil.fixNullStr(item.rentTime));
                     holder.setText(R.id.item_order_address_tv, StringUtil.fixNullStr(item.rentShopName));
                     holder.setText(R.id.item_order_price_tv, CnyUtil.getPriceByUnit(context, item.cost));
-                    if ((item.state == 1 || item.state == 2 || item.state == 4 || item.state == 5) && item.payState == 2) {
+                    if ((item.state == 1 || item.state == 2 || item.state == 4 || item.state == 5) && item.payState == 1) {
                         holder.setVisible(R.id.item_order_action_ll, true);
                         holder.setOnClickListener(R.id.item_order_error_tv, v -> ARouteHelper.helper_detail(BatterBoxApp.lat + "", BatterBoxApp.lng + "").navigation());
                         holder.setOnClickListener(R.id.item_order_buy_tv, v -> DialogUtils.showDialog(getSupportFragmentManager(), null, getString(R.string.order_30), getString(R.string.app_16), new View.OnClickListener() {
