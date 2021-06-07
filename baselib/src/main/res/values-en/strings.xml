@@ -223,6 +223,7 @@
     <string name="user_12">Not set</string>
     <string name="user_13">My code QR</string>
     <string name="user_14">Scan QR code to add contacts</string>
+    <string name="user_15">Regione</string>
     <!--<string name="helper_4">BATERÍA\nATASCADA</string>-->
     <!--<string name="helper_5">ESTACIÓN FUERA\nDE SERVICIO</string>-->
     <!--<string name="helper_6">BATERÍA\nDAÑADA</string>-->
@@ -391,4 +392,20 @@
     <string name="profile_chat">send message</string>
     <string name="profile_del">Delete friends</string>
     <string name="profile_del1">Are you sure to delete friends?</string>
+
+    //隐私政策
+    <string name="p_alert_1">Reminder</string>
+    <string name="p_alert_2">1.We may apply for mobile phone storage rights, cameras, location permissions；</string>
+    <string name="p_alert_3">2.For information push and account security, we will apply for system equipment permission to collect equipment information and log information；</string>
+    <string name="p_alert_4">3.We will try our best to take all kinds of security technology to protect your personal information. Without your consent, we will not let a third party obtain, share or provide your information；</string>
+    <string name="p_alert_5">4.You can also access, correct and delete your personal information. We will also provide ways of cancellation and complaint.</string>
+    <string name="p_alert_6">You can read the full version of the</string>
+    <string name="p_alert_7"> user agreement</string>
+    <string name="p_alert_8"> and </string>
+    <string name="p_alert_9">privacy agreement</string>
+    <string name="p_alert_10">Agree</string>
+    <string name="p_alert_11">Disagree</string>
+
+    <string name="n_1"> Running</string>
+    <string name="n_2">Click to learn more or stop the application</string>
 </resources>

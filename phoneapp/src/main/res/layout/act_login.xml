@@ -128,7 +128,32 @@
         android:textAllCaps="false"
         android:textColor="@android:color/black"
         android:textSize="@dimen/x36" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x16"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/x55"
+        android:paddingEnd="@dimen/x55">
 
+        <ImageView
+            android:id="@+id/act_login_check_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/x20"
+            android:src="@mipmap/ic_choose" />
+
+        <TextView
+            android:id="@+id/act_login_register_check_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/x12"
+            android:paddingBottom="@dimen/x12"
+            android:text="@string/login_15"
+            android:textColor="#454545"
+            android:textSize="@dimen/x22" />
+
+    </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -222,10 +222,12 @@ public class BatterBoxApp extends AppContextBase {
     }
 
     public static void register_user_push() {
+        FQL.d("registrationID =register_user_push");
         if (UserUtil.isLogin()) {
             UserEntity userEntity = UserUtil.getUserInfo();
+            FQL.d("registrationID =userEntity=" + userEntity);
             if (userEntity != null) {
-                JPushInterface.setAlias(getInstance(), 1000, String.valueOf(userEntity.mId));
+                JPushInterface.setAlias(getInstance(), (int) (System.currentTimeMillis()/1000), String.valueOf(userEntity.mId));
                 String registrationID = JPushInterface.getRegistrationID(getInstance());
                 FQL.d("registrationID ==" + registrationID);
                 if (!StringUtil.isEmpty(registrationID)) {

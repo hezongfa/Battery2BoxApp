@@ -222,6 +222,7 @@
     <string name="user_12">Nicht gesetzt</string>
     <string name="user_13">Mein Code QR</string>
     <string name="user_14">QR-Code scannen, um Kontakte hinzuzufügen</string>
+    <string name="user_15">Region</string>
     <!--<string name="helper_4">BATERÍA\nATASCADA</string>-->
     <!--<string name="helper_5">ESTACIÓN FUERA\nDE SERVICIO</string>-->
     <!--<string name="helper_6">BATERÍA\nDAÑADA</string>-->
@@ -390,4 +391,20 @@
     <string name="profile_chat">Enviar mensaje</string>
     <string name="profile_del">Eliminar amigo</string>
     <string name="profile_del1">Confirma eliminar amigo?</string>
+
+    //隐私政策
+    <string name="p_alert_1">Aviso Legal</string>
+    <string name="p_alert_2">1.Con su acuerdo, nosotros Podemos solicitar el permiso de almacenamiento del teléfono móvil, la cámara, el permiso de ubicación, Visite nuestro Política de privacidad；</string>
+    <string name="p_alert_3">2.Para el envío de información y la seguridad de la cuenta, solicitaremos permisos de dispositivo del sistema para recopilar información del dispositivo y registrar información;</string>
+    <string name="p_alert_4">3.Trabajaremos arduamente para adoptar diversas tecnologías de seguridad para proteger su información personal. Sin su consentimiento, no permitiremos que terceros compartan o proporcionen su información al mundo exterior;</string>
+    <string name="p_alert_5">4.También puede acceder, corregir y eliminar su información personal, y también proporcionaremos formas de cancelar y presentar una queja.</string>
+    <string name="p_alert_6">Puede leer la versión completa del </string>
+    <string name="p_alert_7">Acuerdo de usuario </string>
+    <string name="p_alert_8">y el </string>
+    <string name="p_alert_9">Acuerdo de privacidad</string>
+    <string name="p_alert_10">Acepto</string>
+    <string name="p_alert_11">No acepto</string>
+
+    <string name="n_1"> Laufend</string>
+    <string name="n_2">Klicken Sie, um mehr zu erfahren oder die Anwendung zu stoppen</string>
 </resources>

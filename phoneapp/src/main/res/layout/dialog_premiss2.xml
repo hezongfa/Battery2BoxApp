@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_ffffff_r15px"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/x40">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x80"
+            android:background="@drawable/bg_p_title_bg"
+            android:gravity="center"
+            android:text="@string/setting_4"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/x28" />
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x750"
+            android:layout_marginStart="@dimen/x44"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginEnd="@dimen/x44" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x40"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/x44"
+            android:paddingEnd="@dimen/x44">
+
+
+            <TextView
+                android:id="@+id/disagree_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/x80"
+                android:layout_marginStart="@dimen/x15"
+                android:layout_marginEnd="@dimen/x10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_f2f2f2_r10px"
+                android:gravity="center"
+                android:text="@string/p_alert_11"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x24" />
+
+
+            <TextView
+                android:id="@+id/agree_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/x80"
+                android:layout_marginStart="@dimen/x10"
+                android:layout_marginEnd="@dimen/x15"
+                android:layout_weight="1"
+                android:background="@mipmap/pic_enter_btn_bg"
+                android:gravity="center"
+                android:text="@string/p_alert_10"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/x24" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

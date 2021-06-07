@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.act.main.main_chat.MainChatFragment;
+import com.batterbox.power.phone.app.event.ExitEvent;
 import com.batterbox.power.phone.app.utils.RefreshLanguageHelper;
 import com.batterbox.power.phone.app.utils.ScanUtil;
 import com.batterbox.power.phone.app.utils.UserUtil;
@@ -21,6 +22,8 @@ import com.chenyi.baselib.utils.ViewUtil;
 import com.chenyi.baselib.utils.print.FQT;
 import com.tencent.qcloud.tim.uikit.base.IUIKitCallBack;
 import com.tencent.qcloud.tim.uikit.modules.conversation.ConversationManagerKit;
+
+import org.greenrobot.eventbus.Subscribe;
 
 import q.rorbin.badgeview.QBadgeView;
 import qiu.niorgai.StatusBarCompat;
@@ -36,7 +39,8 @@ public class MainActivity extends BaseActivity {
 
     QBadgeView chatCountBadge;
 
-//    MainMenuHelper mainMenuHelper;
+    //    MainMenuHelper mainMenuHelper;
+//    Intent locServiceIntent;
 
     public static void goToMain(Context context, boolean newTask) {
         Intent intent = new Intent(context, MainActivity.class);
@@ -54,7 +58,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.act_m);
         RefreshLanguageHelper.init(this);
         StatusBarCompat.translucentStatusBar(this, true);
-//        registerEventBus(this);
+        registerEventBus(this);
         if (getIntent() != null) {
             curIndex = getIntent().getIntExtra("curIndex", 0);
         }
@@ -87,7 +91,7 @@ public class MainActivity extends BaseActivity {
         ConversationManagerKit.getInstance().loadConversation(new IUIKitCallBack() {
             @Override
             public void onSuccess(Object data) {
-                
+
             }
 
             @Override
@@ -96,6 +100,8 @@ public class MainActivity extends BaseActivity {
             }
         });
 //        mainMenuHelper = new MainMenuHelper(this);
+//        locServiceIntent = new Intent(this, LocService.class);
+//        startService(locServiceIntent);
     }
 
     protected void onSaveInstanceState(Bundle outState) {
@@ -106,12 +112,26 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        if (curIndex==0){
+            if (mainMapFragment!=null){
+                mainMapFragment.onResume();
+            }
+        }
         if (!UserUtil.isLogin()) {
             UserUtil.gotoLogin();
         }
 
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (curIndex==0){
+            if (mainMapFragment!=null){
+                mainMapFragment.onPause();
+            }
+        }
+    }
 
     long temp = 0L;
 
@@ -143,6 +163,9 @@ public class MainActivity extends BaseActivity {
         mainUserFragment = null;
         mainSearchFragment = null;
         mainMapFragment = null;
+//        if (locServiceIntent != null) {
+//            stopService(locServiceIntent);
+//        }
         super.onDestroy();
     }
 
@@ -314,4 +337,10 @@ public class MainActivity extends BaseActivity {
         context.startActivity(intent);
     }
 
+    @Subscribe
+    public void exitEvent(ExitEvent exitEvent) {
+        if (exitEvent != null) {
+            finish();
+        }
+    }
 }

@@ -43,11 +43,11 @@ public class PhotoPickHelper {
 
         String status = Environment.getExternalStorageState();
         if (status.equals(Environment.MEDIA_MOUNTED)) {
-            String imgsFilePath = Environment.getExternalStorageDirectory() + File.separator + BuildConfig.APPLICATION_ID + "_temp_photo" + File.separator;
+            String imgsFilePath = Environment.getExternalStorageDirectory() + File.separator + BuildConfig.LIBRARY_PACKAGE_NAME + "_temp_photo" + File.separator;
             FileUtil.mkFile(new File(imgsFilePath));
             cameraPath = imgsFilePath + cameraPath;
         } else {
-            String imgsFilePath = context.getFilesDir() + File.separator + BuildConfig.APPLICATION_ID + "_temp_photo" + File.separator;
+            String imgsFilePath = context.getFilesDir() + File.separator + BuildConfig.LIBRARY_PACKAGE_NAME + "_temp_photo" + File.separator;
             FileUtil.mkFile(new File(imgsFilePath));
             cameraPath = imgsFilePath + cameraPath;
         }

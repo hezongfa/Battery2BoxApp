@@ -11,6 +11,7 @@ import android.view.View;
 import com.batterbox.power.phone.app.AppConfigUtil;
 import com.batterbox.power.phone.app.R;
 import com.batterbox.power.phone.app.act.main.MainActivity;
+import com.batterbox.power.phone.app.utils.UserUtil;
 import com.chenyi.baselib.ui.BaseActivity;
 
 import java.lang.ref.WeakReference;
@@ -34,18 +35,22 @@ public class WelcomeActivity extends BaseActivity {
             AppConfigUtil.setFirstLaunch(false);
             transHandler.postDelayed(() -> {
                 if (weakReference.get() != null) {
-                    startActivity(new Intent(this, MainActivity.class));
+                    if (!UserUtil.isLogin()) {
+                        UserUtil.gotoLogin();
+                    }else {
+                        startActivity(new Intent(this, MainActivity.class));
+                    }
                     finish();
                 }
             }, 500);
         } else {
             transHandler.postDelayed(() -> {
                 if (weakReference.get() != null) {
-//                    if (StringUtil.isEmpty(UserUtil.getToken())) {
-//                        startActivity(new Intent(this, LoginActivity.class));
-//                    } else {
-                    startActivity(new Intent(this, MainActivity.class));
-////                    }
+                    if (!UserUtil.isLogin()) {
+                        UserUtil.gotoLogin();
+                    }else {
+                        startActivity(new Intent(this, MainActivity.class));
+                    }
                     finish();
                 }
             }, 500);

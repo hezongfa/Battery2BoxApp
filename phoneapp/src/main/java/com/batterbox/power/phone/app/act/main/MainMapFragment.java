@@ -3,11 +3,13 @@ package com.batterbox.power.phone.app.act.main;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.view.animation.AnimationSet;
 import android.view.animation.TranslateAnimation;
@@ -45,6 +47,10 @@ import com.chenyi.baselib.widget.dialog.DialogUtils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationAvailability;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -56,6 +62,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -162,7 +170,7 @@ public class MainMapFragment extends BaseFragment implements OnMapReadyCallback,
             getLB(pt);
         });
         findViewById(R.id.act_main_help_iv).setOnClickListener(v -> ARouteHelper.helper_detail(pt == null ? "" : String.valueOf(pt.latitude), pt == null ? "" : String.valueOf(pt.longitude)).navigation());
-        findViewById(R.id.act_main_nav_iv).setOnClickListener(v -> locCur());
+        findViewById(R.id.act_main_nav_iv).setOnClickListener(v -> requestLocationUpdates());
     }
 
     @Override
@@ -195,43 +203,45 @@ public class MainMapFragment extends BaseFragment implements OnMapReadyCallback,
         getADData();
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-//        mainMenuHelper.setData();
-
-//        UserEntity userEntity = UserUtil.getUserInfo();
-//        if (userEntity != null) {
-//            ImageLoaderUtil.load(getContext(), userEntity.headImg, findViewById(R.id.act_main_menu_btn), R.mipmap.ic_launcher);
-//        } else {
-//            ((CircleImageView) findViewById(R.id.act_main_menu_btn)).setImageResource(R.mipmap.ic_launcher);
-//        }
-        order_UnfinishOrder();
-
-    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
         if (googleMap == null) return;
         this.googleMap = googleMap;
         googleMap.setOnMarkerClickListener(this);
+        googleMap.setOnCameraIdleListener(() -> {
+            int left = mapView.getLeft();
+            int top = mapView.getTop();
+            int right = mapView.getRight();
+            int bottom = mapView.getBottom();
+            int x = (int) (mapView.getX() + (right - left) / 2);
+            int y = (int) (mapView.getY() + (bottom - top) / 2);
+            Projection projection = googleMap.getProjection();
+            pt = projection.fromScreenLocation(new Point(x, y));
+//            FQT.showShort(MainActivity.this, "location.getLongitude()=" + pt.toString());
+            startSelectLocationAnim();
+            getLB(pt);
+        });
         MainMapFragmentPermissionsDispatcher.userLocationWithPermissionCheck(this);
     }
-
-    private void locCur() {
-        if (fusedLocationProviderClient == null) return;
-        fusedLocationProviderClient.getLastLocation().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                Location location = task.getResult();
-                if (location != null) {
-//                    BatterBoxApp.lat = location.getLatitude();
-//                    BatterBoxApp.lng = location.getLongitude();
-//                    FQT.showShort(MainActivity.this, "location.getLongitude()=" + location.getLatitude());
-                    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13.0f));
-                }
-            }
-        });
-    }
+//    OnCompleteListener onCompleteListener=new OnCompleteListener<Location>() {
+//        @Override
+//        public void onComplete(@NonNull Task<Location> task) {
+//            if (task.isSuccessful()) {
+//                Location location = task.getResult();
+//                if (location != null) {
+////                    BatterBoxApp.lat = location.getLatitude();
+////                    BatterBoxApp.lng = location.getLongitude();
+////                    FQT.showShort(MainActivity.this, "location.getLongitude()=" + location.getLatitude());
+//                    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13.0f));
+//                }
+//            }
+//        }
+//    };
+//    private void locCur() {
+//        if (fusedLocationProviderClient == null) return;
+//        fusedLocationProviderClient.getLastLocation().addOnCompleteListener(onCompleteListener);
+//    }
 
     private void startSelectLocationAnim() {
         TranslateAnimation translateAnimation1 = new TranslateAnimation(0, 0, 20, -20);
@@ -262,18 +272,6 @@ public class MainMapFragment extends BaseFragment implements OnMapReadyCallback,
                 EventBus.getDefault().post(new RefreshSearchLbsShopEvent(responseEntity.getData()));
                 if (responseEntity != null && responseEntity.getData() != null) {
                     for (LBShopEntity lbShopEntity : responseEntity.getData()) {
-//                        if (!showLBShops.contains(lbShopEntity)) {
-//                            Marker marker = googleMap.addMarker(new MarkerOptions().position(new LatLng(lbShopEntity.la, lbShopEntity.lo)).icon(BitmapDescriptorFactory.fromResource(lbShopEntity.getIconRes())));
-//                            marker.setTag(lbShopEntity);
-//                            markers.add(marker);
-//                            showLBShops.add(lbShopEntity);
-//                        } else {
-//                            for (Marker marker : markers) {
-//                                if (marker.getTag() != null && marker.getTag() instanceof LBShopEntity && marker.getTag().equals(lbShopEntity)) {
-//                                    marker.setTag(lbShopEntity);
-//                                }
-//                            }
-//                        }
                         if (!showLBShops.contains(lbShopEntity)) {
                             Marker marker = googleMap.addMarker(new MarkerOptions().position(new LatLng(lbShopEntity.la, lbShopEntity.lo)).icon(BitmapDescriptorFactory.fromResource(lbShopEntity.getIconRes())));
                             marker.setTag(lbShopEntity);
@@ -288,6 +286,34 @@ public class MainMapFragment extends BaseFragment implements OnMapReadyCallback,
 
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+
+        order_UnfinishOrder();
+        try {
+            if (fusedLocationProviderClient != null) {
+                requestLocationUpdates();
+            }
+            googleMap.setMyLocationEnabled(true);
+        } catch (Exception e) {
+            FQL.e("设置开始定位错误");
+        }
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        try {
+            if (fusedLocationProviderClient != null) {
+                fusedLocationProviderClient.removeLocationUpdates(locationCallback);
+            }
+            googleMap.setMyLocationEnabled(false);
+        } catch (Exception e) {
+            FQL.e("设置停止定位错误");
+        }
+        super.onPause();
     }
 
     @Override
@@ -422,46 +448,43 @@ public class MainMapFragment extends BaseFragment implements OnMapReadyCallback,
         //TODO 测试 广州坐标
 //        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(23.220299, 113.290519), 13.0f));
 
-        googleMap.setOnCameraIdleListener(() -> {
-            int left = mapView.getLeft();
-            int top = mapView.getTop();
-            int right = mapView.getRight();
-            int bottom = mapView.getBottom();
-            int x = (int) (mapView.getX() + (right - left) / 2);
-            int y = (int) (mapView.getY() + (bottom - top) / 2);
-            Projection projection = googleMap.getProjection();
-            pt = projection.fromScreenLocation(new Point(x, y));
-//            FQT.showShort(MainActivity.this, "location.getLongitude()=" + pt.toString());
-            startSelectLocationAnim();
-            getLB(pt);
-        });
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getContext());
-        locCur();
-//        LocationRequest mLocationRequest = new LocationRequest();
-//        mLocationRequest.setInterval(5000);
-//        mLocationRequest.setFastestInterval(1000);
-//        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-//        fusedLocationProviderClient.requestLocationUpdates(mLocationRequest, new LocationCallback() {
-//            @Override
-//            public void onLocationResult(LocationResult locationResult) {
-//                super.onLocationResult(locationResult);
-//                Location location = locationResult.getLastLocation();
-//                FQL.d("locloc", "onLocationResult");
-//                if (location != null) {
-//                    FQL.d("locloc", "location===" + location.toString());
-//                    FQT.showShort(MainActivity.this, "location.getLongitude()=" + location.getLatitude());
-//                    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13.0f));
-//                    fusedLocationProviderClient.removeLocationUpdates(this);
-//                }
-//            }
-//
-//            @Override
-//            public void onLocationAvailability(LocationAvailability locationAvailability) {
-//                super.onLocationAvailability(locationAvailability);
-//                FQL.d("locloc", "locationAvailability.isLocationAvailable()==" + locationAvailability.isLocationAvailable());
-//            }
-//        }, null);
 
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getContext());
+        requestLocationUpdates();
+//        locCur();
+    }
+
+
+    LocationCallback locationCallback = new LocationCallback() {
+        @Override
+        public void onLocationResult(LocationResult locationResult) {
+            super.onLocationResult(locationResult);
+            Location location = locationResult.getLastLocation();
+            FQL.d("locloc", "onLocationResult");
+            if (location != null) {
+                FQL.d("locloc", "location===" + location.toString());
+//                    FQT.showShort(getContext(), "location.getLongitude()=" + location.getLatitude());
+                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location.getLatitude(), location.getLongitude()), 13.0f));
+                fusedLocationProviderClient.removeLocationUpdates(this);
+            }
+        }
+
+        @Override
+        public void onLocationAvailability(LocationAvailability locationAvailability) {
+            super.onLocationAvailability(locationAvailability);
+            FQL.d("locloc", "locationAvailability.isLocationAvailable()==" + locationAvailability.isLocationAvailable());
+        }
+    };
+
+    private void requestLocationUpdates() {
+        LocationRequest mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(5000);
+        mLocationRequest.setFastestInterval(1000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        fusedLocationProviderClient.requestLocationUpdates(mLocationRequest, locationCallback, null);
     }
 
     @OnNeverAskAgain({Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION})

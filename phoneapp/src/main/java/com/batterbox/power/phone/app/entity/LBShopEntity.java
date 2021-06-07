@@ -68,6 +68,10 @@ public class LBShopEntity extends BaseEntity {
                     return R.mipmap.ic_marker_hospital;
                 case 11:
                     return R.mipmap.ic_marker_film;
+                case 12:
+                    return R.mipmap.ic_marker_peluqueria;
+                case 13:
+                    return R.mipmap.ic_marker_bears;
                 default:
                     return R.mipmap.ic_marker_def;
             }
@@ -95,6 +99,10 @@ public class LBShopEntity extends BaseEntity {
                     return R.mipmap.ic_marker_hospital_n;
                 case 11:
                     return R.mipmap.ic_marker_film_n;
+                case 12:
+                    return R.mipmap.ic_marker_peluqueria_n;
+                case 13:
+                    return R.mipmap.ic_marker_bears_n;
                 default:
                     return R.mipmap.ic_marker_def;
             }
@@ -104,7 +112,7 @@ public class LBShopEntity extends BaseEntity {
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof LBShopEntity) {
-            if (StringUtil.isEquals(((LBShopEntity) obj).shopId,shopId)){
+            if (StringUtil.isEquals(((LBShopEntity) obj).shopId, shopId)) {
                 return true;
             }
 //            if (((LBShopEntity) obj).la == la && ((LBShopEntity) obj).lo == lo) {

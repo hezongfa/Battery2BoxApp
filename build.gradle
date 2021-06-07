@@ -4,11 +4,7 @@ buildscript {
 
     repositories {
         jcenter()
-
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+        google()
         maven {
             url "http://maven.aliyun.com/nexus/content/repositories/releases/"
         }
@@ -18,8 +14,8 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
-        classpath "io.objectbox:objectbox-gradle-plugin:2.3.4"
+        classpath 'com.android.tools.build:gradle:4.0.2'
+        classpath "io.objectbox:objectbox-gradle-plugin:2.5.1"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -29,10 +25,7 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://jitpack.io" }
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+        google()
         maven {
             url "http://maven.aliyun.com/nexus/content/repositories/releases/"
         }

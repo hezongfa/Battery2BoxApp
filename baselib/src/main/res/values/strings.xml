@@ -479,4 +479,20 @@
     <string name="profile_chat">发送消息</string>
     <string name="profile_del">删除好友</string>
     <string name="profile_del1">您确认删除好友?</string>
+
+
+    //隐私政策
+    <string name="p_alert_1">温馨提示</string>
+    <string name="p_alert_2">1.我们可能会申请手机存储权限、摄像头、定位权限；</string>
+    <string name="p_alert_3">2.为了信息推送和账号安全，我们会申请系统设备权限收集设备信息、日志信息；</string>
+    <string name="p_alert_4">3.我们会努力采取各种安全技术保护您的个人信息，未经您同意，我们不会让第三方获取共享或对外提供您的信息；</string>
+    <string name="p_alert_5">4.您还可以访问、更正、删除您的个人信息，我们也将提供注销、投诉方式。</string>
+    <string name="p_alert_6">您可以阅读完整版</string>
+    <string name="p_alert_7">用户协议</string>
+    <string name="p_alert_8"> 和 </string>
+    <string name="p_alert_9">隐私协议</string>
+    <string name="p_alert_10">同意</string>
+    <string name="p_alert_11">拒绝并退出应用</string>
+    <string name="n_1">正在运行</string>
+    <string name="n_2">点击了解详情或停止应用。</string>
 </resources>

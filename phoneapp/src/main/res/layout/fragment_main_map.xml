@@ -183,6 +183,7 @@
         android:id="@+id/act_main_refresh_iv"
         android:layout_width="@dimen/x90"
         android:layout_height="@dimen/x90"
+        android:visibility="visible"
         android:layout_above="@id/act_login_submit_ll"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="@dimen/x20"
@@ -192,6 +193,7 @@
     <ImageView
         android:id="@+id/act_main_nav_iv"
         android:layout_width="@dimen/x90"
+        android:visibility="visible"
         android:layout_height="@dimen/x90"
         android:layout_above="@id/act_main_refresh_iv"
         android:layout_alignParentEnd="true"
